@@ -4857,7 +4857,7 @@
     "href": "projects.html#coming-next",
     "title": "Build projects",
     "section": "Coming next",
-    "text": "Coming next\n\nLine Scout: follow what the robot can sense\nConnect a simulated sensor, feature extractor, bounded diff-drive controller, odometry/tf2, RViz path, rosbag, and an error analyzer.\nStage: researched · Difficulty: beginner-intermediate · Estimate: 6 hours\nCapstone: Follow a course under an occlusion while bounding cross-track error, time, and command saturation.\n\n\nSort Cell: make a six-DOF arm pick, classify, and place\nIntegrate URDF/SRDF, tf2, ros2_control, MoveIt 2, planning scenes, actions, and MoveIt Task Constructor rather than stopping at joint sliders.\nStage: researched · Difficulty: intermediate-advanced · Estimate: 14 hours\nCapstone: Sort a deterministic mixed batch into bins and account for planning, grasp, execution, and classification failures.\n\n\nSafe Swarm: coordinate a collision-free robot team\nAdapt Robotarium formation and barrier-certificate ideas to namespaced ROS 2 robots, scalable launch, tf2 frames, RViz markers, and recorded safety metrics.\nStage: researched · Difficulty: advanced · Estimate: 10 hours\nCapstone: Switch leader–follower formations while proving minimum separation and bounded commands.\n\n\nWarehouse Courier: navigate jobs and recover from blockage\nExercise Nav2 maps, localization, actions, behavior trees, lifecycle, recovery, and operational evidence as one mission.\nStage: candidate · Difficulty: intermediate-advanced · Estimate: 12 hours\nCapstone: Deliver among stations with a blocked aisle and explain the recovery trace.\n\n\nCalibrate It: recover a hidden sensor transform\nTurn bagged measurements into a calibrated tf2 extrinsic with uncertainty, parameter persistence, and held-out validation.\nStage: candidate · Difficulty: advanced · Estimate: 8 hours\nCapstone: Estimate the hidden transform within tolerance and reject a poor measurement set.",
+    "text": "Coming next\n\nSort Cell: make a six-DOF arm pick, classify, and place\nIntegrate URDF/SRDF, tf2, ros2_control, MoveIt 2, planning scenes, actions, and MoveIt Task Constructor rather than stopping at joint sliders.\nStage: researched · Difficulty: intermediate-advanced · Estimate: 14 hours\nCapstone: Sort a deterministic mixed batch into bins and account for planning, grasp, execution, and classification failures.\n\n\nSafe Swarm: coordinate a collision-free robot team\nAdapt Robotarium formation and barrier-certificate ideas to namespaced ROS 2 robots, scalable launch, tf2 frames, RViz markers, and recorded safety metrics.\nStage: researched · Difficulty: advanced · Estimate: 10 hours\nCapstone: Switch leader–follower formations while proving minimum separation and bounded commands.\n\n\nWarehouse Courier: navigate jobs and recover from blockage\nExercise Nav2 maps, localization, actions, behavior trees, lifecycle, recovery, and operational evidence as one mission.\nStage: candidate · Difficulty: intermediate-advanced · Estimate: 12 hours\nCapstone: Deliver among stations with a blocked aisle and explain the recovery trace.\n\n\nCalibrate It: recover a hidden sensor transform\nTurn bagged measurements into a calibrated tf2 extrinsic with uncertainty, parameter persistence, and held-out validation.\nStage: candidate · Difficulty: advanced · Estimate: 8 hours\nCapstone: Estimate the hidden transform within tolerance and reject a poor measurement set.",
     "crumbs": [
       "Course",
       "Projects"
@@ -5228,276 +5228,1558 @@
     ]
   },
   {
-    "objectID": "projects/frame-detective/publish-motion.html",
-    "href": "projects/frame-detective/publish-motion.html",
-    "title": "Publish motion through time",
+    "objectID": "projects/line-scout/capstone.html",
+    "href": "projects/line-scout/capstone.html",
+    "title": "Capstone line course",
     "section": "",
-    "text": "Milestone 3 of 6 · Produces: a connected dynamic and static transform tree\nBuild projects › Frame Detective: debug a robot’s spatial story › Publish motion through time\nTime: about 55 minutes. You need: frame_model (or the downloaded complete workspace). Progress: 3/6.",
+    "text": "Milestone 7 of 7 · Produces: a repeatable scored line-following report\nBuild projects › Line Scout: follow what the robot can sense › Capstone line course\nTime: about 55 minutes. You need: line_tune (or the downloaded complete workspace). Progress: 7/7.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Publish motion through time"
+      "Line Scout: follow what the robot can sense",
+      "Capstone line course"
     ]
   },
   {
-    "objectID": "projects/frame-detective/publish-motion.html#goal",
-    "href": "projects/frame-detective/publish-motion.html#goal",
-    "title": "Publish motion through time",
+    "objectID": "projects/line-scout/capstone.html#goal",
+    "href": "projects/line-scout/capstone.html#goal",
+    "title": "Capstone line course",
     "section": "Goal",
-    "text": "Goal\nPublish one dynamic and one static transform with clear ownership and inspect their rates and topology.",
+    "text": "Goal\nComplete and repeat the curved course with bounded tracking and recovery evidence.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Publish motion through time"
+      "Line Scout: follow what the robot can sense",
+      "Capstone line course"
     ]
   },
   {
-    "objectID": "projects/frame-detective/publish-motion.html#do-it",
-    "href": "projects/frame-detective/publish-motion.html#do-it",
-    "title": "Publish motion through time",
+    "objectID": "projects/line-scout/capstone.html#do-it",
+    "href": "projects/line-scout/capstone.html#do-it",
+    "title": "Capstone line course",
     "section": "Do it",
-    "text": "Do it\nOpen frame_source.py. The node publishes map → base_link continuously using the node clock and publishes base_link → sensor_link once with a static broadcaster. It also publishes a stamped detection.\nWith Terminal A running, use Terminal B:\nsource /opt/ros/jazzy/setup.bash\nsource ~/frame_detective_ws/install/local_setup.bash\nros2 run tf2_ros tf2_echo map base_link\nros2 run tf2_ros tf2_monitor map sensor_link\nGenerate a tree snapshot:\ncd ~/frame_detective_ws\nros2 run tf2_tools view_frames",
+    "text": "Do it\nFrom clean launches run two 60-second scored trials using identical parameters. Record sensors, commands, odometry, status, and path. Save two analyzer CSVs and create a report table for completion, RMS/peak error, duration, saturation, loss/recovery, and sample continuity.\nPreview bounds:\n\ncompletion x at least 8.0 m;\nRMS cross-track error below 0.12 m;\npeak absolute error below 0.30 m;\ncommand saturation below 15% of samples;\nat least one reported recovery and no terminal recovery timeout;\nstate/command sample gap at most 0.20 s.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Publish motion through time"
+      "Line Scout: follow what the robot can sense",
+      "Capstone line course"
     ]
   },
   {
-    "objectID": "projects/frame-detective/publish-motion.html#verify",
-    "href": "projects/frame-detective/publish-motion.html#verify",
-    "title": "Publish motion through time",
+    "objectID": "projects/line-scout/capstone.html#verify",
+    "href": "projects/line-scout/capstone.html#verify",
+    "title": "Capstone line course",
     "section": "Verify",
-    "text": "Verify\nbase_link changes smoothly, sensor_link remains rigidly offset, and the PDF tree has one parent per child. The dynamic transform timestamp advances. Save the tree and one monitor excerpt as evidence.",
+    "text": "Verify\nBoth runs must meet every bound. Include one RViz path image and one extracted error series, then explain the largest error and whether it occurred at a curve, occlusion, or recovery transition.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Publish motion through time"
+      "Line Scout: follow what the robot can sense",
+      "Capstone line course"
     ]
   },
   {
-    "objectID": "projects/frame-detective/publish-motion.html#troubleshooting",
-    "href": "projects/frame-detective/publish-motion.html#troubleshooting",
-    "title": "Publish motion through time",
+    "objectID": "projects/line-scout/capstone.html#troubleshooting",
+    "href": "projects/line-scout/capstone.html#troubleshooting",
+    "title": "Capstone line course",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nRepeating old timestamp: make a new message and stamp it each timer callback.\nTwo authorities for one child: stop duplicate broadcasters before debugging values.\nMissing view_frames: install ros-jazzy-tf2-tools.",
+    "text": "Troubleshooting\n\nOne pass only: report sensitivity and continue tuning; do not cherry-pick.\nCompletes by cutting across: cross-track metrics must fail it.\nStops after occlusion: inspect last-error sign, confidence threshold, and timeout.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Publish motion through time"
+      "Line Scout: follow what the robot can sense",
+      "Capstone line course"
     ]
   },
   {
-    "objectID": "projects/frame-detective/publish-motion.html#challenge",
-    "href": "projects/frame-detective/publish-motion.html#challenge",
-    "title": "Publish motion through time",
+    "objectID": "projects/line-scout/capstone.html#challenge",
+    "href": "projects/line-scout/capstone.html#challenge",
+    "title": "Capstone line course",
     "section": "Challenge",
-    "text": "Challenge\nChange angular speed to zero through a parameter. Explain why the transform is still dynamic even while its numeric value temporarily stops changing.",
+    "text": "Challenge\nAdd bounded sensor noise and predict which tuning choice will degrade first.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Publish motion through time"
+      "Line Scout: follow what the robot can sense",
+      "Capstone line course"
     ]
   },
   {
-    "objectID": "projects/frame-detective/publish-motion.html#how-to-complete-this-milestone",
-    "href": "projects/frame-detective/publish-motion.html#how-to-complete-this-milestone",
-    "title": "Publish motion through time",
+    "objectID": "projects/line-scout/capstone.html#how-to-complete-this-milestone",
+    "href": "projects/line-scout/capstone.html#how-to-complete-this-milestone",
+    "title": "Capstone line course",
     "section": "How to complete this milestone",
-    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a connected dynamic and static transform tree.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a repeatable scored line-following report.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Publish motion through time"
+      "Line Scout: follow what the robot can sense",
+      "Capstone line course"
     ]
   },
   {
-    "objectID": "projects/frame-detective/frame-contract.html",
-    "href": "projects/frame-detective/frame-contract.html",
-    "title": "Draw the frame contract",
+    "objectID": "projects/line-scout/close-loop.html",
+    "href": "projects/line-scout/close-loop.html",
+    "title": "Close the mobile control loop",
     "section": "",
-    "text": "Milestone 1 of 6 · Produces: a predicted frame tree and transform vocabulary\nBuild projects › Frame Detective: debug a robot’s spatial story › Draw the frame contract\nTime: about 35 minutes. You need: the pinned environment (or the downloaded complete workspace). Progress: 1/6.",
+    "text": "Milestone 4 of 7 · Produces: bounded tracking commands and status\nBuild projects › Line Scout: follow what the robot can sense › Close the mobile control loop\nTime: about 70 minutes. You need: line_estimate (or the downloaded complete workspace). Progress: 4/7.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Draw the frame contract"
+      "Line Scout: follow what the robot can sense",
+      "Close the mobile control loop"
     ]
   },
   {
-    "objectID": "projects/frame-detective/frame-contract.html#goal",
-    "href": "projects/frame-detective/frame-contract.html#goal",
-    "title": "Draw the frame contract",
+    "objectID": "projects/line-scout/close-loop.html#goal",
+    "href": "projects/line-scout/close-loop.html#goal",
+    "title": "Close the mobile control loop",
     "section": "Goal",
-    "text": "Goal\nRead and draw a tf2 tree before running code, and distinguish coordinates from the frame and time that give them meaning.",
+    "text": "Goal\nPublish bounded body velocity from the estimated line error and explain every term.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Draw the frame contract"
+      "Line Scout: follow what the robot can sense",
+      "Close the mobile control loop"
     ]
   },
   {
-    "objectID": "projects/frame-detective/frame-contract.html#do-it",
-    "href": "projects/frame-detective/frame-contract.html#do-it",
-    "title": "Draw the frame contract",
+    "objectID": "projects/line-scout/close-loop.html#do-it",
+    "href": "projects/line-scout/close-loop.html#do-it",
+    "title": "Close the mobile control loop",
     "section": "Do it",
-    "text": "Do it\nWrite the intended tree on paper:\nmap → base_link → sensor_link\nmap → base_link changes as the robot moves, so it is dynamic. The sensor is bolted 0.20 m forward and 0.10 m above the base, so base_link → sensor_link is static. A detection (1, 0, 0) in sensor_link means one metre along the sensor’s x-axis—not a location in the map.\nFor every transform, say the sentence “pose of the child in the parent.” Then predict the map position of the detection when the base is at (2, 0) with zero yaw.",
+    "text": "Do it\nLaunch with control enabled. The policy uses proportional steering plus a small error-rate term, slows as error grows, and clamps linear/angular velocity:\nangular = clamp(kp·error + kd·error_rate)\nlinear = max_speed · clamp(1 - slowdown·abs(error))\nInspect commands and status:\nros2 topic echo /cmd_vel\nros2 topic echo /line_scout/status",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Draw the frame contract"
+      "Line Scout: follow what the robot can sense",
+      "Close the mobile control loop"
     ]
   },
   {
-    "objectID": "projects/frame-detective/frame-contract.html#verify",
-    "href": "projects/frame-detective/frame-contract.html#verify",
-    "title": "Draw the frame contract",
+    "objectID": "projects/line-scout/close-loop.html#verify",
+    "href": "projects/line-scout/close-loop.html#verify",
+    "title": "Close the mobile control loop",
     "section": "Verify",
-    "text": "Verify\nYour prediction is (3.20, 0, 0.10) in map. It combines robot pose, sensor mount, and sensor measurement. Record parent, child, static/dynamic, authority, and expected rate in a three-row frame-contract table.",
+    "text": "Verify\nEvery command stays within configured limits; stale sensors command zero. The robot advances and corrects both sides without sustained oscillation. Explain why this is closed-loop behavior rather than a prerecorded path.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Draw the frame contract"
+      "Line Scout: follow what the robot can sense",
+      "Close the mobile control loop"
     ]
   },
   {
-    "objectID": "projects/frame-detective/frame-contract.html#troubleshooting",
-    "href": "projects/frame-detective/frame-contract.html#troubleshooting",
-    "title": "Draw the frame contract",
+    "objectID": "projects/line-scout/close-loop.html#troubleshooting",
+    "href": "projects/line-scout/close-loop.html#troubleshooting",
+    "title": "Close the mobile control loop",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\n\n“Transform from A to B” feels ambiguous: write parent and child explicitly.\nCoordinates look plausible: plausible numbers are not evidence of a correct frame.\nStatic means published once, not “zero-valued” or “unimportant.”",
+    "text": "Troubleshooting\n\nDiverges immediately: verify estimator and steering signs before tuning magnitude.\nOscillates: reduce proportional gain or increase rate damping slightly.\nCrawls everywhere: inspect error units and slowdown parameter.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Draw the frame contract"
+      "Line Scout: follow what the robot can sense",
+      "Close the mobile control loop"
     ]
   },
   {
-    "objectID": "projects/frame-detective/frame-contract.html#challenge",
-    "href": "projects/frame-detective/frame-contract.html#challenge",
-    "title": "Draw the frame contract",
+    "objectID": "projects/line-scout/close-loop.html#challenge",
+    "href": "projects/line-scout/close-loop.html#challenge",
+    "title": "Close the mobile control loop",
     "section": "Challenge",
-    "text": "Challenge\nRotate the base 90 degrees counter-clockwise at (2, 0). Predict the marker’s map x and y before using software.",
+    "text": "Challenge\nSet kd:=0, compare overshoot at two curves, and explain what the rate term adds.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Draw the frame contract"
+      "Line Scout: follow what the robot can sense",
+      "Close the mobile control loop"
     ]
   },
   {
-    "objectID": "projects/frame-detective/frame-contract.html#how-to-complete-this-milestone",
-    "href": "projects/frame-detective/frame-contract.html#how-to-complete-this-milestone",
-    "title": "Draw the frame contract",
+    "objectID": "projects/line-scout/close-loop.html#how-to-complete-this-milestone",
+    "href": "projects/line-scout/close-loop.html#how-to-complete-this-milestone",
+    "title": "Close the mobile control loop",
     "section": "How to complete this milestone",
-    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a predicted frame tree and transform vocabulary.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: bounded tracking commands and status.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Draw the frame contract"
+      "Line Scout: follow what the robot can sense",
+      "Close the mobile control loop"
     ]
   },
   {
-    "objectID": "projects/frame-detective/transform-detections.html",
-    "href": "projects/frame-detective/transform-detections.html",
-    "title": "Transform detections into the map",
+    "objectID": "projects/line-scout/tune-evidence.html",
+    "href": "projects/line-scout/tune-evidence.html",
+    "title": "Tune from tracking evidence",
     "section": "",
-    "text": "Milestone 4 of 6 · Produces: a correctly transformed RViz detection marker\nBuild projects › Frame Detective: debug a robot’s spatial story › Transform detections into the map\nTime: about 60 minutes. You need: frame_publish (or the downloaded complete workspace). Progress: 4/6.",
+    "text": "Milestone 6 of 7 · Produces: three comparable trial CSV files\nBuild projects › Line Scout: follow what the robot can sense › Tune from tracking evidence\nTime: about 70 minutes. You need: line_recovery (or the downloaded complete workspace). Progress: 6/7.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Transform detections into the map"
+      "Line Scout: follow what the robot can sense",
+      "Tune from tracking evidence"
     ]
   },
   {
-    "objectID": "projects/frame-detective/transform-detections.html#goal",
-    "href": "projects/frame-detective/transform-detections.html#goal",
-    "title": "Transform detections into the map",
+    "objectID": "projects/line-scout/tune-evidence.html#goal",
+    "href": "projects/line-scout/tune-evidence.html#goal",
+    "title": "Tune from tracking evidence",
     "section": "Goal",
-    "text": "Goal\nTransform a stamped sensor measurement at measurement time and visualize the result without rewriting coordinate math by hand.",
+    "text": "Goal\nTune tracking and recovery using repeatable CSV evidence.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Transform detections into the map"
+      "Line Scout: follow what the robot can sense",
+      "Tune from tracking evidence"
     ]
   },
   {
-    "objectID": "projects/frame-detective/transform-detections.html#do-it",
-    "href": "projects/frame-detective/transform-detections.html#do-it",
-    "title": "Transform detections into the map",
+    "objectID": "projects/line-scout/tune-evidence.html#do-it",
+    "href": "projects/line-scout/tune-evidence.html#do-it",
+    "title": "Tune from tracking evidence",
     "section": "Do it",
-    "text": "Do it\nOpen detection_transformer.py. It owns a tf2 buffer/listener, receives PointStamped on /sensor/detection, and calls buffer.transform(..., 'map'). Only a successful lookup becomes a green sphere marker on /detection_marker; every outcome is also published on /frame_detective/status.\nIn Terminal B:\nros2 topic echo /sensor/detection --once\nros2 topic echo /detection_marker --once\nros2 topic echo /frame_detective/status\nWatch RViz as the base circles. The detection is fixed one metre ahead of the moving sensor at its measurement instant, so the marker moves through map.",
+    "text": "Do it\nRun the analyzer in a sourced terminal for each clean launch:\nmkdir -p ~/line_scout_ws/evidence\nros2 run line_scout trial_analyzer --ros-args \\\n  -p duration:=60.0 -p output:=$HOME/line_scout_ws/evidence/trial-01.csv\nChange one family per run: kp, then kd, then slowdown/recovery speed. Keep track, initial state, limits, occlusion, and duration fixed. Record at least three trials.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Transform detections into the map"
+      "Line Scout: follow what the robot can sense",
+      "Tune from tracking evidence"
     ]
   },
   {
-    "objectID": "projects/frame-detective/transform-detections.html#verify",
-    "href": "projects/frame-detective/transform-detections.html#verify",
-    "title": "Transform detections into the map",
+    "objectID": "projects/line-scout/tune-evidence.html#verify",
+    "href": "projects/line-scout/tune-evidence.html#verify",
+    "title": "Tune from tracking evidence",
     "section": "Verify",
-    "text": "Verify\nThe input header says sensor_link; output marker header says map; status says ok. The transformer contains no sine/cosine coordinate conversion—the tf2 tree is the spatial source of truth.",
+    "text": "Verify\nCompare completion x, RMS/peak cross-track error, duration, saturation fraction, loss/recovery counts, and max sample gap. Reject runs with missing coverage or limit-hiding instability.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Transform detections into the map"
+      "Line Scout: follow what the robot can sense",
+      "Tune from tracking evidence"
     ]
   },
   {
-    "objectID": "projects/frame-detective/transform-detections.html#troubleshooting",
-    "href": "projects/frame-detective/transform-detections.html#troubleshooting",
-    "title": "Transform detections into the map",
+    "objectID": "projects/line-scout/tune-evidence.html#troubleshooting",
+    "href": "projects/line-scout/tune-evidence.html#troubleshooting",
+    "title": "Tune from tracking evidence",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nMarker absent: read status before changing RViz.\nWrong fixed frame: set RViz Fixed Frame to map.\nLatest-time lookup seems to work: it can still be wrong for delayed sensors; preserve the input stamp.",
+    "text": "Troubleshooting\n\nAnalyzer ends before completion: duration is a ceiling, not a success signal.\nTrials differ at start: stop every process and relaunch.\nLow RMS but huge peak: inspect the occlusion interval separately.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Transform detections into the map"
+      "Line Scout: follow what the robot can sense",
+      "Tune from tracking evidence"
     ]
   },
   {
-    "objectID": "projects/frame-detective/transform-detections.html#challenge",
-    "href": "projects/frame-detective/transform-detections.html#challenge",
-    "title": "Transform detections into the map",
+    "objectID": "projects/line-scout/tune-evidence.html#challenge",
+    "href": "projects/line-scout/tune-evidence.html#challenge",
+    "title": "Tune from tracking evidence",
     "section": "Challenge",
-    "text": "Challenge\nPublish two detections with identical coordinates but different timestamps. Explain why their map coordinates can differ.",
+    "text": "Challenge\nDefend a slightly slower controller if it materially improves peak error and recovery reliability.",
     "crumbs": [
       "Course",
       "Projects",
-      "Frame Detective: debug a robot's spatial story",
-      "Transform detections into the map"
+      "Line Scout: follow what the robot can sense",
+      "Tune from tracking evidence"
     ]
   },
   {
-    "objectID": "projects/frame-detective/transform-detections.html#how-to-complete-this-milestone",
-    "href": "projects/frame-detective/transform-detections.html#how-to-complete-this-milestone",
-    "title": "Transform detections into the map",
+    "objectID": "projects/line-scout/tune-evidence.html#how-to-complete-this-milestone",
+    "href": "projects/line-scout/tune-evidence.html#how-to-complete-this-milestone",
+    "title": "Tune from tracking evidence",
     "section": "How to complete this milestone",
-    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a correctly transformed RViz detection marker.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: three comparable trial CSV files.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Tune from tracking evidence"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/diagnose-faults.html",
+    "href": "projects/frame-detective/diagnose-faults.html",
+    "title": "Diagnose four spatial faults",
+    "section": "",
+    "text": "Milestone 5 of 6 · Produces: evidence for reversed\nBuild projects › Frame Detective: debug a robot’s spatial story › Diagnose four spatial faults\nTime: about 70 minutes. You need: frame_transform (or the downloaded complete workspace). Progress: 5/6.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Transform detections into the map"
+      "Diagnose four spatial faults"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/diagnose-faults.html#goal",
+    "href": "projects/frame-detective/diagnose-faults.html#goal",
+    "title": "Diagnose four spatial faults",
+    "section": "Goal",
+    "text": "Goal\nClassify four transform failures from evidence and choose a targeted repair.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Diagnose four spatial faults"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/diagnose-faults.html#do-it",
+    "href": "projects/frame-detective/diagnose-faults.html#do-it",
+    "title": "Diagnose four spatial faults",
+    "section": "Do it",
+    "text": "Do it\nRestart the launch with one fault_mode at a time:\nros2 launch frame_detective display.launch.py fault_mode:=reversed\nros2 launch frame_detective display.launch.py fault_mode:=disconnected\nros2 launch frame_detective display.launch.py fault_mode:=stale\nros2 launch frame_detective display.launch.py fault_mode:=future\nFor each run, capture /frame_detective/status, tf2_echo map sensor_link, and view_frames. Use this decision table:\n\n\n\n\n\n\n\n\nEvidence\nDiagnosis\nRepair\n\n\n\n\nchild has wrong direction/parent conflict\nreversed transform\nrestore parent/child contract\n\n\nno path between trees\ndisconnected tree\nattach sensor to base_link\n\n\nrequested time precedes buffer history\nstale measurement\nfix timestamp/latency policy\n\n\nrequested time is ahead of transforms\nfuture extrapolation\nsynchronize clocks/stamps\n\n\n\nDo not “repair” time faults by always asking for latest; that silently changes the meaning of a measurement.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Diagnose four spatial faults"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/diagnose-faults.html#verify",
+    "href": "projects/frame-detective/diagnose-faults.html#verify",
+    "title": "Diagnose four spatial faults",
+    "section": "Verify",
+    "text": "Verify\nCreate faults.md with fault, exact exception/status, tree evidence, repair, and why the repair preserves semantics. A correct-mode restart returns status ok and a marker in map.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Diagnose four spatial faults"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/diagnose-faults.html#troubleshooting",
+    "href": "projects/frame-detective/diagnose-faults.html#troubleshooting",
+    "title": "Diagnose four spatial faults",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nOld nodes contaminate a run: stop the full launch before changing mode.\nException wording differs: classify connectivity versus extrapolation first.\nRViz can retain an old marker: compare timestamps and status, then clear display history.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Diagnose four spatial faults"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/diagnose-faults.html#challenge",
+    "href": "projects/frame-detective/diagnose-faults.html#challenge",
+    "title": "Diagnose four spatial faults",
+    "section": "Challenge",
+    "text": "Challenge\nAdd a wrong_frame fault that labels sensor coordinates as base_link. Explain why it may produce no exception yet still be more dangerous.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Diagnose four spatial faults"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/diagnose-faults.html#how-to-complete-this-milestone",
+    "href": "projects/frame-detective/diagnose-faults.html#how-to-complete-this-milestone",
+    "title": "Diagnose four spatial faults",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: evidence for reversed.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Diagnose four spatial faults"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/capstone.html",
+    "href": "projects/frame-detective/capstone.html",
+    "title": "Capstone frame incident",
+    "section": "",
+    "text": "Milestone 6 of 6 · Produces: a timed fault diagnosis and repair report\nBuild projects › Frame Detective: debug a robot’s spatial story › Capstone frame incident\nTime: about 45 minutes. You need: frame_faults (or the downloaded complete workspace). Progress: 6/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Capstone frame incident"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/capstone.html#goal",
+    "href": "projects/frame-detective/capstone.html#goal",
+    "title": "Capstone frame incident",
+    "section": "Goal",
+    "text": "Goal\nDiagnose and repair an unknown frame incident under a time limit using a repeatable evidence packet.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Capstone frame incident"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/capstone.html#do-it",
+    "href": "projects/frame-detective/capstone.html#do-it",
+    "title": "Capstone frame incident",
+    "section": "Do it",
+    "text": "Do it\nHave a partner choose one fault mode, or choose randomly without inspecting the launch command. Start a bag before diagnosis:\nmkdir -p ~/frame_detective_ws/evidence\ncd ~/frame_detective_ws/evidence\nros2 bag record /tf /tf_static /sensor/detection \\\n  /detection_marker /frame_detective/status\nRecord start time, inspect status/tree/timing, state one diagnosis, make one targeted change, restart in correct mode, and capture proof. Use this report:\n# Frame incident\n- Symptom and start time:\n- Expected frame contract:\n- Status/exception evidence:\n- Tree and timing evidence:\n- Diagnosis:\n- Repair and semantic reason:\n- Verification: status, marker frame, and elapsed minutes",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Capstone frame incident"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/capstone.html#verify",
+    "href": "projects/frame-detective/capstone.html#verify",
+    "title": "Capstone frame incident",
+    "section": "Verify",
+    "text": "Verify\nPass when diagnosis is correct within 12 minutes, evidence distinguishes tree topology from time failure, the repair restores continuous ok status for 20 seconds, and the marker is published in map. Repeat with a fault from the other class: topology versus time.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Capstone frame incident"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/capstone.html#troubleshooting",
+    "href": "projects/frame-detective/capstone.html#troubleshooting",
+    "title": "Capstone frame incident",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nEvidence bag is huge: record only the five named interfaces.\nRepair works but explanation is vague: state which frame, timestamp, and transform path the consumer requires.\nRandom run is correct mode: record it as baseline, then draw again.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Capstone frame incident"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/capstone.html#challenge",
+    "href": "projects/frame-detective/capstone.html#challenge",
+    "title": "Capstone frame incident",
+    "section": "Challenge",
+    "text": "Challenge\nPropose a monitoring rule that detects this class of incident in a deployed robot without treating every brief startup gap as an alarm.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Capstone frame incident"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/capstone.html#how-to-complete-this-milestone",
+    "href": "projects/frame-detective/capstone.html#how-to-complete-this-milestone",
+    "title": "Capstone frame incident",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a timed fault diagnosis and repair report.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Capstone frame incident"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/model-and-see.html",
+    "href": "projects/frame-detective/model-and-see.html",
+    "title": "Model and see the robot",
+    "section": "",
+    "text": "Milestone 2 of 6 · Produces: a robot model and saved RViz view\nBuild projects › Frame Detective: debug a robot’s spatial story › Model and see the robot\nTime: about 55 minutes. You need: frame_contract (or the downloaded complete workspace). Progress: 2/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Model and see the robot"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/model-and-see.html#goal",
+    "href": "projects/frame-detective/model-and-see.html#goal",
+    "title": "Model and see the robot",
+    "section": "Goal",
+    "text": "Goal\nBuild the workspace, inspect its URDF tree, and make the robot and coordinate axes legible in RViz.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Model and see the robot"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/model-and-see.html#do-it",
+    "href": "projects/frame-detective/model-and-see.html#do-it",
+    "title": "Model and see the robot",
+    "section": "Do it",
+    "text": "Do it\nSave the onsite download as ~/frame_detective_download/frame_detective_ws.zip, then use Terminal A:\nmkdir -p ~/frame_detective_download ~/frame_detective_ws\nunzip -l ~/frame_detective_download/frame_detective_ws.zip\nunzip ~/frame_detective_download/frame_detective_ws.zip -d ~/frame_detective_ws\ncd ~/frame_detective_ws\nsource /opt/ros/jazzy/setup.bash\nrosdep install --from-paths src --ignore-src --rosdistro jazzy -y\ncolcon build --symlink-install\nsource install/local_setup.bash\ncheck_urdf src/frame_detective/urdf/detective.urdf\nros2 launch frame_detective display.launch.py\nIn RViz, keep Fixed Frame=map; inspect RobotModel, TF, and Detection displays. Expand TF and compare axes: x red, y green, z blue. Save the supplied config only after you can point to map, base_link, and sensor_link.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Model and see the robot"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/model-and-see.html#verify",
+    "href": "projects/frame-detective/model-and-see.html#verify",
+    "title": "Model and see the robot",
+    "section": "Verify",
+    "text": "Verify\ncheck_urdf reports base_link with fixed child sensor_link. RViz shows the body and forward sensor without an Error state. The TF display labels all three frames once the lab nodes start.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Model and see the robot"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/model-and-see.html#troubleshooting",
+    "href": "projects/frame-detective/model-and-see.html#troubleshooting",
+    "title": "Model and see the robot",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nEmpty RViz: verify Fixed Frame is map and the launch is still running.\nRobotModel error: inspect /robot_description and the URDF path.\nNo meshes are required; the model uses local primitive geometry.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Model and see the robot"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/model-and-see.html#challenge",
+    "href": "projects/frame-detective/model-and-see.html#challenge",
+    "title": "Model and see the robot",
+    "section": "Challenge",
+    "text": "Challenge\nChange the sensor visual color and mount height in the URDF. Predict which RViz evidence changes and which transform relationship stays conceptually the same.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Model and see the robot"
+    ]
+  },
+  {
+    "objectID": "projects/frame-detective/model-and-see.html#how-to-complete-this-milestone",
+    "href": "projects/frame-detective/model-and-see.html#how-to-complete-this-milestone",
+    "title": "Model and see the robot",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a robot model and saved RViz view.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Frame Detective: debug a robot's spatial story",
+      "Model and see the robot"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html",
+    "href": "projects/balance-bot.html",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "",
+    "text": "8 milestones · 8 hours · preview\nCourse position: Part 1 · Lesson 5 of 5. Return to the canonical course.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "5. Balance Bot"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#what-you-will-build",
+    "href": "projects/balance-bot.html#what-you-will-build",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "What you will build",
+    "text": "What you will build\nBalance Bot is a classic cart-pole: a cart can move left and right while a pole pivots freely above it. Gravity makes the upright pose unstable. Your ROS 2 node observes cart and pole joint state, computes a bounded force, and commands the cart through ros2_control.\nGazebo physics → /joint_states → balance_controller\n      ↑                                │\n      └─ cart_effort_controller/commands ← bounded force\nThis project deliberately separates four concerns: Gazebo owns physics, gz_ros2_control exposes simulated joints, controllers expose ROS interfaces, and your node owns the balancing policy.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "5. Balance Bot"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#control-primer",
+    "href": "projects/balance-bot.html#control-primer",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "Control primer",
+    "text": "Control primer\n\n\n\n\n\n\n\n\nState\nMeaning\nWhy it matters\n\n\n\n\ntheta\npole angle from upright\nmove under the direction of fall\n\n\ntheta_dot\npole angular velocity\nanticipate rather than chase the fall\n\n\nx\ncart displacement from center\navoid balancing by leaving the rail\n\n\nx_dot\ncart velocity\nslow lateral motion\n\n\n\nThis is full-state feedback, not a PID loop: one weighted sum maps the measured state directly to cart force. It is designed only for local upright stabilization. The pole starts near upright; this course does not implement swing-up or recovery from a fallen pole.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "5. Balance Bot"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#before-starting",
+    "href": "projects/balance-bot.html#before-starting",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "Before starting",
+    "text": "Before starting\n\nComplete Building nodes and packages, or be comfortable creating and running an ament_python package.\nUse Ubuntu 24.04, ROS 2 Jazzy, Gazebo Harmonic, and Bash.\nAllow roughly eight hours across several sessions.\nDownload the complete Balance Bot workspace. This is a guided modification project: run the known structure, inspect each named file, then make the lesson’s targeted changes and experiments.\n\nThe pinned Jazzy/Harmonic pairing and integration package are supported by the official gz_ros2_control Jazzy compatibility matrix listed below.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "5. Balance Bot"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#definition-of-success",
+    "href": "projects/balance-bot.html#definition-of-success",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "Definition of success",
+    "text": "Definition of success\nThis is a preview project until executed in the pinned Jazzy runtime. Your local run passes when the pole remains within the lesson’s angle bound for the stated trial duration, the cart stays inside its rail bound, and commanded force never exceeds its safety limit. A moving picture is not enough; the capstone requires topic evidence and a short interpretation.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "5. Balance Bot"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#provenance-and-license",
+    "href": "projects/balance-bot.html#provenance-and-license",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "Provenance and license",
+    "text": "Provenance and license\nThe lesson text, cart-pole Xacro, controller, analyzer, and launch files were authored for ROS 2 Trails; no code was copied from the linked sources. Their design was informed by the official Jazzy gz_ros2_control repository and its pendulum-effort example. The downloadable code is MIT licensed and includes the complete license. Official ROS/Gazebo names and documentation remain under their respective owners and licenses.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "5. Balance Bot"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#references-and-provenance",
+    "href": "projects/balance-bot.html#references-and-provenance",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "References and provenance",
+    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\ngz_ros2_control Jazzy repository and compatibility matrix — ros-controls, jazzy branch; accessed 2026-09-01. Supports: Jazzy/Harmonic compatibility, plugin configuration, and effort-demo architecture.\nROS 2 Jazzy Gazebo tutorials — Open Robotics, Jazzy; accessed 2026-09-01. Supports: Gazebo integration concepts and launch workflow.\nros_gz_sim Jazzy package — Open Robotics, Jazzy; accessed 2026-09-01. Supports: create launch action and simulation package API.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "5. Balance Bot"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#project-milestones",
+    "href": "projects/balance-bot.html#project-milestones",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "Project milestones",
+    "text": "Project milestones\n\n\n1\n\nRun the reference pendulum\nProduces: a verified Jazzy/Harmonic simulation environment\n\n\n\n2\n\nModel the cart-pole plant\nProduces: an inspectable Xacro robot model\n\n\n\n3\n\nLaunch your simulation\nProduces: a running model with active effort and state controllers\n\n\n\n4\n\nRead and interpret state\nProduces: named cart and pole state observations\n\n\n\n5\n\nClose the control loop\nProduces: a parameterized feedback controller node\n\n\n\n6\n\nTune from evidence\nProduces: recorded gain trials and a defensible tuning choice\n\n\n\n7\n\nPackage the complete system\nProduces: one launch command for simulation and control\n\n\n\n8\n\nCapstone stability trial\nProduces: a repeatable pass/fail stability report",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "5. Balance Bot"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/calibrate.html",
+    "href": "projects/camera-detective/calibrate.html",
+    "title": "Estimate and persist calibration",
+    "section": "",
+    "text": "Milestone 4 of 6 · Produces: a persisted camera calibration YAML\nBuild projects › Camera Detective: turn pixels into measurements › Estimate and persist calibration\nTime: about 65 minutes. You need: camera_collect (or the downloaded complete workspace). Progress: 4/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Estimate and persist calibration"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/calibrate.html#goal",
+    "href": "projects/camera-detective/calibrate.html#goal",
+    "title": "Estimate and persist calibration",
+    "section": "Goal",
+    "text": "Goal\nEstimate camera intrinsics through the standard calibration workflow and persist them through the camera driver’s service.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Estimate and persist calibration"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/calibrate.html#do-it",
+    "href": "projects/camera-detective/calibrate.html#do-it",
+    "title": "Estimate and persist calibration",
+    "section": "Do it",
+    "text": "Do it\nRestart good coverage with calibration_output:=$HOME/camera_detective_ws/evidence/good.yaml, then start:\nros2 run camera_calibration cameracalibrator \\\n  --size 8x6 --square 0.03 \\\n  --ros-args -r image:=/camera/image_raw -r camera:=/camera\nMove through the generated samples until horizontal, vertical, scale, and skew coverage are sufficient. Calibrate, inspect the reported matrix/distortion, then Commit. The synthetic driver serves /camera/set_camera_info and writes the configured YAML path.\nRepeat separately with weak coverage; never overwrite the good YAML.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Estimate and persist calibration"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/calibrate.html#verify",
+    "href": "projects/camera-detective/calibrate.html#verify",
+    "title": "Estimate and persist calibration",
+    "section": "Verify",
+    "text": "Verify\nros2 service list includes /camera/set_camera_info; the good YAML exists and contains image dimensions, camera matrix, distortion coefficients, rectification, and projection. Restart with that YAML and confirm K[0] &gt; 0 in CameraInfo.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Estimate and persist calibration"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/calibrate.html#troubleshooting",
+    "href": "projects/camera-detective/calibrate.html#troubleshooting",
+    "title": "Estimate and persist calibration",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nCALIBRATE remains disabled: improve pose diversity rather than increasing count.\nCommit fails: inspect service availability and output-directory permissions.\nWrong board detected: the generator has 8×6 inner corners, not squares.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Estimate and persist calibration"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/calibrate.html#challenge",
+    "href": "projects/camera-detective/calibrate.html#challenge",
+    "title": "Estimate and persist calibration",
+    "section": "Challenge",
+    "text": "Challenge\nExplain why a low training reprojection error can coexist with poor held-out geometry when poses lack diversity.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Estimate and persist calibration"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/calibrate.html#how-to-complete-this-milestone",
+    "href": "projects/camera-detective/calibrate.html#how-to-complete-this-milestone",
+    "title": "Estimate and persist calibration",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a persisted camera calibration YAML.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Estimate and persist calibration"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/capstone.html",
+    "href": "projects/camera-detective/capstone.html",
+    "title": "Capstone calibration decision",
+    "section": "",
+    "text": "Milestone 6 of 6 · Produces: a defensible accept/reject calibration report\nBuild projects › Camera Detective: turn pixels into measurements › Capstone calibration decision\nTime: about 45 minutes. You need: camera_rectify (or the downloaded complete workspace). Progress: 6/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Capstone calibration decision"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/capstone.html#goal",
+    "href": "projects/camera-detective/capstone.html#goal",
+    "title": "Capstone calibration decision",
+    "section": "Goal",
+    "text": "Goal\nAccept or reject two calibrations using repeatable evidence rather than the fact that both produced YAML files.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Capstone calibration decision"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/capstone.html#do-it",
+    "href": "projects/camera-detective/capstone.html#do-it",
+    "title": "Capstone calibration decision",
+    "section": "Do it",
+    "text": "Do it\nFrom clean launches, evaluate good and weak calibration against the identical held-out mode. Record raw/rectified topics and CameraInfo, save screenshots, and run the evaluator for each. Create camera-capstone.md:\n# Camera calibration decision\n| Candidate | coverage dimensions | held-out residual | metadata valid | decision |\n|---|---|---:|---|---|\n| good | | | | |\n| weak | | | | |\n## Contract checks\ntimestamps, frame, resolution, service persistence, rectified output\n## Decision\naccepted calibration, rejected calibration, evidence, and next risk",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Capstone calibration decision"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/capstone.html#verify",
+    "href": "projects/camera-detective/capstone.html#verify",
+    "title": "Capstone calibration decision",
+    "section": "Verify",
+    "text": "Verify\nPass when the good dataset covers all pose dimensions, its held-out residual is below 1.0 px, metadata and persistence checks pass, and the weak dataset is rejected for stated evidence. Repeat the accepted held-out run once.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Capstone calibration decision"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/capstone.html#troubleshooting",
+    "href": "projects/camera-detective/capstone.html#troubleshooting",
+    "title": "Capstone calibration decision",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nBoth pass: tighten held-out sampling or inspect whether weak mode was actually used.\nBoth fail: diagnose metadata separately from numeric residual.\nResults differ after restart: compare calibration URL, resolution, and exact bag.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Capstone calibration decision"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/capstone.html#challenge",
+    "href": "projects/camera-detective/capstone.html#challenge",
+    "title": "Capstone calibration decision",
+    "section": "Challenge",
+    "text": "Challenge\nDescribe the additional experiment required before trusting these intrinsics on a physical camera whose focus, exposure, temperature, or resolution can change.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Capstone calibration decision"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/capstone.html#how-to-complete-this-milestone",
+    "href": "projects/camera-detective/capstone.html#how-to-complete-this-milestone",
+    "title": "Capstone calibration decision",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a defensible accept/reject calibration report.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Capstone calibration decision"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/image-contract.html",
+    "href": "projects/camera-detective/image-contract.html",
+    "title": "Read the image contract",
+    "section": "",
+    "text": "Milestone 1 of 6 · Produces: an image/topic/frame contract\nBuild projects › Camera Detective: turn pixels into measurements › Read the image contract\nTime: about 35 minutes. You need: the pinned environment (or the downloaded complete workspace). Progress: 1/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Read the image contract"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/image-contract.html#goal",
+    "href": "projects/camera-detective/image-contract.html#goal",
+    "title": "Read the image contract",
+    "section": "Goal",
+    "text": "Goal\nExplain the ROS camera contract before estimating calibration parameters.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Read the image contract"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/image-contract.html#do-it",
+    "href": "projects/camera-detective/image-contract.html#do-it",
+    "title": "Read the image contract",
+    "section": "Do it",
+    "text": "Do it\nDraw the pipeline camera_optical_frame → image_raw + camera_info → image_rect. For sensor_msgs/Image, record that the stamp is acquisition time, frame_id is the optical frame, encoding defines pixel layout, and step × height constrains data length. Pair it with CameraInfo having the same stamp/frame and dimensions.\nUse the optical convention: +x right in the image, +y down, +z forward. Explain why a base-frame label on an optical image can look harmless yet corrupt later projection and tf2 work.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Read the image contract"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/image-contract.html#verify",
+    "href": "projects/camera-detective/image-contract.html#verify",
+    "title": "Read the image contract",
+    "section": "Verify",
+    "text": "Verify\nCreate camera-contract.md naming publisher, consumers, topics, message types, frame, timestamp owner, QoS assumption, calibration service, and persistence path. Distinguish intrinsic calibration from the camera-to-robot extrinsic.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Read the image contract"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/image-contract.html#troubleshooting",
+    "href": "projects/camera-detective/image-contract.html#troubleshooting",
+    "title": "Read the image contract",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nIntrinsic versus extrinsic: intrinsics map camera rays to pixels; extrinsics relate the optical frame to another frame.\nResolution is part of calibration; do not reuse parameters blindly after resizing.\nAn image without metadata may display but is not a complete geometric sensor.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Read the image contract"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/image-contract.html#challenge",
+    "href": "projects/camera-detective/image-contract.html#challenge",
+    "title": "Read the image contract",
+    "section": "Challenge",
+    "text": "Challenge\nPredict which fields must change if a 640×480 calibrated stream is cropped and then published as 320×240.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Read the image contract"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/image-contract.html#how-to-complete-this-milestone",
+    "href": "projects/camera-detective/image-contract.html#how-to-complete-this-milestone",
+    "title": "Read the image contract",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: an image/topic/frame contract.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Read the image contract"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html",
+    "href": "projects/camera-detective.html",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "",
+    "text": "6 milestones · 5 hours · preview\nCourse position: Part 1 · Lesson 3 of 5. Return to the canonical course.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#what-you-will-build",
+    "href": "projects/camera-detective.html#what-you-will-build",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "What you will build",
+    "text": "What you will build\nCamera Detective publishes a moving synthetic checkerboard through the same Image, CameraInfo, optical-frame, and calibration-service interfaces used by a real ROS camera driver. You will compare weak and well-distributed samples, persist a calibration, rectify the stream, and accept or reject it using held-out evidence.\nsynthetic_camera ── image_raw + camera_info ──&gt; camera_calibration\n       ↑                        │                       │\n coverage mode                  └────&gt; image_proc &lt;──── calibration YAML\n                                           │\n                                      image_rect → evaluator",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#why-this-comes-after-frame-detective",
+    "href": "projects/camera-detective.html#why-this-comes-after-frame-detective",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "Why this comes after Frame Detective",
+    "text": "Why this comes after Frame Detective\nA pixel is not yet a spatial measurement. Its header must carry acquisition time and an optical frame; calibration parameters explain how rays project into the image; later tf2 transforms relate that camera to a robot. This project makes the camera half of that contract observable before Line Scout depends on it.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#before-starting",
+    "href": "projects/camera-detective.html#before-starting",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "Before starting",
+    "text": "Before starting\n\nComplete Lessons 1 and 2 or understand topics, timestamps, and frames.\nUse Ubuntu 24.04 with ROS 2 Jazzy Desktop.\nDownload the Camera Detective workspace.\nAllow about five hours. The complete workspace is for guided modification and recovery.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#definition-of-success",
+    "href": "projects/camera-detective.html#definition-of-success",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "Definition of success",
+    "text": "Definition of success\nPublish valid synchronized image metadata, collect coverage across position, scale, and tilt, persist a calibration through SetCameraInfo, produce rectified output, and defend acceptance using a held-out residual. You must also reject the weak-coverage result even if the calibration tool produces numbers.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#provenance-and-license",
+    "href": "projects/camera-detective.html#provenance-and-license",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "Provenance and license",
+    "text": "Provenance and license\nThe synthetic source, evaluator, and lessons are original ROS 2 Trails work informed by official Jazzy image_pipeline and message documentation. No source was copied. The workspace is MIT licensed and includes the full terms.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#references-and-provenance",
+    "href": "projects/camera-detective.html#references-and-provenance",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "References and provenance",
+    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\nROS 2 Jazzy image_pipeline — Open Robotics, Jazzy 3.2; accessed 2026-09-01. Supports: camera calibration, CameraInfo, rectification, and image processing architecture.\nsensor_msgs Image message — Open Robotics, Jazzy; accessed 2026-09-01. Supports: acquisition timestamp, optical frame, encoding, dimensions, and row-step contract.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#project-milestones",
+    "href": "projects/camera-detective.html#project-milestones",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "Project milestones",
+    "text": "Project milestones\n\n\n1\n\nRead the image contract\nProduces: an image/topic/frame contract\n\n\n\n2\n\nSee distortion before correcting it\nProduces: raw-image and metadata evidence\n\n\n\n3\n\nCollect calibration coverage\nProduces: good and weak calibration bags\n\n\n\n4\n\nEstimate and persist calibration\nProduces: a persisted camera calibration YAML\n\n\n\n5\n\nRectify and measure\nProduces: held-out raw/rectified evidence and metrics\n\n\n\n6\n\nCapstone calibration decision\nProduces: a defensible accept/reject calibration report",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ROS 2 Trails",
+    "section": "",
+    "text": "For coders who want to make robots observable, spatially correct, and controllable—not merely memorize commands. Run a complete ROS graph in lesson 1, then build increasingly real systems while learning the theory in context.\nStart Lesson 1 See the course"
+  },
+  {
+    "objectID": "index.html#learn-ros-2-by-building-systems-that-move",
+    "href": "index.html#learn-ros-2-by-building-systems-that-move",
+    "title": "ROS 2 Trails",
+    "section": "",
+    "text": "For coders who want to make robots observable, spatially correct, and controllable—not merely memorize commands. Run a complete ROS graph in lesson 1, then build increasingly real systems while learning the theory in context.\nStart Lesson 1 See the course"
+  },
+  {
+    "objectID": "index.html#is-this-course-for-me",
+    "href": "index.html#is-this-course-for-me",
+    "title": "ROS 2 Trails",
+    "section": "Is this course for me?",
+    "text": "Is this course for me?\nYou should be comfortable editing code and using a terminal. You do not need prior ROS experience, advanced control theory, expensive hardware, or permission to leave the site for required material. The pinned learning platform is Ubuntu 24.04 with ROS 2 Jazzy; simulation and visualization come before hardware."
+  },
+  {
+    "objectID": "index.html#what-you-will-make",
+    "href": "index.html#what-you-will-make",
+    "title": "ROS 2 Trails",
+    "section": "What you will make",
+    "text": "What you will make\n\n\nLesson 1 · A complete graph\nDrive a robot, inspect interfaces, intervene, and record evidence in one hour.\n\n\nLesson 2 · Frame Detective\nSee and repair coordinate-frame and timestamp failures in RViz.\n\n\nLesson 3 · Camera Detective\nCalibrate a distorted image stream and reject weak evidence.\n\n\nLesson 4 · Line Scout\nClose a mobile sensing-control loop and recover from lost observations.\n\n\nLesson 5 · Balance Bot\nModel, control, perturb, tune, and score an unstable simulated mechanism."
+  },
+  {
+    "objectID": "index.html#how-learning-works-here",
+    "href": "index.html#how-learning-works-here",
+    "title": "ROS 2 Trails",
+    "section": "How learning works here",
+    "text": "How learning works here\nEach lesson asks you to run a system, inspect it, make a prediction, change one thing, and save evidence. Core explanations and all 129 local tutorials are available when the project gives you a reason to go deeper.\nBegin the course"
+  },
+  {
+    "objectID": "trails.html",
+    "href": "trails.html",
+    "title": "Learning trails",
+    "section": "",
+    "text": "Choose a guided progression. These trails are editorially curated from the pinned Jazzy knowledge pack; ordering is intentional and provenance remains inspectable.\n\n\nBuilding nodes and packages\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions.\n3 modules 6 direct tutorials\n\n\nData, logging, and observability\nROS 2 offers complementary ways to understand a running system. rosbag2 captures interface data for replay; logs describe application decisions; graph inspection reveals topology; topic statistics summarize communication; service introspection observes request/response events; and tracing exposes lower-level timing across executors and middleware.\n3 modules 5 direct tutorials\n\n\nFoundations: the ROS 2 graph\nROS 2 applications are graphs of independently useful nodes. Nodes exchange typed data through topics, request bounded work through services, run longer goal-oriented work through actions, and expose configuration through parameters. The command-line tools let you inspect this graph before writing code, which makes them the best starting point.\n3 modules 6 direct tutorials\n\n\nInterfaces, parameters, actions, and plugins\nInterfaces are the public contracts between nodes. Messages describe topic samples, services pair a request with a response, and actions combine a goal, feedback, a result, and cancellation. Parameters configure a node but should not be mistaken for a high-rate data channel. Pluginlib adds runtime-selected implementations behind a stable C++ interface.\n4 modules 6 direct tutorials\n\n\nLaunch and composition\nLaunch descriptions make multi-node systems reproducible. They declare nodes, arguments, parameters, namespaces, remappings, conditions, and included launch files. Composition places multiple nodes in a shared process when reduced overhead or more efficient communication matters.\n3 modules 5 direct tutorials\n\n\nMiddleware, discovery, and performance\nROS 2 client libraries communicate through an RMW abstraction over supported middleware implementations. Behavior depends on QoS compatibility, discovery, serialization, executor scheduling, process boundaries, memory allocation, and the network. Performance work therefore needs measurements and an explicit operating context.\n3 modules 6 direct tutorials\n\n\nProduction concerns\nA working demo is not yet an operational robot. Production systems must make communication assumptions explicit, expose diagnosable behavior, verify nodes at multiple levels, and protect the ROS graph when deployed across trust boundaries.\n3 modules 5 direct tutorials\n\n\nSecurity and deployment\nROS 2 security builds on DDS Security. A secure deployment needs identities, signed governance and permissions policy, encrypted/authenticated transport, protected keystores, and a deployment process that keeps credentials separate from application artifacts. Security settings must be tested on the actual graph and network topology.\n3 modules 6 direct tutorials\n\n\nTransforms and robot models\ntf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with robot_state_publisher, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.\n3 modules 5 direct tutorials"
+  },
+  {
+    "objectID": "start.html",
+    "href": "start.html",
+    "title": "Start here",
+    "section": "",
+    "text": "Do these in order. Each stage ends with something observable rather than a reading checkpoint.\n\n\nRun and inspect: Foundations: the ROS 2 graph\nCreate and connect: Building nodes and packages\nReason about space: Transforms and robot models\nMake startup repeatable: Launch and composition\nMeasure what happened: Data, logging, and observability\nIntegrate it: Build Frame Detective"
+  },
+  {
+    "objectID": "start.html#your-first-useful-ros-2-loop",
+    "href": "start.html#your-first-useful-ros-2-loop",
+    "title": "Start here",
+    "section": "",
+    "text": "Do these in order. Each stage ends with something observable rather than a reading checkpoint.\n\n\nRun and inspect: Foundations: the ROS 2 graph\nCreate and connect: Building nodes and packages\nReason about space: Transforms and robot models\nMake startup repeatable: Launch and composition\nMeasure what happened: Data, logging, and observability\nIntegrate it: Build Frame Detective"
+  },
+  {
+    "objectID": "start.html#choose-by-outcome",
+    "href": "start.html#choose-by-outcome",
+    "title": "Start here",
+    "section": "Choose by outcome",
+    "text": "Choose by outcome\n\n\n\nI want to…\nGo to…\n\n\n\n\nunderstand nodes, topics, services, actions\nFoundations\n\n\nwrite packages and interfaces\nBuilding nodes\n\n\nunderstand RViz, URDF, and tf2\nTransforms and models\n\n\ncontrol a simulated mechanism\nBalance Bot\n\n\nfind one exact tutorial\nAll onsite lessons"
+  },
+  {
+    "objectID": "core-skills.html",
+    "href": "core-skills.html",
+    "title": "Core skills",
+    "section": "",
+    "text": "Core skills are organized by the job they perform in a robot, not by the order of an upstream documentation tree."
+  },
+  {
+    "objectID": "core-skills.html#make-it-communicate",
+    "href": "core-skills.html#make-it-communicate",
+    "title": "Core skills",
+    "section": "Make it communicate",
+    "text": "Make it communicate\n\nFoundations: the ROS 2 graph\nBuilding nodes and packages\nInterfaces, parameters, actions, and plugins"
+  },
+  {
+    "objectID": "core-skills.html#make-it-spatial-and-repeatable",
+    "href": "core-skills.html#make-it-spatial-and-repeatable",
+    "title": "Core skills",
+    "section": "Make it spatial and repeatable",
+    "text": "Make it spatial and repeatable\n\nTransforms and robot models\nLaunch and composition"
+  },
+  {
+    "objectID": "core-skills.html#make-it-observable-and-dependable",
+    "href": "core-skills.html#make-it-observable-and-dependable",
+    "title": "Core skills",
+    "section": "Make it observable and dependable",
+    "text": "Make it observable and dependable\n\nData, logging, and observability\nMiddleware, discovery, and performance\nProduction concerns\nSecurity and deployment"
+  },
+  {
+    "objectID": "guides/jazzy-environment.html",
+    "href": "guides/jazzy-environment.html",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "",
+    "text": "These lessons target ROS 2 Jazzy on Ubuntu 24.04 using Bash. A container or another supported Jazzy platform can work, but package-installation details may differ. Every displayed shell block contains commands you can copy.",
+    "crumbs": [
+      "Course",
+      "Resources",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#supported-setup",
+    "href": "guides/jazzy-environment.html#supported-setup",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "",
+    "text": "These lessons target ROS 2 Jazzy on Ubuntu 24.04 using Bash. A container or another supported Jazzy platform can work, but package-installation details may differ. Every displayed shell block contains commands you can copy.",
+    "crumbs": [
+      "Course",
+      "Resources",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#check-the-environment",
+    "href": "guides/jazzy-environment.html#check-the-environment",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "Check the environment",
+    "text": "Check the environment\nRun this diagnostic block:\ncheck() { command -v \"$1\" &gt;/dev/null && echo \"PASS $1\" || { echo \"FAIL $1\"; return 1; }; }\ntest -r /opt/ros/jazzy/setup.bash && echo \"PASS ROS setup\" || { echo \"FAIL ROS setup\"; exit 1; }\nsource /opt/ros/jazzy/setup.bash\ncheck ros2 && check colcon && check rosdep && check git && check python3\nEvery check must print PASS; stop and resolve any FAIL. If /opt/ros/jazzy is missing, install the Jazzy desktop or ROS-base distribution before continuing.",
+    "crumbs": [
+      "Course",
+      "Resources",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#prepare-dependency-resolution",
+    "href": "guides/jazzy-environment.html#prepare-dependency-resolution",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "Prepare dependency resolution",
+    "text": "Prepare dependency resolution\nrosdep installs system dependencies declared by packages. Its one-time system initialization may already be complete:\nsudo rosdep init   # run only if /etc/ros/rosdep/sources.list.d is absent\nrosdep update\nThe workspace lesson also clones a public Git repository, so verify network and Git access:\ngit ls-remote https://github.com/ros2/examples.git HEAD",
+    "crumbs": [
+      "Course",
+      "Resources",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#terminal-rule",
+    "href": "guides/jazzy-environment.html#terminal-rule",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "Terminal rule",
+    "text": "Terminal rule\nEvery new terminal starts with the underlay:\nsource /opt/ros/jazzy/setup.bash\nAfter building the course workspace, also source its overlay (sometimes called “re-sourcing the overlay” after a rebuild):\nsource ~/ros2_trails_ws/install/local_setup.bash\nIf a package, node, or interface cannot be found, checking which setup files were sourced is the first diagnostic step.",
+    "crumbs": [
+      "Course",
+      "Resources",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout.html",
+    "href": "projects/line-scout.html",
+    "title": "Line Scout: follow what the robot can sense",
+    "section": "",
+    "text": "7 milestones · 6 hours · preview\nCourse position: Part 1 · Lesson 4 of 5. Return to the canonical course.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "4. Line Scout"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout.html#what-you-will-build",
+    "href": "projects/line-scout.html#what-you-will-build",
+    "title": "Line Scout: follow what the robot can sense",
+    "section": "What you will build",
+    "text": "What you will build\nLine Scout is a deterministic differential-drive robot with seven reflectance sensors. A controller estimates where a curved line lies under the array, publishes bounded body velocity, slows during uncertainty, and uses an explicit recovery policy through a fixed occluded segment. RViz shows the track, robot, and traveled path while an analyzer scores the run.\ntrack_simulator → /line_sensors → line_controller → /cmd_vel\n       │                                  │\n       ├─ /odom + odom→base_link          └─ /line_scout/status\n       └─ track marker + path → RViz → analyzer CSV",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "4. Line Scout"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout.html#why-this-is-a-ros-project",
+    "href": "projects/line-scout.html#why-this-is-a-ros-project",
+    "title": "Line Scout: follow what the robot can sense",
+    "section": "Why this is a ROS project",
+    "text": "Why this is a ROS project\nThe line algorithm is intentionally small. The learning lies in interface contracts, timestamps, frame semantics, observation-to-estimate separation, bounded commands, stale/lost-state safety, deterministic reset, visualization, recording, and defensible metrics—the same concerns used by real mobile stacks.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "4. Line Scout"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout.html#before-starting",
+    "href": "projects/line-scout.html#before-starting",
+    "title": "Line Scout: follow what the robot can sense",
+    "section": "Before starting",
+    "text": "Before starting\n\nComplete Lessons 1–3 or understand topics, tf2, RViz, and sensor metadata.\nUse Ubuntu 24.04 with ROS 2 Jazzy Desktop.\nDownload the Line Scout workspace.\nAllow roughly six hours.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "4. Line Scout"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout.html#definition-of-success",
+    "href": "projects/line-scout.html#definition-of-success",
+    "title": "Line Scout: follow what the robot can sense",
+    "section": "Definition of success",
+    "text": "Definition of success\nReach 8 m progress, recover from the fixed occlusion, keep RMS and peak cross-track error inside the capstone bounds, avoid excessive saturation, and repeat the result from a clean launch. A smooth-looking RViz path alone does not pass.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "4. Line Scout"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout.html#provenance-and-license",
+    "href": "projects/line-scout.html#provenance-and-license",
+    "title": "Line Scout: follow what the robot can sense",
+    "section": "Provenance and license",
+    "text": "Provenance and license\nThe simulator, controller, analyzer, and lessons are original ROS 2 Trails work informed by the Jazzy diff-drive and standard message contracts. The workspace is MIT licensed and includes complete terms.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "4. Line Scout"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout.html#references-and-provenance",
+    "href": "projects/line-scout.html#references-and-provenance",
+    "title": "Line Scout: follow what the robot can sense",
+    "section": "References and provenance",
+    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\nJazzy diff_drive_controller — ros-controls, Jazzy; accessed 2026-09-01. Supports: TwistStamped body command, odometry/tf2, limits, and timeout semantics.\nnav_msgs Odometry message — Open Robotics, Jazzy; accessed 2026-09-01. Supports: pose/twist frame semantics used by the simulator and analyzer.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "4. Line Scout"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout.html#project-milestones",
+    "href": "projects/line-scout.html#project-milestones",
+    "title": "Line Scout: follow what the robot can sense",
+    "section": "Project milestones",
+    "text": "Project milestones\n\n\n1\n\nDraw the sensing-control contract\nProduces: a topic/frame/safety contract\n\n\n\n2\n\nRun and inspect the track\nProduces: RViz and graph baseline evidence\n\n\n\n3\n\nEstimate line error\nProduces: predicted and observed sensor-error cases\n\n\n\n4\n\nClose the mobile control loop\nProduces: bounded tracking commands and status\n\n\n\n5\n\nRecover after line loss\nProduces: an observable occlusion recovery policy\n\n\n\n6\n\nTune from tracking evidence\nProduces: three comparable trial CSV files\n\n\n\n7\n\nCapstone line course\nProduces: a repeatable scored line-following report",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "4. Line Scout"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/collect-coverage.html",
+    "href": "projects/camera-detective/collect-coverage.html",
+    "title": "Collect calibration coverage",
+    "section": "",
+    "text": "Milestone 3 of 6 · Produces: good and weak calibration bags\nBuild projects › Camera Detective: turn pixels into measurements › Collect calibration coverage\nTime: about 55 minutes. You need: camera_distortion (or the downloaded complete workspace). Progress: 3/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Collect calibration coverage"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/collect-coverage.html#goal",
+    "href": "projects/camera-detective/collect-coverage.html#goal",
+    "title": "Collect calibration coverage",
+    "section": "Goal",
+    "text": "Goal\nCollect datasets that reveal why sample diversity matters more than raw count.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Collect calibration coverage"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/collect-coverage.html#do-it",
+    "href": "projects/camera-detective/collect-coverage.html#do-it",
+    "title": "Collect calibration coverage",
+    "section": "Do it",
+    "text": "Do it\nRecord a 30-second good-coverage bag:\nmkdir -p ~/camera_detective_ws/evidence\ncd ~/camera_detective_ws/evidence\nros2 bag record -o good /camera/image_raw /camera/camera_info\nRestart the source with coverage:=weak and record weak for the same duration. Watch both streams. Good coverage moves the board toward edges, changes scale, and varies perspective. Weak coverage repeats near-center, similar-size views.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Collect calibration coverage"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/collect-coverage.html#verify",
+    "href": "projects/camera-detective/collect-coverage.html#verify",
+    "title": "Collect calibration coverage",
+    "section": "Verify",
+    "text": "Verify\nros2 bag info shows comparable duration/rate. Create a coverage table with left/right/top/bottom reach, near/far scale, tilt diversity, blur, and count. The weak bag must fail at least three diversity dimensions even if it has more frames.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Collect calibration coverage"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/collect-coverage.html#troubleshooting",
+    "href": "projects/camera-detective/collect-coverage.html#troubleshooting",
+    "title": "Collect calibration coverage",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nExisting output name: choose a new bag directory; do not overwrite evidence.\nUnequal durations: recollect rather than normalizing away a bad procedure.\nSimilar-looking modes: verify /synthetic_camera parameter coverage.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Collect calibration coverage"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/collect-coverage.html#challenge",
+    "href": "projects/camera-detective/collect-coverage.html#challenge",
+    "title": "Collect calibration coverage",
+    "section": "Challenge",
+    "text": "Challenge\nDesign a third biased dataset that covers all image edges but never changes board scale. Predict which parameter family becomes weakly constrained.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Collect calibration coverage"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/collect-coverage.html#how-to-complete-this-milestone",
+    "href": "projects/camera-detective/collect-coverage.html#how-to-complete-this-milestone",
+    "title": "Collect calibration coverage",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: good and weak calibration bags.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Collect calibration coverage"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/rectify-and-measure.html",
+    "href": "projects/camera-detective/rectify-and-measure.html",
+    "title": "Rectify and measure",
+    "section": "",
+    "text": "Milestone 5 of 6 · Produces: held-out raw/rectified evidence and metrics\nBuild projects › Camera Detective: turn pixels into measurements › Rectify and measure\nTime: about 55 minutes. You need: camera_calibrate (or the downloaded complete workspace). Progress: 5/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Rectify and measure"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/rectify-and-measure.html#goal",
+    "href": "projects/camera-detective/rectify-and-measure.html#goal",
+    "title": "Rectify and measure",
+    "section": "Goal",
+    "text": "Goal\nRectify a held-out stream and evaluate calibration independently of collection.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Rectify and measure"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/rectify-and-measure.html#do-it",
+    "href": "projects/camera-detective/rectify-and-measure.html#do-it",
+    "title": "Rectify and measure",
+    "section": "Do it",
+    "text": "Do it\nRestart the source with the saved good calibration and coverage:=held_out, then launch rectification:\nros2 run image_proc image_proc --ros-args -r __ns:=/camera\nros2 run image_view image_view --ros-args -r image:=/camera/image_rect\nInspect raw and rectified images side by side. Record a held-out straight-line residual in pixels using the supplied evaluator contract, then run:\nros2 run camera_detective evaluate_calibration \\\n  --calibration ~/camera_detective_ws/evidence/good.yaml \\\n  --held-out-residual 0.7",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Rectify and measure"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/rectify-and-measure.html#verify",
+    "href": "projects/camera-detective/rectify-and-measure.html#verify",
+    "title": "Rectify and measure",
+    "section": "Verify",
+    "text": "Verify\nRectified output preserves stamp and optical frame, has the same dimensions, and visibly straightens outer grid lines. The evaluator accepts only complete, plausible metadata and a held-out residual below its explicit threshold.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Rectify and measure"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/rectify-and-measure.html#troubleshooting",
+    "href": "projects/camera-detective/rectify-and-measure.html#troubleshooting",
+    "title": "Rectify and measure",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nNo rectified topic: confirm nonzero K and matching namespace/remappings.\nCropped edges: rectification trades field of view against valid pixels.\n“Looks better” is insufficient: report the held-out metric and procedure.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Rectify and measure"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/rectify-and-measure.html#challenge",
+    "href": "projects/camera-detective/rectify-and-measure.html#challenge",
+    "title": "Rectify and measure",
+    "section": "Challenge",
+    "text": "Challenge\nRun the weak calibration on the same held-out sequence. Compare generalization, not the two calibration tools’ training displays.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Rectify and measure"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/rectify-and-measure.html#how-to-complete-this-milestone",
+    "href": "projects/camera-detective/rectify-and-measure.html#how-to-complete-this-milestone",
+    "title": "Rectify and measure",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: held-out raw/rectified evidence and metrics.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "Rectify and measure"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/see-distortion.html",
+    "href": "projects/camera-detective/see-distortion.html",
+    "title": "See distortion before correcting it",
+    "section": "",
+    "text": "Milestone 2 of 6 · Produces: raw-image and metadata evidence\nBuild projects › Camera Detective: turn pixels into measurements › See distortion before correcting it\nTime: about 45 minutes. You need: camera_contract (or the downloaded complete workspace). Progress: 2/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "See distortion before correcting it"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/see-distortion.html#goal",
+    "href": "projects/camera-detective/see-distortion.html#goal",
+    "title": "See distortion before correcting it",
+    "section": "Goal",
+    "text": "Goal\nRun the synthetic camera and inspect distortion and metadata before correcting it.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "See distortion before correcting it"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/see-distortion.html#do-it",
+    "href": "projects/camera-detective/see-distortion.html#do-it",
+    "title": "See distortion before correcting it",
+    "section": "Do it",
+    "text": "Do it\nDownload/extract the workspace to ~/camera_detective_ws, then use Terminal A:\ncd ~/camera_detective_ws\nsource /opt/ros/jazzy/setup.bash\nrosdep install --from-paths src --ignore-src --rosdistro jazzy -y\ncolcon build --symlink-install\nsource install/local_setup.bash\nros2 launch camera_detective camera.launch.py coverage:=good \\\n  calibration_output:=$HOME/camera_detective_ws/evidence/good.yaml\nIn Terminal B:\nsource /opt/ros/jazzy/setup.bash\nsource ~/camera_detective_ws/install/local_setup.bash\nros2 topic echo /camera/camera_info --once\nros2 topic hz /camera/image_raw\nros2 run image_view image_view --ros-args -r image:=/camera/image_raw\nObserve curved outer grid lines and the checkerboard moving through position, scale, and perspective.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "See distortion before correcting it"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/see-distortion.html#verify",
+    "href": "projects/camera-detective/see-distortion.html#verify",
+    "title": "See distortion before correcting it",
+    "section": "Verify",
+    "text": "Verify\nImage and CameraInfo are 640×480, use camera_optical_frame, and publish near 10 Hz. Before calibration K[0] is zero. Save one screenshot and metadata sample.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "See distortion before correcting it"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/see-distortion.html#troubleshooting",
+    "href": "projects/camera-detective/see-distortion.html#troubleshooting",
+    "title": "See distortion before correcting it",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nNo image window: confirm image_view and cv_bridge packages are installed.\nCalibration already loaded: remove the old explicit output file or choose a fresh path.\nFrozen board: confirm the node clock advances and only one source is running.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "See distortion before correcting it"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/see-distortion.html#challenge",
+    "href": "projects/camera-detective/see-distortion.html#challenge",
+    "title": "See distortion before correcting it",
+    "section": "Challenge",
+    "text": "Challenge\nSwitch coverage:=weak. List the missing kinds of observation without discussing the final calibration numbers yet.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "See distortion before correcting it"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective/see-distortion.html#how-to-complete-this-milestone",
+    "href": "projects/camera-detective/see-distortion.html#how-to-complete-this-milestone",
+    "title": "See distortion before correcting it",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: raw-image and metadata evidence.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Camera Detective: turn pixels into measurements",
+      "See distortion before correcting it"
     ]
   },
   {
@@ -5505,7 +6787,7 @@
     "href": "projects/frame-detective.html",
     "title": "Frame Detective: debug a robot’s spatial story",
     "section": "",
-    "text": "6 milestones · 5 hours · preview\nCourse position: Part 1 · Lesson 2 of 3. Return to the canonical course.",
+    "text": "6 milestones · 5 hours · preview\nCourse position: Part 1 · Lesson 2 of 5. Return to the canonical course.",
     "crumbs": [
       "Course",
       "Practical ROS 2",
@@ -5605,531 +6887,640 @@
     ]
   },
   {
-    "objectID": "guides/jazzy-environment.html",
-    "href": "guides/jazzy-environment.html",
-    "title": "Prepare a ROS 2 Jazzy environment",
+    "objectID": "projects/frame-detective/transform-detections.html",
+    "href": "projects/frame-detective/transform-detections.html",
+    "title": "Transform detections into the map",
     "section": "",
-    "text": "These lessons target ROS 2 Jazzy on Ubuntu 24.04 using Bash. A container or another supported Jazzy platform can work, but package-installation details may differ. Every displayed shell block contains commands you can copy.",
-    "crumbs": [
-      "Course",
-      "Resources",
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "guides/jazzy-environment.html#supported-setup",
-    "href": "guides/jazzy-environment.html#supported-setup",
-    "title": "Prepare a ROS 2 Jazzy environment",
-    "section": "",
-    "text": "These lessons target ROS 2 Jazzy on Ubuntu 24.04 using Bash. A container or another supported Jazzy platform can work, but package-installation details may differ. Every displayed shell block contains commands you can copy.",
-    "crumbs": [
-      "Course",
-      "Resources",
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "guides/jazzy-environment.html#check-the-environment",
-    "href": "guides/jazzy-environment.html#check-the-environment",
-    "title": "Prepare a ROS 2 Jazzy environment",
-    "section": "Check the environment",
-    "text": "Check the environment\nRun this diagnostic block:\ncheck() { command -v \"$1\" &gt;/dev/null && echo \"PASS $1\" || { echo \"FAIL $1\"; return 1; }; }\ntest -r /opt/ros/jazzy/setup.bash && echo \"PASS ROS setup\" || { echo \"FAIL ROS setup\"; exit 1; }\nsource /opt/ros/jazzy/setup.bash\ncheck ros2 && check colcon && check rosdep && check git && check python3\nEvery check must print PASS; stop and resolve any FAIL. If /opt/ros/jazzy is missing, install the Jazzy desktop or ROS-base distribution before continuing.",
-    "crumbs": [
-      "Course",
-      "Resources",
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "guides/jazzy-environment.html#prepare-dependency-resolution",
-    "href": "guides/jazzy-environment.html#prepare-dependency-resolution",
-    "title": "Prepare a ROS 2 Jazzy environment",
-    "section": "Prepare dependency resolution",
-    "text": "Prepare dependency resolution\nrosdep installs system dependencies declared by packages. Its one-time system initialization may already be complete:\nsudo rosdep init   # run only if /etc/ros/rosdep/sources.list.d is absent\nrosdep update\nThe workspace lesson also clones a public Git repository, so verify network and Git access:\ngit ls-remote https://github.com/ros2/examples.git HEAD",
-    "crumbs": [
-      "Course",
-      "Resources",
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "guides/jazzy-environment.html#terminal-rule",
-    "href": "guides/jazzy-environment.html#terminal-rule",
-    "title": "Prepare a ROS 2 Jazzy environment",
-    "section": "Terminal rule",
-    "text": "Terminal rule\nEvery new terminal starts with the underlay:\nsource /opt/ros/jazzy/setup.bash\nAfter building the course workspace, also source its overlay (sometimes called “re-sourcing the overlay” after a rebuild):\nsource ~/ros2_trails_ws/install/local_setup.bash\nIf a package, node, or interface cannot be found, checking which setup files were sourced is the first diagnostic step.",
-    "crumbs": [
-      "Course",
-      "Resources",
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "core-skills.html",
-    "href": "core-skills.html",
-    "title": "Core skills",
-    "section": "",
-    "text": "Core skills are organized by the job they perform in a robot, not by the order of an upstream documentation tree."
-  },
-  {
-    "objectID": "core-skills.html#make-it-communicate",
-    "href": "core-skills.html#make-it-communicate",
-    "title": "Core skills",
-    "section": "Make it communicate",
-    "text": "Make it communicate\n\nFoundations: the ROS 2 graph\nBuilding nodes and packages\nInterfaces, parameters, actions, and plugins"
-  },
-  {
-    "objectID": "core-skills.html#make-it-spatial-and-repeatable",
-    "href": "core-skills.html#make-it-spatial-and-repeatable",
-    "title": "Core skills",
-    "section": "Make it spatial and repeatable",
-    "text": "Make it spatial and repeatable\n\nTransforms and robot models\nLaunch and composition"
-  },
-  {
-    "objectID": "core-skills.html#make-it-observable-and-dependable",
-    "href": "core-skills.html#make-it-observable-and-dependable",
-    "title": "Core skills",
-    "section": "Make it observable and dependable",
-    "text": "Make it observable and dependable\n\nData, logging, and observability\nMiddleware, discovery, and performance\nProduction concerns\nSecurity and deployment"
-  },
-  {
-    "objectID": "start.html",
-    "href": "start.html",
-    "title": "Start here",
-    "section": "",
-    "text": "Do these in order. Each stage ends with something observable rather than a reading checkpoint.\n\n\nRun and inspect: Foundations: the ROS 2 graph\nCreate and connect: Building nodes and packages\nReason about space: Transforms and robot models\nMake startup repeatable: Launch and composition\nMeasure what happened: Data, logging, and observability\nIntegrate it: Build Frame Detective"
-  },
-  {
-    "objectID": "start.html#your-first-useful-ros-2-loop",
-    "href": "start.html#your-first-useful-ros-2-loop",
-    "title": "Start here",
-    "section": "",
-    "text": "Do these in order. Each stage ends with something observable rather than a reading checkpoint.\n\n\nRun and inspect: Foundations: the ROS 2 graph\nCreate and connect: Building nodes and packages\nReason about space: Transforms and robot models\nMake startup repeatable: Launch and composition\nMeasure what happened: Data, logging, and observability\nIntegrate it: Build Frame Detective"
-  },
-  {
-    "objectID": "start.html#choose-by-outcome",
-    "href": "start.html#choose-by-outcome",
-    "title": "Start here",
-    "section": "Choose by outcome",
-    "text": "Choose by outcome\n\n\n\nI want to…\nGo to…\n\n\n\n\nunderstand nodes, topics, services, actions\nFoundations\n\n\nwrite packages and interfaces\nBuilding nodes\n\n\nunderstand RViz, URDF, and tf2\nTransforms and models\n\n\ncontrol a simulated mechanism\nBalance Bot\n\n\nfind one exact tutorial\nAll onsite lessons"
-  },
-  {
-    "objectID": "trails.html",
-    "href": "trails.html",
-    "title": "Learning trails",
-    "section": "",
-    "text": "Choose a guided progression. These trails are editorially curated from the pinned Jazzy knowledge pack; ordering is intentional and provenance remains inspectable.\n\n\nBuilding nodes and packages\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions.\n3 modules 6 direct tutorials\n\n\nData, logging, and observability\nROS 2 offers complementary ways to understand a running system. rosbag2 captures interface data for replay; logs describe application decisions; graph inspection reveals topology; topic statistics summarize communication; service introspection observes request/response events; and tracing exposes lower-level timing across executors and middleware.\n3 modules 5 direct tutorials\n\n\nFoundations: the ROS 2 graph\nROS 2 applications are graphs of independently useful nodes. Nodes exchange typed data through topics, request bounded work through services, run longer goal-oriented work through actions, and expose configuration through parameters. The command-line tools let you inspect this graph before writing code, which makes them the best starting point.\n3 modules 6 direct tutorials\n\n\nInterfaces, parameters, actions, and plugins\nInterfaces are the public contracts between nodes. Messages describe topic samples, services pair a request with a response, and actions combine a goal, feedback, a result, and cancellation. Parameters configure a node but should not be mistaken for a high-rate data channel. Pluginlib adds runtime-selected implementations behind a stable C++ interface.\n4 modules 6 direct tutorials\n\n\nLaunch and composition\nLaunch descriptions make multi-node systems reproducible. They declare nodes, arguments, parameters, namespaces, remappings, conditions, and included launch files. Composition places multiple nodes in a shared process when reduced overhead or more efficient communication matters.\n3 modules 5 direct tutorials\n\n\nMiddleware, discovery, and performance\nROS 2 client libraries communicate through an RMW abstraction over supported middleware implementations. Behavior depends on QoS compatibility, discovery, serialization, executor scheduling, process boundaries, memory allocation, and the network. Performance work therefore needs measurements and an explicit operating context.\n3 modules 6 direct tutorials\n\n\nProduction concerns\nA working demo is not yet an operational robot. Production systems must make communication assumptions explicit, expose diagnosable behavior, verify nodes at multiple levels, and protect the ROS graph when deployed across trust boundaries.\n3 modules 5 direct tutorials\n\n\nSecurity and deployment\nROS 2 security builds on DDS Security. A secure deployment needs identities, signed governance and permissions policy, encrypted/authenticated transport, protected keystores, and a deployment process that keeps credentials separate from application artifacts. Security settings must be tested on the actual graph and network topology.\n3 modules 6 direct tutorials\n\n\nTransforms and robot models\ntf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with robot_state_publisher, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.\n3 modules 5 direct tutorials"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ROS 2 Trails",
-    "section": "",
-    "text": "For coders who want to make robots observable, spatially correct, and controllable—not merely memorize commands. Run a complete ROS graph in lesson 1, then build increasingly real systems while learning the theory in context.\nStart Lesson 1 See the course"
-  },
-  {
-    "objectID": "index.html#learn-ros-2-by-building-systems-that-move",
-    "href": "index.html#learn-ros-2-by-building-systems-that-move",
-    "title": "ROS 2 Trails",
-    "section": "",
-    "text": "For coders who want to make robots observable, spatially correct, and controllable—not merely memorize commands. Run a complete ROS graph in lesson 1, then build increasingly real systems while learning the theory in context.\nStart Lesson 1 See the course"
-  },
-  {
-    "objectID": "index.html#is-this-course-for-me",
-    "href": "index.html#is-this-course-for-me",
-    "title": "ROS 2 Trails",
-    "section": "Is this course for me?",
-    "text": "Is this course for me?\nYou should be comfortable editing code and using a terminal. You do not need prior ROS experience, advanced control theory, expensive hardware, or permission to leave the site for required material. The pinned learning platform is Ubuntu 24.04 with ROS 2 Jazzy; simulation and visualization come before hardware."
-  },
-  {
-    "objectID": "index.html#what-you-will-make",
-    "href": "index.html#what-you-will-make",
-    "title": "ROS 2 Trails",
-    "section": "What you will make",
-    "text": "What you will make\n\n\nLesson 1 · A complete graph\nDrive a robot, inspect interfaces, intervene, and record evidence in one hour.\n\n\nLesson 2 · Frame Detective\nSee and repair coordinate-frame and timestamp failures in RViz.\n\n\nLesson 3 · Balance Bot\nModel, control, perturb, tune, and score an unstable simulated mechanism."
-  },
-  {
-    "objectID": "index.html#how-learning-works-here",
-    "href": "index.html#how-learning-works-here",
-    "title": "ROS 2 Trails",
-    "section": "How learning works here",
-    "text": "How learning works here\nEach lesson asks you to run a system, inspect it, make a prediction, change one thing, and save evidence. Core explanations and all 129 local tutorials are available when the project gives you a reason to go deeper.\nBegin the course"
-  },
-  {
-    "objectID": "projects/balance-bot.html",
-    "href": "projects/balance-bot.html",
-    "title": "Balance Bot: stabilize an inverted pendulum",
-    "section": "",
-    "text": "8 milestones · 8 hours · preview\nCourse position: Part 1 · Lesson 3 of 3. Return to the canonical course.",
-    "crumbs": [
-      "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Balance Bot"
-    ]
-  },
-  {
-    "objectID": "projects/balance-bot.html#what-you-will-build",
-    "href": "projects/balance-bot.html#what-you-will-build",
-    "title": "Balance Bot: stabilize an inverted pendulum",
-    "section": "What you will build",
-    "text": "What you will build\nBalance Bot is a classic cart-pole: a cart can move left and right while a pole pivots freely above it. Gravity makes the upright pose unstable. Your ROS 2 node observes cart and pole joint state, computes a bounded force, and commands the cart through ros2_control.\nGazebo physics → /joint_states → balance_controller\n      ↑                                │\n      └─ cart_effort_controller/commands ← bounded force\nThis project deliberately separates four concerns: Gazebo owns physics, gz_ros2_control exposes simulated joints, controllers expose ROS interfaces, and your node owns the balancing policy.",
-    "crumbs": [
-      "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Balance Bot"
-    ]
-  },
-  {
-    "objectID": "projects/balance-bot.html#control-primer",
-    "href": "projects/balance-bot.html#control-primer",
-    "title": "Balance Bot: stabilize an inverted pendulum",
-    "section": "Control primer",
-    "text": "Control primer\n\n\n\n\n\n\n\n\nState\nMeaning\nWhy it matters\n\n\n\n\ntheta\npole angle from upright\nmove under the direction of fall\n\n\ntheta_dot\npole angular velocity\nanticipate rather than chase the fall\n\n\nx\ncart displacement from center\navoid balancing by leaving the rail\n\n\nx_dot\ncart velocity\nslow lateral motion\n\n\n\nThis is full-state feedback, not a PID loop: one weighted sum maps the measured state directly to cart force. It is designed only for local upright stabilization. The pole starts near upright; this course does not implement swing-up or recovery from a fallen pole.",
-    "crumbs": [
-      "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Balance Bot"
-    ]
-  },
-  {
-    "objectID": "projects/balance-bot.html#before-starting",
-    "href": "projects/balance-bot.html#before-starting",
-    "title": "Balance Bot: stabilize an inverted pendulum",
-    "section": "Before starting",
-    "text": "Before starting\n\nComplete Building nodes and packages, or be comfortable creating and running an ament_python package.\nUse Ubuntu 24.04, ROS 2 Jazzy, Gazebo Harmonic, and Bash.\nAllow roughly eight hours across several sessions.\nDownload the complete Balance Bot workspace. This is a guided modification project: run the known structure, inspect each named file, then make the lesson’s targeted changes and experiments.\n\nThe pinned Jazzy/Harmonic pairing and integration package are supported by the official gz_ros2_control Jazzy compatibility matrix listed below.",
-    "crumbs": [
-      "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Balance Bot"
-    ]
-  },
-  {
-    "objectID": "projects/balance-bot.html#definition-of-success",
-    "href": "projects/balance-bot.html#definition-of-success",
-    "title": "Balance Bot: stabilize an inverted pendulum",
-    "section": "Definition of success",
-    "text": "Definition of success\nThis is a preview project until executed in the pinned Jazzy runtime. Your local run passes when the pole remains within the lesson’s angle bound for the stated trial duration, the cart stays inside its rail bound, and commanded force never exceeds its safety limit. A moving picture is not enough; the capstone requires topic evidence and a short interpretation.",
-    "crumbs": [
-      "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Balance Bot"
-    ]
-  },
-  {
-    "objectID": "projects/balance-bot.html#provenance-and-license",
-    "href": "projects/balance-bot.html#provenance-and-license",
-    "title": "Balance Bot: stabilize an inverted pendulum",
-    "section": "Provenance and license",
-    "text": "Provenance and license\nThe lesson text, cart-pole Xacro, controller, analyzer, and launch files were authored for ROS 2 Trails; no code was copied from the linked sources. Their design was informed by the official Jazzy gz_ros2_control repository and its pendulum-effort example. The downloadable code is MIT licensed and includes the complete license. Official ROS/Gazebo names and documentation remain under their respective owners and licenses.",
-    "crumbs": [
-      "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Balance Bot"
-    ]
-  },
-  {
-    "objectID": "projects/balance-bot.html#references-and-provenance",
-    "href": "projects/balance-bot.html#references-and-provenance",
-    "title": "Balance Bot: stabilize an inverted pendulum",
-    "section": "References and provenance",
-    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\ngz_ros2_control Jazzy repository and compatibility matrix — ros-controls, jazzy branch; accessed 2026-09-01. Supports: Jazzy/Harmonic compatibility, plugin configuration, and effort-demo architecture.\nROS 2 Jazzy Gazebo tutorials — Open Robotics, Jazzy; accessed 2026-09-01. Supports: Gazebo integration concepts and launch workflow.\nros_gz_sim Jazzy package — Open Robotics, Jazzy; accessed 2026-09-01. Supports: create launch action and simulation package API.",
-    "crumbs": [
-      "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Balance Bot"
-    ]
-  },
-  {
-    "objectID": "projects/balance-bot.html#project-milestones",
-    "href": "projects/balance-bot.html#project-milestones",
-    "title": "Balance Bot: stabilize an inverted pendulum",
-    "section": "Project milestones",
-    "text": "Project milestones\n\n\n1\n\nRun the reference pendulum\nProduces: a verified Jazzy/Harmonic simulation environment\n\n\n\n2\n\nModel the cart-pole plant\nProduces: an inspectable Xacro robot model\n\n\n\n3\n\nLaunch your simulation\nProduces: a running model with active effort and state controllers\n\n\n\n4\n\nRead and interpret state\nProduces: named cart and pole state observations\n\n\n\n5\n\nClose the control loop\nProduces: a parameterized feedback controller node\n\n\n\n6\n\nTune from evidence\nProduces: recorded gain trials and a defensible tuning choice\n\n\n\n7\n\nPackage the complete system\nProduces: one launch command for simulation and control\n\n\n\n8\n\nCapstone stability trial\nProduces: a repeatable pass/fail stability report",
-    "crumbs": [
-      "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Balance Bot"
-    ]
-  },
-  {
-    "objectID": "projects/frame-detective/model-and-see.html",
-    "href": "projects/frame-detective/model-and-see.html",
-    "title": "Model and see the robot",
-    "section": "",
-    "text": "Milestone 2 of 6 · Produces: a robot model and saved RViz view\nBuild projects › Frame Detective: debug a robot’s spatial story › Model and see the robot\nTime: about 55 minutes. You need: frame_contract (or the downloaded complete workspace). Progress: 2/6.",
+    "text": "Milestone 4 of 6 · Produces: a correctly transformed RViz detection marker\nBuild projects › Frame Detective: debug a robot’s spatial story › Transform detections into the map\nTime: about 60 minutes. You need: frame_publish (or the downloaded complete workspace). Progress: 4/6.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Model and see the robot"
+      "Transform detections into the map"
     ]
   },
   {
-    "objectID": "projects/frame-detective/model-and-see.html#goal",
-    "href": "projects/frame-detective/model-and-see.html#goal",
-    "title": "Model and see the robot",
+    "objectID": "projects/frame-detective/transform-detections.html#goal",
+    "href": "projects/frame-detective/transform-detections.html#goal",
+    "title": "Transform detections into the map",
     "section": "Goal",
-    "text": "Goal\nBuild the workspace, inspect its URDF tree, and make the robot and coordinate axes legible in RViz.",
+    "text": "Goal\nTransform a stamped sensor measurement at measurement time and visualize the result without rewriting coordinate math by hand.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Model and see the robot"
+      "Transform detections into the map"
     ]
   },
   {
-    "objectID": "projects/frame-detective/model-and-see.html#do-it",
-    "href": "projects/frame-detective/model-and-see.html#do-it",
-    "title": "Model and see the robot",
+    "objectID": "projects/frame-detective/transform-detections.html#do-it",
+    "href": "projects/frame-detective/transform-detections.html#do-it",
+    "title": "Transform detections into the map",
     "section": "Do it",
-    "text": "Do it\nSave the onsite download as ~/frame_detective_download/frame_detective_ws.zip, then use Terminal A:\nmkdir -p ~/frame_detective_download ~/frame_detective_ws\nunzip -l ~/frame_detective_download/frame_detective_ws.zip\nunzip ~/frame_detective_download/frame_detective_ws.zip -d ~/frame_detective_ws\ncd ~/frame_detective_ws\nsource /opt/ros/jazzy/setup.bash\nrosdep install --from-paths src --ignore-src --rosdistro jazzy -y\ncolcon build --symlink-install\nsource install/local_setup.bash\ncheck_urdf src/frame_detective/urdf/detective.urdf\nros2 launch frame_detective display.launch.py\nIn RViz, keep Fixed Frame=map; inspect RobotModel, TF, and Detection displays. Expand TF and compare axes: x red, y green, z blue. Save the supplied config only after you can point to map, base_link, and sensor_link.",
+    "text": "Do it\nOpen detection_transformer.py. It owns a tf2 buffer/listener, receives PointStamped on /sensor/detection, and calls buffer.transform(..., 'map'). Only a successful lookup becomes a green sphere marker on /detection_marker; every outcome is also published on /frame_detective/status.\nIn Terminal B:\nros2 topic echo /sensor/detection --once\nros2 topic echo /detection_marker --once\nros2 topic echo /frame_detective/status\nWatch RViz as the base circles. The detection is fixed one metre ahead of the moving sensor at its measurement instant, so the marker moves through map.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Model and see the robot"
+      "Transform detections into the map"
     ]
   },
   {
-    "objectID": "projects/frame-detective/model-and-see.html#verify",
-    "href": "projects/frame-detective/model-and-see.html#verify",
-    "title": "Model and see the robot",
+    "objectID": "projects/frame-detective/transform-detections.html#verify",
+    "href": "projects/frame-detective/transform-detections.html#verify",
+    "title": "Transform detections into the map",
     "section": "Verify",
-    "text": "Verify\ncheck_urdf reports base_link with fixed child sensor_link. RViz shows the body and forward sensor without an Error state. The TF display labels all three frames once the lab nodes start.",
+    "text": "Verify\nThe input header says sensor_link; output marker header says map; status says ok. The transformer contains no sine/cosine coordinate conversion—the tf2 tree is the spatial source of truth.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Model and see the robot"
+      "Transform detections into the map"
     ]
   },
   {
-    "objectID": "projects/frame-detective/model-and-see.html#troubleshooting",
-    "href": "projects/frame-detective/model-and-see.html#troubleshooting",
-    "title": "Model and see the robot",
+    "objectID": "projects/frame-detective/transform-detections.html#troubleshooting",
+    "href": "projects/frame-detective/transform-detections.html#troubleshooting",
+    "title": "Transform detections into the map",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nEmpty RViz: verify Fixed Frame is map and the launch is still running.\nRobotModel error: inspect /robot_description and the URDF path.\nNo meshes are required; the model uses local primitive geometry.",
+    "text": "Troubleshooting\n\nMarker absent: read status before changing RViz.\nWrong fixed frame: set RViz Fixed Frame to map.\nLatest-time lookup seems to work: it can still be wrong for delayed sensors; preserve the input stamp.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Model and see the robot"
+      "Transform detections into the map"
     ]
   },
   {
-    "objectID": "projects/frame-detective/model-and-see.html#challenge",
-    "href": "projects/frame-detective/model-and-see.html#challenge",
-    "title": "Model and see the robot",
+    "objectID": "projects/frame-detective/transform-detections.html#challenge",
+    "href": "projects/frame-detective/transform-detections.html#challenge",
+    "title": "Transform detections into the map",
     "section": "Challenge",
-    "text": "Challenge\nChange the sensor visual color and mount height in the URDF. Predict which RViz evidence changes and which transform relationship stays conceptually the same.",
+    "text": "Challenge\nPublish two detections with identical coordinates but different timestamps. Explain why their map coordinates can differ.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Model and see the robot"
+      "Transform detections into the map"
     ]
   },
   {
-    "objectID": "projects/frame-detective/model-and-see.html#how-to-complete-this-milestone",
-    "href": "projects/frame-detective/model-and-see.html#how-to-complete-this-milestone",
-    "title": "Model and see the robot",
+    "objectID": "projects/frame-detective/transform-detections.html#how-to-complete-this-milestone",
+    "href": "projects/frame-detective/transform-detections.html#how-to-complete-this-milestone",
+    "title": "Transform detections into the map",
     "section": "How to complete this milestone",
-    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a robot model and saved RViz view.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a correctly transformed RViz detection marker.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Model and see the robot"
+      "Transform detections into the map"
     ]
   },
   {
-    "objectID": "projects/frame-detective/capstone.html",
-    "href": "projects/frame-detective/capstone.html",
-    "title": "Capstone frame incident",
+    "objectID": "projects/frame-detective/frame-contract.html",
+    "href": "projects/frame-detective/frame-contract.html",
+    "title": "Draw the frame contract",
     "section": "",
-    "text": "Milestone 6 of 6 · Produces: a timed fault diagnosis and repair report\nBuild projects › Frame Detective: debug a robot’s spatial story › Capstone frame incident\nTime: about 45 minutes. You need: frame_faults (or the downloaded complete workspace). Progress: 6/6.",
+    "text": "Milestone 1 of 6 · Produces: a predicted frame tree and transform vocabulary\nBuild projects › Frame Detective: debug a robot’s spatial story › Draw the frame contract\nTime: about 35 minutes. You need: the pinned environment (or the downloaded complete workspace). Progress: 1/6.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Capstone frame incident"
+      "Draw the frame contract"
     ]
   },
   {
-    "objectID": "projects/frame-detective/capstone.html#goal",
-    "href": "projects/frame-detective/capstone.html#goal",
-    "title": "Capstone frame incident",
+    "objectID": "projects/frame-detective/frame-contract.html#goal",
+    "href": "projects/frame-detective/frame-contract.html#goal",
+    "title": "Draw the frame contract",
     "section": "Goal",
-    "text": "Goal\nDiagnose and repair an unknown frame incident under a time limit using a repeatable evidence packet.",
+    "text": "Goal\nRead and draw a tf2 tree before running code, and distinguish coordinates from the frame and time that give them meaning.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Capstone frame incident"
+      "Draw the frame contract"
     ]
   },
   {
-    "objectID": "projects/frame-detective/capstone.html#do-it",
-    "href": "projects/frame-detective/capstone.html#do-it",
-    "title": "Capstone frame incident",
+    "objectID": "projects/frame-detective/frame-contract.html#do-it",
+    "href": "projects/frame-detective/frame-contract.html#do-it",
+    "title": "Draw the frame contract",
     "section": "Do it",
-    "text": "Do it\nHave a partner choose one fault mode, or choose randomly without inspecting the launch command. Start a bag before diagnosis:\nmkdir -p ~/frame_detective_ws/evidence\ncd ~/frame_detective_ws/evidence\nros2 bag record /tf /tf_static /sensor/detection \\\n  /detection_marker /frame_detective/status\nRecord start time, inspect status/tree/timing, state one diagnosis, make one targeted change, restart in correct mode, and capture proof. Use this report:\n# Frame incident\n- Symptom and start time:\n- Expected frame contract:\n- Status/exception evidence:\n- Tree and timing evidence:\n- Diagnosis:\n- Repair and semantic reason:\n- Verification: status, marker frame, and elapsed minutes",
+    "text": "Do it\nWrite the intended tree on paper:\nmap → base_link → sensor_link\nmap → base_link changes as the robot moves, so it is dynamic. The sensor is bolted 0.20 m forward and 0.10 m above the base, so base_link → sensor_link is static. A detection (1, 0, 0) in sensor_link means one metre along the sensor’s x-axis—not a location in the map.\nFor every transform, say the sentence “pose of the child in the parent.” Then predict the map position of the detection when the base is at (2, 0) with zero yaw.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Capstone frame incident"
+      "Draw the frame contract"
     ]
   },
   {
-    "objectID": "projects/frame-detective/capstone.html#verify",
-    "href": "projects/frame-detective/capstone.html#verify",
-    "title": "Capstone frame incident",
+    "objectID": "projects/frame-detective/frame-contract.html#verify",
+    "href": "projects/frame-detective/frame-contract.html#verify",
+    "title": "Draw the frame contract",
     "section": "Verify",
-    "text": "Verify\nPass when diagnosis is correct within 12 minutes, evidence distinguishes tree topology from time failure, the repair restores continuous ok status for 20 seconds, and the marker is published in map. Repeat with a fault from the other class: topology versus time.",
+    "text": "Verify\nYour prediction is (3.20, 0, 0.10) in map. It combines robot pose, sensor mount, and sensor measurement. Record parent, child, static/dynamic, authority, and expected rate in a three-row frame-contract table.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Capstone frame incident"
+      "Draw the frame contract"
     ]
   },
   {
-    "objectID": "projects/frame-detective/capstone.html#troubleshooting",
-    "href": "projects/frame-detective/capstone.html#troubleshooting",
-    "title": "Capstone frame incident",
+    "objectID": "projects/frame-detective/frame-contract.html#troubleshooting",
+    "href": "projects/frame-detective/frame-contract.html#troubleshooting",
+    "title": "Draw the frame contract",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nEvidence bag is huge: record only the five named interfaces.\nRepair works but explanation is vague: state which frame, timestamp, and transform path the consumer requires.\nRandom run is correct mode: record it as baseline, then draw again.",
+    "text": "Troubleshooting\n\n“Transform from A to B” feels ambiguous: write parent and child explicitly.\nCoordinates look plausible: plausible numbers are not evidence of a correct frame.\nStatic means published once, not “zero-valued” or “unimportant.”",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Capstone frame incident"
+      "Draw the frame contract"
     ]
   },
   {
-    "objectID": "projects/frame-detective/capstone.html#challenge",
-    "href": "projects/frame-detective/capstone.html#challenge",
-    "title": "Capstone frame incident",
+    "objectID": "projects/frame-detective/frame-contract.html#challenge",
+    "href": "projects/frame-detective/frame-contract.html#challenge",
+    "title": "Draw the frame contract",
     "section": "Challenge",
-    "text": "Challenge\nPropose a monitoring rule that detects this class of incident in a deployed robot without treating every brief startup gap as an alarm.",
+    "text": "Challenge\nRotate the base 90 degrees counter-clockwise at (2, 0). Predict the marker’s map x and y before using software.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Capstone frame incident"
+      "Draw the frame contract"
     ]
   },
   {
-    "objectID": "projects/frame-detective/capstone.html#how-to-complete-this-milestone",
-    "href": "projects/frame-detective/capstone.html#how-to-complete-this-milestone",
-    "title": "Capstone frame incident",
+    "objectID": "projects/frame-detective/frame-contract.html#how-to-complete-this-milestone",
+    "href": "projects/frame-detective/frame-contract.html#how-to-complete-this-milestone",
+    "title": "Draw the frame contract",
     "section": "How to complete this milestone",
-    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a timed fault diagnosis and repair report.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a predicted frame tree and transform vocabulary.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Capstone frame incident"
+      "Draw the frame contract"
     ]
   },
   {
-    "objectID": "projects/frame-detective/diagnose-faults.html",
-    "href": "projects/frame-detective/diagnose-faults.html",
-    "title": "Diagnose four spatial faults",
+    "objectID": "projects/frame-detective/publish-motion.html",
+    "href": "projects/frame-detective/publish-motion.html",
+    "title": "Publish motion through time",
     "section": "",
-    "text": "Milestone 5 of 6 · Produces: evidence for reversed\nBuild projects › Frame Detective: debug a robot’s spatial story › Diagnose four spatial faults\nTime: about 70 minutes. You need: frame_transform (or the downloaded complete workspace). Progress: 5/6.",
+    "text": "Milestone 3 of 6 · Produces: a connected dynamic and static transform tree\nBuild projects › Frame Detective: debug a robot’s spatial story › Publish motion through time\nTime: about 55 minutes. You need: frame_model (or the downloaded complete workspace). Progress: 3/6.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Diagnose four spatial faults"
+      "Publish motion through time"
     ]
   },
   {
-    "objectID": "projects/frame-detective/diagnose-faults.html#goal",
-    "href": "projects/frame-detective/diagnose-faults.html#goal",
-    "title": "Diagnose four spatial faults",
+    "objectID": "projects/frame-detective/publish-motion.html#goal",
+    "href": "projects/frame-detective/publish-motion.html#goal",
+    "title": "Publish motion through time",
     "section": "Goal",
-    "text": "Goal\nClassify four transform failures from evidence and choose a targeted repair.",
+    "text": "Goal\nPublish one dynamic and one static transform with clear ownership and inspect their rates and topology.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Diagnose four spatial faults"
+      "Publish motion through time"
     ]
   },
   {
-    "objectID": "projects/frame-detective/diagnose-faults.html#do-it",
-    "href": "projects/frame-detective/diagnose-faults.html#do-it",
-    "title": "Diagnose four spatial faults",
+    "objectID": "projects/frame-detective/publish-motion.html#do-it",
+    "href": "projects/frame-detective/publish-motion.html#do-it",
+    "title": "Publish motion through time",
     "section": "Do it",
-    "text": "Do it\nRestart the launch with one fault_mode at a time:\nros2 launch frame_detective display.launch.py fault_mode:=reversed\nros2 launch frame_detective display.launch.py fault_mode:=disconnected\nros2 launch frame_detective display.launch.py fault_mode:=stale\nros2 launch frame_detective display.launch.py fault_mode:=future\nFor each run, capture /frame_detective/status, tf2_echo map sensor_link, and view_frames. Use this decision table:\n\n\n\n\n\n\n\n\nEvidence\nDiagnosis\nRepair\n\n\n\n\nchild has wrong direction/parent conflict\nreversed transform\nrestore parent/child contract\n\n\nno path between trees\ndisconnected tree\nattach sensor to base_link\n\n\nrequested time precedes buffer history\nstale measurement\nfix timestamp/latency policy\n\n\nrequested time is ahead of transforms\nfuture extrapolation\nsynchronize clocks/stamps\n\n\n\nDo not “repair” time faults by always asking for latest; that silently changes the meaning of a measurement.",
+    "text": "Do it\nOpen frame_source.py. The node publishes map → base_link continuously using the node clock and publishes base_link → sensor_link once with a static broadcaster. It also publishes a stamped detection.\nWith Terminal A running, use Terminal B:\nsource /opt/ros/jazzy/setup.bash\nsource ~/frame_detective_ws/install/local_setup.bash\nros2 run tf2_ros tf2_echo map base_link\nros2 run tf2_ros tf2_monitor map sensor_link\nGenerate a tree snapshot:\ncd ~/frame_detective_ws\nros2 run tf2_tools view_frames",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Diagnose four spatial faults"
+      "Publish motion through time"
     ]
   },
   {
-    "objectID": "projects/frame-detective/diagnose-faults.html#verify",
-    "href": "projects/frame-detective/diagnose-faults.html#verify",
-    "title": "Diagnose four spatial faults",
+    "objectID": "projects/frame-detective/publish-motion.html#verify",
+    "href": "projects/frame-detective/publish-motion.html#verify",
+    "title": "Publish motion through time",
     "section": "Verify",
-    "text": "Verify\nCreate faults.md with fault, exact exception/status, tree evidence, repair, and why the repair preserves semantics. A correct-mode restart returns status ok and a marker in map.",
+    "text": "Verify\nbase_link changes smoothly, sensor_link remains rigidly offset, and the PDF tree has one parent per child. The dynamic transform timestamp advances. Save the tree and one monitor excerpt as evidence.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Diagnose four spatial faults"
+      "Publish motion through time"
     ]
   },
   {
-    "objectID": "projects/frame-detective/diagnose-faults.html#troubleshooting",
-    "href": "projects/frame-detective/diagnose-faults.html#troubleshooting",
-    "title": "Diagnose four spatial faults",
+    "objectID": "projects/frame-detective/publish-motion.html#troubleshooting",
+    "href": "projects/frame-detective/publish-motion.html#troubleshooting",
+    "title": "Publish motion through time",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nOld nodes contaminate a run: stop the full launch before changing mode.\nException wording differs: classify connectivity versus extrapolation first.\nRViz can retain an old marker: compare timestamps and status, then clear display history.",
+    "text": "Troubleshooting\n\nRepeating old timestamp: make a new message and stamp it each timer callback.\nTwo authorities for one child: stop duplicate broadcasters before debugging values.\nMissing view_frames: install ros-jazzy-tf2-tools.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Diagnose four spatial faults"
+      "Publish motion through time"
     ]
   },
   {
-    "objectID": "projects/frame-detective/diagnose-faults.html#challenge",
-    "href": "projects/frame-detective/diagnose-faults.html#challenge",
-    "title": "Diagnose four spatial faults",
+    "objectID": "projects/frame-detective/publish-motion.html#challenge",
+    "href": "projects/frame-detective/publish-motion.html#challenge",
+    "title": "Publish motion through time",
     "section": "Challenge",
-    "text": "Challenge\nAdd a wrong_frame fault that labels sensor coordinates as base_link. Explain why it may produce no exception yet still be more dangerous.",
+    "text": "Challenge\nChange angular speed to zero through a parameter. Explain why the transform is still dynamic even while its numeric value temporarily stops changing.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Diagnose four spatial faults"
+      "Publish motion through time"
     ]
   },
   {
-    "objectID": "projects/frame-detective/diagnose-faults.html#how-to-complete-this-milestone",
-    "href": "projects/frame-detective/diagnose-faults.html#how-to-complete-this-milestone",
-    "title": "Diagnose four spatial faults",
+    "objectID": "projects/frame-detective/publish-motion.html#how-to-complete-this-milestone",
+    "href": "projects/frame-detective/publish-motion.html#how-to-complete-this-milestone",
+    "title": "Publish motion through time",
     "section": "How to complete this milestone",
-    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: evidence for reversed.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a connected dynamic and static transform tree.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
     "crumbs": [
       "Course",
       "Projects",
       "Frame Detective: debug a robot's spatial story",
-      "Diagnose four spatial faults"
+      "Publish motion through time"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/system-contract.html",
+    "href": "projects/line-scout/system-contract.html",
+    "title": "Draw the sensing-control contract",
+    "section": "",
+    "text": "Milestone 1 of 7 · Produces: a topic/frame/safety contract\nBuild projects › Line Scout: follow what the robot can sense › Draw the sensing-control contract\nTime: about 35 minutes. You need: the pinned environment (or the downloaded complete workspace). Progress: 1/7.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Draw the sensing-control contract"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/system-contract.html#goal",
+    "href": "projects/line-scout/system-contract.html#goal",
+    "title": "Draw the sensing-control contract",
+    "section": "Goal",
+    "text": "Goal\nSeparate observation, estimate, control command, robot state, and trial evidence.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Draw the sensing-control contract"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/system-contract.html#do-it",
+    "href": "projects/line-scout/system-contract.html#do-it",
+    "title": "Draw the sensing-control contract",
+    "section": "Do it",
+    "text": "Do it\nDraw the project graph from the overview. Label /line_sensors as seven ordered reflectance observations, not “the error.” The controller computes a weighted lateral estimate, then maps it to TwistStamped. The simulator owns odometry and odom → base_link; the analyzer observes but never controls.\nRecord these safety rules: bounded linear/angular velocity, command timeout, zero command on stale sensor data, explicit lost-line state, and deterministic clean-launch reset.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Draw the sensing-control contract"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/system-contract.html#verify",
+    "href": "projects/line-scout/system-contract.html#verify",
+    "title": "Draw the sensing-control contract",
+    "section": "Verify",
+    "text": "Verify\nCreate line-contract.md with topic types, publishers/subscribers, frame/stamp owner, expected rates, limits, timeout, and which process owns each decision.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Draw the sensing-control contract"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/system-contract.html#troubleshooting",
+    "href": "projects/line-scout/system-contract.html#troubleshooting",
+    "title": "Draw the sensing-control contract",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nSensor index is not a world coordinate; its lateral offset belongs to the array.\nOdometry pose frame is odom; body twist is expressed in base_link.\n“No line” must not be encoded as a believable zero error.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Draw the sensing-control contract"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/system-contract.html#challenge",
+    "href": "projects/line-scout/system-contract.html#challenge",
+    "title": "Draw the sensing-control contract",
+    "section": "Challenge",
+    "text": "Challenge\nExplain why directly treating the largest sensor index as angular velocity makes testing, reuse, and uncertainty handling harder.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Draw the sensing-control contract"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/system-contract.html#how-to-complete-this-milestone",
+    "href": "projects/line-scout/system-contract.html#how-to-complete-this-milestone",
+    "title": "Draw the sensing-control contract",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a topic/frame/safety contract.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Draw the sensing-control contract"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/run-track.html",
+    "href": "projects/line-scout/run-track.html",
+    "title": "Run and inspect the track",
+    "section": "",
+    "text": "Milestone 2 of 7 · Produces: RViz and graph baseline evidence\nBuild projects › Line Scout: follow what the robot can sense › Run and inspect the track\nTime: about 50 minutes. You need: line_contract (or the downloaded complete workspace). Progress: 2/7.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Run and inspect the track"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/run-track.html#goal",
+    "href": "projects/line-scout/run-track.html#goal",
+    "title": "Run and inspect the track",
+    "section": "Goal",
+    "text": "Goal\nRun the complete stack once, then inspect its graph, frames, and visualization.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Run and inspect the track"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/run-track.html#do-it",
+    "href": "projects/line-scout/run-track.html#do-it",
+    "title": "Run and inspect the track",
+    "section": "Do it",
+    "text": "Do it\nExtract/build the workspace as ~/line_scout_ws, then Terminal A:\ncd ~/line_scout_ws\nsource /opt/ros/jazzy/setup.bash\nrosdep install --from-paths src --ignore-src --rosdistro jazzy -y\ncolcon build --symlink-install\nsource install/local_setup.bash\nros2 launch line_scout line_scout.launch.py controller_enabled:=false\nTerminal B:\nsource /opt/ros/jazzy/setup.bash\nsource ~/line_scout_ws/install/local_setup.bash\nros2 topic list -t\nros2 topic echo /line_sensors --once\nros2 topic echo /odom --once\nros2 run tf2_ros tf2_echo odom base_link",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Run and inspect the track"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/run-track.html#verify",
+    "href": "projects/line-scout/run-track.html#verify",
+    "title": "Run and inspect the track",
+    "section": "Verify",
+    "text": "Verify\nRViz shows a curved green track, robot frame, and path. With control disabled the robot remains at its deterministic initial pose; seven finite sensor values arrive. Save a graph sketch and RViz screenshot.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Run and inspect the track"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/run-track.html#troubleshooting",
+    "href": "projects/line-scout/run-track.html#troubleshooting",
+    "title": "Run and inspect the track",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nRViz Fixed Frame must be odom.\nMoving while disabled means another controller is publishing /cmd_vel.\nMissing sensors: confirm only one simulator and the correct overlay.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Run and inspect the track"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/run-track.html#challenge",
+    "href": "projects/line-scout/run-track.html#challenge",
+    "title": "Run and inspect the track",
+    "section": "Challenge",
+    "text": "Challenge\nPredict which sensor values increase if the robot is translated left of the line without changing yaw.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Run and inspect the track"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/run-track.html#how-to-complete-this-milestone",
+    "href": "projects/line-scout/run-track.html#how-to-complete-this-milestone",
+    "title": "Run and inspect the track",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: RViz and graph baseline evidence.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Run and inspect the track"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/recover-occlusion.html",
+    "href": "projects/line-scout/recover-occlusion.html",
+    "title": "Recover after line loss",
+    "section": "",
+    "text": "Milestone 5 of 7 · Produces: an observable occlusion recovery policy\nBuild projects › Line Scout: follow what the robot can sense › Recover after line loss\nTime: about 55 minutes. You need: line_control (or the downloaded complete workspace). Progress: 5/7.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Recover after line loss"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/recover-occlusion.html#goal",
+    "href": "projects/line-scout/recover-occlusion.html#goal",
+    "title": "Recover after line loss",
+    "section": "Goal",
+    "text": "Goal\nHandle a fixed missing-line segment as an observable state transition rather than pretending every sensor sample is valid.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Recover after line loss"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/recover-occlusion.html#do-it",
+    "href": "projects/line-scout/recover-occlusion.html#do-it",
+    "title": "Recover after line loss",
+    "section": "Do it",
+    "text": "Do it\nThe track is occluded between x=3.5 and x=3.9 m. On loss, the controller reduces speed and turns using the last valid error direction for a bounded search time. If loss exceeds the recovery timeout, it stops.\nWatch tracking → lost → recovered transitions and command output. Restart the complete launch between trials.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Recover after line loss"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/recover-occlusion.html#verify",
+    "href": "projects/line-scout/recover-occlusion.html#verify",
+    "title": "Recover after line loss",
+    "section": "Verify",
+    "text": "Verify\nThe status topic reports at least one loss and recovery; commands remain bounded; the robot does not interpret all-zero reflectance as centered; prolonged forced loss reaches stopped and zero velocity.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Recover after line loss"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/recover-occlusion.html#troubleshooting",
+    "href": "projects/line-scout/recover-occlusion.html#troubleshooting",
+    "title": "Recover after line loss",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nSpins indefinitely: enforce recovery timeout.\nTurns wrong way: preserve the last nonzero error sign.\nFalse loss on curves: separate confidence threshold from steering gain.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Recover after line loss"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/recover-occlusion.html#challenge",
+    "href": "projects/line-scout/recover-occlusion.html#challenge",
+    "title": "Recover after line loss",
+    "section": "Challenge",
+    "text": "Challenge\nCompare last-direction search with alternating search. Define a metric that could choose between them without relying on appearance.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Recover after line loss"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/recover-occlusion.html#how-to-complete-this-milestone",
+    "href": "projects/line-scout/recover-occlusion.html#how-to-complete-this-milestone",
+    "title": "Recover after line loss",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: an observable occlusion recovery policy.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Recover after line loss"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/estimate-error.html",
+    "href": "projects/line-scout/estimate-error.html",
+    "title": "Estimate line error",
+    "section": "",
+    "text": "Milestone 3 of 7 · Produces: predicted and observed sensor-error cases\nBuild projects › Line Scout: follow what the robot can sense › Estimate line error\nTime: about 55 minutes. You need: line_sim (or the downloaded complete workspace). Progress: 3/7.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Estimate line error"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/estimate-error.html#goal",
+    "href": "projects/line-scout/estimate-error.html#goal",
+    "title": "Estimate line error",
+    "section": "Goal",
+    "text": "Goal\nConvert seven reflectance values into a lateral error and confidence measure.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Estimate line error"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/estimate-error.html#do-it",
+    "href": "projects/line-scout/estimate-error.html#do-it",
+    "title": "Estimate line error",
+    "section": "Do it",
+    "text": "Do it\nOpen line_controller.py. Each observation is paired with a sensor offset from left to right. The weighted centroid estimates line position:\nerror = sum(reflectance[i] · offset[i]) / sum(reflectance[i])\nconfidence = sum(reflectance) / 7\nWhen total reflectance is below the loss threshold, there is no valid estimate. Run observer mode and compare raw values, error, and confidence in the status topic.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Estimate line error"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/estimate-error.html#verify",
+    "href": "projects/line-scout/estimate-error.html#verify",
+    "title": "Estimate line error",
+    "section": "Verify",
+    "text": "Verify\nRecord centered, left-offset, right-offset, and lost-line cases. Error sign must match the documented offsets, and loss must produce state lost, not error zero.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Estimate line error"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/estimate-error.html#troubleshooting",
+    "href": "projects/line-scout/estimate-error.html#troubleshooting",
+    "title": "Estimate line error",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nSteering sign wrong: test the estimator independently from the controller sign.\nConfidence changes with scale: it is a heuristic, not a calibrated probability.\nOne noisy sensor dominates: inspect raw array and consider clamping/filtering.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Estimate line error"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/estimate-error.html#challenge",
+    "href": "projects/line-scout/estimate-error.html#challenge",
+    "title": "Estimate line error",
+    "section": "Challenge",
+    "text": "Challenge\nImplement a median or low-pass filter and state the latency/noise trade-off.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Estimate line error"
+    ]
+  },
+  {
+    "objectID": "projects/line-scout/estimate-error.html#how-to-complete-this-milestone",
+    "href": "projects/line-scout/estimate-error.html#how-to-complete-this-milestone",
+    "title": "Estimate line error",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: predicted and observed sensor-error cases.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Line Scout: follow what the robot can sense",
+      "Estimate line error"
     ]
   },
   {
@@ -6924,7 +8315,7 @@
     "href": "course.html",
     "title": "Practical ROS 2",
     "section": "",
-    "text": "Part 1 is the required spine. Complete it in order and save the named artifact from every lesson.\n\n\n1\n\n\nRun, inspect, change, and record a complete graph in about one hour.\n\n\n\n2\n\n\nMake frames and time visible, then diagnose four spatial faults.\n\n\n\n3\n\n\nControl an unstable system and defend the result with measurements.",
+    "text": "Part 1 is the required spine. Complete it in order and save the named artifact from every lesson.\n\n\n1\n\n\nRun, inspect, change, and record a complete graph in about one hour.\n\n\n\n2\n\n\nMake frames and time visible, then diagnose four spatial faults.\n\n\n\n3\n\n\nTurn distorted pixels into calibrated measurements and defend acceptance.\n\n\n\n4\n\n\nEstimate a line, command a mobile base, recover from occlusion, and score the path.\n\n\n\n5\n\n\nControl an unstable system and defend the result with measurements.",
     "crumbs": [
       "Course",
       "Practical ROS 2"
@@ -6935,7 +8326,7 @@
     "href": "course.html#part-1-build-useful-robot-systems",
     "title": "Practical ROS 2",
     "section": "",
-    "text": "Part 1 is the required spine. Complete it in order and save the named artifact from every lesson.\n\n\n1\n\n\nRun, inspect, change, and record a complete graph in about one hour.\n\n\n\n2\n\n\nMake frames and time visible, then diagnose four spatial faults.\n\n\n\n3\n\n\nControl an unstable system and defend the result with measurements.",
+    "text": "Part 1 is the required spine. Complete it in order and save the named artifact from every lesson.\n\n\n1\n\n\nRun, inspect, change, and record a complete graph in about one hour.\n\n\n\n2\n\n\nMake frames and time visible, then diagnose four spatial faults.\n\n\n\n3\n\n\nTurn distorted pixels into calibrated measurements and defend acceptance.\n\n\n\n4\n\n\nEstimate a line, command a mobile base, recover from occlusion, and score the path.\n\n\n\n5\n\n\nControl an unstable system and defend the result with measurements.",
     "crumbs": [
       "Course",
       "Practical ROS 2"

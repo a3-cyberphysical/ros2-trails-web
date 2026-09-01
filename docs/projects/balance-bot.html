@@ -122,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../course.html">Practical ROS 2</a></li><li class="breadcrumb-item"><a href="../course/first-robot-system.html">Part 1 — Build useful systems</a></li><li class="breadcrumb-item"><a href="../projects/balance-bot.html">3. Balance Bot</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../course.html">Practical ROS 2</a></li><li class="breadcrumb-item"><a href="../course/first-robot-system.html">Part 1 — Build useful systems</a></li><li class="breadcrumb-item"><a href="../projects/balance-bot.html">5. Balance Bot</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -174,8 +174,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../projects/camera-detective.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Camera Detective</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/line-scout.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Line Scout</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../projects/balance-bot.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">3. Balance Bot</span></a>
+ <span class="menu-text">5. Balance Bot</span></a>
   </div>
 </li>
       </ul>
@@ -305,13 +317,113 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../projects/balance-bot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Balance Bot: stabilize an inverted pendulum</span></a>
+            <a href="../projects/camera-detective.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Camera Detective: turn pixels into measurements</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/camera-detective/image-contract.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Read the image contract</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/camera-detective/see-distortion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">See distortion before correcting it</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/camera-detective/collect-coverage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Collect calibration coverage</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/camera-detective/calibrate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estimate and persist calibration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/camera-detective/rectify-and-measure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rectify and measure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/camera-detective/capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capstone calibration decision</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../projects/line-scout.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Line Scout: follow what the robot can sense</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/line-scout/system-contract.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Draw the sensing-control contract</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/line-scout/run-track.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Run and inspect the track</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/line-scout/estimate-error.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estimate line error</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/line-scout/close-loop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Close the mobile control loop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/line-scout/recover-occlusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recover after line loss</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/line-scout/tune-evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tune from tracking evidence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/line-scout/capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capstone line course</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../projects/balance-bot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Balance Bot: stabilize an inverted pendulum</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../projects/balance-bot/preflight.html" class="sidebar-item-text sidebar-link">
@@ -368,11 +480,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../guides/jazzy-environment.html" class="sidebar-item-text sidebar-link">
@@ -422,7 +534,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../course.html">Practical ROS 2</a></li><li class="breadcrumb-item"><a href="../course/first-robot-system.html">Part 1 — Build useful systems</a></li><li class="breadcrumb-item"><a href="../projects/balance-bot.html">3. Balance Bot</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../course.html">Practical ROS 2</a></li><li class="breadcrumb-item"><a href="../course/first-robot-system.html">Part 1 — Build useful systems</a></li><li class="breadcrumb-item"><a href="../projects/balance-bot.html">5. Balance Bot</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Balance Bot: stabilize an inverted pendulum</h1>
 <p class="subtitle lead">Build and tune a ROS 2 controller that keeps a simulated cart-pole upright in Gazebo Harmonic.</p>
@@ -445,7 +557,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="trail-meta">
 <p><strong>8 milestones</strong> · <strong>8 hours</strong> · <strong>preview</strong></p>
 </div>
-<p><strong>Course position:</strong> Part 1 · Lesson 3 of 3. <a href="../course.html">Return to the canonical course</a>.</p>
+<p><strong>Course position:</strong> Part 1 · Lesson 5 of 5. <a href="../course.html">Return to the canonical course</a>.</p>
 <section id="what-you-will-build" class="level2">
 <h2 class="anchored" data-anchor-id="what-you-will-build">What you will build</h2>
 <p>Balance Bot is a classic cart-pole: a cart can move left and right while a pole pivots freely above it. Gravity makes the upright pose unstable. Your ROS 2 node observes cart and pole joint state, computes a bounded force, and commands the cart through <code>ros2_control</code>.</p>
