@@ -634,42 +634,42 @@
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html",
     "title": "Writing a simple publisher and subscriber (Python)",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#learning-outcome",
-    "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#learning-outcome",
+    "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#goal",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#goal",
     "title": "Writing a simple publisher and subscriber (Python)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing a simple publisher and subscriber (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "Goal",
+    "text": "Goal\nBuild two Python nodes that exchange increasing integers over a typed topic and verify the communication through the ROS graph."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#before-you-begin",
-    "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#before-you-begin",
+    "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#do-it",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#do-it",
     "title": "Writing a simple publisher and subscriber (Python)",
-    "section": "Before you begin",
-    "text": "Before you begin\nYou should have a working ROS 2 Jazzy environment. Work in a disposable ROS 2 workspace so the experiment is easy to repeat."
+    "section": "Do it",
+    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_python --license Apache-2.0 \\\n  --dependencies rclpy std_msgs trail_py_pubsub\nCreate trail_py_pubsub/trail_py_pubsub/publisher.py:\nimport rclpy\nfrom rclpy.node import Node\nfrom std_msgs.msg import Int32\n\nclass Counter(Node):\n    def __init__(self):\n        super().__init__('counter_publisher')\n        self.pub = self.create_publisher(Int32, 'count', 10)\n        self.value = 0\n        self.create_timer(0.5, self.tick)\n    def tick(self):\n        self.pub.publish(Int32(data=self.value))\n        self.get_logger().info(f'published {self.value}')\n        self.value += 1\n\ndef main():\n    rclpy.init(); node = Counter(); rclpy.spin(node)\nCreate subscriber.py beside it:\nimport rclpy\nfrom rclpy.node import Node\nfrom std_msgs.msg import Int32\n\ndef main():\n    rclpy.init(); node = Node('counter_listener')\n    node.create_subscription(Int32, 'count',\n        lambda msg: node.get_logger().info(f'received {msg.data}'), 10)\n    rclpy.spin(node)\nAdd counter = trail_py_pubsub.publisher:main and listener = trail_py_pubsub.subscriber:main to console_scripts, then build. Run the two executables in separate sourced terminals."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#guided-activity",
-    "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#guided-activity",
+    "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#verify",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#verify",
     "title": "Writing a simple publisher and subscriber (Python)",
-    "section": "Guided activity",
-    "text": "Guided activity\n\nState what you expect Writing a simple publisher and subscriber (Python) to change or reveal.\nPrepare the smallest workspace, node, or command sequence needed for the experiment.\nPractice the concept and verify the result locally.\nChange one input or configuration value and predict the effect before running it again.\nCapture the command, graph observation, log message, or test result that proves the outcome."
+    "section": "Verify",
+    "text": "Verify\nros2 topic info /count --verbose\nros2 topic echo /count --once\nExpect one publisher, one subscriber, type std_msgs/msg/Int32, and a numeric sample. This verifies the graph and the payload independently of node logs."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#check-your-understanding",
-    "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#check-your-understanding",
+    "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#troubleshooting",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#troubleshooting",
     "title": "Writing a simple publisher and subscriber (Python)",
-    "section": "Check your understanding",
-    "text": "Check your understanding\n\nWhat ROS 2 entity, tool, or runtime behavior is central to this lesson?\nWhat observation distinguishes success from a command that merely exits without error?\nWhich assumption would you test first if another learner could not reproduce your result?"
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nZero subscribers: source both terminals and check the topic spelling.\nType mismatch: both nodes must import and use Int32.\nNode exits immediately: rclpy.spin(node) must remain reachable."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#knowledge-for-this-lesson",
-    "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#knowledge-for-this-lesson",
+    "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#challenge",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#challenge",
     "title": "Writing a simple publisher and subscriber (Python)",
-    "section": "Knowledge for this lesson",
-    "text": "Knowledge for this lesson\n\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions. Inspect provenance\nPrefer one clear responsibility per node. Inspect provenance\nUse topics for ongoing data, services for quick request/response operations, Inspect provenance\nand actions when work has progress, cancellation, or a longer lifetime. Inspect provenance\nDefine custom interfaces only when existing message packages do not express Inspect provenance\nthe domain cleanly. Inspect provenance\nKeep build-time dependencies explicit and source the workspace overlay after Inspect provenance\na successful build. Inspect provenance"
+    "section": "Challenge",
+    "text": "Challenge\nMake the period a ROS parameter named period and compare behavior at 0.1 and 1.0 seconds."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#continue-on-a-trail",
@@ -2412,42 +2412,42 @@
     "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html",
     "title": "Creating a workspace",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#learning-outcome",
-    "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#learning-outcome",
+    "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#goal",
+    "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#goal",
     "title": "Creating a workspace",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Creating a workspace in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "Goal",
+    "text": "Goal\nCreate an overlay workspace, build it with colcon, and prove that ROS 2 can discover a package from the installed overlay."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#before-you-begin",
-    "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#before-you-begin",
+    "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#do-it",
+    "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#do-it",
     "title": "Creating a workspace",
-    "section": "Before you begin",
-    "text": "Before you begin\nYou should have a working ROS 2 Jazzy environment. Work in a disposable ROS 2 workspace so the experiment is easy to repeat."
+    "section": "Do it",
+    "text": "Do it\nOpen a terminal where ROS 2 Jazzy is installed:\nsource /opt/ros/jazzy/setup.bash\nmkdir -p ~/ros2_trails_ws/src\ncd ~/ros2_trails_ws\ncolcon build\nThe empty build creates build, install, and log. Source the result:\nsource install/local_setup.bash\nprintenv AMENT_PREFIX_PATH\nNow add an existing package as source and rebuild:\ncd ~/ros2_trails_ws/src\ngit clone -b jazzy https://github.com/ros2/examples.git\ncd ~/ros2_trails_ws\nrosdep install -i --from-path src --rosdistro jazzy -y\ncolcon build --symlink-install --packages-select examples_rclpy_minimal_publisher\nsource install/local_setup.bash"
   },
   {
-    "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#guided-activity",
-    "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#guided-activity",
+    "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#verify",
+    "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#verify",
     "title": "Creating a workspace",
-    "section": "Guided activity",
-    "text": "Guided activity\n\nState what you expect Creating a workspace to change or reveal.\nPrepare the smallest workspace, node, or command sequence needed for the experiment.\nPractice the concept and verify the result locally.\nChange one input or configuration value and predict the effect before running it again.\nCapture the command, graph observation, log message, or test result that proves the outcome."
+    "section": "Verify",
+    "text": "Verify\nros2 pkg prefix examples_rclpy_minimal_publisher\nThe printed path should begin with ~/ros2_trails_ws/install, not /opt/ros/jazzy. That distinction proves the overlay is active."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#check-your-understanding",
-    "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#check-your-understanding",
+    "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#troubleshooting",
+    "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#troubleshooting",
     "title": "Creating a workspace",
-    "section": "Check your understanding",
-    "text": "Check your understanding\n\nWhat ROS 2 entity, tool, or runtime behavior is central to this lesson?\nWhat observation distinguishes success from a command that merely exits without error?\nWhich assumption would you test first if another learner could not reproduce your result?"
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\ncolcon: command not found: install the Jazzy development tools, then open a new terminal.\nA dependency is missing: rerun rosdep install from the workspace root.\nROS finds /opt/ros/jazzy: source install/local_setup.bash again in the current terminal."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#knowledge-for-this-lesson",
-    "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#knowledge-for-this-lesson",
+    "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#challenge",
+    "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#challenge",
     "title": "Creating a workspace",
-    "section": "Knowledge for this lesson",
-    "text": "Knowledge for this lesson\n\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions. Inspect provenance\nPrefer one clear responsibility per node. Inspect provenance\nUse topics for ongoing data, services for quick request/response operations, Inspect provenance\nand actions when work has progress, cancellation, or a longer lifetime. Inspect provenance\nDefine custom interfaces only when existing message packages do not express Inspect provenance\nthe domain cleanly. Inspect provenance\nKeep build-time dependencies explicit and source the workspace overlay after Inspect provenance\na successful build. Inspect provenance"
+    "section": "Challenge",
+    "text": "Challenge\nOpen a clean terminal and predict whether the example package is discoverable before sourcing the overlay. Test the prediction with ros2 pkg prefix."
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#continue-on-a-trail",
@@ -3014,42 +3014,42 @@
     "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html",
     "title": "Creating a package",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#learning-outcome",
-    "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#learning-outcome",
+    "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#goal",
+    "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#goal",
     "title": "Creating a package",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Creating a package in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "Goal",
+    "text": "Goal\nCreate a Python package with explicit dependencies, build only that package, and run its installed executable."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#before-you-begin",
-    "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#before-you-begin",
+    "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#do-it",
+    "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#do-it",
     "title": "Creating a package",
-    "section": "Before you begin",
-    "text": "Before you begin\nYou should have a working ROS 2 Jazzy environment. Work in a disposable ROS 2 workspace so the experiment is easy to repeat."
+    "section": "Do it",
+    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\nmkdir -p ~/ros2_trails_ws/src\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_python --license Apache-2.0 \\\n  --dependencies rclpy std_msgs trail_hello\nCreate trail_hello/trail_hello/hello.py:\nimport rclpy\nfrom rclpy.node import Node\n\ndef main():\n    rclpy.init()\n    node = Node('trail_hello')\n    node.get_logger().info('Hello from an installed ROS 2 package')\n    node.destroy_node()\n    rclpy.shutdown()\nIn trail_hello/setup.py, add this entry inside console_scripts:\n'hello = trail_hello.hello:main',\nBuild and run:\ncd ~/ros2_trails_ws\ncolcon build --symlink-install --packages-select trail_hello\nsource install/local_setup.bash\nros2 run trail_hello hello"
   },
   {
-    "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#guided-activity",
-    "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#guided-activity",
+    "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#verify",
+    "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#verify",
     "title": "Creating a package",
-    "section": "Guided activity",
-    "text": "Guided activity\n\nState what you expect Creating a package to change or reveal.\nPrepare the smallest workspace, node, or command sequence needed for the experiment.\nPractice the concept and verify the result locally.\nChange one input or configuration value and predict the effect before running it again.\nCapture the command, graph observation, log message, or test result that proves the outcome."
+    "section": "Verify",
+    "text": "Verify\nConfirm the log names node trail_hello, then inspect the installed executable:\nros2 pkg executables trail_hello\nIt should list trail_hello hello."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#check-your-understanding",
-    "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#check-your-understanding",
+    "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#troubleshooting",
+    "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#troubleshooting",
     "title": "Creating a package",
-    "section": "Check your understanding",
-    "text": "Check your understanding\n\nWhat ROS 2 entity, tool, or runtime behavior is central to this lesson?\nWhat observation distinguishes success from a command that merely exits without error?\nWhich assumption would you test first if another learner could not reproduce your result?"
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nNo executable is listed: check the console_scripts entry and rebuild.\nPython import fails: ensure hello.py is inside the inner trail_hello directory and rebuild with --symlink-install.\nPackage is not found: source the workspace overlay in this terminal."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#knowledge-for-this-lesson",
-    "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#knowledge-for-this-lesson",
+    "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#challenge",
+    "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#challenge",
     "title": "Creating a package",
-    "section": "Knowledge for this lesson",
-    "text": "Knowledge for this lesson\n\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions. Inspect provenance\nPrefer one clear responsibility per node. Inspect provenance\nUse topics for ongoing data, services for quick request/response operations, Inspect provenance\nand actions when work has progress, cancellation, or a longer lifetime. Inspect provenance\nDefine custom interfaces only when existing message packages do not express Inspect provenance\nthe domain cleanly. Inspect provenance\nKeep build-time dependencies explicit and source the workspace overlay after Inspect provenance\na successful build. Inspect provenance"
+    "section": "Challenge",
+    "text": "Challenge\nAdd a --message command-line argument and log its value without changing the package name or executable name."
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#continue-on-a-trail",
@@ -4328,7 +4328,7 @@
     "href": "trails/building-nodes.html#start-learning",
     "title": "Building nodes and packages",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nBeginner: Client libraries\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n2\n\nCreating a workspace\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n3\n\nCreating a package\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n4\n\nCreating custom msg and srv files\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n5\n\nWriting a simple publisher and subscriber (C++)\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n6\n\nWriting a simple publisher and subscriber (Python)\nBeginner-Client-Libraries · Curated\nOpen lesson →",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nCreating a workspace\nBeginner-Client-Libraries · Authored\nOpen lesson →\n\n\n\n2\n\nCreating a package\nBeginner-Client-Libraries · Authored\nOpen lesson →\n\n\n\n3\n\nCreating custom msg and srv files\nBeginner-Client-Libraries · Authored\nOpen lesson →\n\n\n\n4\n\nWriting a simple publisher and subscriber (C++)\nBeginner-Client-Libraries · Authored\nOpen lesson →\n\n\n\n5\n\nWriting a simple publisher and subscriber (Python)\nBeginner-Client-Libraries · Authored\nOpen lesson →",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4412,7 +4412,7 @@
     "href": "trails/interfaces-and-actions.html#start-learning",
     "title": "Interfaces, parameters, actions, and plugins",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nCreating custom msg and srv files\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n2\n\nCreating and using plugins (C++)\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n3\n\nUsing parameters in a class (C++)\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n4\n\nCreating an action\nIntermediate · Curated\nOpen lesson →\n\n\n\n5\n\nWriting an action server and client (C++)\nIntermediate · Curated\nOpen lesson →\n\n\n\n6\n\nWriting an action server and client (Python)\nIntermediate · Curated\nOpen lesson →",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nCreating custom msg and srv files\nBeginner-Client-Libraries · Authored\nOpen lesson →\n\n\n\n2\n\nCreating and using plugins (C++)\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n3\n\nUsing parameters in a class (C++)\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n4\n\nCreating an action\nIntermediate · Curated\nOpen lesson →\n\n\n\n5\n\nWriting an action server and client (C++)\nIntermediate · Curated\nOpen lesson →\n\n\n\n6\n\nWriting an action server and client (Python)\nIntermediate · Curated\nOpen lesson →",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4508,7 +4508,7 @@
     "href": "trails/foundations.html#start-learning",
     "title": "Foundations: the ROS 2 graph",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nBeginner: CLI tools\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n2\n\nRecording and playing back data\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n3\n\nUnderstanding actions\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n4\n\nUnderstanding nodes\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n5\n\nUnderstanding services\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n6\n\nUnderstanding topics\nBeginner-CLI-Tools · Curated\nOpen lesson →",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nRecording and playing back data\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n2\n\nUnderstanding actions\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n3\n\nUnderstanding nodes\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n4\n\nUnderstanding services\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n5\n\nUnderstanding topics\nBeginner-CLI-Tools · Curated\nOpen lesson →",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -8059,42 +8059,42 @@
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html",
     "title": "Creating custom msg and srv files",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#learning-outcome",
-    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#learning-outcome",
+    "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#goal",
+    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#goal",
     "title": "Creating custom msg and srv files",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Creating custom msg and srv files in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "Goal",
+    "text": "Goal\nDefine a custom message in a dedicated interface package, generate its language support, and publish a value from the command line."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#before-you-begin",
-    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#before-you-begin",
+    "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#do-it",
+    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#do-it",
     "title": "Creating custom msg and srv files",
-    "section": "Before you begin",
-    "text": "Before you begin\nYou should have a working ROS 2 Jazzy environment. Work in a disposable ROS 2 workspace so the experiment is easy to repeat."
+    "section": "Do it",
+    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_cmake --license Apache-2.0 trail_interfaces\nmkdir trail_interfaces/msg\nCreate trail_interfaces/msg/Waypoint.msg:\nstring frame_id\nfloat64 x\nfloat64 y\nAdd these declarations to package.xml:\n&lt;buildtool_depend&gt;rosidl_default_generators&lt;/buildtool_depend&gt;\n&lt;exec_depend&gt;rosidl_default_runtime&lt;/exec_depend&gt;\n&lt;member_of_group&gt;rosidl_interface_packages&lt;/member_of_group&gt;\nIn CMakeLists.txt, add:\nfind_package(rosidl_default_generators REQUIRED)\nrosidl_generate_interfaces(${PROJECT_NAME} \"msg/Waypoint.msg\")\nThen build and source:\ncd ~/ros2_trails_ws\ncolcon build --packages-select trail_interfaces\nsource install/local_setup.bash"
   },
   {
-    "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#guided-activity",
-    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#guided-activity",
+    "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#verify",
+    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#verify",
     "title": "Creating custom msg and srv files",
-    "section": "Guided activity",
-    "text": "Guided activity\n\nState what you expect Creating custom msg and srv files to change or reveal.\nPrepare the smallest workspace, node, or command sequence needed for the experiment.\nPractice the concept and verify the result locally.\nChange one input or configuration value and predict the effect before running it again.\nCapture the command, graph observation, log message, or test result that proves the outcome."
+    "section": "Verify",
+    "text": "Verify\nros2 interface show trail_interfaces/msg/Waypoint\nros2 topic pub --once /goal trail_interfaces/msg/Waypoint \\\n  \"{frame_id: map, x: 1.5, y: -0.5}\"\nIn a second terminal, run ros2 topic echo /goal --once before publishing. The received field names and values prove generation, discovery, and serialization."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#check-your-understanding",
-    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#check-your-understanding",
+    "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#troubleshooting",
+    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#troubleshooting",
     "title": "Creating custom msg and srv files",
-    "section": "Check your understanding",
-    "text": "Check your understanding\n\nWhat ROS 2 entity, tool, or runtime behavior is central to this lesson?\nWhat observation distinguishes success from a command that merely exits without error?\nWhich assumption would you test first if another learner could not reproduce your result?"
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nInterface is unknown: resource the overlay after a successful build.\nCMake cannot find generators: check the dependency spelling and ROS setup.\nYAML parsing fails: keep spaces after colons and quote the entire mapping."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#knowledge-for-this-lesson",
-    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#knowledge-for-this-lesson",
+    "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#challenge",
+    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#challenge",
     "title": "Creating custom msg and srv files",
-    "section": "Knowledge for this lesson",
-    "text": "Knowledge for this lesson\n\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions. Inspect provenance\nPrefer one clear responsibility per node. Inspect provenance\nUse topics for ongoing data, services for quick request/response operations, Inspect provenance\nand actions when work has progress, cancellation, or a longer lifetime. Inspect provenance\nDefine custom interfaces only when existing message packages do not express Inspect provenance\nthe domain cleanly. Inspect provenance\nKeep build-time dependencies explicit and source the workspace overlay after Inspect provenance\na successful build. Inspect provenance"
+    "section": "Challenge",
+    "text": "Challenge\nAdd a uint8 priority field, rebuild, and explain why every publisher and subscriber using the interface must agree on the new generated type."
   },
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#continue-on-a-trail",
@@ -9137,42 +9137,42 @@
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html",
     "title": "Writing a simple publisher and subscriber (C++)",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#learning-outcome",
-    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#learning-outcome",
+    "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#goal",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#goal",
     "title": "Writing a simple publisher and subscriber (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing a simple publisher and subscriber (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "Goal",
+    "text": "Goal\nBuild a C++ publisher node with rclcpp, observe its topic from the CLI, and understand the build declarations that make the executable installable."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#before-you-begin",
-    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#before-you-begin",
+    "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#do-it",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#do-it",
     "title": "Writing a simple publisher and subscriber (C++)",
-    "section": "Before you begin",
-    "text": "Before you begin\nYou should have a working ROS 2 Jazzy environment. Work in a disposable ROS 2 workspace so the experiment is easy to repeat."
+    "section": "Do it",
+    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_cmake --license Apache-2.0 \\\n  --dependencies rclcpp std_msgs trail_cpp_pub\nCreate trail_cpp_pub/src/counter.cpp:\n#include &lt;chrono&gt;\n#include &lt;memory&gt;\n#include \"rclcpp/rclcpp.hpp\"\n#include \"std_msgs/msg/int32.hpp\"\nusing namespace std::chrono_literals;\n\nint main(int argc, char ** argv) {\n  rclcpp::init(argc, argv);\n  auto node = std::make_shared&lt;rclcpp::Node&gt;(\"cpp_counter\");\n  auto pub = node-&gt;create_publisher&lt;std_msgs::msg::Int32&gt;(\"count\", 10);\n  int value = 0;\n  auto timer = node-&gt;create_wall_timer(500ms, [node, pub, &value]() {\n    std_msgs::msg::Int32 msg; msg.data = value++;\n    pub-&gt;publish(msg);\n    RCLCPP_INFO(node-&gt;get_logger(), \"published %d\", msg.data);\n  });\n  rclcpp::spin(node);\n  rclcpp::shutdown();\n}\nAdd to CMakeLists.txt before ament_package():\nadd_executable(counter src/counter.cpp)\nament_target_dependencies(counter rclcpp std_msgs)\ninstall(TARGETS counter DESTINATION lib/${PROJECT_NAME})\nBuild, source, and run ros2 run trail_cpp_pub counter."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#guided-activity",
-    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#guided-activity",
+    "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#verify",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#verify",
     "title": "Writing a simple publisher and subscriber (C++)",
-    "section": "Guided activity",
-    "text": "Guided activity\n\nState what you expect Writing a simple publisher and subscriber (C++) to change or reveal.\nPrepare the smallest workspace, node, or command sequence needed for the experiment.\nPractice the concept and verify the result locally.\nChange one input or configuration value and predict the effect before running it again.\nCapture the command, graph observation, log message, or test result that proves the outcome."
+    "section": "Verify",
+    "text": "Verify\nIn another sourced terminal:\nros2 node info /cpp_counter\nros2 topic echo /count --once\nThe node should publish /count, and the echo should contain an integer."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#check-your-understanding",
-    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#check-your-understanding",
+    "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#troubleshooting",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#troubleshooting",
     "title": "Writing a simple publisher and subscriber (C++)",
-    "section": "Check your understanding",
-    "text": "Check your understanding\n\nWhat ROS 2 entity, tool, or runtime behavior is central to this lesson?\nWhat observation distinguishes success from a command that merely exits without error?\nWhich assumption would you test first if another learner could not reproduce your result?"
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nLinker errors: confirm both dependencies appear in package.xml and ament_target_dependencies.\nros2 run cannot find the executable: confirm the install(TARGETS ...) rule, rebuild, and resource the overlay.\nNo topic: keep the publisher process running while inspecting it."
   },
   {
-    "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#knowledge-for-this-lesson",
-    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#knowledge-for-this-lesson",
+    "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#challenge",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#challenge",
     "title": "Writing a simple publisher and subscriber (C++)",
-    "section": "Knowledge for this lesson",
-    "text": "Knowledge for this lesson\n\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions. Inspect provenance\nPrefer one clear responsibility per node. Inspect provenance\nUse topics for ongoing data, services for quick request/response operations, Inspect provenance\nand actions when work has progress, cancellation, or a longer lifetime. Inspect provenance\nDefine custom interfaces only when existing message packages do not express Inspect provenance\nthe domain cleanly. Inspect provenance\nKeep build-time dependencies explicit and source the workspace overlay after Inspect provenance\na successful build. Inspect provenance"
+    "section": "Challenge",
+    "text": "Challenge\nAdd a second C++ executable that subscribes to count and logs only even values. Verify that the graph reports one publisher and one subscriber."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#continue-on-a-trail",

@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -217,11 +252,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-outcome" id="toc-learning-outcome" class="nav-link active" data-scroll-target="#learning-outcome">Learning outcome</a></li>
-  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before you begin</a></li>
-  <li><a href="#guided-activity" id="toc-guided-activity" class="nav-link" data-scroll-target="#guided-activity">Guided activity</a></li>
-  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding">Check your understanding</a></li>
-  <li><a href="#knowledge-for-this-lesson" id="toc-knowledge-for-this-lesson" class="nav-link" data-scroll-target="#knowledge-for-this-lesson">Knowledge for this lesson</a></li>
+  <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a></li>
+  <li><a href="#do-it" id="toc-do-it" class="nav-link" data-scroll-target="#do-it">Do it</a></li>
+  <li><a href="#verify" id="toc-verify" class="nav-link" data-scroll-target="#verify">Verify</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  <li><a href="#challenge" id="toc-challenge" class="nav-link" data-scroll-target="#challenge">Challenge</a></li>
   <li><a href="#continue-on-a-trail" id="toc-continue-on-a-trail" class="nav-link" data-scroll-target="#continue-on-a-trail">Continue on a trail</a></li>
   <li><a href="#references-and-provenance" id="toc-references-and-provenance" class="nav-link" data-scroll-target="#references-and-provenance">References and provenance</a></li>
   </ul>
@@ -250,47 +285,66 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="lesson-state curated">
-<p><strong>Curated lesson</strong> · This page is part of the local ROS 2 Trails curriculum.</p>
+<div class="lesson-state authored">
+<p><strong>Authored lesson</strong> · This page is part of the local ROS 2 Trails curriculum.</p>
 </div>
-<section id="learning-outcome" class="level2">
-<h2 class="anchored" data-anchor-id="learning-outcome">Learning outcome</h2>
-<p>Use <strong>Writing a simple publisher and subscriber (Python)</strong> in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked.</p>
+<section id="goal" class="level2">
+<h2 class="anchored" data-anchor-id="goal">Goal</h2>
+<p>Build two Python nodes that exchange increasing integers over a typed topic and verify the communication through the ROS graph.</p>
 </section>
-<section id="before-you-begin" class="level2">
-<h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
-<p>You should have a working ROS 2 Jazzy environment. Work in a disposable ROS 2 workspace so the experiment is easy to repeat.</p>
+<section id="do-it" class="level2">
+<h2 class="anchored" data-anchor-id="do-it">Do it</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> /opt/ros/jazzy/setup.bash</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws/src</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> pkg create <span class="at">--build-type</span> ament_python <span class="at">--license</span> Apache-2.0 <span class="dt">\</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">--dependencies</span> rclpy std_msgs trail_py_pubsub</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Create <code>trail_py_pubsub/trail_py_pubsub/publisher.py</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rclpy</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rclpy.node <span class="im">import</span> Node</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> std_msgs.msg <span class="im">import</span> Int32</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Counter(Node):</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="st">'counter_publisher'</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.pub <span class="op">=</span> <span class="va">self</span>.create_publisher(Int32, <span class="st">'count'</span>, <span class="dv">10</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.value <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.create_timer(<span class="fl">0.5</span>, <span class="va">self</span>.tick)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> tick(<span class="va">self</span>):</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.pub.publish(Int32(data<span class="op">=</span><span class="va">self</span>.value))</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.get_logger().info(<span class="ss">f'published </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>value<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.value <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    rclpy.init()<span class="op">;</span> node <span class="op">=</span> Counter()<span class="op">;</span> rclpy.spin(node)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Create <code>subscriber.py</code> beside it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rclpy</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rclpy.node <span class="im">import</span> Node</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> std_msgs.msg <span class="im">import</span> Int32</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    rclpy.init()<span class="op">;</span> node <span class="op">=</span> Node(<span class="st">'counter_listener'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    node.create_subscription(Int32, <span class="st">'count'</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">lambda</span> msg: node.get_logger().info(<span class="ss">f'received </span><span class="sc">{</span>msg<span class="sc">.</span>data<span class="sc">}</span><span class="ss">'</span>), <span class="dv">10</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    rclpy.spin(node)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Add <code>counter = trail_py_pubsub.publisher:main</code> and <code>listener = trail_py_pubsub.subscriber:main</code> to <code>console_scripts</code>, then build. Run the two executables in separate sourced terminals.</p>
 </section>
-<section id="guided-activity" class="level2">
-<h2 class="anchored" data-anchor-id="guided-activity">Guided activity</h2>
-<ol type="1">
-<li>State what you expect <strong>Writing a simple publisher and subscriber (Python)</strong> to change or reveal.</li>
-<li>Prepare the smallest workspace, node, or command sequence needed for the experiment.</li>
-<li>Practice the concept and verify the result locally.</li>
-<li>Change one input or configuration value and predict the effect before running it again.</li>
-<li>Capture the command, graph observation, log message, or test result that proves the outcome.</li>
-</ol>
+<section id="verify" class="level2">
+<h2 class="anchored" data-anchor-id="verify">Verify</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic info /count <span class="at">--verbose</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic echo /count <span class="at">--once</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Expect one publisher, one subscriber, type <code>std_msgs/msg/Int32</code>, and a numeric sample. This verifies the graph and the payload independently of node logs.</p>
 </section>
-<section id="check-your-understanding" class="level2">
-<h2 class="anchored" data-anchor-id="check-your-understanding">Check your understanding</h2>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
 <ul>
-<li>What ROS 2 entity, tool, or runtime behavior is central to this lesson?</li>
-<li>What observation distinguishes success from a command that merely exits without error?</li>
-<li>Which assumption would you test first if another learner could not reproduce your result?</li>
+<li>Zero subscribers: source both terminals and check the topic spelling.</li>
+<li>Type mismatch: both nodes must import and use <code>Int32</code>.</li>
+<li>Node exits immediately: <code>rclpy.spin(node)</code> must remain reachable.</li>
 </ul>
 </section>
-<section id="knowledge-for-this-lesson" class="level2">
-<h2 class="anchored" data-anchor-id="knowledge-for-this-lesson">Knowledge for this lesson</h2>
-<ul>
-<li>A ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. <code>colcon</code> builds the workspace, while <code>ament_cmake</code> and <code>ament_python</code> provide the common C++ and Python package conventions. <a href="../provenance/nugget_canonical-knowledge-topics-building-nodes-md-1-1_a17e46a50ade.html">Inspect provenance</a></li>
-<li>Prefer one clear responsibility per node. <a href="../provenance/nugget_canonical-knowledge-topics-building-nodes-md-8-1_8b0bd8b9b7d5.html">Inspect provenance</a></li>
-<li>Use topics for ongoing data, services for quick request/response operations, <a href="../provenance/nugget_canonical-knowledge-topics-building-nodes-md-8-2_b4997c652aa0.html">Inspect provenance</a></li>
-<li>and actions when work has progress, cancellation, or a longer lifetime. <a href="../provenance/nugget_canonical-knowledge-topics-building-nodes-md-8-3_a7c1f972070f.html">Inspect provenance</a></li>
-<li>Define custom interfaces only when existing message packages do not express <a href="../provenance/nugget_canonical-knowledge-topics-building-nodes-md-8-4_7e060239554a.html">Inspect provenance</a></li>
-<li>the domain cleanly. <a href="../provenance/nugget_canonical-knowledge-topics-building-nodes-md-8-5_66a3d2ac813f.html">Inspect provenance</a></li>
-<li>Keep build-time dependencies explicit and source the workspace overlay after <a href="../provenance/nugget_canonical-knowledge-topics-building-nodes-md-8-6_a460e31ea5ea.html">Inspect provenance</a></li>
-<li>a successful build. <a href="../provenance/nugget_canonical-knowledge-topics-building-nodes-md-8-7_45efacfab63b.html">Inspect provenance</a></li>
-</ul>
+<section id="challenge" class="level2">
+<h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
+<p>Make the period a ROS parameter named <code>period</code> and compare behavior at <code>0.1</code> and <code>1.0</code> seconds.</p>
 </section>
 <section id="continue-on-a-trail" class="level2">
 <h2 class="anchored" data-anchor-id="continue-on-a-trail">Continue on a trail</h2>

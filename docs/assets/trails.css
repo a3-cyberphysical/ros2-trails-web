@@ -48,5 +48,6 @@ body { color: var(--trail-ink); background: var(--trail-paper); }
 .coverage-badge.curated { background: #e8f9c5; color: #3c6500; }
 .lesson-state { padding: .8rem 1rem; border-left: 5px solid var(--trail-cyan); background: white; border-radius: .2rem .7rem .7rem .2rem; }
 .lesson-state.growing { border-left-color: #f0a43c; }
+.lesson-state.authored { border-left-color: #54a600; }
 .tutorial-card[hidden] { display: none; }
 @media (max-width: 600px) { .hero-panel { border-radius: .8rem; } }
