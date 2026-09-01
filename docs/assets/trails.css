@@ -1,0 +1,47 @@
+:root {
+  --trail-ink: #10233f;
+  --trail-blue: #2257d6;
+  --trail-cyan: #2dc4c9;
+  --trail-lime: #c8f04b;
+  --trail-paper: #f5f7fb;
+}
+
+body { color: var(--trail-ink); background: var(--trail-paper); }
+.navbar { box-shadow: 0 2px 18px rgba(16, 35, 63, .1); }
+.hero-panel {
+  color: white; padding: clamp(2rem, 6vw, 5rem); border-radius: 1.4rem;
+  background: radial-gradient(circle at 85% 20%, rgba(45,196,201,.7), transparent 28%),
+              linear-gradient(125deg, #10233f 0%, #2257d6 70%, #2dc4c9 100%);
+  box-shadow: 0 24px 70px rgba(16,35,63,.22); margin-bottom: 2rem;
+}
+.hero-panel h2 { font-size: clamp(2.2rem, 5vw, 4.6rem); max-width: 14ch; line-height: .98; }
+.hero-panel p { max-width: 62ch; font-size: 1.14rem; }
+.metric-grid, .trail-grid, .tutorial-grid { display: grid; gap: 1rem; }
+.metric-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin: 2rem 0; }
+.metric-card, .trail-card, .tutorial-card {
+  background: white; border: 1px solid #dfe5ef; border-radius: 1rem; padding: 1.2rem;
+  box-shadow: 0 8px 28px rgba(16,35,63,.06);
+}
+.metric-card h3 { color: var(--trail-blue); font-size: 2.2rem; margin: 0; }
+.trail-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.trail-card { border-top: 5px solid var(--trail-cyan); }
+.trail-card h3 { margin-top: 0; }
+.trail-stat, .coverage-badge {
+  display: inline-block; border-radius: 999px; padding: .2rem .55rem;
+  background: #edf2ff; color: #244da8; font-size: .76rem; font-weight: 700;
+}
+.trail-meta, .provenance-chain {
+  padding: .8rem 1rem; border-left: 5px solid var(--trail-lime); background: white;
+  border-radius: .2rem .7rem .7rem .2rem; margin-bottom: 1.5rem;
+}
+.coverage-controls { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.5rem 0; }
+#tutorial-filter { min-width: min(100%, 320px); padding: .7rem 1rem; border: 1px solid #b9c5d8; border-radius: 999px; }
+.filter-chip { border: 1px solid #9eb0ca; background: white; border-radius: 999px; padding: .6rem .9rem; }
+.filter-chip.active { color: white; background: var(--trail-blue); border-color: var(--trail-blue); }
+.tutorial-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.tutorial-card h3 { font-size: 1rem; margin: .7rem 0 .45rem; }
+.tutorial-card p { color: #63718a; font-size: .75rem; word-break: break-word; margin: 0; }
+.coverage-badge.curated { background: #e8f9c5; color: #3c6500; }
+.tutorial-card[hidden] { display: none; }
+@media (max-width: 600px) { .hero-panel { border-radius: .8rem; } }
+
