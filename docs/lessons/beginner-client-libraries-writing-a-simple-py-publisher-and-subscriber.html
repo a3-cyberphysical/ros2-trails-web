@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Writing a simple publisher and subscriber (Python) – ROS 2 Trails</title>
+<title>Writing a publisher and subscriber in Python – ROS 2 Trails</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Writing a simple publisher and subscriber (Python)</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Writing a publisher and subscriber in Python</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -267,7 +267,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Writing a simple publisher and subscriber (Python)</h1>
+<h1 class="title">Writing a publisher and subscriber in Python</h1>
 <p class="subtitle lead">Beginner-Client-Libraries</p>
 </div>
 
@@ -288,6 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="lesson-state authored">
 <p><strong>Authored lesson</strong> · This page is part of the local ROS 2 Trails curriculum.</p>
 </div>
+<p><strong>Route:</strong> Building nodes and packages › Stage 2 › Python branch</p>
 <section id="goal" class="level2">
 <h2 class="anchored" data-anchor-id="goal">Goal</h2>
 <p>Build two Python nodes that exchange increasing integers over a typed topic and verify the communication through the ROS graph.</p>
@@ -298,40 +299,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws/src</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> pkg create <span class="at">--build-type</span> ament_python <span class="at">--license</span> Apache-2.0 <span class="dt">\</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">--dependencies</span> rclpy std_msgs trail_py_pubsub</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use the inner package directory for Python modules:</p>
+<pre class="text"><code>trail_py_pubsub/
+├── package.xml
+├── setup.py
+└── trail_py_pubsub/
+    ├── publisher.py
+    └── subscriber.py</code></pre>
 <p>Create <code>trail_py_pubsub/trail_py_pubsub/publisher.py</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rclpy</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rclpy.node <span class="im">import</span> Node</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> std_msgs.msg <span class="im">import</span> Int32</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Counter(Node):</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="st">'counter_publisher'</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.pub <span class="op">=</span> <span class="va">self</span>.create_publisher(Int32, <span class="st">'count'</span>, <span class="dv">10</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.value <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.create_timer(<span class="fl">0.5</span>, <span class="va">self</span>.tick)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> tick(<span class="va">self</span>):</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.pub.publish(Int32(data<span class="op">=</span><span class="va">self</span>.value))</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.get_logger().info(<span class="ss">f'published </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>value<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.value <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    rclpy.init()<span class="op">;</span> node <span class="op">=</span> Counter()<span class="op">;</span> rclpy.spin(node)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Create <code>subscriber.py</code> beside it:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rclpy</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rclpy.node <span class="im">import</span> Node</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> std_msgs.msg <span class="im">import</span> Int32</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    rclpy.init()<span class="op">;</span> node <span class="op">=</span> Node(<span class="st">'counter_listener'</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    node.create_subscription(Int32, <span class="st">'count'</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">lambda</span> msg: node.get_logger().info(<span class="ss">f'received </span><span class="sc">{</span>msg<span class="sc">.</span>data<span class="sc">}</span><span class="ss">'</span>), <span class="dv">10</span>)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    rclpy.spin(node)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Add <code>counter = trail_py_pubsub.publisher:main</code> and <code>listener = trail_py_pubsub.subscriber:main</code> to <code>console_scripts</code>, then build. Run the two executables in separate sourced terminals.</p>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Counter(Node):</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="st">'counter_publisher'</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.pub <span class="op">=</span> <span class="va">self</span>.create_publisher(Int32, <span class="st">'py_count'</span>, <span class="dv">10</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.value <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.create_timer(<span class="fl">0.5</span>, <span class="va">self</span>.tick)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> tick(<span class="va">self</span>):</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.pub.publish(Int32(data<span class="op">=</span><span class="va">self</span>.value))</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.get_logger().info(<span class="ss">f'published </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>value<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.value <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    rclpy.init()<span class="op">;</span> node <span class="op">=</span> Counter()<span class="op">;</span> rclpy.spin(node)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Create <code>subscriber.py</code> beside it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rclpy</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rclpy.node <span class="im">import</span> Node</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> std_msgs.msg <span class="im">import</span> Int32</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    rclpy.init()<span class="op">;</span> node <span class="op">=</span> Node(<span class="st">'counter_listener'</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    node.create_subscription(Int32, <span class="st">'py_count'</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">lambda</span> msg: node.get_logger().info(<span class="ss">f'received </span><span class="sc">{</span>msg<span class="sc">.</span>data<span class="sc">}</span><span class="ss">'</span>), <span class="dv">10</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    rclpy.spin(node)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In <code>setup.py</code>, use this complete entry-point fragment:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>entry_points<span class="op">=</span>{</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'console_scripts'</span>: [</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">'counter = trail_py_pubsub.publisher:main'</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">'listener = trail_py_pubsub.subscriber:main'</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>},</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Build, then run the nodes in separate terminals:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">colcon</span> build <span class="at">--symlink-install</span> <span class="at">--packages-select</span> trail_py_pubsub</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> install/local_setup.bash</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> run trail_py_pubsub counter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In Terminal B:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> /opt/ros/jazzy/setup.bash</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/ros2_trails_ws/install/local_setup.bash</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> run trail_py_pubsub listener</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="verify" class="level2">
 <h2 class="anchored" data-anchor-id="verify">Verify</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic info /count <span class="at">--verbose</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic echo /count <span class="at">--once</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic info /py_count <span class="at">--verbose</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic echo /py_count <span class="at">--once</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Expect one publisher, one subscriber, type <code>std_msgs/msg/Int32</code>, and a numeric sample. This verifies the graph and the payload independently of node logs.</p>
 </section>
 <section id="troubleshooting" class="level2">
@@ -344,13 +367,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="challenge" class="level2">
 <h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
-<p>Make the period a ROS parameter named <code>period</code> and compare behavior at <code>0.1</code> and <code>1.0</code> seconds.</p>
+<p>Change the timer constant from <code>0.5</code> to <code>0.1</code> seconds. Predict the rate, rebuild, then measure it with <code>ros2 topic hz /py_count</code>. Completion means the measured average is close to 10 Hz. Hint: frequency is approximately <code>1 / period</code>.</p>
+<p>Stop both nodes with <code>Ctrl+C</code> before continuing to custom interfaces. If you also want to compare client libraries, complete the C++ branch first.</p>
 </section>
 <section id="continue-on-a-trail" class="level2">
 <h2 class="anchored" data-anchor-id="continue-on-a-trail">Continue on a trail</h2>
 <ul>
 <li><a href="../trails/building-nodes.html">Building nodes and packages</a></li>
 </ul>
+<nav class="lesson-navigation" aria-label="Lesson navigation">
+<a class="previous-lesson" href="../lessons/beginner-client-libraries-creating-your-first-ros2-package.html">← Creating a package</a><a class="next-lesson" href="../lessons/beginner-client-libraries-custom-ros2-interfaces.html">Next: Creating and using a custom message →</a>
+</nav>
 </section>
 <section id="references-and-provenance" class="level2">
 <h2 class="anchored" data-anchor-id="references-and-provenance">References and provenance</h2>

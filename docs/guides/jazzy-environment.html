@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Writing an action server and client (C++) – ROS 2 Trails</title>
+<title>Prepare a ROS 2 Jazzy environment – ROS 2 Trails</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -122,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Writing an action server and client (C++)</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Prepare a ROS 2 Jazzy environment</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -217,13 +252,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-outcome" id="toc-learning-outcome" class="nav-link active" data-scroll-target="#learning-outcome">Learning outcome</a></li>
-  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before you begin</a></li>
-  <li><a href="#guided-activity" id="toc-guided-activity" class="nav-link" data-scroll-target="#guided-activity">Guided activity</a></li>
-  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding">Check your understanding</a></li>
-  <li><a href="#knowledge-for-this-lesson" id="toc-knowledge-for-this-lesson" class="nav-link" data-scroll-target="#knowledge-for-this-lesson">Knowledge for this lesson</a></li>
-  <li><a href="#continue-on-a-trail" id="toc-continue-on-a-trail" class="nav-link" data-scroll-target="#continue-on-a-trail">Continue on a trail</a></li>
-  <li><a href="#references-and-provenance" id="toc-references-and-provenance" class="nav-link" data-scroll-target="#references-and-provenance">References and provenance</a></li>
+  <li><a href="#supported-setup" id="toc-supported-setup" class="nav-link active" data-scroll-target="#supported-setup">Supported setup</a></li>
+  <li><a href="#check-the-environment" id="toc-check-the-environment" class="nav-link" data-scroll-target="#check-the-environment">Check the environment</a></li>
+  <li><a href="#prepare-dependency-resolution" id="toc-prepare-dependency-resolution" class="nav-link" data-scroll-target="#prepare-dependency-resolution">Prepare dependency resolution</a></li>
+  <li><a href="#terminal-rule" id="toc-terminal-rule" class="nav-link" data-scroll-target="#terminal-rule">Terminal rule</a></li>
   </ul>
 </nav>
     </div>
@@ -232,8 +264,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Writing an action server and client (C++)</h1>
-<p class="subtitle lead">Intermediate</p>
+<h1 class="title">Prepare a ROS 2 Jazzy environment</h1>
 </div>
 
 
@@ -250,61 +281,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="lesson-state curated">
-<p><strong>Curated lesson</strong> · This page is part of the local ROS 2 Trails curriculum.</p>
-</div>
-<section id="learning-outcome" class="level2">
-<h2 class="anchored" data-anchor-id="learning-outcome">Learning outcome</h2>
-<p>Use <strong>Writing an action server and client (C++)</strong> in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked.</p>
+<section id="supported-setup" class="level2">
+<h2 class="anchored" data-anchor-id="supported-setup">Supported setup</h2>
+<p>These lessons target ROS 2 Jazzy on Ubuntu 24.04 using Bash. A container or another supported Jazzy platform can work, but package-installation details may differ. Every displayed shell block contains commands you can copy.</p>
 </section>
-<section id="before-you-begin" class="level2">
-<h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
-<p>You should have comfortable use of nodes, topics, services, actions, and parameters. Work in a disposable ROS 2 workspace so the experiment is easy to repeat.</p>
+<section id="check-the-environment" class="level2">
+<h2 class="anchored" data-anchor-id="check-the-environment">Check the environment</h2>
+<p>Run this diagnostic block:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check()</span> <span class="kw">{</span> <span class="bu">command</span> <span class="at">-v</span> <span class="st">"</span><span class="va">$1</span><span class="st">"</span> <span class="op">&gt;</span>/dev/null <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> <span class="st">"PASS </span><span class="va">$1</span><span class="st">"</span> <span class="kw">||</span> <span class="kw">{</span> <span class="bu">echo</span> <span class="st">"FAIL </span><span class="va">$1</span><span class="st">"</span><span class="kw">;</span> <span class="cf">return</span> <span class="dv">1</span><span class="kw">;</span> <span class="kw">};</span> <span class="kw">}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">test</span> <span class="at">-r</span> /opt/ros/jazzy/setup.bash <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> <span class="st">"PASS ROS setup"</span> <span class="kw">||</span> <span class="kw">{</span> <span class="bu">echo</span> <span class="st">"FAIL ROS setup"</span><span class="kw">;</span> <span class="bu">exit</span> 1<span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> /opt/ros/jazzy/setup.bash</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">check</span> ros2 <span class="kw">&amp;&amp;</span> <span class="ex">check</span> colcon <span class="kw">&amp;&amp;</span> <span class="ex">check</span> rosdep <span class="kw">&amp;&amp;</span> <span class="ex">check</span> git <span class="kw">&amp;&amp;</span> <span class="ex">check</span> python3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Every check must print <code>PASS</code>; stop and resolve any <code>FAIL</code>. If <code>/opt/ros/jazzy</code> is missing, install the Jazzy desktop or ROS-base distribution before continuing.</p>
 </section>
-<section id="guided-activity" class="level2">
-<h2 class="anchored" data-anchor-id="guided-activity">Guided activity</h2>
-<ol type="1">
-<li>State what you expect <strong>Writing an action server and client (C++)</strong> to change or reveal.</li>
-<li>Prepare the smallest workspace, node, or command sequence needed for the experiment.</li>
-<li>Apply the feature in a small workspace and record evidence that it behaves as intended.</li>
-<li>Change one input or configuration value and predict the effect before running it again.</li>
-<li>Capture the command, graph observation, log message, or test result that proves the outcome.</li>
-</ol>
+<section id="prepare-dependency-resolution" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-dependency-resolution">Prepare dependency resolution</h2>
+<p><code>rosdep</code> installs system dependencies declared by packages. Its one-time system initialization may already be complete:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> rosdep init   <span class="co"># run only if /etc/ros/rosdep/sources.list.d is absent</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">rosdep</span> update</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The workspace lesson also clones a public Git repository, so verify network and Git access:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> ls-remote https://github.com/ros2/examples.git HEAD</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="check-your-understanding" class="level2">
-<h2 class="anchored" data-anchor-id="check-your-understanding">Check your understanding</h2>
-<ul>
-<li>What ROS 2 entity, tool, or runtime behavior is central to this lesson?</li>
-<li>What observation distinguishes success from a command that merely exits without error?</li>
-<li>Which assumption would you test first if another learner could not reproduce your result?</li>
-</ul>
-</section>
-<section id="knowledge-for-this-lesson" class="level2">
-<h2 class="anchored" data-anchor-id="knowledge-for-this-lesson">Knowledge for this lesson</h2>
-<ul>
-<li>Interfaces are the public contracts between nodes. Messages describe topic samples, services pair a request with a response, and actions combine a goal, feedback, a result, and cancellation. Parameters configure a node but should not be mistaken for a high-rate data channel. Pluginlib adds runtime-selected implementations behind a stable C++ interface. <a href="../provenance/nugget_canonical-knowledge-topics-interfaces-and-action_2f661ceccabb.html">Inspect provenance</a></li>
-<li>Complete Foundations and Building nodes. <a href="../provenance/nugget_canonical-knowledge-topics-interfaces-and-action_7f20290ccf19.html">Inspect provenance</a></li>
-<li>Reuse standard interfaces where their semantics fit. <a href="../provenance/nugget_canonical-knowledge-topics-interfaces-and-action_5280add7aa7b.html">Inspect provenance</a></li>
-<li>Keep custom interfaces small, named for domain meaning, and independent of <a href="../provenance/nugget_canonical-knowledge-topics-interfaces-and-action_cf9b4c8d111e.html">Inspect provenance</a></li>
-<li>implementation details. <a href="../provenance/nugget_canonical-knowledge-topics-interfaces-and-action_cb11ead3b029.html">Inspect provenance</a></li>
-<li>Choose an action when callers need progress or cancellation; otherwise a <a href="../provenance/nugget_canonical-knowledge-topics-interfaces-and-action_abce9d85da09.html">Inspect provenance</a></li>
-<li>service may be simpler. <a href="../provenance/nugget_canonical-knowledge-topics-interfaces-and-action_f4e9cc759362.html">Inspect provenance</a></li>
-<li>Validate parameters and react deliberately to runtime parameter changes. <a href="../provenance/nugget_canonical-knowledge-topics-interfaces-and-action_d2c0ec79099e.html">Inspect provenance</a></li>
-</ul>
-</section>
-<section id="continue-on-a-trail" class="level2">
-<h2 class="anchored" data-anchor-id="continue-on-a-trail">Continue on a trail</h2>
-<ul>
-<li><a href="../trails/interfaces-and-actions.html">Interfaces, parameters, actions, and plugins</a></li>
-</ul>
-<nav class="lesson-navigation" aria-label="Lesson navigation">
-<a class="previous-lesson" href="../lessons/intermediate-creating-an-action.html">← Creating an action</a><a class="next-lesson" href="../lessons/intermediate-writing-an-action-server-client-py.html">Next: Writing an action server and client (Python) →</a>
-</nav>
-</section>
-<section id="references-and-provenance" class="level2">
-<h2 class="anchored" data-anchor-id="references-and-provenance">References and provenance</h2>
-<p>This local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: <a href="https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp.html">Writing an action server and client (C++)</a>.</p>
-<p>Pinned source revision: <code>b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e</code></p>
+<section id="terminal-rule" class="level2">
+<h2 class="anchored" data-anchor-id="terminal-rule">Terminal rule</h2>
+<p>Every new terminal starts with the underlay:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> /opt/ros/jazzy/setup.bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After building the course workspace, also source its overlay (sometimes called “re-sourcing the overlay” after a rebuild):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/ros2_trails_ws/install/local_setup.bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If a package, node, or interface cannot be found, checking which setup files were sourced is the first diagnostic step.</p>
 
 
 </section>

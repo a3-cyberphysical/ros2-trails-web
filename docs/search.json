@@ -116,7 +116,7 @@
     "href": "lessons/intermediate-launch-launch-main.html#continue-on-a-trail",
     "title": "Launch",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nLaunch and composition"
+    "text": "Continue on a trail\n\nLaunch and composition\n\n\nNext: Creating a launch file →"
   },
   {
     "objectID": "lessons/intermediate-launch-launch-main.html#references-and-provenance",
@@ -298,7 +298,7 @@
     "href": "lessons/intermediate-testing-testing-main.html#continue-on-a-trail",
     "title": "Testing",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nProduction concerns"
+    "text": "Continue on a trail\n\nProduction concerns\n\n\n← Using quality-of-service settings for lossy networksNext: How to use ros2_tracing to trace and analyze an application →"
   },
   {
     "objectID": "lessons/intermediate-testing-testing-main.html#references-and-provenance",
@@ -438,7 +438,7 @@
     "href": "lessons/advanced-security-deployment-guidelines.html#continue-on-a-trail",
     "title": "Deployment Guidelines",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nSecurity and deployment"
+    "text": "Continue on a trail\n\nSecurity and deployment\n\n\n← Setting access controlsNext: Examining network traffic →"
   },
   {
     "objectID": "lessons/advanced-security-deployment-guidelines.html#references-and-provenance",
@@ -494,7 +494,7 @@
     "href": "lessons/advanced-security-introducing-ros2-security.html#continue-on-a-trail",
     "title": "Setting up security",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nSecurity and deployment"
+    "text": "Continue on a trail\n\nSecurity and deployment\n\n\n← SecurityNext: Understanding the security keystore →"
   },
   {
     "objectID": "lessons/advanced-security-introducing-ros2-security.html#references-and-provenance",
@@ -632,56 +632,56 @@
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html",
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html",
-    "title": "Writing a simple publisher and subscriber (Python)",
+    "title": "Writing a publisher and subscriber in Python",
     "section": "",
-    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum.\nRoute: Building nodes and packages › Stage 2 › Python branch"
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#goal",
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#goal",
-    "title": "Writing a simple publisher and subscriber (Python)",
+    "title": "Writing a publisher and subscriber in Python",
     "section": "Goal",
     "text": "Goal\nBuild two Python nodes that exchange increasing integers over a typed topic and verify the communication through the ROS graph."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#do-it",
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#do-it",
-    "title": "Writing a simple publisher and subscriber (Python)",
+    "title": "Writing a publisher and subscriber in Python",
     "section": "Do it",
-    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_python --license Apache-2.0 \\\n  --dependencies rclpy std_msgs trail_py_pubsub\nCreate trail_py_pubsub/trail_py_pubsub/publisher.py:\nimport rclpy\nfrom rclpy.node import Node\nfrom std_msgs.msg import Int32\n\nclass Counter(Node):\n    def __init__(self):\n        super().__init__('counter_publisher')\n        self.pub = self.create_publisher(Int32, 'count', 10)\n        self.value = 0\n        self.create_timer(0.5, self.tick)\n    def tick(self):\n        self.pub.publish(Int32(data=self.value))\n        self.get_logger().info(f'published {self.value}')\n        self.value += 1\n\ndef main():\n    rclpy.init(); node = Counter(); rclpy.spin(node)\nCreate subscriber.py beside it:\nimport rclpy\nfrom rclpy.node import Node\nfrom std_msgs.msg import Int32\n\ndef main():\n    rclpy.init(); node = Node('counter_listener')\n    node.create_subscription(Int32, 'count',\n        lambda msg: node.get_logger().info(f'received {msg.data}'), 10)\n    rclpy.spin(node)\nAdd counter = trail_py_pubsub.publisher:main and listener = trail_py_pubsub.subscriber:main to console_scripts, then build. Run the two executables in separate sourced terminals."
+    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_python --license Apache-2.0 \\\n  --dependencies rclpy std_msgs trail_py_pubsub\nUse the inner package directory for Python modules:\ntrail_py_pubsub/\n├── package.xml\n├── setup.py\n└── trail_py_pubsub/\n    ├── publisher.py\n    └── subscriber.py\nCreate trail_py_pubsub/trail_py_pubsub/publisher.py:\nimport rclpy\nfrom rclpy.node import Node\nfrom std_msgs.msg import Int32\n\nclass Counter(Node):\n    def __init__(self):\n        super().__init__('counter_publisher')\n        self.pub = self.create_publisher(Int32, 'py_count', 10)\n        self.value = 0\n        self.create_timer(0.5, self.tick)\n    def tick(self):\n        self.pub.publish(Int32(data=self.value))\n        self.get_logger().info(f'published {self.value}')\n        self.value += 1\n\ndef main():\n    rclpy.init(); node = Counter(); rclpy.spin(node)\nCreate subscriber.py beside it:\nimport rclpy\nfrom rclpy.node import Node\nfrom std_msgs.msg import Int32\n\ndef main():\n    rclpy.init(); node = Node('counter_listener')\n    node.create_subscription(Int32, 'py_count',\n        lambda msg: node.get_logger().info(f'received {msg.data}'), 10)\n    rclpy.spin(node)\nIn setup.py, use this complete entry-point fragment:\nentry_points={\n    'console_scripts': [\n        'counter = trail_py_pubsub.publisher:main',\n        'listener = trail_py_pubsub.subscriber:main',\n    ],\n},\nBuild, then run the nodes in separate terminals:\ncd ~/ros2_trails_ws\ncolcon build --symlink-install --packages-select trail_py_pubsub\nsource install/local_setup.bash\nros2 run trail_py_pubsub counter\nIn Terminal B:\nsource /opt/ros/jazzy/setup.bash\nsource ~/ros2_trails_ws/install/local_setup.bash\nros2 run trail_py_pubsub listener"
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#verify",
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#verify",
-    "title": "Writing a simple publisher and subscriber (Python)",
+    "title": "Writing a publisher and subscriber in Python",
     "section": "Verify",
-    "text": "Verify\nros2 topic info /count --verbose\nros2 topic echo /count --once\nExpect one publisher, one subscriber, type std_msgs/msg/Int32, and a numeric sample. This verifies the graph and the payload independently of node logs."
+    "text": "Verify\nros2 topic info /py_count --verbose\nros2 topic echo /py_count --once\nExpect one publisher, one subscriber, type std_msgs/msg/Int32, and a numeric sample. This verifies the graph and the payload independently of node logs."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#troubleshooting",
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#troubleshooting",
-    "title": "Writing a simple publisher and subscriber (Python)",
+    "title": "Writing a publisher and subscriber in Python",
     "section": "Troubleshooting",
     "text": "Troubleshooting\n\nZero subscribers: source both terminals and check the topic spelling.\nType mismatch: both nodes must import and use Int32.\nNode exits immediately: rclpy.spin(node) must remain reachable."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#challenge",
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#challenge",
-    "title": "Writing a simple publisher and subscriber (Python)",
+    "title": "Writing a publisher and subscriber in Python",
     "section": "Challenge",
-    "text": "Challenge\nMake the period a ROS parameter named period and compare behavior at 0.1 and 1.0 seconds."
+    "text": "Challenge\nChange the timer constant from 0.5 to 0.1 seconds. Predict the rate, rebuild, then measure it with ros2 topic hz /py_count. Completion means the measured average is close to 10 Hz. Hint: frequency is approximately 1 / period.\nStop both nodes with Ctrl+C before continuing to custom interfaces. If you also want to compare client libraries, complete the C++ branch first."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#continue-on-a-trail",
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#continue-on-a-trail",
-    "title": "Writing a simple publisher and subscriber (Python)",
+    "title": "Writing a publisher and subscriber in Python",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nBuilding nodes and packages"
+    "text": "Continue on a trail\n\nBuilding nodes and packages\n\n\n← Creating a packageNext: Creating and using a custom message →"
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#references-and-provenance",
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#references-and-provenance",
-    "title": "Writing a simple publisher and subscriber (Python)",
+    "title": "Writing a publisher and subscriber in Python",
     "section": "References and provenance",
     "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a simple publisher and subscriber (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
@@ -774,7 +774,7 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-topics-understanding-ros2-topics.html#continue-on-a-trail",
     "title": "Understanding topics",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nFoundations: the ROS 2 graph"
+    "text": "Continue on a trail\n\nFoundations: the ROS 2 graph\n\n\n← Understanding nodesNext: Understanding services →"
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-topics-understanding-ros2-topics.html#references-and-provenance",
@@ -872,7 +872,7 @@
     "href": "lessons/intermediate-writing-an-action-server-client-py.html#continue-on-a-trail",
     "title": "Writing an action server and client (Python)",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nInterfaces, parameters, actions, and plugins"
+    "text": "Continue on a trail\n\nInterfaces, parameters, actions, and plugins\n\n\n← Writing an action server and client (C++)Next: Using parameters in a class (C++) →"
   },
   {
     "objectID": "lessons/intermediate-writing-an-action-server-client-py.html#references-and-provenance",
@@ -1012,7 +1012,7 @@
     "href": "lessons/intermediate-launch-creating-launch-files.html#continue-on-a-trail",
     "title": "Creating a launch file",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nLaunch and composition"
+    "text": "Continue on a trail\n\nLaunch and composition\n\n\n← LaunchNext: Using substitutions →"
   },
   {
     "objectID": "lessons/intermediate-launch-creating-launch-files.html#references-and-provenance",
@@ -1194,7 +1194,7 @@
     "href": "lessons/intermediate-creating-an-action.html#continue-on-a-trail",
     "title": "Creating an action",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nInterfaces, parameters, actions, and plugins"
+    "text": "Continue on a trail\n\nInterfaces, parameters, actions, and plugins\n\n\n← Creating and using a custom messageNext: Writing an action server and client (C++) →"
   },
   {
     "objectID": "lessons/intermediate-creating-an-action.html#references-and-provenance",
@@ -1334,7 +1334,7 @@
     "href": "lessons/intermediate-launch-using-ros2-launch-for-large-projects.html#continue-on-a-trail",
     "title": "Managing large projects",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nLaunch and composition"
+    "text": "Continue on a trail\n\nLaunch and composition\n\n\n← Using substitutionsNext: Composing multiple nodes in a single process →"
   },
   {
     "objectID": "lessons/intermediate-launch-using-ros2-launch-for-large-projects.html#references-and-provenance",
@@ -1432,7 +1432,7 @@
     "href": "lessons/advanced-discovery-server-discovery-server.html#continue-on-a-trail",
     "title": "Using Fast DDS Discovery Server as discovery protocol [community-contributed]",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nMiddleware, discovery, and performance"
+    "text": "Continue on a trail\n\nMiddleware, discovery, and performance\n\n\n← Setting up efficient intra-process communicationNext: Unlocking the potential of Fast DDS middleware [community-contributed] →"
   },
   {
     "objectID": "lessons/advanced-discovery-server-discovery-server.html#references-and-provenance",
@@ -1530,7 +1530,7 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-nodes-understanding-ros2-nodes.html#continue-on-a-trail",
     "title": "Understanding nodes",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nFoundations: the ROS 2 graph"
+    "text": "Continue on a trail\n\nFoundations: the ROS 2 graph\n\n\nNext: Understanding topics →"
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-nodes-understanding-ros2-nodes.html#references-and-provenance",
@@ -1712,7 +1712,7 @@
     "href": "lessons/advanced-security-examine-traffic.html#continue-on-a-trail",
     "title": "Examining network traffic",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nSecurity and deployment"
+    "text": "Continue on a trail\n\nSecurity and deployment\n\n\n← Deployment Guidelines"
   },
   {
     "objectID": "lessons/advanced-security-examine-traffic.html#references-and-provenance",
@@ -1810,7 +1810,7 @@
     "href": "lessons/demos-service-introspection.html#continue-on-a-trail",
     "title": "Configure service introspection",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nData, logging, and observability"
+    "text": "Continue on a trail\n\nData, logging, and observability\n\n\n← Enabling topic statistics (C++)Next: How to use ros2_tracing to trace and analyze an application →"
   },
   {
     "objectID": "lessons/demos-service-introspection.html#references-and-provenance",
@@ -1866,7 +1866,7 @@
     "href": "lessons/advanced-topic-statistics-tutorial-topic-statistics-tutorial.html#continue-on-a-trail",
     "title": "Enabling topic statistics (C++)",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nData, logging, and observability"
+    "text": "Continue on a trail\n\nData, logging, and observability\n\n\n← LoggingNext: Configure service introspection →"
   },
   {
     "objectID": "lessons/advanced-topic-statistics-tutorial-topic-statistics-tutorial.html#references-and-provenance",
@@ -2006,7 +2006,7 @@
     "href": "lessons/intermediate-tf2-introduction-to-tf2.html#continue-on-a-trail",
     "title": "Introducing tf2",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nTransforms and robot models"
+    "text": "Continue on a trail\n\nTransforms and robot models\n\n\n← tf2Next: Debugging →"
   },
   {
     "objectID": "lessons/intermediate-tf2-introduction-to-tf2.html#references-and-provenance",
@@ -2230,7 +2230,7 @@
     "href": "lessons/advanced-security-security-main.html#continue-on-a-trail",
     "title": "Security",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nProduction concerns\nSecurity and deployment"
+    "text": "Continue on a trail\n\nProduction concerns\nSecurity and deployment\n\n\nNext: Setting up security →"
   },
   {
     "objectID": "lessons/advanced-security-security-main.html#references-and-provenance",
@@ -2412,7 +2412,7 @@
     "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html",
     "title": "Creating a workspace",
     "section": "",
-    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum.\nRoute: Building nodes and packages › Stage 1 › Workspace and package · step 1 of 2"
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#goal",
@@ -2426,7 +2426,7 @@
     "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#do-it",
     "title": "Creating a workspace",
     "section": "Do it",
-    "text": "Do it\nOpen a terminal where ROS 2 Jazzy is installed:\nsource /opt/ros/jazzy/setup.bash\nmkdir -p ~/ros2_trails_ws/src\ncd ~/ros2_trails_ws\ncolcon build\nThe empty build creates build, install, and log. Source the result:\nsource install/local_setup.bash\nprintenv AMENT_PREFIX_PATH\nNow add an existing package as source and rebuild:\ncd ~/ros2_trails_ws/src\ngit clone -b jazzy https://github.com/ros2/examples.git\ncd ~/ros2_trails_ws\nrosdep install -i --from-path src --rosdistro jazzy -y\ncolcon build --symlink-install --packages-select examples_rclpy_minimal_publisher\nsource install/local_setup.bash"
+    "text": "Do it\nOpen a terminal where ROS 2 Jazzy is installed:\nsource /opt/ros/jazzy/setup.bash\nmkdir -p ~/ros2_trails_ws/src\ncd ~/ros2_trails_ws/src\ngit clone -b jazzy https://github.com/ros2/examples.git\ncd ~/ros2_trails_ws\nrosdep install -i --from-path src --rosdistro jazzy -y\ncolcon build --symlink-install --packages-select examples_rclpy_minimal_publisher\nsource install/local_setup.bash\nprintenv AMENT_PREFIX_PATH\nA successful package build creates build, install, and log. The underlay at /opt/ros/jazzy supplies ROS 2; install/local_setup.bash adds this workspace as an overlay without replacing the underlay.\n\nsrc contains the source files you edit.\nbuild contains per-package intermediate build state.\ninstall contains the discoverable result used by ROS tools.\nlog contains build diagnostics.\n\nSourcing changes search paths in the current shell; it does not build or copy anything. --symlink-install links supported Python/resources into install for a faster edit cycle. Rebuild after compiled C++ changes, dependency or metadata changes, and whenever an edit is not reflected through a symlink."
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#verify",
@@ -2447,14 +2447,14 @@
     "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#challenge",
     "title": "Creating a workspace",
     "section": "Challenge",
-    "text": "Challenge\nOpen a clean terminal and predict whether the example package is discoverable before sourcing the overlay. Test the prediction with ros2 pkg prefix."
+    "text": "Challenge\nOpen a clean terminal and predict whether the example package is discoverable before sourcing the overlay. Test the prediction with ros2 pkg prefix. Completion means you can explain why the clean terminal cannot find the overlay package but can find packages installed in /opt/ros/jazzy. Hint: compare AMENT_PREFIX_PATH before and after sourcing install/local_setup.bash."
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#continue-on-a-trail",
     "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#continue-on-a-trail",
     "title": "Creating a workspace",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nBuilding nodes and packages"
+    "text": "Continue on a trail\n\nBuilding nodes and packages\n\n\nNext: Creating a package →"
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#references-and-provenance",
@@ -2636,7 +2636,7 @@
     "href": "lessons/demos-logging-and-logger-configuration.html#continue-on-a-trail",
     "title": "Logging",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nData, logging, and observability"
+    "text": "Continue on a trail\n\nData, logging, and observability\n\n\n← Recording and playing back dataNext: Enabling topic statistics (C++) →"
   },
   {
     "objectID": "lessons/demos-logging-and-logger-configuration.html#references-and-provenance",
@@ -2692,7 +2692,7 @@
     "href": "lessons/intermediate-launch-using-substitutions.html#continue-on-a-trail",
     "title": "Using substitutions",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nLaunch and composition"
+    "text": "Continue on a trail\n\nLaunch and composition\n\n\n← Creating a launch fileNext: Managing large projects →"
   },
   {
     "objectID": "lessons/intermediate-launch-using-substitutions.html#references-and-provenance",
@@ -2748,7 +2748,7 @@
     "href": "lessons/advanced-ros2-tracing-trace-and-analyze.html#continue-on-a-trail",
     "title": "How to use ros2_tracing to trace and analyze an application",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nData, logging, and observability\nProduction concerns"
+    "text": "Continue on a trail\n\nData, logging, and observability\nProduction concerns\n\n\n← TestingNext: Security →"
   },
   {
     "objectID": "lessons/advanced-ros2-tracing-trace-and-analyze.html#references-and-provenance",
@@ -2804,7 +2804,7 @@
     "href": "lessons/advanced-creating-an-rmw-implementation.html#continue-on-a-trail",
     "title": "Creating an rmw implementation",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nMiddleware, discovery, and performance"
+    "text": "Continue on a trail\n\nMiddleware, discovery, and performance\n\n\n← Understanding real-time programming"
   },
   {
     "objectID": "lessons/advanced-creating-an-rmw-implementation.html#references-and-provenance",
@@ -2860,7 +2860,7 @@
     "href": "lessons/intermediate-urdf-urdf-main.html#continue-on-a-trail",
     "title": "URDF",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nTransforms and robot models"
+    "text": "Continue on a trail\n\nTransforms and robot models\n\n\n← DebuggingNext: Using URDF with robot_state_publisher (Python) →"
   },
   {
     "objectID": "lessons/intermediate-urdf-urdf-main.html#references-and-provenance",
@@ -2958,7 +2958,7 @@
     "href": "lessons/beginner-client-libraries-pluginlib.html#continue-on-a-trail",
     "title": "Creating and using plugins (C++)",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nInterfaces, parameters, actions, and plugins"
+    "text": "Continue on a trail\n\nInterfaces, parameters, actions, and plugins\n\n\n← Using parameters in a class (C++)"
   },
   {
     "objectID": "lessons/beginner-client-libraries-pluginlib.html#references-and-provenance",
@@ -3014,7 +3014,7 @@
     "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html",
     "title": "Creating a package",
     "section": "",
-    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum.\nRoute: Building nodes and packages › Stage 1 › Workspace and package · step 2 of 2"
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#goal",
@@ -3028,7 +3028,7 @@
     "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#do-it",
     "title": "Creating a package",
     "section": "Do it",
-    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\nmkdir -p ~/ros2_trails_ws/src\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_python --license Apache-2.0 \\\n  --dependencies rclpy std_msgs trail_hello\nCreate trail_hello/trail_hello/hello.py:\nimport rclpy\nfrom rclpy.node import Node\n\ndef main():\n    rclpy.init()\n    node = Node('trail_hello')\n    node.get_logger().info('Hello from an installed ROS 2 package')\n    node.destroy_node()\n    rclpy.shutdown()\nIn trail_hello/setup.py, add this entry inside console_scripts:\n'hello = trail_hello.hello:main',\nBuild and run:\ncd ~/ros2_trails_ws\ncolcon build --symlink-install --packages-select trail_hello\nsource install/local_setup.bash\nros2 run trail_hello hello"
+    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\nmkdir -p ~/ros2_trails_ws/src\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_python --license Apache-2.0 \\\n  --dependencies rclpy trail_hello\nrclpy is declared because the code imports it. Do not list packages merely because they are common: dependency metadata should describe what this package actually needs. package.xml records ROS package dependencies; setup.py separately tells Python how to install modules and console entry points.\nCreate trail_hello/trail_hello/hello.py:\nimport rclpy\nfrom rclpy.node import Node\n\ndef main():\n    rclpy.init()\n    node = Node('trail_hello')\n    node.get_logger().info('Hello from an installed ROS 2 package')\n    node.destroy_node()\n    rclpy.shutdown()\nIn trail_hello/setup.py, add this entry inside console_scripts:\n'hello = trail_hello.hello:main',\nBuild and run:\ncd ~/ros2_trails_ws\ncolcon build --symlink-install --packages-select trail_hello\nsource install/local_setup.bash\nros2 run trail_hello hello"
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#verify",
@@ -3049,14 +3049,14 @@
     "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#challenge",
     "title": "Creating a package",
     "section": "Challenge",
-    "text": "Challenge\nAdd a --message command-line argument and log its value without changing the package name or executable name."
+    "text": "Challenge\nAdd a second console-script name, hello_again, pointing to the same main. Rebuild and confirm ros2 pkg executables trail_hello lists both names and both run successfully. Hint: add a second quoted line to console_scripts."
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#continue-on-a-trail",
     "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#continue-on-a-trail",
     "title": "Creating a package",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nBuilding nodes and packages"
+    "text": "Continue on a trail\n\nBuilding nodes and packages\n\n\n← Creating a workspaceChoose Writing a publisher and subscriber in C++ →Choose Writing a publisher and subscriber in Python →"
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#references-and-provenance",
@@ -4316,7 +4316,43 @@
     "href": "trails/building-nodes.html",
     "title": "Building nodes and packages",
     "section": "",
-    "text": "6 lessons · 3 learning stages · Learn entirely on this site",
+    "text": "5 lessons · 3 learning stages · Learn entirely on this site",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Building nodes and packages"
+    ]
+  },
+  {
+    "objectID": "trails/building-nodes.html#what-you-will-make",
+    "href": "trails/building-nodes.html#what-you-will-make",
+    "title": "Building nodes and packages",
+    "section": "What you will make",
+    "text": "What you will make\nYou will create one workspace, add packages to it, run two nodes that exchange messages, and define a message type for your own domain.\nros2_trails_ws/                 workspace: the build boundary\n└── src/\n    ├── trail_hello/            package: code + dependency metadata\n    ├── trail_py_pubsub/        package containing Python nodes\n    ├── trail_cpp_pub/          package containing C++ nodes\n    └── trail_interfaces/       package containing message definitions\nA package is the smallest ROS 2 project unit. A build installs executable artifacts; ros2 run locates one and starts a process. That process can create one or more nodes, which are the participants visible in the ROS graph. Nodes exchange typed data over topics. colcon builds the workspace; ament_python and ament_cmake describe how Python and C++ packages are built and installed.",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Building nodes and packages"
+    ]
+  },
+  {
+    "objectID": "trails/building-nodes.html#route-through-the-three-stages",
+    "href": "trails/building-nodes.html#route-through-the-three-stages",
+    "title": "Building nodes and packages",
+    "section": "Route through the three stages",
+    "text": "Route through the three stages\n\nWorkspace and package: complete lessons 1 and 2.\nChoose one ROS programming library: use rclpy for Python or rclcpp for C++. Complete both only if you want a language comparison.\nDomain interface: complete the custom-interface lesson and connect Waypoint to the language branch you chose.\n\nCheckpoint before stage 3: ros2 topic info must show one publisher and one subscriber in your chosen language, and ros2 topic echo --once must capture a sample.",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Building nodes and packages"
+    ]
+  },
+  {
+    "objectID": "trails/building-nodes.html#capstone-prove-the-complete-system",
+    "href": "trails/building-nodes.html#capstone-prove-the-complete-system",
+    "title": "Building nodes and packages",
+    "section": "Capstone: prove the complete system",
+    "text": "Capstone: prove the complete system\nStart from clean terminals and demonstrate all three stages. Use notes and copy commands freely; the goal is to select, adapt, and explain them:\n\nBuild through your chosen node package with colcon --packages-up-to.\nSource the underlay and workspace overlay in both run terminals.\nRun one publisher and one subscriber using Waypoint on /goal.\nCapture ros2 node list, ros2 topic info /goal --verbose, and one received waypoint.\nExplain which packages came from /opt/ros/jazzy and which came from the workspace overlay.\n\nMark the trail complete only when every box has observable evidence. Mark a stage needs review when you cannot yet explain why a command is needed or predict its key output.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4328,7 +4364,7 @@
     "href": "trails/building-nodes.html#start-learning",
     "title": "Building nodes and packages",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nCreating a workspace\nBeginner-Client-Libraries · Authored\nOpen lesson →\n\n\n\n2\n\nCreating a package\nBeginner-Client-Libraries · Authored\nOpen lesson →\n\n\n\n3\n\nCreating custom msg and srv files\nBeginner-Client-Libraries · Authored\nOpen lesson →\n\n\n\n4\n\nWriting a simple publisher and subscriber (C++)\nBeginner-Client-Libraries · Authored\nOpen lesson →\n\n\n\n5\n\nWriting a simple publisher and subscriber (Python)\nBeginner-Client-Libraries · Authored\nOpen lesson →",
+    "text": "Start learning\nComplete the stages in order; choose one lesson in stage 2. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nCreating a workspace\nStage 1 · Workspace and package · step 1 of 2 · Authored\n\n\n\n2\n\nCreating a package\nStage 1 · Workspace and package · step 2 of 2 · Authored\n\n\n\nA\n\nWriting a publisher and subscriber in C++\nStage 2 · C++ branch · Authored\n\n\n\nB\n\nWriting a publisher and subscriber in Python\nStage 2 · Python branch · Authored\n\n\n\n3\n\nCreating and using a custom message\nStage 3 · Domain interface · Authored",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4412,7 +4448,7 @@
     "href": "trails/interfaces-and-actions.html#start-learning",
     "title": "Interfaces, parameters, actions, and plugins",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nCreating custom msg and srv files\nBeginner-Client-Libraries · Authored\nOpen lesson →\n\n\n\n2\n\nCreating and using plugins (C++)\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n3\n\nUsing parameters in a class (C++)\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n4\n\nCreating an action\nIntermediate · Curated\nOpen lesson →\n\n\n\n5\n\nWriting an action server and client (C++)\nIntermediate · Curated\nOpen lesson →\n\n\n\n6\n\nWriting an action server and client (Python)\nIntermediate · Curated\nOpen lesson →",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nCreating and using a custom message\nBeginner-Client-Libraries · Authored\n\n\n\n2\n\nCreating an action\nIntermediate · Curated\n\n\n\n3\n\nWriting an action server and client (C++)\nIntermediate · Curated\n\n\n\n4\n\nWriting an action server and client (Python)\nIntermediate · Curated\n\n\n\n5\n\nUsing parameters in a class (C++)\nBeginner-Client-Libraries · Curated\n\n\n\n6\n\nCreating and using plugins (C++)\nBeginner-Client-Libraries · Curated",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4496,7 +4532,7 @@
     "href": "trails/foundations.html",
     "title": "Foundations: the ROS 2 graph",
     "section": "",
-    "text": "6 lessons · 3 learning stages · Learn entirely on this site",
+    "text": "5 lessons · 3 learning stages · Learn entirely on this site",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4508,7 +4544,7 @@
     "href": "trails/foundations.html#start-learning",
     "title": "Foundations: the ROS 2 graph",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nRecording and playing back data\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n2\n\nUnderstanding actions\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n3\n\nUnderstanding nodes\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n4\n\nUnderstanding services\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n5\n\nUnderstanding topics\nBeginner-CLI-Tools · Curated\nOpen lesson →",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nUnderstanding nodes\nBeginner-CLI-Tools · Curated\n\n\n\n2\n\nUnderstanding topics\nBeginner-CLI-Tools · Curated\n\n\n\n3\n\nUnderstanding services\nBeginner-CLI-Tools · Curated\n\n\n\n4\n\nUnderstanding actions\nBeginner-CLI-Tools · Curated\n\n\n\n5\n\nRecording and playing back data\nBeginner-CLI-Tools · Curated",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4592,7 +4628,7 @@
     "href": "trails/middleware-and-performance.html#start-learning",
     "title": "Middleware, discovery, and performance",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nCreating an rmw implementation\nAdvanced · Curated\nOpen lesson →\n\n\n\n2\n\nUsing Fast DDS Discovery Server as discovery protocol [community-contributed]\nAdvanced · Curated\nOpen lesson →\n\n\n\n3\n\nUnlocking the potential of Fast DDS middleware [community-contributed]\nAdvanced · Curated\nOpen lesson →\n\n\n\n4\n\nSetting up efficient intra-process communication\nDemos · Curated\nOpen lesson →\n\n\n\n5\n\nUsing quality-of-service settings for lossy networks\nDemos · Curated\nOpen lesson →\n\n\n\n6\n\nUnderstanding real-time programming\nDemos · Curated\nOpen lesson →",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nUsing quality-of-service settings for lossy networks\nDemos · Curated\n\n\n\n2\n\nSetting up efficient intra-process communication\nDemos · Curated\n\n\n\n3\n\nUsing Fast DDS Discovery Server as discovery protocol [community-contributed]\nAdvanced · Curated\n\n\n\n4\n\nUnlocking the potential of Fast DDS middleware [community-contributed]\nAdvanced · Curated\n\n\n\n5\n\nUnderstanding real-time programming\nDemos · Curated\n\n\n\n6\n\nCreating an rmw implementation\nAdvanced · Curated",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4695,6 +4731,41 @@
     "text": "Choose a guided progression. These trails are editorially curated from the pinned Jazzy knowledge pack; ordering is intentional and provenance remains inspectable.\n\n\nBuilding nodes and packages\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions.\n3 modules 6 direct tutorials\n\n\nData, logging, and observability\nROS 2 offers complementary ways to understand a running system. rosbag2 captures interface data for replay; logs describe application decisions; graph inspection reveals topology; topic statistics summarize communication; service introspection observes request/response events; and tracing exposes lower-level timing across executors and middleware.\n3 modules 5 direct tutorials\n\n\nFoundations: the ROS 2 graph\nROS 2 applications are graphs of independently useful nodes. Nodes exchange typed data through topics, request bounded work through services, run longer goal-oriented work through actions, and expose configuration through parameters. The command-line tools let you inspect this graph before writing code, which makes them the best starting point.\n3 modules 6 direct tutorials\n\n\nInterfaces, parameters, actions, and plugins\nInterfaces are the public contracts between nodes. Messages describe topic samples, services pair a request with a response, and actions combine a goal, feedback, a result, and cancellation. Parameters configure a node but should not be mistaken for a high-rate data channel. Pluginlib adds runtime-selected implementations behind a stable C++ interface.\n4 modules 6 direct tutorials\n\n\nLaunch and composition\nLaunch descriptions make multi-node systems reproducible. They declare nodes, arguments, parameters, namespaces, remappings, conditions, and included launch files. Composition places multiple nodes in a shared process when reduced overhead or more efficient communication matters.\n3 modules 5 direct tutorials\n\n\nMiddleware, discovery, and performance\nROS 2 client libraries communicate through an RMW abstraction over supported middleware implementations. Behavior depends on QoS compatibility, discovery, serialization, executor scheduling, process boundaries, memory allocation, and the network. Performance work therefore needs measurements and an explicit operating context.\n3 modules 6 direct tutorials\n\n\nProduction concerns\nA working demo is not yet an operational robot. Production systems must make communication assumptions explicit, expose diagnosable behavior, verify nodes at multiple levels, and protect the ROS graph when deployed across trust boundaries.\n3 modules 5 direct tutorials\n\n\nSecurity and deployment\nROS 2 security builds on DDS Security. A secure deployment needs identities, signed governance and permissions policy, encrypted/authenticated transport, protected keystores, and a deployment process that keeps credentials separate from application artifacts. Security settings must be tested on the actual graph and network topology.\n3 modules 6 direct tutorials\n\n\nTransforms and robot models\ntf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with robot_state_publisher, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.\n3 modules 5 direct tutorials"
   },
   {
+    "objectID": "guides/jazzy-environment.html",
+    "href": "guides/jazzy-environment.html",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "",
+    "text": "These lessons target ROS 2 Jazzy on Ubuntu 24.04 using Bash. A container or another supported Jazzy platform can work, but package-installation details may differ. Every displayed shell block contains commands you can copy."
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#supported-setup",
+    "href": "guides/jazzy-environment.html#supported-setup",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "",
+    "text": "These lessons target ROS 2 Jazzy on Ubuntu 24.04 using Bash. A container or another supported Jazzy platform can work, but package-installation details may differ. Every displayed shell block contains commands you can copy."
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#check-the-environment",
+    "href": "guides/jazzy-environment.html#check-the-environment",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "Check the environment",
+    "text": "Check the environment\nRun this diagnostic block:\ncheck() { command -v \"$1\" &gt;/dev/null && echo \"PASS $1\" || { echo \"FAIL $1\"; return 1; }; }\ntest -r /opt/ros/jazzy/setup.bash && echo \"PASS ROS setup\" || { echo \"FAIL ROS setup\"; exit 1; }\nsource /opt/ros/jazzy/setup.bash\ncheck ros2 && check colcon && check rosdep && check git && check python3\nEvery check must print PASS; stop and resolve any FAIL. If /opt/ros/jazzy is missing, install the Jazzy desktop or ROS-base distribution before continuing."
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#prepare-dependency-resolution",
+    "href": "guides/jazzy-environment.html#prepare-dependency-resolution",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "Prepare dependency resolution",
+    "text": "Prepare dependency resolution\nrosdep installs system dependencies declared by packages. Its one-time system initialization may already be complete:\nsudo rosdep init   # run only if /etc/ros/rosdep/sources.list.d is absent\nrosdep update\nThe workspace lesson also clones a public Git repository, so verify network and Git access:\ngit ls-remote https://github.com/ros2/examples.git HEAD"
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#terminal-rule",
+    "href": "guides/jazzy-environment.html#terminal-rule",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "Terminal rule",
+    "text": "Terminal rule\nEvery new terminal starts with the underlay:\nsource /opt/ros/jazzy/setup.bash\nAfter building the course workspace, also source its overlay (sometimes called “re-sourcing the overlay” after a rebuild):\nsource ~/ros2_trails_ws/install/local_setup.bash\nIf a package, node, or interface cannot be found, checking which setup files were sourced is the first diagnostic step."
+  },
+  {
     "objectID": "trails/data-and-observability.html",
     "href": "trails/data-and-observability.html",
     "title": "Data, logging, and observability",
@@ -4711,7 +4782,7 @@
     "href": "trails/data-and-observability.html#start-learning",
     "title": "Data, logging, and observability",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nHow to use ros2_tracing to trace and analyze an application\nAdvanced · Curated\nOpen lesson →\n\n\n\n2\n\nEnabling topic statistics (C++)\nAdvanced · Curated\nOpen lesson →\n\n\n\n3\n\nRecording and playing back data\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n4\n\nLogging\nDemos · Curated\nOpen lesson →\n\n\n\n5\n\nConfigure service introspection\nDemos · Curated\nOpen lesson →",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nRecording and playing back data\nBeginner-CLI-Tools · Curated\n\n\n\n2\n\nLogging\nDemos · Curated\n\n\n\n3\n\nEnabling topic statistics (C++)\nAdvanced · Curated\n\n\n\n4\n\nConfigure service introspection\nDemos · Curated\n\n\n\n5\n\nHow to use ros2_tracing to trace and analyze an application\nAdvanced · Curated",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4795,7 +4866,7 @@
     "href": "trails/launch-and-composition.html#start-learning",
     "title": "Launch and composition",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nComposing multiple nodes in a single process\nIntermediate · Curated\nOpen lesson →\n\n\n\n2\n\nCreating a launch file\nIntermediate · Curated\nOpen lesson →\n\n\n\n3\n\nLaunch\nIntermediate · Curated\nOpen lesson →\n\n\n\n4\n\nManaging large projects\nIntermediate · Curated\nOpen lesson →\n\n\n\n5\n\nUsing substitutions\nIntermediate · Curated\nOpen lesson →",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nLaunch\nIntermediate · Curated\n\n\n\n2\n\nCreating a launch file\nIntermediate · Curated\n\n\n\n3\n\nUsing substitutions\nIntermediate · Curated\n\n\n\n4\n\nManaging large projects\nIntermediate · Curated\n\n\n\n5\n\nComposing multiple nodes in a single process\nIntermediate · Curated",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4879,7 +4950,7 @@
     "href": "trails/security-and-deployment.html#start-learning",
     "title": "Security and deployment",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nSetting access controls\nAdvanced · Curated\nOpen lesson →\n\n\n\n2\n\nDeployment Guidelines\nAdvanced · Curated\nOpen lesson →\n\n\n\n3\n\nExamining network traffic\nAdvanced · Curated\nOpen lesson →\n\n\n\n4\n\nSetting up security\nAdvanced · Curated\nOpen lesson →\n\n\n\n5\n\nSecurity\nAdvanced · Curated\nOpen lesson →\n\n\n\n6\n\nUnderstanding the security keystore\nAdvanced · Curated\nOpen lesson →",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nSecurity\nAdvanced · Curated\n\n\n\n2\n\nSetting up security\nAdvanced · Curated\n\n\n\n3\n\nUnderstanding the security keystore\nAdvanced · Curated\n\n\n\n4\n\nSetting access controls\nAdvanced · Curated\n\n\n\n5\n\nDeployment Guidelines\nAdvanced · Curated\n\n\n\n6\n\nExamining network traffic\nAdvanced · Curated",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4963,7 +5034,7 @@
     "href": "trails/transforms-and-models.html#start-learning",
     "title": "Transforms and robot models",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nDebugging\nIntermediate · Curated\nOpen lesson →\n\n\n\n2\n\nIntroducing tf2\nIntermediate · Curated\nOpen lesson →\n\n\n\n3\n\ntf2\nIntermediate · Curated\nOpen lesson →\n\n\n\n4\n\nURDF\nIntermediate · Curated\nOpen lesson →\n\n\n\n5\n\nUsing URDF with robot_state_publisher (Python)\nIntermediate · Curated\nOpen lesson →",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\ntf2\nIntermediate · Curated\n\n\n\n2\n\nIntroducing tf2\nIntermediate · Curated\n\n\n\n3\n\nDebugging\nIntermediate · Curated\n\n\n\n4\n\nURDF\nIntermediate · Curated\n\n\n\n5\n\nUsing URDF with robot_state_publisher (Python)\nIntermediate · Curated",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -5047,7 +5118,7 @@
     "href": "trails/production-concerns.html#start-learning",
     "title": "Production concerns",
     "section": "Start learning",
-    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nHow to use ros2_tracing to trace and analyze an application\nAdvanced · Curated\nOpen lesson →\n\n\n\n2\n\nSecurity\nAdvanced · Curated\nOpen lesson →\n\n\n\n3\n\nUsing quality-of-service settings for lossy networks\nDemos · Curated\nOpen lesson →\n\n\n\n4\n\nUnderstanding real-time programming\nDemos · Curated\nOpen lesson →\n\n\n\n5\n\nTesting\nIntermediate · Curated\nOpen lesson →",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nUsing quality-of-service settings for lossy networks\nDemos · Curated\n\n\n\n2\n\nTesting\nIntermediate · Curated\n\n\n\n3\n\nHow to use ros2_tracing to trace and analyze an application\nAdvanced · Curated\n\n\n\n4\n\nSecurity\nAdvanced · Curated\n\n\n\n5\n\nUnderstanding real-time programming\nDemos · Curated",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -6365,7 +6436,7 @@
     "href": "lessons/advanced-fastdds-configuration.html#continue-on-a-trail",
     "title": "Unlocking the potential of Fast DDS middleware [community-contributed]",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nMiddleware, discovery, and performance"
+    "text": "Continue on a trail\n\nMiddleware, discovery, and performance\n\n\n← Using Fast DDS Discovery Server as discovery protocol [community-contributed]Next: Understanding real-time programming →"
   },
   {
     "objectID": "lessons/advanced-fastdds-configuration.html#references-and-provenance",
@@ -6421,7 +6492,7 @@
     "href": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html#continue-on-a-trail",
     "title": "Using URDF with robot_state_publisher (Python)",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nTransforms and robot models"
+    "text": "Continue on a trail\n\nTransforms and robot models\n\n\n← URDF"
   },
   {
     "objectID": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html#references-and-provenance",
@@ -6477,7 +6548,7 @@
     "href": "lessons/intermediate-tf2-tf2-main.html#continue-on-a-trail",
     "title": "tf2",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nTransforms and robot models"
+    "text": "Continue on a trail\n\nTransforms and robot models\n\n\nNext: Introducing tf2 →"
   },
   {
     "objectID": "lessons/intermediate-tf2-tf2-main.html#references-and-provenance",
@@ -6533,7 +6604,7 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-services-understanding-ros2-services.html#continue-on-a-trail",
     "title": "Understanding services",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nFoundations: the ROS 2 graph"
+    "text": "Continue on a trail\n\nFoundations: the ROS 2 graph\n\n\n← Understanding topicsNext: Understanding actions →"
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-services-understanding-ros2-services.html#references-and-provenance",
@@ -6757,7 +6828,7 @@
     "href": "lessons/demos-real-time-programming.html#continue-on-a-trail",
     "title": "Understanding real-time programming",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nMiddleware, discovery, and performance\nProduction concerns"
+    "text": "Continue on a trail\n\nMiddleware, discovery, and performance\nProduction concerns\n\n\n← Security"
   },
   {
     "objectID": "lessons/demos-real-time-programming.html#references-and-provenance",
@@ -6855,7 +6926,7 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-actions-understanding-ros2-actions.html#continue-on-a-trail",
     "title": "Understanding actions",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nFoundations: the ROS 2 graph"
+    "text": "Continue on a trail\n\nFoundations: the ROS 2 graph\n\n\n← Understanding servicesNext: Recording and playing back data →"
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-actions-understanding-ros2-actions.html#references-and-provenance",
@@ -7121,7 +7192,7 @@
     "href": "lessons/beginner-client-libraries-using-parameters-in-a-class-cpp.html#continue-on-a-trail",
     "title": "Using parameters in a class (C++)",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nInterfaces, parameters, actions, and plugins"
+    "text": "Continue on a trail\n\nInterfaces, parameters, actions, and plugins\n\n\n← Writing an action server and client (Python)Next: Creating and using plugins (C++) →"
   },
   {
     "objectID": "lessons/beginner-client-libraries-using-parameters-in-a-class-cpp.html#references-and-provenance",
@@ -7261,7 +7332,7 @@
     "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#continue-on-a-trail",
     "title": "Debugging",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nTransforms and robot models"
+    "text": "Continue on a trail\n\nTransforms and robot models\n\n\n← Introducing tf2Next: URDF →"
   },
   {
     "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#references-and-provenance",
@@ -7695,7 +7766,7 @@
     "href": "lessons/demos-quality-of-service.html#continue-on-a-trail",
     "title": "Using quality-of-service settings for lossy networks",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nMiddleware, discovery, and performance\nProduction concerns"
+    "text": "Continue on a trail\n\nMiddleware, discovery, and performance\nProduction concerns\n\n\nNext: Testing →"
   },
   {
     "objectID": "lessons/demos-quality-of-service.html#references-and-provenance",
@@ -7947,7 +8018,7 @@
     "href": "lessons/intermediate-composition.html#continue-on-a-trail",
     "title": "Composing multiple nodes in a single process",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nLaunch and composition"
+    "text": "Continue on a trail\n\nLaunch and composition\n\n\n← Managing large projects"
   },
   {
     "objectID": "lessons/intermediate-composition.html#references-and-provenance",
@@ -8003,7 +8074,7 @@
     "href": "lessons/demos-intra-process-communication.html#continue-on-a-trail",
     "title": "Setting up efficient intra-process communication",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nMiddleware, discovery, and performance"
+    "text": "Continue on a trail\n\nMiddleware, discovery, and performance\n\n\n← Using quality-of-service settings for lossy networksNext: Using Fast DDS Discovery Server as discovery protocol [community-contributed] →"
   },
   {
     "objectID": "lessons/demos-intra-process-communication.html#references-and-provenance",
@@ -8057,56 +8128,63 @@
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html",
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html",
-    "title": "Creating custom msg and srv files",
+    "title": "Creating and using a custom message",
     "section": "",
-    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum.\nRoute: Building nodes and packages › Stage 3 › Domain interface"
   },
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#goal",
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#goal",
-    "title": "Creating custom msg and srv files",
+    "title": "Creating and using a custom message",
     "section": "Goal",
-    "text": "Goal\nDefine a custom message in a dedicated interface package, generate its language support, and publish a value from the command line."
+    "text": "Goal\nDefine a custom message in a dedicated interface package, generate its language support, and prove that ROS 2 can serialize a domain-specific waypoint."
   },
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#do-it",
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#do-it",
-    "title": "Creating custom msg and srv files",
+    "title": "Creating and using a custom message",
     "section": "Do it",
-    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_cmake --license Apache-2.0 trail_interfaces\nmkdir trail_interfaces/msg\nCreate trail_interfaces/msg/Waypoint.msg:\nstring frame_id\nfloat64 x\nfloat64 y\nAdd these declarations to package.xml:\n&lt;buildtool_depend&gt;rosidl_default_generators&lt;/buildtool_depend&gt;\n&lt;exec_depend&gt;rosidl_default_runtime&lt;/exec_depend&gt;\n&lt;member_of_group&gt;rosidl_interface_packages&lt;/member_of_group&gt;\nIn CMakeLists.txt, add:\nfind_package(rosidl_default_generators REQUIRED)\nrosidl_generate_interfaces(${PROJECT_NAME} \"msg/Waypoint.msg\")\nThen build and source:\ncd ~/ros2_trails_ws\ncolcon build --packages-select trail_interfaces\nsource install/local_setup.bash"
+    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_cmake --license Apache-2.0 trail_interfaces\nmkdir trail_interfaces/msg\nThe files used in this lesson are:\ntrail_interfaces/\n├── CMakeLists.txt\n├── package.xml\n└── msg/\n    └── Waypoint.msg\nCreate trail_interfaces/msg/Waypoint.msg:\nstring frame_id\nfloat64 x\nfloat64 y\nAdd these declarations inside the existing &lt;package&gt;...&lt;/package&gt; element in package.xml:\n&lt;buildtool_depend&gt;rosidl_default_generators&lt;/buildtool_depend&gt;\n&lt;exec_depend&gt;rosidl_default_runtime&lt;/exec_depend&gt;\n&lt;member_of_group&gt;rosidl_interface_packages&lt;/member_of_group&gt;\nIn CMakeLists.txt, place this immediately before the existing ament_package() call:\nfind_package(rosidl_default_generators REQUIRED)\nrosidl_generate_interfaces(${PROJECT_NAME} \"msg/Waypoint.msg\")\nrosidl_generate_interfaces turns the schema into installed type support and language-specific code. A Python node imports from trail_interfaces.msg import Waypoint; C++ includes \"trail_interfaces/msg/waypoint.hpp\". Changing fields changes that generated contract, so packages that compile or import it must be rebuilt against the same definition.\nThen build and source:\ncd ~/ros2_trails_ws\ncolcon build --packages-select trail_interfaces\nsource install/local_setup.bash"
   },
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#verify",
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#verify",
-    "title": "Creating custom msg and srv files",
+    "title": "Creating and using a custom message",
     "section": "Verify",
-    "text": "Verify\nros2 interface show trail_interfaces/msg/Waypoint\nros2 topic pub --once /goal trail_interfaces/msg/Waypoint \\\n  \"{frame_id: map, x: 1.5, y: -0.5}\"\nIn a second terminal, run ros2 topic echo /goal --once before publishing. The received field names and values prove generation, discovery, and serialization."
+    "text": "Verify\nros2 interface show trail_interfaces/msg/Waypoint\nros2 topic echo /goal --once\nLeave Terminal A waiting. In Terminal B, source the same overlay and publish:\nsource /opt/ros/jazzy/setup.bash\nsource ~/ros2_trails_ws/install/local_setup.bash\nros2 topic pub --once /goal trail_interfaces/msg/Waypoint \\\n  \"{frame_id: map, x: 1.5, y: -0.5}\"\nTerminal A should print the same field names and values. This proves generation, type discovery, and serialization without hiding those concepts inside more application code."
+  },
+  {
+    "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#connect-it-to-your-node-branch",
+    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#connect-it-to-your-node-branch",
+    "title": "Creating and using a custom message",
+    "section": "Connect it to your node branch",
+    "text": "Connect it to your node branch\nMake trail_interfaces a dependency of the Python or C++ pub/sub package you completed.\n\nPython branch\nAdd &lt;exec_depend&gt;trail_interfaces&lt;/exec_depend&gt; to package.xml. In both Python nodes replace their contents with these complete files.\npublisher.py:\nimport rclpy\nfrom rclpy.node import Node\nfrom trail_interfaces.msg import Waypoint\n\nclass WaypointPublisher(Node):\n    def __init__(self):\n        super().__init__('waypoint_publisher')\n        self.publisher = self.create_publisher(Waypoint, 'goal', 10)\n        self.x = 0.0\n        self.create_timer(0.5, self.publish_waypoint)\n    def publish_waypoint(self):\n        message = Waypoint(frame_id='map', x=self.x, y=0.0)\n        self.publisher.publish(message)\n        self.get_logger().info(f'goal map ({message.x}, {message.y})')\n        self.x += 1.0\n\ndef main():\n    rclpy.init(); node = WaypointPublisher(); rclpy.spin(node)\nsubscriber.py:\nimport rclpy\nfrom rclpy.node import Node\nfrom trail_interfaces.msg import Waypoint\n\ndef main():\n    rclpy.init(); node = Node('waypoint_listener')\n    node.create_subscription(Waypoint, 'goal', lambda msg:\n        node.get_logger().info(f'goal {msg.frame_id} ({msg.x}, {msg.y})'), 10)\n    rclpy.spin(node)\nKeep the existing counter and listener console-script names, then build:\ncd ~/ros2_trails_ws\ncolcon build --packages-up-to trail_py_pubsub\nsource install/local_setup.bash\n\n\nC++ branch\nAdd &lt;depend&gt;trail_interfaces&lt;/depend&gt; to package.xml. In CMakeLists.txt, add find_package(trail_interfaces REQUIRED) and include trail_interfaces in ament_target_dependencies for both targets. Replace counter.cpp with:\n#include &lt;chrono&gt;\n#include &lt;memory&gt;\n#include \"rclcpp/rclcpp.hpp\"\n#include \"trail_interfaces/msg/waypoint.hpp\"\nusing namespace std::chrono_literals;\nint main(int argc, char ** argv) {\n  rclcpp::init(argc, argv);\n  auto node = std::make_shared&lt;rclcpp::Node&gt;(\"waypoint_publisher\");\n  auto pub = node-&gt;create_publisher&lt;trail_interfaces::msg::Waypoint&gt;(\"goal\", 10);\n  double x = 0.0;\n  auto timer = node-&gt;create_wall_timer(500ms, [node, pub, &x]() {\n    trail_interfaces::msg::Waypoint msg;\n    msg.frame_id = \"map\"; msg.x = x++; msg.y = 0.0;\n    pub-&gt;publish(msg);\n    RCLCPP_INFO(node-&gt;get_logger(), \"goal %s (%.1f, %.1f)\", msg.frame_id.c_str(), msg.x, msg.y);\n  });\n  rclcpp::spin(node); rclcpp::shutdown();\n}\nReplace listener.cpp with:\n#include &lt;memory&gt;\n#include \"rclcpp/rclcpp.hpp\"\n#include \"trail_interfaces/msg/waypoint.hpp\"\nint main(int argc, char ** argv) {\n  rclcpp::init(argc, argv);\n  auto node = std::make_shared&lt;rclcpp::Node&gt;(\"waypoint_listener\");\n  auto sub = node-&gt;create_subscription&lt;trail_interfaces::msg::Waypoint&gt;(\n    \"goal\", 10, [node](trail_interfaces::msg::Waypoint::ConstSharedPtr msg) {\n      RCLCPP_INFO(node-&gt;get_logger(), \"goal %s (%.1f, %.1f)\", msg-&gt;frame_id.c_str(), msg-&gt;x, msg-&gt;y);\n    });\n  rclcpp::spin(node); rclcpp::shutdown();\n}\nThen build:\ncd ~/ros2_trails_ws\ncolcon build --packages-up-to trail_cpp_pub\nsource install/local_setup.bash\nRun both nodes from your chosen branch, then verify ros2 topic type /goal prints trail_interfaces/msg/Waypoint and the subscriber logs frame_id, x, and y. If compilation or import fails, first confirm ros2 interface show trail_interfaces/msg/Waypoint works in that terminal. The declared dependency creates an edge in the package graph; this is what lets colcon --packages-up-to build trail_interfaces before the consuming node package."
   },
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#troubleshooting",
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#troubleshooting",
-    "title": "Creating custom msg and srv files",
+    "title": "Creating and using a custom message",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nInterface is unknown: resource the overlay after a successful build.\nCMake cannot find generators: check the dependency spelling and ROS setup.\nYAML parsing fails: keep spaces after colons and quote the entire mapping."
+    "text": "Troubleshooting\n\nInterface is unknown: re-source the overlay after a successful build.\nCMake cannot find generators: check the dependency spelling and ROS setup.\nYAML parsing fails: keep spaces after colons and quote the entire mapping."
   },
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#challenge",
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#challenge",
-    "title": "Creating custom msg and srv files",
+    "title": "Creating and using a custom message",
     "section": "Challenge",
-    "text": "Challenge\nAdd a uint8 priority field, rebuild, and explain why every publisher and subscriber using the interface must agree on the new generated type."
+    "text": "Challenge\nAdd a uint8 priority field, rebuild, publish it from the CLI, and explain why every publisher and subscriber using the interface must agree on the new type. Completion means ros2 interface show and a received sample both include priority. Hint: rebuild every package that depends on trail_interfaces."
   },
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#continue-on-a-trail",
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#continue-on-a-trail",
-    "title": "Creating custom msg and srv files",
+    "title": "Creating and using a custom message",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nBuilding nodes and packages\nInterfaces, parameters, actions, and plugins"
+    "text": "Continue on a trail\n\nBuilding nodes and packages\nInterfaces, parameters, actions, and plugins\n\n\nFinish trail →"
   },
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#references-and-provenance",
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#references-and-provenance",
-    "title": "Creating custom msg and srv files",
+    "title": "Creating and using a custom message",
     "section": "References and provenance",
     "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating custom msg and srv files.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
@@ -8493,7 +8571,7 @@
     "href": "lessons/beginner-cli-tools-recording-and-playing-back-data-recording-and-playing-back-data.html#continue-on-a-trail",
     "title": "Recording and playing back data",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nData, logging, and observability\nFoundations: the ROS 2 graph"
+    "text": "Continue on a trail\n\nData, logging, and observability\nFoundations: the ROS 2 graph\n\n\n← Understanding actions"
   },
   {
     "objectID": "lessons/beginner-cli-tools-recording-and-playing-back-data-recording-and-playing-back-data.html#references-and-provenance",
@@ -8633,7 +8711,7 @@
     "href": "lessons/intermediate-writing-an-action-server-client-cpp.html#continue-on-a-trail",
     "title": "Writing an action server and client (C++)",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nInterfaces, parameters, actions, and plugins"
+    "text": "Continue on a trail\n\nInterfaces, parameters, actions, and plugins\n\n\n← Creating an actionNext: Writing an action server and client (Python) →"
   },
   {
     "objectID": "lessons/intermediate-writing-an-action-server-client-cpp.html#references-and-provenance",
@@ -8983,7 +9061,7 @@
     "href": "lessons/advanced-security-access-controls.html#continue-on-a-trail",
     "title": "Setting access controls",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nSecurity and deployment"
+    "text": "Continue on a trail\n\nSecurity and deployment\n\n\n← Understanding the security keystoreNext: Deployment Guidelines →"
   },
   {
     "objectID": "lessons/advanced-security-access-controls.html#references-and-provenance",
@@ -9123,7 +9201,7 @@
     "href": "lessons/advanced-security-the-keystore.html#continue-on-a-trail",
     "title": "Understanding the security keystore",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nSecurity and deployment"
+    "text": "Continue on a trail\n\nSecurity and deployment\n\n\n← Setting up securityNext: Setting access controls →"
   },
   {
     "objectID": "lessons/advanced-security-the-keystore.html#references-and-provenance",
@@ -9135,56 +9213,56 @@
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html",
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html",
-    "title": "Writing a simple publisher and subscriber (C++)",
+    "title": "Writing a publisher and subscriber in C++",
     "section": "",
-    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum.\nRoute: Building nodes and packages › Stage 2 › C++ branch"
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#goal",
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#goal",
-    "title": "Writing a simple publisher and subscriber (C++)",
+    "title": "Writing a publisher and subscriber in C++",
     "section": "Goal",
-    "text": "Goal\nBuild a C++ publisher node with rclcpp, observe its topic from the CLI, and understand the build declarations that make the executable installable."
+    "text": "Goal\nBuild C++ publisher and subscriber nodes with rclcpp, observe their topic, and understand the build declarations that make both executables installable."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#do-it",
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#do-it",
-    "title": "Writing a simple publisher and subscriber (C++)",
+    "title": "Writing a publisher and subscriber in C++",
     "section": "Do it",
-    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_cmake --license Apache-2.0 \\\n  --dependencies rclcpp std_msgs trail_cpp_pub\nCreate trail_cpp_pub/src/counter.cpp:\n#include &lt;chrono&gt;\n#include &lt;memory&gt;\n#include \"rclcpp/rclcpp.hpp\"\n#include \"std_msgs/msg/int32.hpp\"\nusing namespace std::chrono_literals;\n\nint main(int argc, char ** argv) {\n  rclcpp::init(argc, argv);\n  auto node = std::make_shared&lt;rclcpp::Node&gt;(\"cpp_counter\");\n  auto pub = node-&gt;create_publisher&lt;std_msgs::msg::Int32&gt;(\"count\", 10);\n  int value = 0;\n  auto timer = node-&gt;create_wall_timer(500ms, [node, pub, &value]() {\n    std_msgs::msg::Int32 msg; msg.data = value++;\n    pub-&gt;publish(msg);\n    RCLCPP_INFO(node-&gt;get_logger(), \"published %d\", msg.data);\n  });\n  rclcpp::spin(node);\n  rclcpp::shutdown();\n}\nAdd to CMakeLists.txt before ament_package():\nadd_executable(counter src/counter.cpp)\nament_target_dependencies(counter rclcpp std_msgs)\ninstall(TARGETS counter DESTINATION lib/${PROJECT_NAME})\nBuild, source, and run ros2 run trail_cpp_pub counter."
+    "text": "Do it\nsource /opt/ros/jazzy/setup.bash\ncd ~/ros2_trails_ws/src\nros2 pkg create --build-type ament_cmake --license Apache-2.0 \\\n  --dependencies rclcpp std_msgs trail_cpp_pub\nThe generated locations used below are:\ntrail_cpp_pub/\n├── CMakeLists.txt\n├── package.xml\n└── src/\n    ├── counter.cpp\n    └── listener.cpp\nCreate trail_cpp_pub/src/counter.cpp:\n#include &lt;chrono&gt;\n#include &lt;memory&gt;\n#include \"rclcpp/rclcpp.hpp\"\n#include \"std_msgs/msg/int32.hpp\"\nusing namespace std::chrono_literals;\n\nint main(int argc, char ** argv) {\n  rclcpp::init(argc, argv);\n  auto node = std::make_shared&lt;rclcpp::Node&gt;(\"cpp_counter\");\n  auto pub = node-&gt;create_publisher&lt;std_msgs::msg::Int32&gt;(\"cpp_count\", 10);\n  int value = 0;\n  auto timer = node-&gt;create_wall_timer(500ms, [node, pub, &value]() {\n    std_msgs::msg::Int32 msg; msg.data = value++;\n    pub-&gt;publish(msg);\n    RCLCPP_INFO(node-&gt;get_logger(), \"published %d\", msg.data);\n  });\n  rclcpp::spin(node);\n  rclcpp::shutdown();\n}\nAdd to CMakeLists.txt before ament_package():\nadd_executable(counter src/counter.cpp)\nament_target_dependencies(counter rclcpp std_msgs)\ninstall(TARGETS counter DESTINATION lib/${PROJECT_NAME})\nCreate trail_cpp_pub/src/listener.cpp:\n#include &lt;memory&gt;\n#include \"rclcpp/rclcpp.hpp\"\n#include \"std_msgs/msg/int32.hpp\"\n\nint main(int argc, char ** argv) {\n  rclcpp::init(argc, argv);\n  auto node = std::make_shared&lt;rclcpp::Node&gt;(\"cpp_listener\");\n  auto sub = node-&gt;create_subscription&lt;std_msgs::msg::Int32&gt;(\n    \"cpp_count\", 10, [node](std_msgs::msg::Int32::ConstSharedPtr msg) {\n      RCLCPP_INFO(node-&gt;get_logger(), \"received %d\", msg-&gt;data);\n    });\n  rclcpp::spin(node);\n  rclcpp::shutdown();\n}\nAdd and install the second target:\nadd_executable(listener src/listener.cpp)\nament_target_dependencies(listener rclcpp std_msgs)\ninstall(TARGETS counter listener DESTINATION lib/${PROJECT_NAME})\nBuild and source the workspace. Run ros2 run trail_cpp_pub counter and ros2 run trail_cpp_pub listener in separate sourced terminals. The listener should log the same increasing values produced by the publisher."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#verify",
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#verify",
-    "title": "Writing a simple publisher and subscriber (C++)",
+    "title": "Writing a publisher and subscriber in C++",
     "section": "Verify",
-    "text": "Verify\nIn another sourced terminal:\nros2 node info /cpp_counter\nros2 topic echo /count --once\nThe node should publish /count, and the echo should contain an integer."
+    "text": "Verify\nIn another sourced terminal:\nros2 node list\nros2 topic info /cpp_count --verbose\nros2 topic echo /cpp_count --once\nBefore echo, the node list must contain /cpp_counter and /cpp_listener, and topic info must report one publisher and one subscriber. The listener terminal must log at least one received value. (echo briefly adds another subscriber, so measure endpoint counts before running it.)"
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#troubleshooting",
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#troubleshooting",
-    "title": "Writing a simple publisher and subscriber (C++)",
+    "title": "Writing a publisher and subscriber in C++",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nLinker errors: confirm both dependencies appear in package.xml and ament_target_dependencies.\nros2 run cannot find the executable: confirm the install(TARGETS ...) rule, rebuild, and resource the overlay.\nNo topic: keep the publisher process running while inspecting it."
+    "text": "Troubleshooting\n\nLinker errors: confirm both dependencies appear in package.xml and ament_target_dependencies.\nros2 run cannot find the executable: confirm the install(TARGETS ...) rule, rebuild, and re-source the overlay.\nNo topic: keep the publisher process running while inspecting it."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#challenge",
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#challenge",
-    "title": "Writing a simple publisher and subscriber (C++)",
+    "title": "Writing a publisher and subscriber in C++",
     "section": "Challenge",
-    "text": "Challenge\nAdd a second C++ executable that subscribes to count and logs only even values. Verify that the graph reports one publisher and one subscriber."
+    "text": "Challenge\nChange the subscriber so it logs only even values. You are done when its log shows 0, 2, 4 while ros2 topic echo /cpp_count still sees odd values. Hint: put the condition inside the callback; filtering changes application behavior, not the graph.\nStop both nodes with Ctrl+C before continuing.\nThe important pieces map directly to the Python lesson:\n\n\n\n\n\n\n\n\nIdea\nC++\nPython\n\n\n\n\nNode identity\nNode(\"cpp_counter\")\nNode('counter_publisher')\n\n\nTyped endpoint\ncreate_publisher&lt;Int32&gt;\ncreate_publisher(Int32, ...)\n\n\nQueue depth\nfinal argument 10\nfinal argument 10\n\n\nPeriodic work\nwall timer callback\ntimer callback\n\n\nProcess events\nrclcpp::spin\nrclpy.spin\n\n\n\nPublisher and subscriber endpoints match when they discover one another in the same ROS domain, resolve to the same topic name, use the exact same message type, and have compatible Quality of Service policies. The shorthand 10 selects the library’s default QoS settings with KEEP_LAST history depth 10; QoS also includes policies such as reliability and durability, covered in a later trail."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#continue-on-a-trail",
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#continue-on-a-trail",
-    "title": "Writing a simple publisher and subscriber (C++)",
+    "title": "Writing a publisher and subscriber in C++",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nBuilding nodes and packages"
+    "text": "Continue on a trail\n\nBuilding nodes and packages\n\n\n← Creating a packageNext: Creating and using a custom message →"
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#references-and-provenance",
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#references-and-provenance",
-    "title": "Writing a simple publisher and subscriber (C++)",
+    "title": "Writing a publisher and subscriber in C++",
     "section": "References and provenance",
     "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a simple publisher and subscriber (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },

@@ -217,7 +217,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#start-learning" id="toc-start-learning" class="nav-link active" data-scroll-target="#start-learning">Start learning</a></li>
+  <li><a href="#what-you-will-make" id="toc-what-you-will-make" class="nav-link active" data-scroll-target="#what-you-will-make">What you will make</a></li>
+  <li><a href="#route-through-the-three-stages" id="toc-route-through-the-three-stages" class="nav-link" data-scroll-target="#route-through-the-three-stages">Route through the three stages</a></li>
+  <li><a href="#capstone-prove-the-complete-system" id="toc-capstone-prove-the-complete-system" class="nav-link" data-scroll-target="#capstone-prove-the-complete-system">Capstone: prove the complete system</a></li>
+  <li><a href="#start-learning" id="toc-start-learning" class="nav-link" data-scroll-target="#start-learning">Start learning</a></li>
   <li><a href="#what-you-will-build-up-along-the-way" id="toc-what-you-will-build-up-along-the-way" class="nav-link" data-scroll-target="#what-you-will-build-up-along-the-way">What you will build up along the way</a></li>
   <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">1. Overview</a>
   <ul class="collapse">
@@ -241,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../trails/building-nodes.html">Learning trails</a></li><li class="breadcrumb-item"><a href="../trails/building-nodes.html">Building nodes and packages</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Building nodes and packages</h1>
-<p class="subtitle lead">A ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. <code>colcon</code> builds the workspace, while <code>ament_cmake</code> and <code>ament_python</code> provide the common C++ and Python package conventions.</p>
+<p class="subtitle lead">Create a workspace, package communicating nodes, and define a message type.</p>
 </div>
 
 
@@ -259,50 +262,90 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="trail-meta">
-<p><strong>6 lessons</strong> · <strong>3 learning stages</strong> · Learn entirely on this site</p>
+<p><strong>5 lessons</strong> · <strong>3 learning stages</strong> · Learn entirely on this site</p>
 </div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Before you start
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Run the <a href="../guides/jazzy-environment.html">local Jazzy environment check</a>. It verifies the installation, shell, build tools, dependency tool, and network assumptions used below.</p>
+</div>
+</div>
+<section id="what-you-will-make" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-make">What you will make</h2>
+<p>You will create one workspace, add packages to it, run two nodes that exchange messages, and define a message type for your own domain.</p>
+<pre class="text"><code>ros2_trails_ws/                 workspace: the build boundary
+└── src/
+    ├── trail_hello/            package: code + dependency metadata
+    ├── trail_py_pubsub/        package containing Python nodes
+    ├── trail_cpp_pub/          package containing C++ nodes
+    └── trail_interfaces/       package containing message definitions</code></pre>
+<p>A <strong>package</strong> is the smallest ROS 2 project unit. A build installs executable artifacts; <code>ros2 run</code> locates one and starts a process. That process can create one or more <strong>nodes</strong>, which are the participants visible in the ROS graph. Nodes exchange typed data over <strong>topics</strong>. <code>colcon</code> builds the workspace; <code>ament_python</code> and <code>ament_cmake</code> describe how Python and C++ packages are built and installed.</p>
+</section>
+<section id="route-through-the-three-stages" class="level2">
+<h2 class="anchored" data-anchor-id="route-through-the-three-stages">Route through the three stages</h2>
+<ol type="1">
+<li><strong>Workspace and package:</strong> complete lessons 1 and 2.</li>
+<li><strong>Choose one ROS programming library:</strong> use <code>rclpy</code> for Python or <code>rclcpp</code> for C++. Complete both only if you want a language comparison.</li>
+<li><strong>Domain interface:</strong> complete the custom-interface lesson and connect <code>Waypoint</code> to the language branch you chose.</li>
+</ol>
+<p>Checkpoint before stage 3: <code>ros2 topic info</code> must show one publisher and one subscriber in your chosen language, and <code>ros2 topic echo --once</code> must capture a sample.</p>
+</section>
+<section id="capstone-prove-the-complete-system" class="level2">
+<h2 class="anchored" data-anchor-id="capstone-prove-the-complete-system">Capstone: prove the complete system</h2>
+<p>Start from clean terminals and demonstrate all three stages. Use notes and copy commands freely; the goal is to select, adapt, and explain them:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Build through your chosen node package with <code>colcon --packages-up-to</code>.</label></li>
+<li><label><input type="checkbox">Source the underlay and workspace overlay in both run terminals.</label></li>
+<li><label><input type="checkbox">Run one publisher and one subscriber using <code>Waypoint</code> on <code>/goal</code>.</label></li>
+<li><label><input type="checkbox">Capture <code>ros2 node list</code>, <code>ros2 topic info /goal --verbose</code>, and one received waypoint.</label></li>
+<li><label><input type="checkbox">Explain which packages came from <code>/opt/ros/jazzy</code> and which came from the workspace overlay.</label></li>
+</ul>
+<p>Mark the trail <strong>complete</strong> only when every box has observable evidence. Mark a stage <strong>needs review</strong> when you cannot yet explain why a command is needed or predict its key output.</p>
+</section>
 <section id="start-learning" class="level2">
 <h2 class="anchored" data-anchor-id="start-learning">Start learning</h2>
-<p>Work through these lessons in order. Each one contains a local activity and knowledge check.</p>
-<div class="lesson-grid">
-<div class="lesson-card">
-<p><span class="lesson-number">1</span></p>
+<p>Complete the stages in order; choose one lesson in stage 2. Each lesson contains a local activity and knowledge check.</p>
+<div class="lesson-grid" role="list" aria-label="Lessons in this trail">
+<div class="lesson-card" role="listitem">
+<p><span class="lesson-number" aria-hidden="true">1</span></p>
 <section id="creating-a-workspace" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-workspace"><a href="../lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html">Creating a workspace</a></h3>
-<p>Beginner-Client-Libraries · Authored</p>
-<p><a href="../lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html">Open lesson →</a></p>
+<p>Stage 1 · Workspace and package · step 1 of 2 · Authored</p>
 </section>
 </div>
-<div class="lesson-card">
-<p><span class="lesson-number">2</span></p>
+<div class="lesson-card" role="listitem">
+<p><span class="lesson-number" aria-hidden="true">2</span></p>
 <section id="creating-a-package" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-package"><a href="../lessons/beginner-client-libraries-creating-your-first-ros2-package.html">Creating a package</a></h3>
-<p>Beginner-Client-Libraries · Authored</p>
-<p><a href="../lessons/beginner-client-libraries-creating-your-first-ros2-package.html">Open lesson →</a></p>
+<p>Stage 1 · Workspace and package · step 2 of 2 · Authored</p>
 </section>
 </div>
-<div class="lesson-card">
-<p><span class="lesson-number">3</span></p>
-<section id="creating-custom-msg-and-srv-files" class="level3">
-<h3 class="anchored" data-anchor-id="creating-custom-msg-and-srv-files"><a href="../lessons/beginner-client-libraries-custom-ros2-interfaces.html">Creating custom msg and srv files</a></h3>
-<p>Beginner-Client-Libraries · Authored</p>
-<p><a href="../lessons/beginner-client-libraries-custom-ros2-interfaces.html">Open lesson →</a></p>
+<div class="lesson-card" role="listitem">
+<p><span class="lesson-number" aria-hidden="true">A</span></p>
+<section id="writing-a-publisher-and-subscriber-in-c" class="level3">
+<h3 class="anchored" data-anchor-id="writing-a-publisher-and-subscriber-in-c"><a href="../lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html">Writing a publisher and subscriber in C++</a></h3>
+<p>Stage 2 · C++ branch · Authored</p>
 </section>
 </div>
-<div class="lesson-card">
-<p><span class="lesson-number">4</span></p>
-<section id="writing-a-simple-publisher-and-subscriber-c" class="level3">
-<h3 class="anchored" data-anchor-id="writing-a-simple-publisher-and-subscriber-c"><a href="../lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html">Writing a simple publisher and subscriber (C++)</a></h3>
-<p>Beginner-Client-Libraries · Authored</p>
-<p><a href="../lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html">Open lesson →</a></p>
+<div class="lesson-card" role="listitem">
+<p><span class="lesson-number" aria-hidden="true">B</span></p>
+<section id="writing-a-publisher-and-subscriber-in-python" class="level3">
+<h3 class="anchored" data-anchor-id="writing-a-publisher-and-subscriber-in-python"><a href="../lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html">Writing a publisher and subscriber in Python</a></h3>
+<p>Stage 2 · Python branch · Authored</p>
 </section>
 </div>
-<div class="lesson-card">
-<p><span class="lesson-number">5</span></p>
-<section id="writing-a-simple-publisher-and-subscriber-python" class="level3">
-<h3 class="anchored" data-anchor-id="writing-a-simple-publisher-and-subscriber-python"><a href="../lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html">Writing a simple publisher and subscriber (Python)</a></h3>
-<p>Beginner-Client-Libraries · Authored</p>
-<p><a href="../lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html">Open lesson →</a></p>
+<div class="lesson-card" role="listitem">
+<p><span class="lesson-number" aria-hidden="true">3</span></p>
+<section id="creating-and-using-a-custom-message" class="level3">
+<h3 class="anchored" data-anchor-id="creating-and-using-a-custom-message"><a href="../lessons/beginner-client-libraries-custom-ros2-interfaces.html">Creating and using a custom message</a></h3>
+<p>Stage 3 · Domain interface · Authored</p>
 </section>
 </div>
 </div>

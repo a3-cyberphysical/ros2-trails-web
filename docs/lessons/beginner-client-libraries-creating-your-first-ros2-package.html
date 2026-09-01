@@ -288,6 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="lesson-state authored">
 <p><strong>Authored lesson</strong> · This page is part of the local ROS 2 Trails curriculum.</p>
 </div>
+<p><strong>Route:</strong> Building nodes and packages › Stage 1 › Workspace and package · step 2 of 2</p>
 <section id="goal" class="level2">
 <h2 class="anchored" data-anchor-id="goal">Goal</h2>
 <p>Create a Python package with explicit dependencies, build only that package, and run its installed executable.</p>
@@ -298,7 +299,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/ros2_trails_ws/src</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws/src</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> pkg create <span class="at">--build-type</span> ament_python <span class="at">--license</span> Apache-2.0 <span class="dt">\</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">--dependencies</span> rclpy std_msgs trail_hello</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">--dependencies</span> rclpy trail_hello</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>rclpy</code> is declared because the code imports it. Do not list packages merely because they are common: dependency metadata should describe what this package actually needs. <code>package.xml</code> records ROS package dependencies; <code>setup.py</code> separately tells Python how to install modules and console entry points.</p>
 <p>Create <code>trail_hello/trail_hello/hello.py</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rclpy</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rclpy.node <span class="im">import</span> Node</span>
@@ -333,13 +335,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="challenge" class="level2">
 <h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
-<p>Add a <code>--message</code> command-line argument and log its value without changing the package name or executable name.</p>
+<p>Add a second console-script name, <code>hello_again</code>, pointing to the same <code>main</code>. Rebuild and confirm <code>ros2 pkg executables trail_hello</code> lists both names and both run successfully. Hint: add a second quoted line to <code>console_scripts</code>.</p>
 </section>
 <section id="continue-on-a-trail" class="level2">
 <h2 class="anchored" data-anchor-id="continue-on-a-trail">Continue on a trail</h2>
 <ul>
 <li><a href="../trails/building-nodes.html">Building nodes and packages</a></li>
 </ul>
+<nav class="lesson-navigation" aria-label="Lesson navigation">
+<a class="previous-lesson" href="../lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html">← Creating a workspace</a><a href="../lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html">Choose Writing a publisher and subscriber in C++ →</a><a href="../lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html">Choose Writing a publisher and subscriber in Python →</a>
+</nav>
 </section>
 <section id="references-and-provenance" class="level2">
 <h2 class="anchored" data-anchor-id="references-and-provenance">References and provenance</h2>

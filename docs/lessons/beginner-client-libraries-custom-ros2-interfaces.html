@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Creating custom msg and srv files – ROS 2 Trails</title>
+<title>Creating and using a custom message – ROS 2 Trails</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Creating custom msg and srv files</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Creating and using a custom message</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -255,6 +255,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a></li>
   <li><a href="#do-it" id="toc-do-it" class="nav-link" data-scroll-target="#do-it">Do it</a></li>
   <li><a href="#verify" id="toc-verify" class="nav-link" data-scroll-target="#verify">Verify</a></li>
+  <li><a href="#connect-it-to-your-node-branch" id="toc-connect-it-to-your-node-branch" class="nav-link" data-scroll-target="#connect-it-to-your-node-branch">Connect it to your node branch</a>
+  <ul class="collapse">
+  <li><a href="#python-branch" id="toc-python-branch" class="nav-link" data-scroll-target="#python-branch">Python branch</a></li>
+  <li><a href="#c-branch" id="toc-c-branch" class="nav-link" data-scroll-target="#c-branch">C++ branch</a></li>
+  </ul></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
   <li><a href="#challenge" id="toc-challenge" class="nav-link" data-scroll-target="#challenge">Challenge</a></li>
   <li><a href="#continue-on-a-trail" id="toc-continue-on-a-trail" class="nav-link" data-scroll-target="#continue-on-a-trail">Continue on a trail</a></li>
@@ -267,7 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Creating custom msg and srv files</h1>
+<h1 class="title">Creating and using a custom message</h1>
 <p class="subtitle lead">Beginner-Client-Libraries</p>
 </div>
 
@@ -288,9 +293,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="lesson-state authored">
 <p><strong>Authored lesson</strong> · This page is part of the local ROS 2 Trails curriculum.</p>
 </div>
+<p><strong>Route:</strong> Building nodes and packages › Stage 3 › Domain interface</p>
 <section id="goal" class="level2">
 <h2 class="anchored" data-anchor-id="goal">Goal</h2>
-<p>Define a custom message in a dedicated interface package, generate its language support, and publish a value from the command line.</p>
+<p>Define a custom message in a dedicated interface package, generate its language support, and prove that ROS 2 can serialize a domain-specific waypoint.</p>
 </section>
 <section id="do-it" class="level2">
 <h2 class="anchored" data-anchor-id="do-it">Do it</h2>
@@ -298,40 +304,132 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws/src</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> pkg create <span class="at">--build-type</span> ament_cmake <span class="at">--license</span> Apache-2.0 trail_interfaces</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> trail_interfaces/msg</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The files used in this lesson are:</p>
+<pre class="text"><code>trail_interfaces/
+├── CMakeLists.txt
+├── package.xml
+└── msg/
+    └── Waypoint.msg</code></pre>
 <p>Create <code>trail_interfaces/msg/Waypoint.msg</code>:</p>
 <pre class="text"><code>string frame_id
 float64 x
 float64 y</code></pre>
-<p>Add these declarations to <code>package.xml</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">buildtool_depend</span>&gt;rosidl_default_generators&lt;/<span class="kw">buildtool_depend</span>&gt;</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">exec_depend</span>&gt;rosidl_default_runtime&lt;/<span class="kw">exec_depend</span>&gt;</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">member_of_group</span>&gt;rosidl_interface_packages&lt;/<span class="kw">member_of_group</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>In <code>CMakeLists.txt</code>, add:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode cmake code-with-copy"><code class="sourceCode cmake"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">find_package</span>(rosidl_default_generators <span class="ot">REQUIRED</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rosidl_generate_interfaces</span>(<span class="dv">${PROJECT_NAME}</span> <span class="st">"msg/Waypoint.msg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Add these declarations inside the existing <code>&lt;package&gt;...&lt;/package&gt;</code> element in <code>package.xml</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">buildtool_depend</span>&gt;rosidl_default_generators&lt;/<span class="kw">buildtool_depend</span>&gt;</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">exec_depend</span>&gt;rosidl_default_runtime&lt;/<span class="kw">exec_depend</span>&gt;</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">member_of_group</span>&gt;rosidl_interface_packages&lt;/<span class="kw">member_of_group</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In <code>CMakeLists.txt</code>, place this immediately before the existing <code>ament_package()</code> call:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode cmake code-with-copy"><code class="sourceCode cmake"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">find_package</span>(rosidl_default_generators <span class="ot">REQUIRED</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rosidl_generate_interfaces</span>(<span class="dv">${PROJECT_NAME}</span> <span class="st">"msg/Waypoint.msg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>rosidl_generate_interfaces</code> turns the schema into installed type support and language-specific code. A Python node imports <code>from trail_interfaces.msg import Waypoint</code>; C++ includes <code>"trail_interfaces/msg/waypoint.hpp"</code>. Changing fields changes that generated contract, so packages that compile or import it must be rebuilt against the same definition.</p>
 <p>Then build and source:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">colcon</span> build <span class="at">--packages-select</span> trail_interfaces</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> install/local_setup.bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">colcon</span> build <span class="at">--packages-select</span> trail_interfaces</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> install/local_setup.bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="verify" class="level2">
 <h2 class="anchored" data-anchor-id="verify">Verify</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> interface show trail_interfaces/msg/Waypoint</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic pub <span class="at">--once</span> /goal trail_interfaces/msg/Waypoint <span class="dt">\</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"{frame_id: map, x: 1.5, y: -0.5}"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>In a second terminal, run <code>ros2 topic echo /goal --once</code> before publishing. The received field names and values prove generation, discovery, and serialization.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> interface show trail_interfaces/msg/Waypoint</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic echo /goal <span class="at">--once</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Leave Terminal A waiting. In Terminal B, source the same overlay and publish:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> /opt/ros/jazzy/setup.bash</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/ros2_trails_ws/install/local_setup.bash</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic pub <span class="at">--once</span> /goal trail_interfaces/msg/Waypoint <span class="dt">\</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"{frame_id: map, x: 1.5, y: -0.5}"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Terminal A should print the same field names and values. This proves generation, type discovery, and serialization without hiding those concepts inside more application code.</p>
+</section>
+<section id="connect-it-to-your-node-branch" class="level2">
+<h2 class="anchored" data-anchor-id="connect-it-to-your-node-branch">Connect it to your node branch</h2>
+<p>Make <code>trail_interfaces</code> a dependency of the Python or C++ pub/sub package you completed.</p>
+<section id="python-branch" class="level3">
+<h3 class="anchored" data-anchor-id="python-branch">Python branch</h3>
+<p>Add <code>&lt;exec_depend&gt;trail_interfaces&lt;/exec_depend&gt;</code> to <code>package.xml</code>. In both Python nodes replace their contents with these complete files.</p>
+<p><code>publisher.py</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rclpy</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rclpy.node <span class="im">import</span> Node</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> trail_interfaces.msg <span class="im">import</span> Waypoint</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> WaypointPublisher(Node):</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="st">'waypoint_publisher'</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.publisher <span class="op">=</span> <span class="va">self</span>.create_publisher(Waypoint, <span class="st">'goal'</span>, <span class="dv">10</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.create_timer(<span class="fl">0.5</span>, <span class="va">self</span>.publish_waypoint)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> publish_waypoint(<span class="va">self</span>):</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        message <span class="op">=</span> Waypoint(frame_id<span class="op">=</span><span class="st">'map'</span>, x<span class="op">=</span><span class="va">self</span>.x, y<span class="op">=</span><span class="fl">0.0</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.publisher.publish(message)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.get_logger().info(<span class="ss">f'goal map (</span><span class="sc">{</span>message<span class="sc">.</span>x<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>message<span class="sc">.</span>y<span class="sc">}</span><span class="ss">)'</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x <span class="op">+=</span> <span class="fl">1.0</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    rclpy.init()<span class="op">;</span> node <span class="op">=</span> WaypointPublisher()<span class="op">;</span> rclpy.spin(node)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>subscriber.py</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rclpy</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rclpy.node <span class="im">import</span> Node</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> trail_interfaces.msg <span class="im">import</span> Waypoint</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    rclpy.init()<span class="op">;</span> node <span class="op">=</span> Node(<span class="st">'waypoint_listener'</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    node.create_subscription(Waypoint, <span class="st">'goal'</span>, <span class="kw">lambda</span> msg:</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        node.get_logger().info(<span class="ss">f'goal </span><span class="sc">{</span>msg<span class="sc">.</span>frame_id<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span>msg<span class="sc">.</span>x<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>msg<span class="sc">.</span>y<span class="sc">}</span><span class="ss">)'</span>), <span class="dv">10</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    rclpy.spin(node)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Keep the existing <code>counter</code> and <code>listener</code> console-script names, then build:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">colcon</span> build <span class="at">--packages-up-to</span> trail_py_pubsub</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> install/local_setup.bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="c-branch" class="level3">
+<h3 class="anchored" data-anchor-id="c-branch">C++ branch</h3>
+<p>Add <code>&lt;depend&gt;trail_interfaces&lt;/depend&gt;</code> to <code>package.xml</code>. In <code>CMakeLists.txt</code>, add <code>find_package(trail_interfaces REQUIRED)</code> and include <code>trail_interfaces</code> in <code>ament_target_dependencies</code> for both targets. Replace <code>counter.cpp</code> with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;chrono&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;memory&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"rclcpp/rclcpp.hpp"</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"trail_interfaces/msg/waypoint.hpp"</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> <span class="bu">std::</span>chrono_literals<span class="op">;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">int</span> argc<span class="op">,</span> <span class="dt">char</span> <span class="op">**</span> argv<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>init<span class="op">(</span>argc<span class="op">,</span> argv<span class="op">);</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> node <span class="op">=</span> <span class="bu">std::</span>make_shared<span class="op">&lt;</span>rclcpp<span class="op">::</span>Node<span class="op">&gt;(</span><span class="st">"waypoint_publisher"</span><span class="op">);</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> pub <span class="op">=</span> node<span class="op">-&gt;</span>create_publisher<span class="op">&lt;</span>trail_interfaces<span class="op">::</span>msg<span class="op">::</span>Waypoint<span class="op">&gt;(</span><span class="st">"goal"</span><span class="op">,</span> <span class="dv">10</span><span class="op">);</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">double</span> x <span class="op">=</span> <span class="fl">0.0</span><span class="op">;</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> timer <span class="op">=</span> node<span class="op">-&gt;</span>create_wall_timer<span class="op">(</span><span class="dv">500</span><span class="bu">ms</span><span class="op">,</span> <span class="op">[</span>node<span class="op">,</span> pub<span class="op">,</span> <span class="op">&amp;</span>x<span class="op">]()</span> <span class="op">{</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    trail_interfaces<span class="op">::</span>msg<span class="op">::</span>Waypoint msg<span class="op">;</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    msg<span class="op">.</span>frame_id <span class="op">=</span> <span class="st">"map"</span><span class="op">;</span> msg<span class="op">.</span>x <span class="op">=</span> x<span class="op">++;</span> msg<span class="op">.</span>y <span class="op">=</span> <span class="fl">0.0</span><span class="op">;</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    pub<span class="op">-&gt;</span>publish<span class="op">(</span>msg<span class="op">);</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    RCLCPP_INFO<span class="op">(</span>node<span class="op">-&gt;</span>get_logger<span class="op">(),</span> <span class="st">"goal </span><span class="sc">%s</span><span class="st"> (</span><span class="sc">%.1f</span><span class="st">, </span><span class="sc">%.1f</span><span class="st">)"</span><span class="op">,</span> msg<span class="op">.</span>frame_id<span class="op">.</span>c_str<span class="op">(),</span> msg<span class="op">.</span>x<span class="op">,</span> msg<span class="op">.</span>y<span class="op">);</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">});</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>spin<span class="op">(</span>node<span class="op">);</span> rclcpp<span class="op">::</span>shutdown<span class="op">();</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Replace <code>listener.cpp</code> with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;memory&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"rclcpp/rclcpp.hpp"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"trail_interfaces/msg/waypoint.hpp"</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">int</span> argc<span class="op">,</span> <span class="dt">char</span> <span class="op">**</span> argv<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>init<span class="op">(</span>argc<span class="op">,</span> argv<span class="op">);</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> node <span class="op">=</span> <span class="bu">std::</span>make_shared<span class="op">&lt;</span>rclcpp<span class="op">::</span>Node<span class="op">&gt;(</span><span class="st">"waypoint_listener"</span><span class="op">);</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> sub <span class="op">=</span> node<span class="op">-&gt;</span>create_subscription<span class="op">&lt;</span>trail_interfaces<span class="op">::</span>msg<span class="op">::</span>Waypoint<span class="op">&gt;(</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"goal"</span><span class="op">,</span> <span class="dv">10</span><span class="op">,</span> <span class="op">[</span>node<span class="op">](</span>trail_interfaces<span class="op">::</span>msg<span class="op">::</span>Waypoint<span class="op">::</span>ConstSharedPtr msg<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>      RCLCPP_INFO<span class="op">(</span>node<span class="op">-&gt;</span>get_logger<span class="op">(),</span> <span class="st">"goal </span><span class="sc">%s</span><span class="st"> (</span><span class="sc">%.1f</span><span class="st">, </span><span class="sc">%.1f</span><span class="st">)"</span><span class="op">,</span> msg<span class="op">-&gt;</span>frame_id<span class="op">.</span>c_str<span class="op">(),</span> msg<span class="op">-&gt;</span>x<span class="op">,</span> msg<span class="op">-&gt;</span>y<span class="op">);</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">});</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>spin<span class="op">(</span>node<span class="op">);</span> rclcpp<span class="op">::</span>shutdown<span class="op">();</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then build:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">colcon</span> build <span class="at">--packages-up-to</span> trail_cpp_pub</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> install/local_setup.bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Run both nodes from your chosen branch, then verify <code>ros2 topic type /goal</code> prints <code>trail_interfaces/msg/Waypoint</code> and the subscriber logs <code>frame_id</code>, <code>x</code>, and <code>y</code>. If compilation or import fails, first confirm <code>ros2 interface show trail_interfaces/msg/Waypoint</code> works in that terminal. The declared dependency creates an edge in the package graph; this is what lets <code>colcon --packages-up-to</code> build <code>trail_interfaces</code> before the consuming node package.</p>
+</section>
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
 <ul>
-<li>Interface is unknown: resource the overlay after a successful build.</li>
+<li>Interface is unknown: re-source the overlay after a successful build.</li>
 <li>CMake cannot find generators: check the dependency spelling and ROS setup.</li>
 <li>YAML parsing fails: keep spaces after colons and quote the entire mapping.</li>
 </ul>
 </section>
 <section id="challenge" class="level2">
 <h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
-<p>Add a <code>uint8 priority</code> field, rebuild, and explain why every publisher and subscriber using the interface must agree on the new generated type.</p>
+<p>Add a <code>uint8 priority</code> field, rebuild, publish it from the CLI, and explain why every publisher and subscriber using the interface must agree on the new type. Completion means <code>ros2 interface show</code> and a received sample both include <code>priority</code>. Hint: rebuild every package that depends on <code>trail_interfaces</code>.</p>
 </section>
 <section id="continue-on-a-trail" class="level2">
 <h2 class="anchored" data-anchor-id="continue-on-a-trail">Continue on a trail</h2>
@@ -339,6 +437,9 @@ float64 y</code></pre>
 <li><a href="../trails/building-nodes.html">Building nodes and packages</a></li>
 <li><a href="../trails/interfaces-and-actions.html">Interfaces, parameters, actions, and plugins</a></li>
 </ul>
+<nav class="lesson-navigation" aria-label="Lesson navigation">
+<a href="../trails/building-nodes.html">Finish trail →</a>
+</nav>
 </section>
 <section id="references-and-provenance" class="level2">
 <h2 class="anchored" data-anchor-id="references-and-provenance">References and provenance</h2>

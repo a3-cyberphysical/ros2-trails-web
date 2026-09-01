@@ -288,6 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="lesson-state authored">
 <p><strong>Authored lesson</strong> · This page is part of the local ROS 2 Trails curriculum.</p>
 </div>
+<p><strong>Route:</strong> Building nodes and packages › Stage 1 › Workspace and package · step 1 of 2</p>
 <section id="goal" class="level2">
 <h2 class="anchored" data-anchor-id="goal">Goal</h2>
 <p>Create an overlay workspace, build it with <code>colcon</code>, and prove that ROS 2 can discover a package from the installed overlay.</p>
@@ -297,22 +298,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Open a terminal where ROS 2 Jazzy is installed:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> /opt/ros/jazzy/setup.bash</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/ros2_trails_ws/src</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">colcon</span> build</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The empty build creates <code>build</code>, <code>install</code>, and <code>log</code>. Source the result:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> install/local_setup.bash</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">printenv</span> AMENT_PREFIX_PATH</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Now add an existing package as source and rebuild:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws/src</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">-b</span> jazzy https://github.com/ros2/examples.git</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">rosdep</span> install <span class="at">-i</span> <span class="at">--from-path</span> src <span class="at">--rosdistro</span> jazzy <span class="at">-y</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">colcon</span> build <span class="at">--symlink-install</span> <span class="at">--packages-select</span> examples_rclpy_minimal_publisher</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> install/local_setup.bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws/src</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">-b</span> jazzy https://github.com/ros2/examples.git</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">rosdep</span> install <span class="at">-i</span> <span class="at">--from-path</span> src <span class="at">--rosdistro</span> jazzy <span class="at">-y</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">colcon</span> build <span class="at">--symlink-install</span> <span class="at">--packages-select</span> examples_rclpy_minimal_publisher</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> install/local_setup.bash</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">printenv</span> AMENT_PREFIX_PATH</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A successful package build creates <code>build</code>, <code>install</code>, and <code>log</code>. The underlay at <code>/opt/ros/jazzy</code> supplies ROS 2; <code>install/local_setup.bash</code> adds this workspace as an overlay without replacing the underlay.</p>
+<ul>
+<li><code>src</code> contains the source files you edit.</li>
+<li><code>build</code> contains per-package intermediate build state.</li>
+<li><code>install</code> contains the discoverable result used by ROS tools.</li>
+<li><code>log</code> contains build diagnostics.</li>
+</ul>
+<p>Sourcing changes search paths in the current shell; it does not build or copy anything. <code>--symlink-install</code> links supported Python/resources into <code>install</code> for a faster edit cycle. Rebuild after compiled C++ changes, dependency or metadata changes, and whenever an edit is not reflected through a symlink.</p>
 </section>
 <section id="verify" class="level2">
 <h2 class="anchored" data-anchor-id="verify">Verify</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> pkg prefix examples_rclpy_minimal_publisher</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> pkg prefix examples_rclpy_minimal_publisher</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The printed path should begin with <code>~/ros2_trails_ws/install</code>, not <code>/opt/ros/jazzy</code>. That distinction proves the overlay is active.</p>
 </section>
 <section id="troubleshooting" class="level2">
@@ -325,13 +329,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="challenge" class="level2">
 <h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
-<p>Open a clean terminal and predict whether the example package is discoverable before sourcing the overlay. Test the prediction with <code>ros2 pkg prefix</code>.</p>
+<p>Open a clean terminal and predict whether the example package is discoverable before sourcing the overlay. Test the prediction with <code>ros2 pkg prefix</code>. Completion means you can explain why the clean terminal cannot find the overlay package but can find packages installed in <code>/opt/ros/jazzy</code>. Hint: compare <code>AMENT_PREFIX_PATH</code> before and after sourcing <code>install/local_setup.bash</code>.</p>
 </section>
 <section id="continue-on-a-trail" class="level2">
 <h2 class="anchored" data-anchor-id="continue-on-a-trail">Continue on a trail</h2>
 <ul>
 <li><a href="../trails/building-nodes.html">Building nodes and packages</a></li>
 </ul>
+<nav class="lesson-navigation" aria-label="Lesson navigation">
+<a class="next-lesson" href="../lessons/beginner-client-libraries-creating-your-first-ros2-package.html">Next: Creating a package →</a>
+</nav>
 </section>
 <section id="references-and-provenance" class="level2">
 <h2 class="anchored" data-anchor-id="references-and-provenance">References and provenance</h2>

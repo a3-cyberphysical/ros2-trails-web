@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Writing a simple publisher and subscriber (C++) – ROS 2 Trails</title>
+<title>Writing a publisher and subscriber in C++ – ROS 2 Trails</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Writing a simple publisher and subscriber (C++)</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Writing a publisher and subscriber in C++</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -267,7 +267,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Writing a simple publisher and subscriber (C++)</h1>
+<h1 class="title">Writing a publisher and subscriber in C++</h1>
 <p class="subtitle lead">Beginner-Client-Libraries</p>
 </div>
 
@@ -288,9 +288,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="lesson-state authored">
 <p><strong>Authored lesson</strong> · This page is part of the local ROS 2 Trails curriculum.</p>
 </div>
+<p><strong>Route:</strong> Building nodes and packages › Stage 2 › C++ branch</p>
 <section id="goal" class="level2">
 <h2 class="anchored" data-anchor-id="goal">Goal</h2>
-<p>Build a C++ publisher node with <code>rclcpp</code>, observe its topic from the CLI, and understand the build declarations that make the executable installable.</p>
+<p>Build C++ publisher and subscriber nodes with <code>rclcpp</code>, observe their topic, and understand the build declarations that make both executables installable.</p>
 </section>
 <section id="do-it" class="level2">
 <h2 class="anchored" data-anchor-id="do-it">Do it</h2>
@@ -298,56 +299,130 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_ws/src</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> pkg create <span class="at">--build-type</span> ament_cmake <span class="at">--license</span> Apache-2.0 <span class="dt">\</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">--dependencies</span> rclcpp std_msgs trail_cpp_pub</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The generated locations used below are:</p>
+<pre class="text"><code>trail_cpp_pub/
+├── CMakeLists.txt
+├── package.xml
+└── src/
+    ├── counter.cpp
+    └── listener.cpp</code></pre>
 <p>Create <code>trail_cpp_pub/src/counter.cpp</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;chrono&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;memory&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"rclcpp/rclcpp.hpp"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"std_msgs/msg/int32.hpp"</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> <span class="bu">std::</span>chrono_literals<span class="op">;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">int</span> argc<span class="op">,</span> <span class="dt">char</span> <span class="op">**</span> argv<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>init<span class="op">(</span>argc<span class="op">,</span> argv<span class="op">);</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> node <span class="op">=</span> <span class="bu">std::</span>make_shared<span class="op">&lt;</span>rclcpp<span class="op">::</span>Node<span class="op">&gt;(</span><span class="st">"cpp_counter"</span><span class="op">);</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> pub <span class="op">=</span> node<span class="op">-&gt;</span>create_publisher<span class="op">&lt;</span>std_msgs<span class="op">::</span>msg<span class="op">::</span>Int32<span class="op">&gt;(</span><span class="st">"count"</span><span class="op">,</span> <span class="dv">10</span><span class="op">);</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> value <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> timer <span class="op">=</span> node<span class="op">-&gt;</span>create_wall_timer<span class="op">(</span><span class="dv">500</span><span class="bu">ms</span><span class="op">,</span> <span class="op">[</span>node<span class="op">,</span> pub<span class="op">,</span> <span class="op">&amp;</span>value<span class="op">]()</span> <span class="op">{</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    std_msgs<span class="op">::</span>msg<span class="op">::</span>Int32 msg<span class="op">;</span> msg<span class="op">.</span>data <span class="op">=</span> value<span class="op">++;</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    pub<span class="op">-&gt;</span>publish<span class="op">(</span>msg<span class="op">);</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    RCLCPP_INFO<span class="op">(</span>node<span class="op">-&gt;</span>get_logger<span class="op">(),</span> <span class="st">"published </span><span class="sc">%d</span><span class="st">"</span><span class="op">,</span> msg<span class="op">.</span>data<span class="op">);</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">});</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>spin<span class="op">(</span>node<span class="op">);</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>shutdown<span class="op">();</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;chrono&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;memory&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"rclcpp/rclcpp.hpp"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"std_msgs/msg/int32.hpp"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> <span class="bu">std::</span>chrono_literals<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">int</span> argc<span class="op">,</span> <span class="dt">char</span> <span class="op">**</span> argv<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>init<span class="op">(</span>argc<span class="op">,</span> argv<span class="op">);</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> node <span class="op">=</span> <span class="bu">std::</span>make_shared<span class="op">&lt;</span>rclcpp<span class="op">::</span>Node<span class="op">&gt;(</span><span class="st">"cpp_counter"</span><span class="op">);</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> pub <span class="op">=</span> node<span class="op">-&gt;</span>create_publisher<span class="op">&lt;</span>std_msgs<span class="op">::</span>msg<span class="op">::</span>Int32<span class="op">&gt;(</span><span class="st">"cpp_count"</span><span class="op">,</span> <span class="dv">10</span><span class="op">);</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> value <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> timer <span class="op">=</span> node<span class="op">-&gt;</span>create_wall_timer<span class="op">(</span><span class="dv">500</span><span class="bu">ms</span><span class="op">,</span> <span class="op">[</span>node<span class="op">,</span> pub<span class="op">,</span> <span class="op">&amp;</span>value<span class="op">]()</span> <span class="op">{</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    std_msgs<span class="op">::</span>msg<span class="op">::</span>Int32 msg<span class="op">;</span> msg<span class="op">.</span>data <span class="op">=</span> value<span class="op">++;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    pub<span class="op">-&gt;</span>publish<span class="op">(</span>msg<span class="op">);</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    RCLCPP_INFO<span class="op">(</span>node<span class="op">-&gt;</span>get_logger<span class="op">(),</span> <span class="st">"published </span><span class="sc">%d</span><span class="st">"</span><span class="op">,</span> msg<span class="op">.</span>data<span class="op">);</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">});</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>spin<span class="op">(</span>node<span class="op">);</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>shutdown<span class="op">();</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Add to <code>CMakeLists.txt</code> before <code>ament_package()</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode cmake code-with-copy"><code class="sourceCode cmake"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">add_executable</span>(<span class="bn">counter</span> src/counter.cpp)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ament_target_dependencies</span>(counter rclcpp std_msgs)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">install</span>(<span class="ot">TARGETS</span> <span class="bn">counter</span> <span class="ot">DESTINATION</span> lib/<span class="dv">${PROJECT_NAME}</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Build, source, and run <code>ros2 run trail_cpp_pub counter</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode cmake code-with-copy"><code class="sourceCode cmake"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">add_executable</span>(<span class="bn">counter</span> src/counter.cpp)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ament_target_dependencies</span>(counter rclcpp std_msgs)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">install</span>(<span class="ot">TARGETS</span> <span class="bn">counter</span> <span class="ot">DESTINATION</span> lib/<span class="dv">${PROJECT_NAME}</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Create <code>trail_cpp_pub/src/listener.cpp</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;memory&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"rclcpp/rclcpp.hpp"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"std_msgs/msg/int32.hpp"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">int</span> argc<span class="op">,</span> <span class="dt">char</span> <span class="op">**</span> argv<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>init<span class="op">(</span>argc<span class="op">,</span> argv<span class="op">);</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> node <span class="op">=</span> <span class="bu">std::</span>make_shared<span class="op">&lt;</span>rclcpp<span class="op">::</span>Node<span class="op">&gt;(</span><span class="st">"cpp_listener"</span><span class="op">);</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> sub <span class="op">=</span> node<span class="op">-&gt;</span>create_subscription<span class="op">&lt;</span>std_msgs<span class="op">::</span>msg<span class="op">::</span>Int32<span class="op">&gt;(</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cpp_count"</span><span class="op">,</span> <span class="dv">10</span><span class="op">,</span> <span class="op">[</span>node<span class="op">](</span>std_msgs<span class="op">::</span>msg<span class="op">::</span>Int32<span class="op">::</span>ConstSharedPtr msg<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>      RCLCPP_INFO<span class="op">(</span>node<span class="op">-&gt;</span>get_logger<span class="op">(),</span> <span class="st">"received </span><span class="sc">%d</span><span class="st">"</span><span class="op">,</span> msg<span class="op">-&gt;</span>data<span class="op">);</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">});</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>spin<span class="op">(</span>node<span class="op">);</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  rclcpp<span class="op">::</span>shutdown<span class="op">();</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Add and install the second target:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode cmake code-with-copy"><code class="sourceCode cmake"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">add_executable</span>(<span class="bn">listener</span> src/listener.cpp)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ament_target_dependencies</span>(listener rclcpp std_msgs)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">install</span>(<span class="ot">TARGETS</span> <span class="bn">counter</span> <span class="bn">listener</span> <span class="ot">DESTINATION</span> lib/<span class="dv">${PROJECT_NAME}</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Build and source the workspace. Run <code>ros2 run trail_cpp_pub counter</code> and <code>ros2 run trail_cpp_pub listener</code> in separate sourced terminals. The listener should log the same increasing values produced by the publisher.</p>
 </section>
 <section id="verify" class="level2">
 <h2 class="anchored" data-anchor-id="verify">Verify</h2>
 <p>In another sourced terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> node info /cpp_counter</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic echo /count <span class="at">--once</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The node should publish <code>/count</code>, and the echo should contain an integer.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> node list</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic info /cpp_count <span class="at">--verbose</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic echo /cpp_count <span class="at">--once</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Before <code>echo</code>, the node list must contain <code>/cpp_counter</code> and <code>/cpp_listener</code>, and topic info must report one publisher and one subscriber. The listener terminal must log at least one received value. (<code>echo</code> briefly adds another subscriber, so measure endpoint counts before running it.)</p>
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
 <ul>
 <li>Linker errors: confirm both dependencies appear in <code>package.xml</code> and <code>ament_target_dependencies</code>.</li>
-<li><code>ros2 run</code> cannot find the executable: confirm the <code>install(TARGETS ...)</code> rule, rebuild, and resource the overlay.</li>
+<li><code>ros2 run</code> cannot find the executable: confirm the <code>install(TARGETS ...)</code> rule, rebuild, and re-source the overlay.</li>
 <li>No topic: keep the publisher process running while inspecting it.</li>
 </ul>
 </section>
 <section id="challenge" class="level2">
 <h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
-<p>Add a second C++ executable that subscribes to <code>count</code> and logs only even values. Verify that the graph reports one publisher and one subscriber.</p>
+<p>Change the subscriber so it logs only even values. You are done when its log shows <code>0, 2, 4</code> while <code>ros2 topic echo /cpp_count</code> still sees odd values. Hint: put the condition inside the callback; filtering changes application behavior, not the graph.</p>
+<p>Stop both nodes with <code>Ctrl+C</code> before continuing.</p>
+<p>The important pieces map directly to the Python lesson:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Idea</th>
+<th>C++</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Node identity</td>
+<td><code>Node("cpp_counter")</code></td>
+<td><code>Node('counter_publisher')</code></td>
+</tr>
+<tr class="even">
+<td>Typed endpoint</td>
+<td><code>create_publisher&lt;Int32&gt;</code></td>
+<td><code>create_publisher(Int32, ...)</code></td>
+</tr>
+<tr class="odd">
+<td>Queue depth</td>
+<td>final argument <code>10</code></td>
+<td>final argument <code>10</code></td>
+</tr>
+<tr class="even">
+<td>Periodic work</td>
+<td>wall timer callback</td>
+<td>timer callback</td>
+</tr>
+<tr class="odd">
+<td>Process events</td>
+<td><code>rclcpp::spin</code></td>
+<td><code>rclpy.spin</code></td>
+</tr>
+</tbody>
+</table>
+<p>Publisher and subscriber endpoints match when they discover one another in the same ROS domain, resolve to the same topic name, use the exact same message type, and have compatible Quality of Service policies. The shorthand <code>10</code> selects the library’s default QoS settings with <code>KEEP_LAST</code> history depth 10; QoS also includes policies such as reliability and durability, covered in a later trail.</p>
 </section>
 <section id="continue-on-a-trail" class="level2">
 <h2 class="anchored" data-anchor-id="continue-on-a-trail">Continue on a trail</h2>
 <ul>
 <li><a href="../trails/building-nodes.html">Building nodes and packages</a></li>
 </ul>
+<nav class="lesson-navigation" aria-label="Lesson navigation">
+<a class="previous-lesson" href="../lessons/beginner-client-libraries-creating-your-first-ros2-package.html">← Creating a package</a><a class="next-lesson" href="../lessons/beginner-client-libraries-custom-ros2-interfaces.html">Next: Creating and using a custom message →</a>
+</nav>
 </section>
 <section id="references-and-provenance" class="level2">
 <h2 class="anchored" data-anchor-id="references-and-provenance">References and provenance</h2>
