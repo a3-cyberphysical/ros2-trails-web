@@ -96,20 +96,20 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../start.html" aria-current="page"> 
-<span class="menu-text">Start</span></a>
+    <a class="nav-link active" href="../../course.html" aria-current="page"> 
+<span class="menu-text">Course</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../core-skills.html"> 
 <span class="menu-text">Core skills</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html"> 
-<span class="menu-text">Build systems</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../reference.html"> 
-<span class="menu-text">Reference</span></a>
+    <a class="nav-link" href="../../resources.html"> 
+<span class="menu-text">Resources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -122,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../projects.html">Build systems</a></li><li class="breadcrumb-item"><a href="../../projects/frame-detective.html">Frame Detective: debug a robot’s spatial story</a></li><li class="breadcrumb-item"><a href="../../projects/frame-detective/frame-contract.html">Draw the frame contract</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../projects.html">Projects</a></li><li class="breadcrumb-item"><a href="../../projects/frame-detective.html">Frame Detective: debug a robot’s spatial story</a></li><li class="breadcrumb-item"><a href="../../projects/frame-detective/frame-contract.html">Draw the frame contract</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -142,21 +142,53 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../start.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Start here</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../core-skills.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Core skills</span></a>
+            <a href="../../course.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical ROS 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Part 1 — Build useful systems</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course/first-robot-system.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Your first ROS 2 system</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../projects/frame-detective.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Frame Detective</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../projects/balance-bot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Balance Bot</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Part 2 — Understand the layers</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../trails/foundations.html" class="sidebar-item-text sidebar-link">
@@ -213,24 +245,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+      </ul>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../projects.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Build systems</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+ <span class="menu-text">Projects</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../projects/frame-detective.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Frame Detective: debug a robot's spatial story</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../projects/frame-detective/frame-contract.html" class="sidebar-item-text sidebar-link active">
@@ -273,11 +307,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../projects/balance-bot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Balance Bot: stabilize an inverted pendulum</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../projects/balance-bot/preflight.html" class="sidebar-item-text sidebar-link">
@@ -332,13 +366,25 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reference</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a href="../../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../guides/jazzy-environment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../resources.html#help-and-diagnostic-packet" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Help and diagnostics</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../coverage.html" class="sidebar-item-text sidebar-link">
@@ -368,13 +414,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#verify" id="toc-verify" class="nav-link" data-scroll-target="#verify">Verify</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
   <li><a href="#challenge" id="toc-challenge" class="nav-link" data-scroll-target="#challenge">Challenge</a></li>
+  <li><a href="#how-to-complete-this-milestone" id="toc-how-to-complete-this-milestone" class="nav-link" data-scroll-target="#how-to-complete-this-milestone">How to complete this milestone</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../projects.html">Build systems</a></li><li class="breadcrumb-item"><a href="../../projects/frame-detective.html">Frame Detective: debug a robot’s spatial story</a></li><li class="breadcrumb-item"><a href="../../projects/frame-detective/frame-contract.html">Draw the frame contract</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../projects.html">Projects</a></li><li class="breadcrumb-item"><a href="../../projects/frame-detective.html">Frame Detective: debug a robot’s spatial story</a></li><li class="breadcrumb-item"><a href="../../projects/frame-detective/frame-contract.html">Draw the frame contract</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Draw the frame contract</h1>
 <p class="subtitle lead">Frame Detective: debug a robot’s spatial story · milestone 1 of 6</p>
@@ -425,12 +472,22 @@ ul.task-list li input[type="checkbox"] {
 <section id="challenge" class="level2">
 <h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
 <p>Rotate the base 90 degrees counter-clockwise at <code>(2, 0)</code>. Predict the marker’s map x and y before using software.</p>
+</section>
+<section id="how-to-complete-this-milestone" class="level2 completion-contract">
+<h2 class="anchored" data-anchor-id="how-to-complete-this-milestone">How to complete this milestone</h2>
+<ol type="1">
+<li>Run the primary activity; reading alone does not complete it.</li>
+<li>Meet every condition under <strong>Verify</strong>.</li>
+<li>Save the promised artifact: <strong>a predicted frame tree and transform vocabulary</strong>.</li>
+<li>Attempt the <strong>Challenge</strong> or make one controlled experiment of your own.</li>
+</ol>
+<p>If blocked, use Troubleshooting first, then capture the onsite <a href="../../resources.html#help-and-diagnostic-packet">diagnostic packet</a>. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.</p>
+</section>
 <nav class="lesson-navigation" aria-label="Project lesson navigation">
 <a href="model-and-see.html">Next: Model and see the robot →</a> <a href="../frame-detective.html">All milestones</a>
 </nav>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
