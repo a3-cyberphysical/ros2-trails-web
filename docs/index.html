@@ -96,24 +96,20 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Overview</span></a>
+    <a class="nav-link active" href="./start.html" aria-current="page"> 
+<span class="menu-text">Start</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./trails.html"> 
-<span class="menu-text">Learning Trails</span></a>
+    <a class="nav-link" href="./core-skills.html"> 
+<span class="menu-text">Core skills</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./projects.html"> 
-<span class="menu-text">Build Projects</span></a>
+<span class="menu-text">Build systems</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./coverage.html"> 
-<span class="menu-text">Lesson Library</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./provenance.html"> 
-<span class="menu-text">Provenance</span></a>
+    <a class="nav-link" href="./reference.html"> 
+<span class="menu-text">Reference</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -146,15 +142,27 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./start.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Start here</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Learning trails</span></a>
+            <a href="./core-skills.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Core skills</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trails/foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Foundations: the ROS 2 graph</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./trails/building-nodes.html" class="sidebar-item-text sidebar-link">
@@ -163,14 +171,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./trails/data-and-observability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data, logging, and observability</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./trails/foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Foundations: the ROS 2 graph</span></a>
+  <a href="./trails/transforms-and-models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transforms and robot models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -183,6 +185,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./trails/launch-and-composition.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Launch and composition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trails/data-and-observability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data, logging, and observability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -203,18 +211,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Security and deployment</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./trails/transforms-and-models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Transforms and robot models</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./projects.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Build projects</span></a>
+ <span class="menu-text">Build systems</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -222,13 +224,60 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./projects/balance-bot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Balance Bot: stabilize an inverted pendulum</span></a>
+            <a href="./projects/frame-detective.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Frame Detective: debug a robot's spatial story</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/frame-detective/frame-contract.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Draw the frame contract</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/frame-detective/model-and-see.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Model and see the robot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/frame-detective/publish-motion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Publish motion through time</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/frame-detective/transform-detections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transform detections into the map</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/frame-detective/diagnose-faults.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diagnose four spatial faults</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/frame-detective/capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capstone frame incident</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./projects/balance-bot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Balance Bot: stabilize an inverted pendulum</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./projects/balance-bot/preflight.html" class="sidebar-item-text sidebar-link">
@@ -281,6 +330,29 @@ ul.task-list li input[type="checkbox"] {
   </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./coverage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">All 129 lessons</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./provenance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Source provenance</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -291,9 +363,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-source-grounded-route-through-ros-2-jazzy" id="toc-a-source-grounded-route-through-ros-2-jazzy" class="nav-link active" data-scroll-target="#a-source-grounded-route-through-ros-2-jazzy">A source-grounded route through ROS 2 Jazzy</a></li>
-  <li><a href="#how-this-works" id="toc-how-this-works" class="nav-link" data-scroll-target="#how-this-works">How this works</a></li>
-  <li><a href="#suggested-route" id="toc-suggested-route" class="nav-link" data-scroll-target="#suggested-route">Suggested route</a></li>
+  <li><a href="#learn-ros-2-by-building-systems-that-move" id="toc-learn-ros-2-by-building-systems-that-move" class="nav-link active" data-scroll-target="#learn-ros-2-by-building-systems-that-move">Learn ROS 2 by building systems that move</a></li>
+  <li><a href="#one-course-four-places" id="toc-one-course-four-places" class="nav-link" data-scroll-target="#one-course-four-places">One course, four places</a></li>
+  <li><a href="#recommended-first-route" id="toc-recommended-first-route" class="nav-link" data-scroll-target="#recommended-first-route">Recommended first route</a></li>
   </ul>
 </nav>
     </div>
@@ -319,10 +391,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="a-source-grounded-route-through-ros-2-jazzy" class="level2 hero-panel">
-<h2 class="anchored" data-anchor-id="a-source-grounded-route-through-ros-2-jazzy">A source-grounded route through ROS 2 Jazzy</h2>
-<p>Learn ROS 2 without leaving the trail. Move from the ROS graph to production deployment through <strong>9 curated learning trails</strong> and <strong>129 local lesson pages</strong>.</p>
-<p><a href="./trails.html" class="btn btn-primary">Start the trails</a> <a href="./coverage.html" class="btn btn-outline-light">Browse local lessons</a></p>
+<section id="learn-ros-2-by-building-systems-that-move" class="level2 hero-panel">
+<h2 class="anchored" data-anchor-id="learn-ros-2-by-building-systems-that-move">Learn ROS 2 by building systems that move</h2>
+<p>Start with the graph, learn to see space and time, then build controlled, observable robots. The course connects <strong>9 core-skill trails</strong>, <strong>129 onsite lessons</strong>, and project capstones.</p>
+<p><a href="./start.html" class="btn btn-primary">Start here</a> <a href="./projects.html" class="btn btn-outline-light">Build a robot</a></p>
 </section>
 <div class="metric-grid">
 <section id="section" class="level3 metric-card">
@@ -342,22 +414,36 @@ ul.task-list li input[type="checkbox"] {
 <p>Onsite lessons</p>
 </section>
 </div>
-<section id="how-this-works" class="level2">
-<h2 class="anchored" data-anchor-id="how-this-works">How this works</h2>
-<p>Each trail is compiled from the curated ROS 2 Knowledge Pack. Lessons, exercises, and navigation live on this site. The knowledge pack and official ROS 2 documentation are evidence and optional references—not destinations required to continue learning. The 85 growing lessons make expansion work visible instead of hiding gaps.</p>
+<section id="one-course-four-places" class="level2">
+<h2 class="anchored" data-anchor-id="one-course-four-places">One course, four places</h2>
+<div class="pathway-grid">
+<section id="start" class="level3 pathway-card">
+<h3 class="anchored" data-anchor-id="start">1. Start</h3>
+<p>Build a graph you can run, inspect, and explain.</p>
 </section>
-<section id="suggested-route" class="level2">
-<h2 class="anchored" data-anchor-id="suggested-route">Suggested route</h2>
+<section id="core-skills" class="level3 pathway-card">
+<h3 class="anchored" data-anchor-id="core-skills">2. Core skills</h3>
+<p>Learn interfaces, spatial reasoning, launch, evidence, and operations.</p>
+</section>
+<section id="build-systems" class="level3 pathway-card">
+<h3 class="anchored" data-anchor-id="build-systems">3. Build systems</h3>
+<p>Integrate capabilities in visible, measurable robot projects.</p>
+</section>
+<section id="reference" class="level3 pathway-card">
+<h3 class="anchored" data-anchor-id="reference">4. Reference</h3>
+<p>Search every local tutorial and inspect provenance when you need depth.</p>
+</section>
+</div>
+<p>Required learning stays onsite. Official documentation and the knowledge pack support claims and provide optional depth; they are not onward-navigation gates.</p>
+</section>
+<section id="recommended-first-route" class="level2">
+<h2 class="anchored" data-anchor-id="recommended-first-route">Recommended first route</h2>
 <ol type="1">
-<li><a href="./trails/building-nodes.html">Building nodes and packages</a> — A ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. <code>colcon</code> builds the workspace, while <code>ament_cmake</code> and <code>ament_python</code> provide the common C++ and Python package conventions.</li>
-<li><a href="./trails/data-and-observability.html">Data, logging, and observability</a> — ROS 2 offers complementary ways to understand a running system. rosbag2 captures interface data for replay; logs describe application decisions; graph inspection reveals topology; topic statistics summarize communication; service introspection observes request/response events; and tracing exposes lower-level timing across executors and middleware.</li>
-<li><a href="./trails/foundations.html">Foundations: the ROS 2 graph</a> — ROS 2 applications are graphs of independently useful nodes. Nodes exchange typed data through topics, request bounded work through services, run longer goal-oriented work through actions, and expose configuration through parameters. The command-line tools let you inspect this graph before writing code, which makes them the best starting point.</li>
-<li><a href="./trails/interfaces-and-actions.html">Interfaces, parameters, actions, and plugins</a> — Interfaces are the public contracts between nodes. Messages describe topic samples, services pair a request with a response, and actions combine a goal, feedback, a result, and cancellation. Parameters configure a node but should not be mistaken for a high-rate data channel. Pluginlib adds runtime-selected implementations behind a stable C++ interface.</li>
-<li><a href="./trails/launch-and-composition.html">Launch and composition</a> — Launch descriptions make multi-node systems reproducible. They declare nodes, arguments, parameters, namespaces, remappings, conditions, and included launch files. Composition places multiple nodes in a shared process when reduced overhead or more efficient communication matters.</li>
-<li><a href="./trails/middleware-and-performance.html">Middleware, discovery, and performance</a> — ROS 2 client libraries communicate through an RMW abstraction over supported middleware implementations. Behavior depends on QoS compatibility, discovery, serialization, executor scheduling, process boundaries, memory allocation, and the network. Performance work therefore needs measurements and an explicit operating context.</li>
-<li><a href="./trails/production-concerns.html">Production concerns</a> — A working demo is not yet an operational robot. Production systems must make communication assumptions explicit, expose diagnosable behavior, verify nodes at multiple levels, and protect the ROS graph when deployed across trust boundaries.</li>
-<li><a href="./trails/security-and-deployment.html">Security and deployment</a> — ROS 2 security builds on DDS Security. A secure deployment needs identities, signed governance and permissions policy, encrypted/authenticated transport, protected keystores, and a deployment process that keeps credentials separate from application artifacts. Security settings must be tested on the actual graph and network topology.</li>
-<li><a href="./trails/transforms-and-models.html">Transforms and robot models</a> — tf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with <code>robot_state_publisher</code>, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.</li>
+<li><a href="./trails/foundations.html">Understand the ROS graph</a></li>
+<li><a href="./trails/building-nodes.html">Build communicating nodes</a></li>
+<li><a href="./trails/transforms-and-models.html">See frames and robot models</a></li>
+<li><a href="./projects/frame-detective.html">Build Frame Detective</a></li>
+<li><a href="./projects/balance-bot.html">Build Balance Bot</a></li>
 </ol>
 
 

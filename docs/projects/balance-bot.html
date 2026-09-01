@@ -96,24 +96,20 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Overview</span></a>
+    <a class="nav-link active" href="../start.html" aria-current="page"> 
+<span class="menu-text">Start</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../trails.html"> 
-<span class="menu-text">Learning Trails</span></a>
+    <a class="nav-link" href="../core-skills.html"> 
+<span class="menu-text">Core skills</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../projects.html" aria-current="page"> 
-<span class="menu-text">Build Projects</span></a>
+    <a class="nav-link" href="../projects.html"> 
+<span class="menu-text">Build systems</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../coverage.html"> 
-<span class="menu-text">Lesson Library</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../provenance.html"> 
-<span class="menu-text">Provenance</span></a>
+    <a class="nav-link" href="../reference.html"> 
+<span class="menu-text">Reference</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -126,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../projects.html">Build projects</a></li><li class="breadcrumb-item"><a href="../projects/balance-bot.html">Balance Bot: stabilize an inverted pendulum</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../projects.html">Build systems</a></li><li class="breadcrumb-item"><a href="../projects/balance-bot.html">Balance Bot: stabilize an inverted pendulum</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -146,15 +142,27 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../start.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Start here</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Learning trails</span></a>
+            <a href="../core-skills.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Core skills</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../trails/foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Foundations: the ROS 2 graph</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../trails/building-nodes.html" class="sidebar-item-text sidebar-link">
@@ -163,14 +171,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../trails/data-and-observability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data, logging, and observability</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../trails/foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Foundations: the ROS 2 graph</span></a>
+  <a href="../trails/transforms-and-models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transforms and robot models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -183,6 +185,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../trails/launch-and-composition.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Launch and composition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../trails/data-and-observability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data, logging, and observability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -203,18 +211,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Security and deployment</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../trails/transforms-and-models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Transforms and robot models</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../projects.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Build projects</span></a>
+ <span class="menu-text">Build systems</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -222,13 +224,60 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../projects/balance-bot.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Balance Bot: stabilize an inverted pendulum</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a href="../projects/frame-detective.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Frame Detective: debug a robot's spatial story</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/frame-detective/frame-contract.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Draw the frame contract</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/frame-detective/model-and-see.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Model and see the robot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/frame-detective/publish-motion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Publish motion through time</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/frame-detective/transform-detections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transform detections into the map</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/frame-detective/diagnose-faults.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diagnose four spatial faults</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/frame-detective/capstone.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capstone frame incident</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../projects/balance-bot.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Balance Bot: stabilize an inverted pendulum</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../projects/balance-bot/preflight.html" class="sidebar-item-text sidebar-link">
@@ -281,6 +330,29 @@ ul.task-list li input[type="checkbox"] {
   </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../coverage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">All 129 lessons</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../provenance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Source provenance</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -304,7 +376,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../projects.html">Build projects</a></li><li class="breadcrumb-item"><a href="../projects/balance-bot.html">Balance Bot: stabilize an inverted pendulum</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../projects.html">Build systems</a></li><li class="breadcrumb-item"><a href="../projects/balance-bot.html">Balance Bot: stabilize an inverted pendulum</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Balance Bot: stabilize an inverted pendulum</h1>
 <p class="subtitle lead">Build and tune a ROS 2 controller that keeps a simulated cart-pole upright in Gazebo Harmonic.</p>
