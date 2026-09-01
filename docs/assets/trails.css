@@ -42,6 +42,7 @@ body { color: var(--trail-ink); background: var(--trail-paper); }
 .tutorial-card h3 { font-size: 1rem; margin: .7rem 0 .45rem; }
 .tutorial-card p { color: #63718a; font-size: .75rem; word-break: break-word; margin: 0; }
 .coverage-badge.curated { background: #e8f9c5; color: #3c6500; }
+.lesson-state { padding: .8rem 1rem; border-left: 5px solid var(--trail-cyan); background: white; border-radius: .2rem .7rem .7rem .2rem; }
+.lesson-state.growing { border-left-color: #f0a43c; }
 .tutorial-card[hidden] { display: none; }
 @media (max-width: 600px) { .hero-panel { border-radius: .8rem; } }
-
