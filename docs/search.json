@@ -4696,6 +4696,329 @@
     ]
   },
   {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Build projects",
+    "section": "",
+    "text": "Turn ROS 2 capabilities into visible systems. Project trails reuse foundation lessons, add project-specific milestones, and finish with measurable capstones.\n\n\nBalance Bot: stabilize an inverted pendulum\nBuild and tune a ROS 2 controller that keeps a simulated cart-pole upright in Gazebo Harmonic.\nPreview — runtime validation in progress. Source, commands, static checks, and acceptance criteria are published; suggested gains still require an exact-runtime trial. Difficulty: intermediate. Platform: Ubuntu 24.04 · ROS 2 Jazzy · Gazebo Harmonic.\n8 milestones preview 8 hours",
+    "crumbs": [
+      "Overview",
+      "Build projects"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/package-the-system.html",
+    "href": "projects/balance-bot/package-the-system.html",
+    "title": "Package the complete system",
+    "section": "",
+    "text": "Milestone 7 of 8 · Produces: one launch command for simulation and control\nBuild projects › Balance Bot: stabilize an inverted pendulum › Package the complete system\nTime: about 45 minutes. You need: balance_tune (or the downloaded complete workspace). Progress: 7/8.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Package the complete system"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/package-the-system.html#goal",
+    "href": "projects/balance-bot/package-the-system.html#goal",
+    "title": "Package the complete system",
+    "section": "Goal",
+    "text": "Goal\nStart Gazebo, spawn the robot, activate controllers, and run the policy through one project-owned launch command.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Package the complete system"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/package-the-system.html#do-it",
+    "href": "projects/balance-bot/package-the-system.html#do-it",
+    "title": "Package the complete system",
+    "section": "Do it",
+    "text": "Do it\nInspect balance.launch.py in the control package. It includes the simulation and starts the policy concurrently. This is safe because the policy publishes nothing until valid joint state arrives; controller spawners are sequenced in the simulation launch. Gains and the repeatable disturbance are launch arguments/ROS parameters rather than source edits.\ncd ~/balance_bot_ws\nsource /opt/ros/jazzy/setup.bash\nsource install/local_setup.bash\nros2 launch balance_bot_control balance.launch.py \\\n  k_theta:=120.0 k_theta_dot:=22.0 k_x:=-4.0 k_x_dot:=-8.0\nFor a manual run, call the start service after joint state appears:\nros2 service call /balance_controller/start_trial std_srvs/srv/Trigger '{}'\nThe capstone analyzer calls this service automatically.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Package the complete system"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/package-the-system.html#verify",
+    "href": "projects/balance-bot/package-the-system.html#verify",
+    "title": "Package the complete system",
+    "section": "Verify",
+    "text": "Verify\nFrom a clean terminal, the single launch command must yield an active effort controller, a running balance_controller, non-stale state, and bounded command messages. Stop the launch and confirm its child processes exit.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Package the complete system"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/package-the-system.html#troubleshooting",
+    "href": "projects/balance-bot/package-the-system.html#troubleshooting",
+    "title": "Package the complete system",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nController starts too early: wait on controller-manager/controller state, not an arbitrary sleep.\nParameters unchanged: inspect them with ros2 param get on the running node.\nOld values persist: ensure only one controller node is running.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Package the complete system"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/package-the-system.html#challenge",
+    "href": "projects/balance-bot/package-the-system.html#challenge",
+    "title": "Package the complete system",
+    "section": "Challenge",
+    "text": "Challenge\nAdd a max_tilt launch argument and forward it to the node. Prove it works by choosing a smaller cutoff and observing the explicit tilt-safety log plus a zero-force command without editing Python.\n\n← Tune from evidenceNext: Capstone stability trial → All milestones",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Package the complete system"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/read-the-state.html",
+    "href": "projects/balance-bot/read-the-state.html",
+    "title": "Read and interpret state",
+    "section": "",
+    "text": "Milestone 4 of 8 · Produces: named cart and pole state observations\nBuild projects › Balance Bot: stabilize an inverted pendulum › Read and interpret state\nTime: about 45 minutes. You need: balance_sim (or the downloaded complete workspace). Progress: 4/8.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Read and interpret state"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/read-the-state.html#goal",
+    "href": "projects/balance-bot/read-the-state.html#goal",
+    "title": "Read and interpret state",
+    "section": "Goal",
+    "text": "Goal\nExtract cart position/velocity and pole angle/angular velocity by joint name, without assuming array order.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Read and interpret state"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/read-the-state.html#do-it",
+    "href": "projects/balance-bot/read-the-state.html#do-it",
+    "title": "Read and interpret state",
+    "section": "Do it",
+    "text": "Do it\nKeep Terminal A from milestone 3 running. In Terminal B — state inspection:\nsource /opt/ros/jazzy/setup.bash\nsource ~/balance_bot_ws/install/local_setup.bash\nros2 topic echo /joint_states --once\nros2 topic hz /joint_states\nOpen balance_bot_control/controller.py. Its state_for helper looks up the index of each joint name before reading parallel position and velocity arrays. This matters because message order is not an application contract.\nRun the observer-only mode:\nros2 run balance_bot_control balance_controller --ros-args -p enabled:=false",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Read and interpret state"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/read-the-state.html#verify",
+    "href": "projects/balance-bot/read-the-state.html#verify",
+    "title": "Read and interpret state",
+    "section": "Verify",
+    "text": "Verify\nObserver logs print state x=... x_dot=... theta=... theta_dot=... roughly once per second and must contain finite values. Use the initial fall without dragging the model. Disabled observer mode deliberately commands zero and does not apply the later scored disturbance. Restart the launch to restore the initial state. Stopping joint states must trigger joint state is stale; commanding zero force once on the transition to stale.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Read and interpret state"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/read-the-state.html#troubleshooting",
+    "href": "projects/balance-bot/read-the-state.html#troubleshooting",
+    "title": "Read and interpret state",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nJoint missing: compare names with the Xacro and raw message.\nVelocity array empty: confirm the state interfaces and broadcaster config.\nAngle jumps near a full revolution: normalize it before control; the supplied controller uses atan2(sin(theta), cos(theta)).",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Read and interpret state"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/read-the-state.html#challenge",
+    "href": "projects/balance-bot/read-the-state.html#challenge",
+    "title": "Read and interpret state",
+    "section": "Challenge",
+    "text": "Challenge\nExplain why indexing position[0] is fragile even if it works in your first sample. Then identify the exact failure the stale-state timeout prevents.\n\n← Launch your simulationNext: Close the control loop → All milestones",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Read and interpret state"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/preflight.html",
+    "href": "projects/balance-bot/preflight.html",
+    "title": "Run the reference pendulum",
+    "section": "",
+    "text": "Milestone 1 of 8 · Produces: a verified Jazzy/Harmonic simulation environment\nBuild projects › Balance Bot: stabilize an inverted pendulum › Run the reference pendulum\nTime: about 45 minutes. You need: the pinned environment (or the downloaded complete workspace). Progress: 1/8.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Run the reference pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/preflight.html#goal",
+    "href": "projects/balance-bot/preflight.html#goal",
+    "title": "Run the reference pendulum",
+    "section": "Goal",
+    "text": "Goal\nVerify the exact ROS 2 Jazzy, Gazebo Harmonic, and gz_ros2_control stack used by this project before editing robot code.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Run the reference pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/preflight.html#do-it",
+    "href": "projects/balance-bot/preflight.html#do-it",
+    "title": "Run the reference pendulum",
+    "section": "Do it",
+    "text": "Do it\nInstall the binary packages and print their versions:\nsudo apt update\nsudo apt install ros-jazzy-desktop ros-dev-tools liburdfdom-tools \\\n  ros-jazzy-gz-ros2-control ros-jazzy-gz-ros2-control-demos \\\n  ros-jazzy-ros-gz ros-jazzy-ros2-control ros-jazzy-ros2-controllers \\\n  ros-jazzy-rosbag2 ros-jazzy-xacro ros-jazzy-rqt-plot\nsource /opt/ros/jazzy/setup.bash\nfor tool in ros2 colcon rosdep xacro check_urdf gz; do\n  command -v \"$tool\" &gt;/dev/null && echo \"PASS $tool\" || echo \"FAIL $tool\"\ndone\nros2 pkg xml -t version gz_ros2_control\nros2 pkg prefix gz_ros2_control_demos\ngz sim --versions\nLaunch the official effort-driven pendulum model:\nros2 launch gz_ros2_control_demos pendulum_example_effort.launch.py\nIn a second terminal, source Jazzy and inspect the system:\nsource /opt/ros/jazzy/setup.bash\nros2 control list_controllers\nros2 topic echo /joint_states --once",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Run the reference pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/preflight.html#verify",
+    "href": "projects/balance-bot/preflight.html#verify",
+    "title": "Run the reference pendulum",
+    "section": "Verify",
+    "text": "Verify\nGazebo must show a cart, rail, and pole. Controller output must list an active joint_state_broadcaster and joint_trajectory_controller. The joint-state sample must name slider_to_cart and cart_to_pendulum. Every CLI preflight line must say PASS before continuing.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Run the reference pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/preflight.html#troubleshooting",
+    "href": "projects/balance-bot/preflight.html#troubleshooting",
+    "title": "Run the reference pendulum",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nPackage missing: rerun apt update, then confirm the ROS apt repository is configured for Ubuntu 24.04.\nGazebo opens empty: wait for the spawn process and inspect launch-terminal errors before retrying.\nController is inactive: compare installed gz_ros2_control and controller_manager versions; avoid mixing source demos with older binaries.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Run the reference pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/preflight.html#challenge",
+    "href": "projects/balance-bot/preflight.html#challenge",
+    "title": "Run the reference pendulum",
+    "section": "Challenge",
+    "text": "Challenge\nDraw the four ownership boxes—physics, simulated hardware, ROS controller, and application policy—and place each observed process/topic in one box.\n\nNext: Model the cart-pole plant → All milestones",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Run the reference pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/tune-from-evidence.html",
+    "href": "projects/balance-bot/tune-from-evidence.html",
+    "title": "Tune from evidence",
+    "section": "",
+    "text": "Milestone 6 of 8 · Produces: recorded gain trials and a defensible tuning choice\nBuild projects › Balance Bot: stabilize an inverted pendulum › Tune from evidence\nTime: about 120 minutes. You need: balance_control (or the downloaded complete workspace). Progress: 6/8.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Tune from evidence"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/tune-from-evidence.html#goal",
+    "href": "projects/balance-bot/tune-from-evidence.html#goal",
+    "title": "Tune from evidence",
+    "section": "Goal",
+    "text": "Goal\nTune the controller with repeatable measurements rather than visual guesswork.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Tune from evidence"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/tune-from-evidence.html#do-it",
+    "href": "projects/balance-bot/tune-from-evidence.html#do-it",
+    "title": "Tune from evidence",
+    "section": "Do it",
+    "text": "Do it\nKeep simulation and controller running. In Terminal C — bag recorder:\nmkdir -p ~/balance_bot_ws/trials\ncd ~/balance_bot_ws/trials\nsource /opt/ros/jazzy/setup.bash\nsource ~/balance_bot_ws/install/local_setup.bash\nros2 bag record /joint_states /cart_effort_controller/commands\nChange one gain family per run. Begin with angle/angle-rate gains, then add cart centering. Keep initial conditions, force limit, and run duration fixed. Use rqt_plot for live inspection:\nrqt_plot /cart_effort_controller/commands/data[0]\nRecord peak absolute angle, approximate settling time, peak cart displacement, peak force, and failure reason in trials.csv.\nThe workspace includes a live analyzer and CSV template. In Terminal D — analyzer, source both setups and start it before each trial:\nsource /opt/ros/jazzy/setup.bash\nsource ~/balance_bot_ws/install/local_setup.bash\nros2 run balance_bot_control trial_analyzer --ros-args \\\n  -p use_sim_time:=true -p duration:=20.0 -p output:=trial-01.csv\nIt resolves joint arrays by name, waits for state and command traffic, then calls the controller’s trial-start service. That single event resets the disturbance and analyzer clocks. It writes peaks, the initial four-state vector, coverage gaps, safety events, sample counts, and pass/fail. Insufficient or discontinuous samples make the trial fail. Open the script after the first run and inspect how each metric is derived.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Tune from evidence"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/tune-from-evidence.html#verify",
+    "href": "projects/balance-bot/tune-from-evidence.html#verify",
+    "title": "Tune from evidence",
+    "section": "Verify",
+    "text": "Verify\nA defensible tuning choice must compare at least three named trials and use the same metrics. “Looked smoother” is not sufficient. Reject any trial that hides instability by remaining at the force limit.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Tune from evidence"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/tune-from-evidence.html#troubleshooting",
+    "href": "projects/balance-bot/tune-from-evidence.html#troubleshooting",
+    "title": "Tune from evidence",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nBag records no data: list topics and confirm simulation is running.\nPlot expression fails: use ros2 topic echo and inspect the actual field.\nTrials cannot be compared: reset simulation and use the same duration and initial perturbation.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Tune from evidence"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/tune-from-evidence.html#challenge",
+    "href": "projects/balance-bot/tune-from-evidence.html#challenge",
+    "title": "Tune from evidence",
+    "section": "Challenge",
+    "text": "Challenge\nChoose between two trials where one has smaller angle error but larger cart travel. State the trade-off explicitly and defend which better meets capstone bounds.\n\n← Close the control loopNext: Package the complete system → All milestones",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Tune from evidence"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "ROS 2 Trails",
@@ -4764,6 +5087,414 @@
     "title": "Prepare a ROS 2 Jazzy environment",
     "section": "Terminal rule",
     "text": "Terminal rule\nEvery new terminal starts with the underlay:\nsource /opt/ros/jazzy/setup.bash\nAfter building the course workspace, also source its overlay (sometimes called “re-sourcing the overlay” after a rebuild):\nsource ~/ros2_trails_ws/install/local_setup.bash\nIf a package, node, or interface cannot be found, checking which setup files were sourced is the first diagnostic step."
+  },
+  {
+    "objectID": "projects/balance-bot.html",
+    "href": "projects/balance-bot.html",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "",
+    "text": "8 milestones · 8 hours · preview",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#what-you-will-build",
+    "href": "projects/balance-bot.html#what-you-will-build",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "What you will build",
+    "text": "What you will build\nBalance Bot is a classic cart-pole: a cart can move left and right while a pole pivots freely above it. Gravity makes the upright pose unstable. Your ROS 2 node observes cart and pole joint state, computes a bounded force, and commands the cart through ros2_control.\nGazebo physics → /joint_states → balance_controller\n      ↑                                │\n      └─ cart_effort_controller/commands ← bounded force\nThis project deliberately separates four concerns: Gazebo owns physics, gz_ros2_control exposes simulated joints, controllers expose ROS interfaces, and your node owns the balancing policy.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#control-primer",
+    "href": "projects/balance-bot.html#control-primer",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "Control primer",
+    "text": "Control primer\n\n\n\n\n\n\n\n\nState\nMeaning\nWhy it matters\n\n\n\n\ntheta\npole angle from upright\nmove under the direction of fall\n\n\ntheta_dot\npole angular velocity\nanticipate rather than chase the fall\n\n\nx\ncart displacement from center\navoid balancing by leaving the rail\n\n\nx_dot\ncart velocity\nslow lateral motion\n\n\n\nThis is full-state feedback, not a PID loop: one weighted sum maps the measured state directly to cart force. It is designed only for local upright stabilization. The pole starts near upright; this course does not implement swing-up or recovery from a fallen pole.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#before-starting",
+    "href": "projects/balance-bot.html#before-starting",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "Before starting",
+    "text": "Before starting\n\nComplete Building nodes and packages, or be comfortable creating and running an ament_python package.\nUse Ubuntu 24.04, ROS 2 Jazzy, Gazebo Harmonic, and Bash.\nAllow roughly eight hours across several sessions.\nDownload the complete Balance Bot workspace. This is a guided modification project: run the known structure, inspect each named file, then make the lesson’s targeted changes and experiments.\n\nThe pinned Jazzy/Harmonic pairing and integration package are supported by the official gz_ros2_control Jazzy compatibility matrix listed below.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#definition-of-success",
+    "href": "projects/balance-bot.html#definition-of-success",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "Definition of success",
+    "text": "Definition of success\nThis is a preview project until executed in the pinned Jazzy runtime. Your local run passes when the pole remains within the lesson’s angle bound for the stated trial duration, the cart stays inside its rail bound, and commanded force never exceeds its safety limit. A moving picture is not enough; the capstone requires topic evidence and a short interpretation.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#provenance-and-license",
+    "href": "projects/balance-bot.html#provenance-and-license",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "Provenance and license",
+    "text": "Provenance and license\nThe lesson text, cart-pole Xacro, controller, analyzer, and launch files were authored for ROS 2 Trails; no code was copied from the linked sources. Their design was informed by the official Jazzy gz_ros2_control repository and its pendulum-effort example. The downloadable code is MIT licensed and includes the complete license. Official ROS/Gazebo names and documentation remain under their respective owners and licenses.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#references-and-provenance",
+    "href": "projects/balance-bot.html#references-and-provenance",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "References and provenance",
+    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\ngz_ros2_control Jazzy repository and compatibility matrix — ros-controls, jazzy branch; accessed 2026-09-01. Supports: Jazzy/Harmonic compatibility, plugin configuration, and effort-demo architecture.\nROS 2 Jazzy Gazebo tutorials — Open Robotics, Jazzy; accessed 2026-09-01. Supports: Gazebo integration concepts and launch workflow.\nros_gz_sim Jazzy package — Open Robotics, Jazzy; accessed 2026-09-01. Supports: create launch action and simulation package API.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot.html#project-milestones",
+    "href": "projects/balance-bot.html#project-milestones",
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "section": "Project milestones",
+    "text": "Project milestones\n\n\n1\n\nRun the reference pendulum\nProduces: a verified Jazzy/Harmonic simulation environment\n\n\n\n2\n\nModel the cart-pole plant\nProduces: an inspectable Xacro robot model\n\n\n\n3\n\nLaunch your simulation\nProduces: a running model with active effort and state controllers\n\n\n\n4\n\nRead and interpret state\nProduces: named cart and pole state observations\n\n\n\n5\n\nClose the control loop\nProduces: a parameterized feedback controller node\n\n\n\n6\n\nTune from evidence\nProduces: recorded gain trials and a defensible tuning choice\n\n\n\n7\n\nPackage the complete system\nProduces: one launch command for simulation and control\n\n\n\n8\n\nCapstone stability trial\nProduces: a repeatable pass/fail stability report",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/model-the-plant.html",
+    "href": "projects/balance-bot/model-the-plant.html",
+    "title": "Model the cart-pole plant",
+    "section": "",
+    "text": "Milestone 2 of 8 · Produces: an inspectable Xacro robot model\nBuild projects › Balance Bot: stabilize an inverted pendulum › Model the cart-pole plant\nTime: about 60 minutes. You need: balance_preflight (or the downloaded complete workspace). Progress: 2/8.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Model the cart-pole plant"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/model-the-plant.html#goal",
+    "href": "projects/balance-bot/model-the-plant.html#goal",
+    "title": "Model the cart-pole plant",
+    "section": "Goal",
+    "text": "Goal\nUnderstand and validate the local cart-pole Xacro model before asking a controller to stabilize it.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Model the cart-pole plant"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/model-the-plant.html#do-it",
+    "href": "projects/balance-bot/model-the-plant.html#do-it",
+    "title": "Model the cart-pole plant",
+    "section": "Do it",
+    "text": "Do it\nDownload the Balance Bot workspace to an explicit path, inspect its contents, then extract it:\nmkdir -p ~/balance_bot_download ~/balance_bot_ws\n# Save the link above as ~/balance_bot_download/balance_bot_ws.zip\nunzip -l ~/balance_bot_download/balance_bot_ws.zip\nunzip ~/balance_bot_download/balance_bot_ws.zip -d ~/balance_bot_ws\ncd ~/balance_bot_ws\ntest -d src/balance_bot_description && test -d src/balance_bot_control\nsource /opt/ros/jazzy/setup.bash\nxacro src/balance_bot_description/urdf/cart_pole.urdf.xacro &gt; /tmp/cart_pole.urdf\ncheck_urdf /tmp/cart_pole.urdf\nOpen src/balance_bot_description/urdf/cart_pole.urdf.xacro in four passes:\n\nTrace world → rail → slider_to_cart → cart → cart_to_pendulum → pole.\nRead each joint’s axis and limits; predict the allowed motion.\nLocate each mass, inertia, and origin; predict which way gravity tips the pole.\nLocate &lt;ros2_control&gt; and the Gazebo plugin; predict which joint accepts effort commands and which remains passive.\n\nAfter each pass, compare the prediction with check_urdf or the CLI evidence in the next milestone.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Model the cart-pole plant"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/model-the-plant.html#verify",
+    "href": "projects/balance-bot/model-the-plant.html#verify",
+    "title": "Model the cart-pole plant",
+    "section": "Verify",
+    "text": "Verify\ncheck_urdf must report a tree whose cart is attached by slider_to_cart and whose pole is attached by cart_to_pendulum. Only the cart is claimed by the effort command controller; both joints expose position and velocity state.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Model the cart-pole plant"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/model-the-plant.html#troubleshooting",
+    "href": "projects/balance-bot/model-the-plant.html#troubleshooting",
+    "title": "Model the cart-pole plant",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nXacro cannot find a package: this command uses a file path and needs only the Jazzy underlay; check spelling before building.\nInvalid inertia: all masses must be positive and inertia matrices physically plausible.\nPole hangs down: confirm its visual and inertial origins extend upward from the pivot when joint position is zero.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Model the cart-pole plant"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/model-the-plant.html#challenge",
+    "href": "projects/balance-bot/model-the-plant.html#challenge",
+    "title": "Model the cart-pole plant",
+    "section": "Challenge",
+    "text": "Challenge\nDouble the pole mass, predict whether the same gains will feel more or less aggressive, then restore the original value before continuing.\n\n← Run the reference pendulumNext: Launch your simulation → All milestones",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Model the cart-pole plant"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/launch-the-simulation.html",
+    "href": "projects/balance-bot/launch-the-simulation.html",
+    "title": "Launch your simulation",
+    "section": "",
+    "text": "Milestone 3 of 8 · Produces: a running model with active effort and state controllers\nBuild projects › Balance Bot: stabilize an inverted pendulum › Launch your simulation\nTime: about 60 minutes. You need: balance_plant (or the downloaded complete workspace). Progress: 3/8.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Launch your simulation"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/launch-the-simulation.html#goal",
+    "href": "projects/balance-bot/launch-the-simulation.html#goal",
+    "title": "Launch your simulation",
+    "section": "Goal",
+    "text": "Goal\nBuild the supplied description package and start your own cart-pole with active joint-state and cart-effort controllers.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Launch your simulation"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/launch-the-simulation.html#do-it",
+    "href": "projects/balance-bot/launch-the-simulation.html#do-it",
+    "title": "Launch your simulation",
+    "section": "Do it",
+    "text": "Do it\nTerminal A — build and simulation (leave running):\ncd ~/balance_bot_ws\nsource /opt/ros/jazzy/setup.bash\nrosdep install --from-paths src --ignore-src --rosdistro jazzy -y\ncolcon build --symlink-install\nsource install/local_setup.bash\nros2 launch balance_bot_description simulation.launch.py\nTerminal B — inspection and manual command:\nsource /opt/ros/jazzy/setup.bash\nsource ~/balance_bot_ws/install/local_setup.bash\nros2 control list_hardware_interfaces\nros2 control list_controllers\nros2 topic info /cart_effort_controller/commands --verbose\nSend a small bounded force briefly, then send zero:\nros2 topic pub --once /cart_effort_controller/commands \\\n  std_msgs/msg/Float64MultiArray \"{data: [5.0]}\"\nros2 topic pub --once /cart_effort_controller/commands \\\n  std_msgs/msg/Float64MultiArray \"{data: [0.0]}\"",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Launch your simulation"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/launch-the-simulation.html#verify",
+    "href": "projects/balance-bot/launch-the-simulation.html#verify",
+    "title": "Launch your simulation",
+    "section": "Verify",
+    "text": "Verify\nThe cart must move when force is applied. Hardware interfaces must show cart effort as claimed and position/velocity states as available. The command topic must have one controller subscriber.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Launch your simulation"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/launch-the-simulation.html#troubleshooting",
+    "href": "projects/balance-bot/launch-the-simulation.html#troubleshooting",
+    "title": "Launch your simulation",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nController type unavailable: install ros-jazzy-ros2-controllers.\nCommand has no effect: confirm the controller is active and the array has one value for its one commanded joint.\nRobot falls or leaves the rail: restart the launch; uncontrolled instability is expected at this milestone.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Launch your simulation"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/launch-the-simulation.html#challenge",
+    "href": "projects/balance-bot/launch-the-simulation.html#challenge",
+    "title": "Launch your simulation",
+    "section": "Challenge",
+    "text": "Challenge\nCompare force commands 2.0 and 10.0. Record cart displacement direction and explain why an effort command is not a target position.\nStop Terminal A with Ctrl+C only after completing the checks. Restart it before the next milestone.\n\n← Model the cart-pole plantNext: Read and interpret state → All milestones",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Launch your simulation"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/capstone.html",
+    "href": "projects/balance-bot/capstone.html",
+    "title": "Capstone stability trial",
+    "section": "",
+    "text": "Milestone 8 of 8 · Produces: a repeatable pass/fail stability report\nBuild projects › Balance Bot: stabilize an inverted pendulum › Capstone stability trial\nTime: about 60 minutes. You need: balance_launch (or the downloaded complete workspace). Progress: 8/8.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Capstone stability trial"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/capstone.html#goal",
+    "href": "projects/balance-bot/capstone.html#goal",
+    "title": "Capstone stability trial",
+    "section": "Goal",
+    "text": "Goal\nRun a repeatable stability trial and publish an evidence-backed pass/fail report.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Capstone stability trial"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/capstone.html#do-it",
+    "href": "projects/balance-bot/capstone.html#do-it",
+    "title": "Capstone stability trial",
+    "section": "Do it",
+    "text": "Do it\nUse the packaged launch, fixed gains, fixed force limit, and a 20-second trial. Start recording before the launch applies its configured timed disturbance. Use disturbance_at:=2.0, disturbance_force:=12.0, and disturbance_duration:=0.15 in every scored attempt. Restart the complete launch between attempts to restore the same initial condition. Create capstone.md containing environment/package versions, gains, bounds, commands used, observations, and links to the bag/trial CSV.\nFrom clean terminals, use this order:\n\nTerminal A: source Jazzy and the overlay; launch balance.launch.py with the three disturbance parameters above. The policy commands zero while waiting for a trial start. Leave it running.\nTerminal B: source both setups; record /joint_states and the command topic to a named bag such as final-01.\nTerminal C: source both setups; run trial_analyzer for 20 seconds and write final-01.csv. It automatically calls /balance_controller/start_trial, so this one event arms measurement and schedules the disturbance.\nWhen the analyzer reports completion, stop the bag with Ctrl+C, then stop the launch. Repeat from a fresh launch as final-02.\n\nUse this onsite report skeleton:\n# Balance Bot capstone\n- Environment and package versions:\n- Gains and force limit:\n- Disturbance and duration:\n- Commands used:\n| Trial | angle after 3 s | cart (whole trial) | force (whole trial) | pass? |\n|---|---:|---:|---:|---|\n| final-01 | | | | |\n| final-02 | | | | |\n## Evidence\n- Bags and CSV files:\n- Graph or extracted series:\n## Interpretation\nWhat repeated, what failed, and the next change I would test.\nPreview acceptance bounds—adjust only before beginning the final trial:\n\nabsolute pole angle below 0.35 rad after the first 3 seconds;\nabsolute cart position below 4 m;\nabsolute force at or below 80 N;\nno stale-state or safety-cutoff event during the scored interval.\nno state or command sample gap above 0.2 s.\n\nCompare the two CSV initial-state vectors. Treat the reset as equivalent only if cart position and pole angle differ by less than 0.01 and both initial velocity magnitudes are below 0.02; otherwise reject and rerun the pair.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Capstone stability trial"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/capstone.html#verify",
+    "href": "projects/balance-bot/capstone.html#verify",
+    "title": "Capstone stability trial",
+    "section": "Verify",
+    "text": "Verify\nReport every bound separately as pass or fail. Include one graph or extracted series supporting the angle and force claims. Repeat the trial once; a result that cannot repeat is not yet a project pass.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Capstone stability trial"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/capstone.html#troubleshooting",
+    "href": "projects/balance-bot/capstone.html#troubleshooting",
+    "title": "Capstone stability trial",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nImmediate cutoff: initial tilt exceeds the controller’s recoverable/safety region; reset rather than disabling safety.\nSlow cart drift: revisit position and velocity gains.\nOne pass and one failure: describe sensitivity and continue tuning instead of selecting only the successful run.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Capstone stability trial"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/capstone.html#challenge",
+    "href": "projects/balance-bot/capstone.html#challenge",
+    "title": "Capstone stability trial",
+    "section": "Challenge",
+    "text": "Challenge\nApply a second disturbance after recovery. Predict whether your gain choice prioritizes rapid recovery, low force, or small cart travel, then compare the recording with that prediction.\n\n← Package the complete systemFinish project trail → All milestones",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Capstone stability trial"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/close-the-loop.html",
+    "href": "projects/balance-bot/close-the-loop.html",
+    "title": "Close the control loop",
+    "section": "",
+    "text": "Milestone 5 of 8 · Produces: a parameterized feedback controller node\nBuild projects › Balance Bot: stabilize an inverted pendulum › Close the control loop\nTime: about 75 minutes. You need: balance_state (or the downloaded complete workspace). Progress: 5/8.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Close the control loop"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/close-the-loop.html#goal",
+    "href": "projects/balance-bot/close-the-loop.html#goal",
+    "title": "Close the control loop",
+    "section": "Goal",
+    "text": "Goal\nRun a bounded state-feedback controller and explain how each measured state contributes to cart force.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Close the control loop"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/close-the-loop.html#do-it",
+    "href": "projects/balance-bot/close-the-loop.html#do-it",
+    "title": "Close the control loop",
+    "section": "Do it",
+    "text": "Do it\nThe supplied controller computes:\nforce = k_theta·theta + k_theta_dot·theta_dot + k_x·x + k_x_dot·x_dot\nAngle terms move the cart under the falling pole. Cart terms keep the system from stabilizing by driving endlessly down the rail. The node clamps force and publishes zero when state is stale or tilt exceeds the safety cutoff.\nUse this convention throughout the project:\n             +theta (pole tips toward +x)\n                   /\n   -x  &lt;---- [cart] ----&gt;  +x\n                 +force ----&gt;\nBefore tuning, apply a small positive force with the pole safely near upright. The cart position should increase. Then tip the pole slightly toward +x and confirm the reported angle is positive. If either observation disagrees, fix the convention before changing gains.\nThis is full-state feedback: every coefficient multiplies a different measured state. The rate terms provide damping-like action, but this is not a generic PID controller and it does not swing a fallen pole upright.\nStart simulation, then in another sourced terminal:\nros2 run balance_bot_control balance_controller --ros-args \\\n  -p k_theta:=120.0 -p k_theta_dot:=22.0 \\\n  -p k_x:=-4.0 -p k_x_dot:=-8.0 -p max_force:=80.0\nIn another sourced terminal, arm this exploratory run after state arrives:\nros2 service call /balance_controller/start_trial std_srvs/srv/Trigger '{}'",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Close the control loop"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/close-the-loop.html#verify",
+    "href": "projects/balance-bot/close-the-loop.html#verify",
+    "title": "Close the control loop",
+    "section": "Verify",
+    "text": "Verify\nUse ros2 topic echo /cart_effort_controller/commands and the controller log. Every command must remain within ±80. Stale state or excessive tilt must produce zero command. Do not treat the suggested gains as validated until the Jazzy runtime trial passes.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Close the control loop"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/close-the-loop.html#troubleshooting",
+    "href": "projects/balance-bot/close-the-loop.html#troubleshooting",
+    "title": "Close the control loop",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nPole accelerates away immediately: stop, verify the angle sign, then reverse the angle gains rather than increasing magnitude blindly.\nViolent chatter: lower the angle gain or increase the angular-rate term.\nCart runs away while pole improves: strengthen restoring cart gains.",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Close the control loop"
+    ]
+  },
+  {
+    "objectID": "projects/balance-bot/close-the-loop.html#challenge",
+    "href": "projects/balance-bot/close-the-loop.html#challenge",
+    "title": "Close the control loop",
+    "section": "Challenge",
+    "text": "Challenge\nSet all gains to zero and predict every command. Then enable one term at a time and describe the behavior it can and cannot correct.\n\n← Read and interpret stateNext: Tune from evidence → All milestones",
+    "crumbs": [
+      "Overview",
+      "Build projects",
+      "Balance Bot: stabilize an inverted pendulum",
+      "Close the control loop"
+    ]
   },
   {
     "objectID": "trails/data-and-observability.html",
