@@ -217,19 +217,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">1. Overview</a>
+  <li><a href="#start-learning" id="toc-start-learning" class="nav-link active" data-scroll-target="#start-learning">Start learning</a></li>
+  <li><a href="#what-you-will-build-up-along-the-way" id="toc-what-you-will-build-up-along-the-way" class="nav-link" data-scroll-target="#what-you-will-build-up-along-the-way">What you will build up along the way</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">1. Overview</a>
   <ul class="collapse">
-  <li><a href="#evidence-backed-learning-units" id="toc-evidence-backed-learning-units" class="nav-link" data-scroll-target="#evidence-backed-learning-units">Evidence-backed learning units</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas">Key ideas</a></li>
   </ul></li>
   <li><a href="#mental-model" id="toc-mental-model" class="nav-link" data-scroll-target="#mental-model">2. Mental model</a>
   <ul class="collapse">
-  <li><a href="#evidence-backed-learning-units-1" id="toc-evidence-backed-learning-units-1" class="nav-link" data-scroll-target="#evidence-backed-learning-units-1">Evidence-backed learning units</a></li>
+  <li><a href="#key-ideas-1" id="toc-key-ideas-1" class="nav-link" data-scroll-target="#key-ideas-1">Key ideas</a></li>
   </ul></li>
   <li><a href="#practical-checkpoint" id="toc-practical-checkpoint" class="nav-link" data-scroll-target="#practical-checkpoint">3. Practical checkpoint</a>
   <ul class="collapse">
-  <li><a href="#evidence-backed-learning-units-2" id="toc-evidence-backed-learning-units-2" class="nav-link" data-scroll-target="#evidence-backed-learning-units-2">Evidence-backed learning units</a></li>
+  <li><a href="#key-ideas-2" id="toc-key-ideas-2" class="nav-link" data-scroll-target="#key-ideas-2">Key ideas</a></li>
   </ul></li>
-  <li><a href="#lessons-in-this-trail" id="toc-lessons-in-this-trail" class="nav-link" data-scroll-target="#lessons-in-this-trail">Lessons in this trail</a></li>
+  <li><a href="#references-and-evidence" id="toc-references-and-evidence" class="nav-link" data-scroll-target="#references-and-evidence">References and evidence</a></li>
   </ul>
 </nav>
     </div>
@@ -257,66 +259,112 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="trail-meta">
-<p><strong>3 modules</strong> · <strong>9 evidence nuggets</strong> · <strong>5 local lessons</strong></p>
+<p><strong>5 lessons</strong> · <strong>3 learning stages</strong> · Learn entirely on this site</p>
 </div>
+<section id="start-learning" class="level2">
+<h2 class="anchored" data-anchor-id="start-learning">Start learning</h2>
+<p>Work through these lessons in order. Each one contains a local activity and knowledge check.</p>
+<div class="lesson-grid">
+<div class="lesson-card">
+<p><span class="lesson-number">1</span></p>
+<section id="debugging" class="level3">
+<h3 class="anchored" data-anchor-id="debugging"><a href="../lessons/intermediate-tf2-debugging-tf2-problems.html">Debugging</a></h3>
+<p>Intermediate · Curated</p>
+<p><a href="../lessons/intermediate-tf2-debugging-tf2-problems.html">Open lesson →</a></p>
+</section>
+</div>
+<div class="lesson-card">
+<p><span class="lesson-number">2</span></p>
+<section id="introducing-tf2" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-tf2"><a href="../lessons/intermediate-tf2-introduction-to-tf2.html">Introducing <code>tf2</code></a></h3>
+<p>Intermediate · Curated</p>
+<p><a href="../lessons/intermediate-tf2-introduction-to-tf2.html">Open lesson →</a></p>
+</section>
+</div>
+<div class="lesson-card">
+<p><span class="lesson-number">3</span></p>
+<section id="tf2" class="level3">
+<h3 class="anchored" data-anchor-id="tf2"><a href="../lessons/intermediate-tf2-tf2-main.html"><code>tf2</code></a></h3>
+<p>Intermediate · Curated</p>
+<p><a href="../lessons/intermediate-tf2-tf2-main.html">Open lesson →</a></p>
+</section>
+</div>
+<div class="lesson-card">
+<p><span class="lesson-number">4</span></p>
+<section id="urdf" class="level3">
+<h3 class="anchored" data-anchor-id="urdf"><a href="../lessons/intermediate-urdf-urdf-main.html">URDF</a></h3>
+<p>Intermediate · Curated</p>
+<p><a href="../lessons/intermediate-urdf-urdf-main.html">Open lesson →</a></p>
+</section>
+</div>
+<div class="lesson-card">
+<p><span class="lesson-number">5</span></p>
+<section id="using-urdf-with-robot_state_publisher-python" class="level3">
+<h3 class="anchored" data-anchor-id="using-urdf-with-robot_state_publisher-python"><a href="../lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html">Using URDF with <code>robot_state_publisher</code> (Python)</a></h3>
+<p>Intermediate · Curated</p>
+<p><a href="../lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html">Open lesson →</a></p>
+</section>
+</div>
+</div>
+</section>
+<section id="what-you-will-build-up-along-the-way" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-build-up-along-the-way">What you will build up along the way</h2>
+</section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">1. Overview</h2>
 <p>tf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with <code>robot_state_publisher</code>, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.</p>
-<section id="evidence-backed-learning-units" class="level3">
-<h3 class="anchored" data-anchor-id="evidence-backed-learning-units">Evidence-backed learning units</h3>
+<section id="key-ideas" class="level3">
+<h3 class="anchored" data-anchor-id="key-ideas">Key ideas</h3>
 <ul>
-<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_618f1f3c07cd.html">tf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with <code>robot_state_publisher</code>, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.</a> <code>SOURCE-DERIVED</code></li>
+<li>tf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with <code>robot_state_publisher</code>, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.</li>
 </ul>
 </section>
 </section>
 <section id="mental-model" class="level2">
 <h2 class="anchored" data-anchor-id="mental-model">2. Mental model</h2>
 <p>A transform answers where one frame is relative to another at a particular</p>
-<section id="evidence-backed-learning-units-1" class="level3">
-<h3 class="anchored" data-anchor-id="evidence-backed-learning-units-1">Evidence-backed learning units</h3>
+<section id="key-ideas-1" class="level3">
+<h3 class="anchored" data-anchor-id="key-ideas-1">Key ideas</h3>
 <ul>
-<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_9a70a4c2cb39.html">A transform answers where one frame is relative to another at a particular</a> <code>SOURCE-DERIVED</code></li>
-<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_87f595da605c.html">time.</a> <code>SOURCE-DERIVED</code></li>
-<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_31952784ac9e.html">Static transforms describe relationships that do not change.</a> <code>SOURCE-DERIVED</code></li>
-<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_4bde98fd46c3.html">Dynamic transforms must be timestamped and published continuously.</a> <code>SOURCE-DERIVED</code></li>
-<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_0ad0edc74ad7.html">A connected frame tree needs unambiguous parent-child relationships.</a> <code>SOURCE-DERIVED</code></li>
-<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_a11230d2fb1b.html">URDF describes structure; joint states supply changing joint positions; tf2</a> <code>SOURCE-DERIVED</code></li>
-<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_49742c9b984d.html">exposes the resulting frame relationships.</a> <code>SOURCE-DERIVED</code></li>
+<li>A transform answers where one frame is relative to another at a particular</li>
+<li>time.</li>
+<li>Static transforms describe relationships that do not change.</li>
+<li>Dynamic transforms must be timestamped and published continuously.</li>
+<li>A connected frame tree needs unambiguous parent-child relationships.</li>
+<li>URDF describes structure; joint states supply changing joint positions; tf2</li>
+<li>exposes the resulting frame relationships.</li>
 </ul>
 </section>
 </section>
 <section id="practical-checkpoint" class="level2">
 <h2 class="anchored" data-anchor-id="practical-checkpoint">3. Practical checkpoint</h2>
 <p>Build a small URDF model, publish its joint states and transforms, inspect the frame tree, and visualize the result in RViz. Then deliberately request a transform at an unavailable time and use the debugging tools to understand the failure.</p>
-<section id="evidence-backed-learning-units-2" class="level3">
-<h3 class="anchored" data-anchor-id="evidence-backed-learning-units-2">Evidence-backed learning units</h3>
+<section id="key-ideas-2" class="level3">
+<h3 class="anchored" data-anchor-id="key-ideas-2">Key ideas</h3>
 <ul>
-<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_54d12a466c79.html">Build a small URDF model, publish its joint states and transforms, inspect the frame tree, and visualize the result in RViz. Then deliberately request a transform at an unavailable time and use the debugging tools to understand the failure.</a> <code>SOURCE-DERIVED</code></li>
+<li>Build a small URDF model, publish its joint states and transforms, inspect the frame tree, and visualize the result in RViz. Then deliberately request a transform at an unavailable time and use the debugging tools to understand the failure.</li>
 </ul>
 </section>
 </section>
-<section id="lessons-in-this-trail" class="level2">
-<h2 class="anchored" data-anchor-id="lessons-in-this-trail">Lessons in this trail</h2>
+<section id="references-and-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="references-and-evidence">References and evidence</h2>
+<details>
+<summary>
+Inspect the source evidence behind this trail
+</summary>
 <ul>
-<li><a href="../lessons/intermediate-tf2-debugging-tf2-problems.html">Debugging</a></li>
-<li><a href="../lessons/intermediate-tf2-introduction-to-tf2.html">Introducing <code>tf2</code></a></li>
-<li><a href="../lessons/intermediate-tf2-tf2-main.html"><code>tf2</code></a></li>
-<li><a href="../lessons/intermediate-urdf-urdf-main.html">URDF</a></li>
-<li><a href="../lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html">Using URDF with <code>robot_state_publisher</code> (Python)</a></li>
+<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_618f1f3c07cd.html">tf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry,</a></li>
+<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_9a70a4c2cb39.html">A transform answers where one frame is relative to another at a particular</a></li>
+<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_87f595da605c.html">time</a></li>
+<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_31952784ac9e.html">Static transforms describe relationships that do not change</a></li>
+<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_4bde98fd46c3.html">Dynamic transforms must be timestamped and published continuously</a></li>
+<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_0ad0edc74ad7.html">A connected frame tree needs unambiguous parent-child relationships</a></li>
+<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_a11230d2fb1b.html">URDF describes structure; joint states supply changing joint positions; tf2</a></li>
+<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_49742c9b984d.html">exposes the resulting frame relationships</a></li>
+<li><a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_54d12a466c79.html">Build a small URDF model, publish its joint states and transforms, inspect the frame tree, and visua</a></li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Generated versus sourced
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Module ordering and presentation are generated curriculum structure. Claims labeled <code>SOURCE-DERIVED</code> come from the curated knowledge pack and link to exact provenance.</p>
-</div>
-</div>
+</details>
+<p>The evidence layer supports editorial review; it is not a required step in the learning path.</p>
 
 
 </section>

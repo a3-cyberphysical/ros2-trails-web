@@ -4316,7 +4316,31 @@
     "href": "trails/building-nodes.html",
     "title": "Building nodes and packages",
     "section": "",
-    "text": "3 modules · 9 evidence nuggets · 6 local lessons",
+    "text": "6 lessons · 3 learning stages · Learn entirely on this site",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Building nodes and packages"
+    ]
+  },
+  {
+    "objectID": "trails/building-nodes.html#start-learning",
+    "href": "trails/building-nodes.html#start-learning",
+    "title": "Building nodes and packages",
+    "section": "Start learning",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nBeginner: Client libraries\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n2\n\nCreating a workspace\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n3\n\nCreating a package\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n4\n\nCreating custom msg and srv files\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n5\n\nWriting a simple publisher and subscriber (C++)\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n6\n\nWriting a simple publisher and subscriber (Python)\nBeginner-Client-Libraries · Curated\nOpen lesson →",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Building nodes and packages"
+    ]
+  },
+  {
+    "objectID": "trails/building-nodes.html#what-you-will-build-up-along-the-way",
+    "href": "trails/building-nodes.html#what-you-will-build-up-along-the-way",
+    "title": "Building nodes and packages",
+    "section": "What you will build up along the way",
+    "text": "What you will build up along the way",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4328,7 +4352,7 @@
     "href": "trails/building-nodes.html#overview",
     "title": "Building nodes and packages",
     "section": "1. Overview",
-    "text": "1. Overview\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions.\n\nEvidence-backed learning units\n\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions. SOURCE-DERIVED",
+    "text": "1. Overview\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions.\n\nKey ideas\n\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4340,7 +4364,7 @@
     "href": "trails/building-nodes.html#core-design-choices",
     "title": "Building nodes and packages",
     "section": "2. Core design choices",
-    "text": "2. Core design choices\nPrefer one clear responsibility per node.\n\nEvidence-backed learning units\n\nPrefer one clear responsibility per node. SOURCE-DERIVED\nUse topics for ongoing data, services for quick request/response operations, SOURCE-DERIVED\nand actions when work has progress, cancellation, or a longer lifetime. SOURCE-DERIVED\nDefine custom interfaces only when existing message packages do not express SOURCE-DERIVED\nthe domain cleanly. SOURCE-DERIVED\nKeep build-time dependencies explicit and source the workspace overlay after SOURCE-DERIVED\na successful build. SOURCE-DERIVED",
+    "text": "2. Core design choices\nPrefer one clear responsibility per node.\n\nKey ideas\n\nPrefer one clear responsibility per node.\nUse topics for ongoing data, services for quick request/response operations,\nand actions when work has progress, cancellation, or a longer lifetime.\nDefine custom interfaces only when existing message packages do not express\nthe domain cleanly.\nKeep build-time dependencies explicit and source the workspace overlay after\na successful build.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4352,7 +4376,7 @@
     "href": "trails/building-nodes.html#practical-checkpoint",
     "title": "Building nodes and packages",
     "section": "3. Practical checkpoint",
-    "text": "3. Practical checkpoint\nCreate a workspace with one package, implement a publisher/subscriber pair in either C++ or Python, build it, source the overlay, and verify the graph using the CLI tools from the foundations section.\n\nEvidence-backed learning units\n\nCreate a workspace with one package, implement a publisher/subscriber pair in either C++ or Python, build it, source the overlay, and verify the graph using the CLI tools from the foundations section. SOURCE-DERIVED",
+    "text": "3. Practical checkpoint\nCreate a workspace with one package, implement a publisher/subscriber pair in either C++ or Python, build it, source the overlay, and verify the graph using the CLI tools from the foundations section.\n\nKey ideas\n\nCreate a workspace with one package, implement a publisher/subscriber pair in either C++ or Python, build it, source the overlay, and verify the graph using the CLI tools from the foundations section.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4360,11 +4384,11 @@
     ]
   },
   {
-    "objectID": "trails/building-nodes.html#lessons-in-this-trail",
-    "href": "trails/building-nodes.html#lessons-in-this-trail",
+    "objectID": "trails/building-nodes.html#references-and-evidence",
+    "href": "trails/building-nodes.html#references-and-evidence",
     "title": "Building nodes and packages",
-    "section": "Lessons in this trail",
-    "text": "Lessons in this trail\n\nBeginner: Client libraries\nCreating a workspace\nCreating a package\nCreating custom msg and srv files\nWriting a simple publisher and subscriber (C++)\nWriting a simple publisher and subscriber (Python)\n\n\n\n\n\n\n\nNoteGenerated versus sourced\n\n\n\nModule ordering and presentation are generated curriculum structure. Claims labeled SOURCE-DERIVED come from the curated knowledge pack and link to exact provenance.",
+    "section": "References and evidence",
+    "text": "References and evidence\n\n\nInspect the source evidence behind this trail\n\n\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and\nPrefer one clear responsibility per node\nUse topics for ongoing data, services for quick request/response operations,\nand actions when work has progress, cancellation, or a longer lifetime\nDefine custom interfaces only when existing message packages do not express\nthe domain cleanly\nKeep build-time dependencies explicit and source the workspace overlay after\na successful build\nCreate a workspace with one package, implement a publisher/subscriber pair in either C++ or Python,\n\n\nThe evidence layer supports editorial review; it is not a required step in the learning path.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4376,7 +4400,31 @@
     "href": "trails/interfaces-and-actions.html",
     "title": "Interfaces, parameters, actions, and plugins",
     "section": "",
-    "text": "4 modules · 11 evidence nuggets · 6 local lessons",
+    "text": "6 lessons · 4 learning stages · Learn entirely on this site",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Interfaces, parameters, actions, and plugins"
+    ]
+  },
+  {
+    "objectID": "trails/interfaces-and-actions.html#start-learning",
+    "href": "trails/interfaces-and-actions.html#start-learning",
+    "title": "Interfaces, parameters, actions, and plugins",
+    "section": "Start learning",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nCreating custom msg and srv files\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n2\n\nCreating and using plugins (C++)\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n3\n\nUsing parameters in a class (C++)\nBeginner-Client-Libraries · Curated\nOpen lesson →\n\n\n\n4\n\nCreating an action\nIntermediate · Curated\nOpen lesson →\n\n\n\n5\n\nWriting an action server and client (C++)\nIntermediate · Curated\nOpen lesson →\n\n\n\n6\n\nWriting an action server and client (Python)\nIntermediate · Curated\nOpen lesson →",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Interfaces, parameters, actions, and plugins"
+    ]
+  },
+  {
+    "objectID": "trails/interfaces-and-actions.html#what-you-will-build-up-along-the-way",
+    "href": "trails/interfaces-and-actions.html#what-you-will-build-up-along-the-way",
+    "title": "Interfaces, parameters, actions, and plugins",
+    "section": "What you will build up along the way",
+    "text": "What you will build up along the way",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4388,7 +4436,7 @@
     "href": "trails/interfaces-and-actions.html#overview",
     "title": "Interfaces, parameters, actions, and plugins",
     "section": "1. Overview",
-    "text": "1. Overview\nInterfaces are the public contracts between nodes. Messages describe topic samples, services pair a request with a response, and actions combine a goal, feedback, a result, and cancellation. Parameters configure a node but should not be mistaken for a high-rate data channel. Pluginlib adds runtime-selected implementations behind a stable C++ interface.\n\nEvidence-backed learning units\n\nInterfaces are the public contracts between nodes. Messages describe topic samples, services pair a request with a response, and actions combine a goal, feedback, a result, and cancellation. Parameters configure a node but should not be mistaken for a high-rate data channel. Pluginlib adds runtime-selected implementations behind a stable C++ interface. SOURCE-DERIVED",
+    "text": "1. Overview\nInterfaces are the public contracts between nodes. Messages describe topic samples, services pair a request with a response, and actions combine a goal, feedback, a result, and cancellation. Parameters configure a node but should not be mistaken for a high-rate data channel. Pluginlib adds runtime-selected implementations behind a stable C++ interface.\n\nKey ideas\n\nInterfaces are the public contracts between nodes. Messages describe topic samples, services pair a request with a response, and actions combine a goal, feedback, a result, and cancellation. Parameters configure a node but should not be mistaken for a high-rate data channel. Pluginlib adds runtime-selected implementations behind a stable C++ interface.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4400,7 +4448,7 @@
     "href": "trails/interfaces-and-actions.html#prerequisites",
     "title": "Interfaces, parameters, actions, and plugins",
     "section": "2. Prerequisites",
-    "text": "2. Prerequisites\nComplete Foundations and Building nodes.\n\nEvidence-backed learning units\n\nComplete Foundations and Building nodes. SOURCE-DERIVED",
+    "text": "2. Prerequisites\nComplete Foundations and Building nodes.\n\nKey ideas\n\nComplete Foundations and Building nodes.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4412,7 +4460,7 @@
     "href": "trails/interfaces-and-actions.html#design-guidance",
     "title": "Interfaces, parameters, actions, and plugins",
     "section": "3. Design guidance",
-    "text": "3. Design guidance\nReuse standard interfaces where their semantics fit.\n\nEvidence-backed learning units\n\nReuse standard interfaces where their semantics fit. SOURCE-DERIVED\nKeep custom interfaces small, named for domain meaning, and independent of SOURCE-DERIVED\nimplementation details. SOURCE-DERIVED\nChoose an action when callers need progress or cancellation; otherwise a SOURCE-DERIVED\nservice may be simpler. SOURCE-DERIVED\nValidate parameters and react deliberately to runtime parameter changes. SOURCE-DERIVED\nUse plugins when multiple implementations need a shared contract and runtime SOURCE-DERIVED\nselection—not merely to split files. SOURCE-DERIVED",
+    "text": "3. Design guidance\nReuse standard interfaces where their semantics fit.\n\nKey ideas\n\nReuse standard interfaces where their semantics fit.\nKeep custom interfaces small, named for domain meaning, and independent of\nimplementation details.\nChoose an action when callers need progress or cancellation; otherwise a\nservice may be simpler.\nValidate parameters and react deliberately to runtime parameter changes.\nUse plugins when multiple implementations need a shared contract and runtime\nselection—not merely to split files.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4424,7 +4472,7 @@
     "href": "trails/interfaces-and-actions.html#practical-checkpoint",
     "title": "Interfaces, parameters, actions, and plugins",
     "section": "4. Practical checkpoint",
-    "text": "4. Practical checkpoint\nDefine a custom action, implement one server and client, expose a validated parameter that changes server behavior, and inspect goal feedback and cancellation from the command line.\n\nEvidence-backed learning units\n\nDefine a custom action, implement one server and client, expose a validated parameter that changes server behavior, and inspect goal feedback and cancellation from the command line. SOURCE-DERIVED",
+    "text": "4. Practical checkpoint\nDefine a custom action, implement one server and client, expose a validated parameter that changes server behavior, and inspect goal feedback and cancellation from the command line.\n\nKey ideas\n\nDefine a custom action, implement one server and client, expose a validated parameter that changes server behavior, and inspect goal feedback and cancellation from the command line.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4432,11 +4480,11 @@
     ]
   },
   {
-    "objectID": "trails/interfaces-and-actions.html#lessons-in-this-trail",
-    "href": "trails/interfaces-and-actions.html#lessons-in-this-trail",
+    "objectID": "trails/interfaces-and-actions.html#references-and-evidence",
+    "href": "trails/interfaces-and-actions.html#references-and-evidence",
     "title": "Interfaces, parameters, actions, and plugins",
-    "section": "Lessons in this trail",
-    "text": "Lessons in this trail\n\nCreating custom msg and srv files\nCreating and using plugins (C++)\nUsing parameters in a class (C++)\nCreating an action\nWriting an action server and client (C++)\nWriting an action server and client (Python)\n\n\n\n\n\n\n\nNoteGenerated versus sourced\n\n\n\nModule ordering and presentation are generated curriculum structure. Claims labeled SOURCE-DERIVED come from the curated knowledge pack and link to exact provenance.",
+    "section": "References and evidence",
+    "text": "References and evidence\n\n\nInspect the source evidence behind this trail\n\n\nInterfaces are the public contracts between nodes. Messages describe topic samples, services pair a\nComplete Foundations and Building nodes\nReuse standard interfaces where their semantics fit\nKeep custom interfaces small, named for domain meaning, and independent of\nimplementation details\nChoose an action when callers need progress or cancellation; otherwise a\nservice may be simpler\nValidate parameters and react deliberately to runtime parameter changes\nUse plugins when multiple implementations need a shared contract and runtime\nselection—not merely to split files\nDefine a custom action, implement one server and client, expose a validated parameter that changes s\n\n\nThe evidence layer supports editorial review; it is not a required step in the learning path.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4448,7 +4496,31 @@
     "href": "trails/foundations.html",
     "title": "Foundations: the ROS 2 graph",
     "section": "",
-    "text": "3 modules · 10 evidence nuggets · 6 local lessons",
+    "text": "6 lessons · 3 learning stages · Learn entirely on this site",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Foundations: the ROS 2 graph"
+    ]
+  },
+  {
+    "objectID": "trails/foundations.html#start-learning",
+    "href": "trails/foundations.html#start-learning",
+    "title": "Foundations: the ROS 2 graph",
+    "section": "Start learning",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nBeginner: CLI tools\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n2\n\nRecording and playing back data\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n3\n\nUnderstanding actions\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n4\n\nUnderstanding nodes\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n5\n\nUnderstanding services\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n6\n\nUnderstanding topics\nBeginner-CLI-Tools · Curated\nOpen lesson →",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Foundations: the ROS 2 graph"
+    ]
+  },
+  {
+    "objectID": "trails/foundations.html#what-you-will-build-up-along-the-way",
+    "href": "trails/foundations.html#what-you-will-build-up-along-the-way",
+    "title": "Foundations: the ROS 2 graph",
+    "section": "What you will build up along the way",
+    "text": "What you will build up along the way",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4460,7 +4532,7 @@
     "href": "trails/foundations.html#overview",
     "title": "Foundations: the ROS 2 graph",
     "section": "1. Overview",
-    "text": "1. Overview\nROS 2 applications are graphs of independently useful nodes. Nodes exchange typed data through topics, request bounded work through services, run longer goal-oriented work through actions, and expose configuration through parameters. The command-line tools let you inspect this graph before writing code, which makes them the best starting point.\n\nEvidence-backed learning units\n\nROS 2 applications are graphs of independently useful nodes. Nodes exchange typed data through topics, request bounded work through services, run longer goal-oriented work through actions, and expose configuration through parameters. The command-line tools let you inspect this graph before writing code, which makes them the best starting point. SOURCE-DERIVED",
+    "text": "1. Overview\nROS 2 applications are graphs of independently useful nodes. Nodes exchange typed data through topics, request bounded work through services, run longer goal-oriented work through actions, and expose configuration through parameters. The command-line tools let you inspect this graph before writing code, which makes them the best starting point.\n\nKey ideas\n\nROS 2 applications are graphs of independently useful nodes. Nodes exchange typed data through topics, request bounded work through services, run longer goal-oriented work through actions, and expose configuration through parameters. The command-line tools let you inspect this graph before writing code, which makes them the best starting point.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4472,7 +4544,7 @@
     "href": "trails/foundations.html#learning-sequence",
     "title": "Foundations: the ROS 2 graph",
     "section": "2. Learning sequence",
-    "text": "2. Learning sequence\nConfigure and source the ROS 2 environment in every new shell.\n\nEvidence-backed learning units\n\nConfigure and source the ROS 2 environment in every new shell. SOURCE-DERIVED\nUse turtlesim to get a visible system running quickly. SOURCE-DERIVED\nInspect nodes and their interfaces with ros2 node. SOURCE-DERIVED\nObserve streams with ros2 topic and request/response interactions with SOURCE-DERIVED\nros2 service. SOURCE-DERIVED\nUse ros2 action for feedback-producing goals and ros2 param for runtime SOURCE-DERIVED\nconfiguration. SOURCE-DERIVED\nRecord and replay graph traffic with rosbag2. SOURCE-DERIVED",
+    "text": "2. Learning sequence\nConfigure and source the ROS 2 environment in every new shell.\n\nKey ideas\n\nConfigure and source the ROS 2 environment in every new shell.\nUse turtlesim to get a visible system running quickly.\nInspect nodes and their interfaces with ros2 node.\nObserve streams with ros2 topic and request/response interactions with\nros2 service.\nUse ros2 action for feedback-producing goals and ros2 param for runtime\nconfiguration.\nRecord and replay graph traffic with rosbag2.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4484,7 +4556,7 @@
     "href": "trails/foundations.html#practical-checkpoint",
     "title": "Foundations: the ROS 2 graph",
     "section": "3. Practical checkpoint",
-    "text": "3. Practical checkpoint\nYou should be able to explain why a velocity command is a topic, a reset is a service, and navigation to a pose is an action; list the active interfaces; and record a topic for later replay.\n\nEvidence-backed learning units\n\nYou should be able to explain why a velocity command is a topic, a reset is a service, and navigation to a pose is an action; list the active interfaces; and record a topic for later replay. SOURCE-DERIVED",
+    "text": "3. Practical checkpoint\nYou should be able to explain why a velocity command is a topic, a reset is a service, and navigation to a pose is an action; list the active interfaces; and record a topic for later replay.\n\nKey ideas\n\nYou should be able to explain why a velocity command is a topic, a reset is a service, and navigation to a pose is an action; list the active interfaces; and record a topic for later replay.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4492,11 +4564,11 @@
     ]
   },
   {
-    "objectID": "trails/foundations.html#lessons-in-this-trail",
-    "href": "trails/foundations.html#lessons-in-this-trail",
+    "objectID": "trails/foundations.html#references-and-evidence",
+    "href": "trails/foundations.html#references-and-evidence",
     "title": "Foundations: the ROS 2 graph",
-    "section": "Lessons in this trail",
-    "text": "Lessons in this trail\n\nBeginner: CLI tools\nRecording and playing back data\nUnderstanding actions\nUnderstanding nodes\nUnderstanding services\nUnderstanding topics\n\n\n\n\n\n\n\nNoteGenerated versus sourced\n\n\n\nModule ordering and presentation are generated curriculum structure. Claims labeled SOURCE-DERIVED come from the curated knowledge pack and link to exact provenance.",
+    "section": "References and evidence",
+    "text": "References and evidence\n\n\nInspect the source evidence behind this trail\n\n\nROS 2 applications are graphs of independently useful nodes. Nodes exchange typed data through topic\nConfigure and source the ROS 2 environment in every new shell\nUse turtlesim to get a visible system running quickly\nInspect nodes and their interfaces with ros2 node\nObserve streams with ros2 topic and request/response interactions with\nros2 service\nUse ros2 action for feedback-producing goals and ros2 param for runtime\nconfiguration\nRecord and replay graph traffic with rosbag2\nYou should be able to explain why a velocity command is a topic, a reset is a service, and navigatio\n\n\nThe evidence layer supports editorial review; it is not a required step in the learning path.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4508,7 +4580,31 @@
     "href": "trails/middleware-and-performance.html",
     "title": "Middleware, discovery, and performance",
     "section": "",
-    "text": "3 modules · 11 evidence nuggets · 6 local lessons",
+    "text": "6 lessons · 3 learning stages · Learn entirely on this site",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Middleware, discovery, and performance"
+    ]
+  },
+  {
+    "objectID": "trails/middleware-and-performance.html#start-learning",
+    "href": "trails/middleware-and-performance.html#start-learning",
+    "title": "Middleware, discovery, and performance",
+    "section": "Start learning",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nCreating an rmw implementation\nAdvanced · Curated\nOpen lesson →\n\n\n\n2\n\nUsing Fast DDS Discovery Server as discovery protocol [community-contributed]\nAdvanced · Curated\nOpen lesson →\n\n\n\n3\n\nUnlocking the potential of Fast DDS middleware [community-contributed]\nAdvanced · Curated\nOpen lesson →\n\n\n\n4\n\nSetting up efficient intra-process communication\nDemos · Curated\nOpen lesson →\n\n\n\n5\n\nUsing quality-of-service settings for lossy networks\nDemos · Curated\nOpen lesson →\n\n\n\n6\n\nUnderstanding real-time programming\nDemos · Curated\nOpen lesson →",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Middleware, discovery, and performance"
+    ]
+  },
+  {
+    "objectID": "trails/middleware-and-performance.html#what-you-will-build-up-along-the-way",
+    "href": "trails/middleware-and-performance.html#what-you-will-build-up-along-the-way",
+    "title": "Middleware, discovery, and performance",
+    "section": "What you will build up along the way",
+    "text": "What you will build up along the way",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4520,7 +4616,7 @@
     "href": "trails/middleware-and-performance.html#overview",
     "title": "Middleware, discovery, and performance",
     "section": "1. Overview",
-    "text": "1. Overview\nROS 2 client libraries communicate through an RMW abstraction over supported middleware implementations. Behavior depends on QoS compatibility, discovery, serialization, executor scheduling, process boundaries, memory allocation, and the network. Performance work therefore needs measurements and an explicit operating context.\n\nEvidence-backed learning units\n\nROS 2 client libraries communicate through an RMW abstraction over supported middleware implementations. Behavior depends on QoS compatibility, discovery, serialization, executor scheduling, process boundaries, memory allocation, and the network. Performance work therefore needs measurements and an explicit operating context. SOURCE-DERIVED",
+    "text": "1. Overview\nROS 2 client libraries communicate through an RMW abstraction over supported middleware implementations. Behavior depends on QoS compatibility, discovery, serialization, executor scheduling, process boundaries, memory allocation, and the network. Performance work therefore needs measurements and an explicit operating context.\n\nKey ideas\n\nROS 2 client libraries communicate through an RMW abstraction over supported middleware implementations. Behavior depends on QoS compatibility, discovery, serialization, executor scheduling, process boundaries, memory allocation, and the network. Performance work therefore needs measurements and an explicit operating context.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4532,7 +4628,7 @@
     "href": "trails/middleware-and-performance.html#key-tradeoffs",
     "title": "Middleware, discovery, and performance",
     "section": "2. Key tradeoffs",
-    "text": "2. Key tradeoffs\nReliable delivery can add latency or blocking under loss; best effort can be\n\nEvidence-backed learning units\n\nReliable delivery can add latency or blocking under loss; best effort can be SOURCE-DERIVED\nappropriate for replaceable sensor samples. SOURCE-DERIVED\nTransient-local durability helps late joiners but retains samples. SOURCE-DERIVED\nComposition can reduce serialization and process overhead while increasing SOURCE-DERIVED\nfault coupling. SOURCE-DERIVED\nDiscovery servers or tuned discovery can help constrained or segmented SOURCE-DERIVED\nnetworks, but add configuration dependencies. SOURCE-DERIVED\nReal-time behavior requires bounded allocation, scheduling, and platform SOURCE-DERIVED\nconfiguration throughout the path. SOURCE-DERIVED",
+    "text": "2. Key tradeoffs\nReliable delivery can add latency or blocking under loss; best effort can be\n\nKey ideas\n\nReliable delivery can add latency or blocking under loss; best effort can be\nappropriate for replaceable sensor samples.\nTransient-local durability helps late joiners but retains samples.\nComposition can reduce serialization and process overhead while increasing\nfault coupling.\nDiscovery servers or tuned discovery can help constrained or segmented\nnetworks, but add configuration dependencies.\nReal-time behavior requires bounded allocation, scheduling, and platform\nconfiguration throughout the path.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4544,7 +4640,7 @@
     "href": "trails/middleware-and-performance.html#practical-checkpoint",
     "title": "Middleware, discovery, and performance",
     "section": "3. Practical checkpoint",
-    "text": "3. Practical checkpoint\nState the QoS contract for each critical interface, test an incompatible pair, compare separate-process and composed execution, and measure before choosing a middleware-specific optimization.\n\nEvidence-backed learning units\n\nState the QoS contract for each critical interface, test an incompatible pair, compare separate-process and composed execution, and measure before choosing a middleware-specific optimization. SOURCE-DERIVED",
+    "text": "3. Practical checkpoint\nState the QoS contract for each critical interface, test an incompatible pair, compare separate-process and composed execution, and measure before choosing a middleware-specific optimization.\n\nKey ideas\n\nState the QoS contract for each critical interface, test an incompatible pair, compare separate-process and composed execution, and measure before choosing a middleware-specific optimization.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4552,11 +4648,11 @@
     ]
   },
   {
-    "objectID": "trails/middleware-and-performance.html#lessons-in-this-trail",
-    "href": "trails/middleware-and-performance.html#lessons-in-this-trail",
+    "objectID": "trails/middleware-and-performance.html#references-and-evidence",
+    "href": "trails/middleware-and-performance.html#references-and-evidence",
     "title": "Middleware, discovery, and performance",
-    "section": "Lessons in this trail",
-    "text": "Lessons in this trail\n\nCreating an rmw implementation\nUsing Fast DDS Discovery Server as discovery protocol [community-contributed]\nUnlocking the potential of Fast DDS middleware [community-contributed]\nSetting up efficient intra-process communication\nUsing quality-of-service settings for lossy networks\nUnderstanding real-time programming\n\n\n\n\n\n\n\nNoteGenerated versus sourced\n\n\n\nModule ordering and presentation are generated curriculum structure. Claims labeled SOURCE-DERIVED come from the curated knowledge pack and link to exact provenance.",
+    "section": "References and evidence",
+    "text": "References and evidence\n\n\nInspect the source evidence behind this trail\n\n\nROS 2 client libraries communicate through an RMW abstraction over supported middleware implementati\nReliable delivery can add latency or blocking under loss; best effort can be\nappropriate for replaceable sensor samples\nTransient-local durability helps late joiners but retains samples\nComposition can reduce serialization and process overhead while increasing\nfault coupling\nDiscovery servers or tuned discovery can help constrained or segmented\nnetworks, but add configuration dependencies\nReal-time behavior requires bounded allocation, scheduling, and platform\nconfiguration throughout the path\nState the QoS contract for each critical interface, test an incompatible pair, compare separate-proc\n\n\nThe evidence layer supports editorial review; it is not a required step in the learning path.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4603,7 +4699,31 @@
     "href": "trails/data-and-observability.html",
     "title": "Data, logging, and observability",
     "section": "",
-    "text": "3 modules · 8 evidence nuggets · 5 local lessons",
+    "text": "5 lessons · 3 learning stages · Learn entirely on this site",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Data, logging, and observability"
+    ]
+  },
+  {
+    "objectID": "trails/data-and-observability.html#start-learning",
+    "href": "trails/data-and-observability.html#start-learning",
+    "title": "Data, logging, and observability",
+    "section": "Start learning",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nHow to use ros2_tracing to trace and analyze an application\nAdvanced · Curated\nOpen lesson →\n\n\n\n2\n\nEnabling topic statistics (C++)\nAdvanced · Curated\nOpen lesson →\n\n\n\n3\n\nRecording and playing back data\nBeginner-CLI-Tools · Curated\nOpen lesson →\n\n\n\n4\n\nLogging\nDemos · Curated\nOpen lesson →\n\n\n\n5\n\nConfigure service introspection\nDemos · Curated\nOpen lesson →",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Data, logging, and observability"
+    ]
+  },
+  {
+    "objectID": "trails/data-and-observability.html#what-you-will-build-up-along-the-way",
+    "href": "trails/data-and-observability.html#what-you-will-build-up-along-the-way",
+    "title": "Data, logging, and observability",
+    "section": "What you will build up along the way",
+    "text": "What you will build up along the way",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4615,7 +4735,7 @@
     "href": "trails/data-and-observability.html#overview",
     "title": "Data, logging, and observability",
     "section": "1. Overview",
-    "text": "1. Overview\nROS 2 offers complementary ways to understand a running system. rosbag2 captures interface data for replay; logs describe application decisions; graph inspection reveals topology; topic statistics summarize communication; service introspection observes request/response events; and tracing exposes lower-level timing across executors and middleware.\n\nEvidence-backed learning units\n\nROS 2 offers complementary ways to understand a running system. rosbag2 captures interface data for replay; logs describe application decisions; graph inspection reveals topology; topic statistics summarize communication; service introspection observes request/response events; and tracing exposes lower-level timing across executors and middleware. SOURCE-DERIVED",
+    "text": "1. Overview\nROS 2 offers complementary ways to understand a running system. rosbag2 captures interface data for replay; logs describe application decisions; graph inspection reveals topology; topic statistics summarize communication; service introspection observes request/response events; and tracing exposes lower-level timing across executors and middleware.\n\nKey ideas\n\nROS 2 offers complementary ways to understand a running system. rosbag2 captures interface data for replay; logs describe application decisions; graph inspection reveals topology; topic statistics summarize communication; service introspection observes request/response events; and tracing exposes lower-level timing across executors and middleware.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4627,7 +4747,7 @@
     "href": "trails/data-and-observability.html#a-diagnostic-ladder",
     "title": "Data, logging, and observability",
     "section": "2. A diagnostic ladder",
-    "text": "2. A diagnostic ladder\nConfirm environment and graph visibility with CLI introspection.\n\nEvidence-backed learning units\n\nConfirm environment and graph visibility with CLI introspection. SOURCE-DERIVED\nCheck node logs and logger levels. SOURCE-DERIVED\nInspect message rates, timestamps, and QoS compatibility. SOURCE-DERIVED\nRecord the smallest useful topic set with rosbag2. SOURCE-DERIVED\nUse statistics or service introspection for structured runtime evidence. SOURCE-DERIVED\nTrace only when higher-level evidence cannot explain latency or scheduling. SOURCE-DERIVED",
+    "text": "2. A diagnostic ladder\nConfirm environment and graph visibility with CLI introspection.\n\nKey ideas\n\nConfirm environment and graph visibility with CLI introspection.\nCheck node logs and logger levels.\nInspect message rates, timestamps, and QoS compatibility.\nRecord the smallest useful topic set with rosbag2.\nUse statistics or service introspection for structured runtime evidence.\nTrace only when higher-level evidence cannot explain latency or scheduling.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4639,7 +4759,7 @@
     "href": "trails/data-and-observability.html#practical-checkpoint",
     "title": "Data, logging, and observability",
     "section": "3. Practical checkpoint",
-    "text": "3. Practical checkpoint\nRecord and replay a small graph, change logger levels at runtime, measure one topic, and write down how you would distinguish publisher latency from executor or middleware latency.\n\nEvidence-backed learning units\n\nRecord and replay a small graph, change logger levels at runtime, measure one topic, and write down how you would distinguish publisher latency from executor or middleware latency. SOURCE-DERIVED",
+    "text": "3. Practical checkpoint\nRecord and replay a small graph, change logger levels at runtime, measure one topic, and write down how you would distinguish publisher latency from executor or middleware latency.\n\nKey ideas\n\nRecord and replay a small graph, change logger levels at runtime, measure one topic, and write down how you would distinguish publisher latency from executor or middleware latency.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4647,11 +4767,11 @@
     ]
   },
   {
-    "objectID": "trails/data-and-observability.html#lessons-in-this-trail",
-    "href": "trails/data-and-observability.html#lessons-in-this-trail",
+    "objectID": "trails/data-and-observability.html#references-and-evidence",
+    "href": "trails/data-and-observability.html#references-and-evidence",
     "title": "Data, logging, and observability",
-    "section": "Lessons in this trail",
-    "text": "Lessons in this trail\n\nHow to use ros2_tracing to trace and analyze an application\nEnabling topic statistics (C++)\nRecording and playing back data\nLogging\nConfigure service introspection\n\n\n\n\n\n\n\nNoteGenerated versus sourced\n\n\n\nModule ordering and presentation are generated curriculum structure. Claims labeled SOURCE-DERIVED come from the curated knowledge pack and link to exact provenance.",
+    "section": "References and evidence",
+    "text": "References and evidence\n\n\nInspect the source evidence behind this trail\n\n\nROS 2 offers complementary ways to understand a running system. rosbag2 captures interface data for\nConfirm environment and graph visibility with CLI introspection\nCheck node logs and logger levels\nInspect message rates, timestamps, and QoS compatibility\nRecord the smallest useful topic set with rosbag2\nUse statistics or service introspection for structured runtime evidence\nTrace only when higher-level evidence cannot explain latency or scheduling\nRecord and replay a small graph, change logger levels at runtime, measure one topic, and write down\n\n\nThe evidence layer supports editorial review; it is not a required step in the learning path.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4663,7 +4783,31 @@
     "href": "trails/launch-and-composition.html",
     "title": "Launch and composition",
     "section": "",
-    "text": "3 modules · 7 evidence nuggets · 5 local lessons",
+    "text": "5 lessons · 3 learning stages · Learn entirely on this site",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Launch and composition"
+    ]
+  },
+  {
+    "objectID": "trails/launch-and-composition.html#start-learning",
+    "href": "trails/launch-and-composition.html#start-learning",
+    "title": "Launch and composition",
+    "section": "Start learning",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nComposing multiple nodes in a single process\nIntermediate · Curated\nOpen lesson →\n\n\n\n2\n\nCreating a launch file\nIntermediate · Curated\nOpen lesson →\n\n\n\n3\n\nLaunch\nIntermediate · Curated\nOpen lesson →\n\n\n\n4\n\nManaging large projects\nIntermediate · Curated\nOpen lesson →\n\n\n\n5\n\nUsing substitutions\nIntermediate · Curated\nOpen lesson →",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Launch and composition"
+    ]
+  },
+  {
+    "objectID": "trails/launch-and-composition.html#what-you-will-build-up-along-the-way",
+    "href": "trails/launch-and-composition.html#what-you-will-build-up-along-the-way",
+    "title": "Launch and composition",
+    "section": "What you will build up along the way",
+    "text": "What you will build up along the way",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4675,7 +4819,7 @@
     "href": "trails/launch-and-composition.html#overview",
     "title": "Launch and composition",
     "section": "1. Overview",
-    "text": "1. Overview\nLaunch descriptions make multi-node systems reproducible. They declare nodes, arguments, parameters, namespaces, remappings, conditions, and included launch files. Composition places multiple nodes in a shared process when reduced overhead or more efficient communication matters.\n\nEvidence-backed learning units\n\nLaunch descriptions make multi-node systems reproducible. They declare nodes, arguments, parameters, namespaces, remappings, conditions, and included launch files. Composition places multiple nodes in a shared process when reduced overhead or more efficient communication matters. SOURCE-DERIVED",
+    "text": "1. Overview\nLaunch descriptions make multi-node systems reproducible. They declare nodes, arguments, parameters, namespaces, remappings, conditions, and included launch files. Composition places multiple nodes in a shared process when reduced overhead or more efficient communication matters.\n\nKey ideas\n\nLaunch descriptions make multi-node systems reproducible. They declare nodes, arguments, parameters, namespaces, remappings, conditions, and included launch files. Composition places multiple nodes in a shared process when reduced overhead or more efficient communication matters.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4687,7 +4831,7 @@
     "href": "trails/launch-and-composition.html#progression",
     "title": "Launch and composition",
     "section": "2. Progression",
-    "text": "2. Progression\nStart several nodes from one launch description.\n\nEvidence-backed learning units\n\nStart several nodes from one launch description. SOURCE-DERIVED\nReplace fixed values with launch arguments and substitutions. SOURCE-DERIVED\nGroup related nodes with namespaces and reusable included launch files. SOURCE-DERIVED\nUse event handlers only when startup or shutdown ordering is meaningful. SOURCE-DERIVED\nEvaluate component composition after the graph works as separate processes. SOURCE-DERIVED",
+    "text": "2. Progression\nStart several nodes from one launch description.\n\nKey ideas\n\nStart several nodes from one launch description.\nReplace fixed values with launch arguments and substitutions.\nGroup related nodes with namespaces and reusable included launch files.\nUse event handlers only when startup or shutdown ordering is meaningful.\nEvaluate component composition after the graph works as separate processes.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4699,7 +4843,7 @@
     "href": "trails/launch-and-composition.html#practical-checkpoint",
     "title": "Launch and composition",
     "section": "3. Practical checkpoint",
-    "text": "3. Practical checkpoint\nCreate a top-level launch file that accepts configuration, includes a smaller launch file, applies a namespace, and starts a pair of communicating nodes.\n\nEvidence-backed learning units\n\nCreate a top-level launch file that accepts configuration, includes a smaller launch file, applies a namespace, and starts a pair of communicating nodes. SOURCE-DERIVED",
+    "text": "3. Practical checkpoint\nCreate a top-level launch file that accepts configuration, includes a smaller launch file, applies a namespace, and starts a pair of communicating nodes.\n\nKey ideas\n\nCreate a top-level launch file that accepts configuration, includes a smaller launch file, applies a namespace, and starts a pair of communicating nodes.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4707,11 +4851,11 @@
     ]
   },
   {
-    "objectID": "trails/launch-and-composition.html#lessons-in-this-trail",
-    "href": "trails/launch-and-composition.html#lessons-in-this-trail",
+    "objectID": "trails/launch-and-composition.html#references-and-evidence",
+    "href": "trails/launch-and-composition.html#references-and-evidence",
     "title": "Launch and composition",
-    "section": "Lessons in this trail",
-    "text": "Lessons in this trail\n\nComposing multiple nodes in a single process\nCreating a launch file\nLaunch\nManaging large projects\nUsing substitutions\n\n\n\n\n\n\n\nNoteGenerated versus sourced\n\n\n\nModule ordering and presentation are generated curriculum structure. Claims labeled SOURCE-DERIVED come from the curated knowledge pack and link to exact provenance.",
+    "section": "References and evidence",
+    "text": "References and evidence\n\n\nInspect the source evidence behind this trail\n\n\nLaunch descriptions make multi-node systems reproducible. They declare nodes, arguments, parameters,\nStart several nodes from one launch description\nReplace fixed values with launch arguments and substitutions\nGroup related nodes with namespaces and reusable included launch files\nUse event handlers only when startup or shutdown ordering is meaningful\nEvaluate component composition after the graph works as separate processes\nCreate a top-level launch file that accepts configuration, includes a smaller launch file, applies a\n\n\nThe evidence layer supports editorial review; it is not a required step in the learning path.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4723,7 +4867,31 @@
     "href": "trails/security-and-deployment.html",
     "title": "Security and deployment",
     "section": "",
-    "text": "3 modules · 9 evidence nuggets · 6 local lessons",
+    "text": "6 lessons · 3 learning stages · Learn entirely on this site",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Security and deployment"
+    ]
+  },
+  {
+    "objectID": "trails/security-and-deployment.html#start-learning",
+    "href": "trails/security-and-deployment.html#start-learning",
+    "title": "Security and deployment",
+    "section": "Start learning",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nSetting access controls\nAdvanced · Curated\nOpen lesson →\n\n\n\n2\n\nDeployment Guidelines\nAdvanced · Curated\nOpen lesson →\n\n\n\n3\n\nExamining network traffic\nAdvanced · Curated\nOpen lesson →\n\n\n\n4\n\nSetting up security\nAdvanced · Curated\nOpen lesson →\n\n\n\n5\n\nSecurity\nAdvanced · Curated\nOpen lesson →\n\n\n\n6\n\nUnderstanding the security keystore\nAdvanced · Curated\nOpen lesson →",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Security and deployment"
+    ]
+  },
+  {
+    "objectID": "trails/security-and-deployment.html#what-you-will-build-up-along-the-way",
+    "href": "trails/security-and-deployment.html#what-you-will-build-up-along-the-way",
+    "title": "Security and deployment",
+    "section": "What you will build up along the way",
+    "text": "What you will build up along the way",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4735,7 +4903,7 @@
     "href": "trails/security-and-deployment.html#overview",
     "title": "Security and deployment",
     "section": "1. Overview",
-    "text": "1. Overview\nROS 2 security builds on DDS Security. A secure deployment needs identities, signed governance and permissions policy, encrypted/authenticated transport, protected keystores, and a deployment process that keeps credentials separate from application artifacts. Security settings must be tested on the actual graph and network topology.\n\nEvidence-backed learning units\n\nROS 2 security builds on DDS Security. A secure deployment needs identities, signed governance and permissions policy, encrypted/authenticated transport, protected keystores, and a deployment process that keeps credentials separate from application artifacts. Security settings must be tested on the actual graph and network topology. SOURCE-DERIVED",
+    "text": "1. Overview\nROS 2 security builds on DDS Security. A secure deployment needs identities, signed governance and permissions policy, encrypted/authenticated transport, protected keystores, and a deployment process that keeps credentials separate from application artifacts. Security settings must be tested on the actual graph and network topology.\n\nKey ideas\n\nROS 2 security builds on DDS Security. A secure deployment needs identities, signed governance and permissions policy, encrypted/authenticated transport, protected keystores, and a deployment process that keeps credentials separate from application artifacts. Security settings must be tested on the actual graph and network topology.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4747,7 +4915,7 @@
     "href": "trails/security-and-deployment.html#threat-oriented-checklist",
     "title": "Security and deployment",
     "section": "2. Threat-oriented checklist",
-    "text": "2. Threat-oriented checklist\nIdentify which participants and networks are trusted.\n\nEvidence-backed learning units\n\nIdentify which participants and networks are trusted. SOURCE-DERIVED\nGive each enclave only the graph permissions it needs. SOURCE-DERIVED\nProtect private keys at rest and during provisioning. SOURCE-DERIVED\nDecide whether failure to enable security should stop the system. SOURCE-DERIVED\nInspect traffic to verify protection rather than assuming configuration took SOURCE-DERIVED\neffect. SOURCE-DERIVED\nPlan certificate rotation, revocation, incident response, and clock health. SOURCE-DERIVED",
+    "text": "2. Threat-oriented checklist\nIdentify which participants and networks are trusted.\n\nKey ideas\n\nIdentify which participants and networks are trusted.\nGive each enclave only the graph permissions it needs.\nProtect private keys at rest and during provisioning.\nDecide whether failure to enable security should stop the system.\nInspect traffic to verify protection rather than assuming configuration took\neffect.\nPlan certificate rotation, revocation, incident response, and clock health.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4759,7 +4927,7 @@
     "href": "trails/security-and-deployment.html#practical-checkpoint",
     "title": "Security and deployment",
     "section": "3. Practical checkpoint",
-    "text": "3. Practical checkpoint\nCreate a test keystore, run two authorized nodes securely, demonstrate a denied operation, and inspect captured traffic without exposing production secrets.\n\nEvidence-backed learning units\n\nCreate a test keystore, run two authorized nodes securely, demonstrate a denied operation, and inspect captured traffic without exposing production secrets. SOURCE-DERIVED",
+    "text": "3. Practical checkpoint\nCreate a test keystore, run two authorized nodes securely, demonstrate a denied operation, and inspect captured traffic without exposing production secrets.\n\nKey ideas\n\nCreate a test keystore, run two authorized nodes securely, demonstrate a denied operation, and inspect captured traffic without exposing production secrets.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4767,11 +4935,11 @@
     ]
   },
   {
-    "objectID": "trails/security-and-deployment.html#lessons-in-this-trail",
-    "href": "trails/security-and-deployment.html#lessons-in-this-trail",
+    "objectID": "trails/security-and-deployment.html#references-and-evidence",
+    "href": "trails/security-and-deployment.html#references-and-evidence",
     "title": "Security and deployment",
-    "section": "Lessons in this trail",
-    "text": "Lessons in this trail\n\nSetting access controls\nDeployment Guidelines\nExamining network traffic\nSetting up security\nSecurity\nUnderstanding the security keystore\n\n\n\n\n\n\n\nNoteGenerated versus sourced\n\n\n\nModule ordering and presentation are generated curriculum structure. Claims labeled SOURCE-DERIVED come from the curated knowledge pack and link to exact provenance.",
+    "section": "References and evidence",
+    "text": "References and evidence\n\n\nInspect the source evidence behind this trail\n\n\nROS 2 security builds on DDS Security. A secure deployment needs identities, signed governance and p\nIdentify which participants and networks are trusted\nGive each enclave only the graph permissions it needs\nProtect private keys at rest and during provisioning\nDecide whether failure to enable security should stop the system\nInspect traffic to verify protection rather than assuming configuration took\neffect\nPlan certificate rotation, revocation, incident response, and clock health\nCreate a test keystore, run two authorized nodes securely, demonstrate a denied operation, and inspe\n\n\nThe evidence layer supports editorial review; it is not a required step in the learning path.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4783,7 +4951,31 @@
     "href": "trails/transforms-and-models.html",
     "title": "Transforms and robot models",
     "section": "",
-    "text": "3 modules · 9 evidence nuggets · 5 local lessons",
+    "text": "5 lessons · 3 learning stages · Learn entirely on this site",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Transforms and robot models"
+    ]
+  },
+  {
+    "objectID": "trails/transforms-and-models.html#start-learning",
+    "href": "trails/transforms-and-models.html#start-learning",
+    "title": "Transforms and robot models",
+    "section": "Start learning",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nDebugging\nIntermediate · Curated\nOpen lesson →\n\n\n\n2\n\nIntroducing tf2\nIntermediate · Curated\nOpen lesson →\n\n\n\n3\n\ntf2\nIntermediate · Curated\nOpen lesson →\n\n\n\n4\n\nURDF\nIntermediate · Curated\nOpen lesson →\n\n\n\n5\n\nUsing URDF with robot_state_publisher (Python)\nIntermediate · Curated\nOpen lesson →",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Transforms and robot models"
+    ]
+  },
+  {
+    "objectID": "trails/transforms-and-models.html#what-you-will-build-up-along-the-way",
+    "href": "trails/transforms-and-models.html#what-you-will-build-up-along-the-way",
+    "title": "Transforms and robot models",
+    "section": "What you will build up along the way",
+    "text": "What you will build up along the way",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4795,7 +4987,7 @@
     "href": "trails/transforms-and-models.html#overview",
     "title": "Transforms and robot models",
     "section": "1. Overview",
-    "text": "1. Overview\ntf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with robot_state_publisher, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.\n\nEvidence-backed learning units\n\ntf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with robot_state_publisher, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components. SOURCE-DERIVED",
+    "text": "1. Overview\ntf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with robot_state_publisher, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.\n\nKey ideas\n\ntf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with robot_state_publisher, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4807,7 +4999,7 @@
     "href": "trails/transforms-and-models.html#mental-model",
     "title": "Transforms and robot models",
     "section": "2. Mental model",
-    "text": "2. Mental model\nA transform answers where one frame is relative to another at a particular\n\nEvidence-backed learning units\n\nA transform answers where one frame is relative to another at a particular SOURCE-DERIVED\ntime. SOURCE-DERIVED\nStatic transforms describe relationships that do not change. SOURCE-DERIVED\nDynamic transforms must be timestamped and published continuously. SOURCE-DERIVED\nA connected frame tree needs unambiguous parent-child relationships. SOURCE-DERIVED\nURDF describes structure; joint states supply changing joint positions; tf2 SOURCE-DERIVED\nexposes the resulting frame relationships. SOURCE-DERIVED",
+    "text": "2. Mental model\nA transform answers where one frame is relative to another at a particular\n\nKey ideas\n\nA transform answers where one frame is relative to another at a particular\ntime.\nStatic transforms describe relationships that do not change.\nDynamic transforms must be timestamped and published continuously.\nA connected frame tree needs unambiguous parent-child relationships.\nURDF describes structure; joint states supply changing joint positions; tf2\nexposes the resulting frame relationships.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4819,7 +5011,7 @@
     "href": "trails/transforms-and-models.html#practical-checkpoint",
     "title": "Transforms and robot models",
     "section": "3. Practical checkpoint",
-    "text": "3. Practical checkpoint\nBuild a small URDF model, publish its joint states and transforms, inspect the frame tree, and visualize the result in RViz. Then deliberately request a transform at an unavailable time and use the debugging tools to understand the failure.\n\nEvidence-backed learning units\n\nBuild a small URDF model, publish its joint states and transforms, inspect the frame tree, and visualize the result in RViz. Then deliberately request a transform at an unavailable time and use the debugging tools to understand the failure. SOURCE-DERIVED",
+    "text": "3. Practical checkpoint\nBuild a small URDF model, publish its joint states and transforms, inspect the frame tree, and visualize the result in RViz. Then deliberately request a transform at an unavailable time and use the debugging tools to understand the failure.\n\nKey ideas\n\nBuild a small URDF model, publish its joint states and transforms, inspect the frame tree, and visualize the result in RViz. Then deliberately request a transform at an unavailable time and use the debugging tools to understand the failure.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4827,11 +5019,11 @@
     ]
   },
   {
-    "objectID": "trails/transforms-and-models.html#lessons-in-this-trail",
-    "href": "trails/transforms-and-models.html#lessons-in-this-trail",
+    "objectID": "trails/transforms-and-models.html#references-and-evidence",
+    "href": "trails/transforms-and-models.html#references-and-evidence",
     "title": "Transforms and robot models",
-    "section": "Lessons in this trail",
-    "text": "Lessons in this trail\n\nDebugging\nIntroducing tf2\ntf2\nURDF\nUsing URDF with robot_state_publisher (Python)\n\n\n\n\n\n\n\nNoteGenerated versus sourced\n\n\n\nModule ordering and presentation are generated curriculum structure. Claims labeled SOURCE-DERIVED come from the curated knowledge pack and link to exact provenance.",
+    "section": "References and evidence",
+    "text": "References and evidence\n\n\nInspect the source evidence behind this trail\n\n\ntf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry,\nA transform answers where one frame is relative to another at a particular\ntime\nStatic transforms describe relationships that do not change\nDynamic transforms must be timestamped and published continuously\nA connected frame tree needs unambiguous parent-child relationships\nURDF describes structure; joint states supply changing joint positions; tf2\nexposes the resulting frame relationships\nBuild a small URDF model, publish its joint states and transforms, inspect the frame tree, and visua\n\n\nThe evidence layer supports editorial review; it is not a required step in the learning path.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4843,7 +5035,31 @@
     "href": "trails/production-concerns.html",
     "title": "Production concerns",
     "section": "",
-    "text": "3 modules · 12 evidence nuggets · 5 local lessons",
+    "text": "5 lessons · 3 learning stages · Learn entirely on this site",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Production concerns"
+    ]
+  },
+  {
+    "objectID": "trails/production-concerns.html#start-learning",
+    "href": "trails/production-concerns.html#start-learning",
+    "title": "Production concerns",
+    "section": "Start learning",
+    "text": "Start learning\nWork through these lessons in order. Each one contains a local activity and knowledge check.\n\n\n1\n\nHow to use ros2_tracing to trace and analyze an application\nAdvanced · Curated\nOpen lesson →\n\n\n\n2\n\nSecurity\nAdvanced · Curated\nOpen lesson →\n\n\n\n3\n\nUsing quality-of-service settings for lossy networks\nDemos · Curated\nOpen lesson →\n\n\n\n4\n\nUnderstanding real-time programming\nDemos · Curated\nOpen lesson →\n\n\n\n5\n\nTesting\nIntermediate · Curated\nOpen lesson →",
+    "crumbs": [
+      "Overview",
+      "Learning trails",
+      "Production concerns"
+    ]
+  },
+  {
+    "objectID": "trails/production-concerns.html#what-you-will-build-up-along-the-way",
+    "href": "trails/production-concerns.html#what-you-will-build-up-along-the-way",
+    "title": "Production concerns",
+    "section": "What you will build up along the way",
+    "text": "What you will build up along the way",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4855,7 +5071,7 @@
     "href": "trails/production-concerns.html#overview",
     "title": "Production concerns",
     "section": "1. Overview",
-    "text": "1. Overview\nA working demo is not yet an operational robot. Production systems must make communication assumptions explicit, expose diagnosable behavior, verify nodes at multiple levels, and protect the ROS graph when deployed across trust boundaries.\n\nEvidence-backed learning units\n\nA working demo is not yet an operational robot. Production systems must make communication assumptions explicit, expose diagnosable behavior, verify nodes at multiple levels, and protect the ROS graph when deployed across trust boundaries. SOURCE-DERIVED",
+    "text": "1. Overview\nA working demo is not yet an operational robot. Production systems must make communication assumptions explicit, expose diagnosable behavior, verify nodes at multiple levels, and protect the ROS graph when deployed across trust boundaries.\n\nKey ideas\n\nA working demo is not yet an operational robot. Production systems must make communication assumptions explicit, expose diagnosable behavior, verify nodes at multiple levels, and protect the ROS graph when deployed across trust boundaries.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4867,7 +5083,7 @@
     "href": "trails/production-concerns.html#review-areas",
     "title": "Production concerns",
     "section": "2. Review areas",
-    "text": "2. Review areas\nQuality of service: reliability, durability, history, and deadlines must\n\nEvidence-backed learning units\n\nQuality of service: reliability, durability, history, and deadlines must SOURCE-DERIVED\nmatch the data and network constraints. Incompatible policies can prevent endpoints from communicating. SOURCE-DERIVED\nDiagnostics: use logging, ros2 doctor, topic statistics, and tracing to SOURCE-DERIVED\ndistinguish graph, timing, and application failures. SOURCE-DERIVED\nTesting: combine unit tests with launch/integration tests that observe actual SOURCE-DERIVED\nnode behavior. SOURCE-DERIVED\nSecurity: ROS 2 security relies on DDS security capabilities, identities, SOURCE-DERIVED\nkeystores, access-control policy, and disciplined deployment configuration. SOURCE-DERIVED\nReal-time behavior: bounded latency requires system-level design; merely SOURCE-DERIVED\nusing ROS 2 does not make an application real-time. SOURCE-DERIVED",
+    "text": "2. Review areas\nQuality of service: reliability, durability, history, and deadlines must\n\nKey ideas\n\nQuality of service: reliability, durability, history, and deadlines must\nmatch the data and network constraints. Incompatible policies can prevent endpoints from communicating.\nDiagnostics: use logging, ros2 doctor, topic statistics, and tracing to\ndistinguish graph, timing, and application failures.\nTesting: combine unit tests with launch/integration tests that observe actual\nnode behavior.\nSecurity: ROS 2 security relies on DDS security capabilities, identities,\nkeystores, access-control policy, and disciplined deployment configuration.\nReal-time behavior: bounded latency requires system-level design; merely\nusing ROS 2 does not make an application real-time.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4879,7 +5095,7 @@
     "href": "trails/production-concerns.html#practical-checkpoint",
     "title": "Production concerns",
     "section": "3. Practical checkpoint",
-    "text": "3. Practical checkpoint\nDocument QoS for the critical interfaces in a small graph, add one integration test, capture trace or statistics evidence, and describe the trust boundary and credential handling required for deployment.\n\nEvidence-backed learning units\n\nDocument QoS for the critical interfaces in a small graph, add one integration test, capture trace or statistics evidence, and describe the trust boundary and credential handling required for deployment. SOURCE-DERIVED",
+    "text": "3. Practical checkpoint\nDocument QoS for the critical interfaces in a small graph, add one integration test, capture trace or statistics evidence, and describe the trust boundary and credential handling required for deployment.\n\nKey ideas\n\nDocument QoS for the critical interfaces in a small graph, add one integration test, capture trace or statistics evidence, and describe the trust boundary and credential handling required for deployment.",
     "crumbs": [
       "Overview",
       "Learning trails",
@@ -4887,11 +5103,11 @@
     ]
   },
   {
-    "objectID": "trails/production-concerns.html#lessons-in-this-trail",
-    "href": "trails/production-concerns.html#lessons-in-this-trail",
+    "objectID": "trails/production-concerns.html#references-and-evidence",
+    "href": "trails/production-concerns.html#references-and-evidence",
     "title": "Production concerns",
-    "section": "Lessons in this trail",
-    "text": "Lessons in this trail\n\nHow to use ros2_tracing to trace and analyze an application\nSecurity\nUsing quality-of-service settings for lossy networks\nUnderstanding real-time programming\nTesting\n\n\n\n\n\n\n\nNoteGenerated versus sourced\n\n\n\nModule ordering and presentation are generated curriculum structure. Claims labeled SOURCE-DERIVED come from the curated knowledge pack and link to exact provenance.",
+    "section": "References and evidence",
+    "text": "References and evidence\n\n\nInspect the source evidence behind this trail\n\n\nA working demo is not yet an operational robot. Production systems must make communication assumptio\nQuality of service: reliability, durability, history, and deadlines must\nmatch the data and network constraints. Incompatible policies can prevent endpoints from communicati\nDiagnostics: use logging, ros2 doctor, topic statistics, and tracing to\ndistinguish graph, timing, and application failures\nTesting: combine unit tests with launch/integration tests that observe actual\nnode behavior\nSecurity: ROS 2 security relies on DDS security capabilities, identities,\nkeystores, access-control policy, and disciplined deployment configuration\nReal-time behavior: bounded latency requires system-level design; merely\nusing ROS 2 does not make an application real-time\nDocument QoS for the critical interfaces in a small graph, add one integration test, capture trace o\n\n\nThe evidence layer supports editorial review; it is not a required step in the learning path.",
     "crumbs": [
       "Overview",
       "Learning trails",
