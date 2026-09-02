@@ -142,7 +142,7 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-listener-py.html#references-and-provenance",
     "title": "Writing a listener (Python)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a listener (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a listener (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-launch-launch-main.html",
@@ -198,7 +198,7 @@
     "href": "lessons/intermediate-launch-launch-main.html#references-and-provenance",
     "title": "Launch",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Launch.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Launch.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-parameters-understanding-ros2-parameters.html",
@@ -240,7 +240,7 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-parameters-understanding-ros2-parameters.html#references-and-provenance",
     "title": "Understanding parameters",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding parameters.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding parameters.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/demos-content-filtering-subscription.html",
@@ -282,7 +282,7 @@
     "href": "lessons/demos-content-filtering-subscription.html#references-and-provenance",
     "title": "Creating a content filtering subscription",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating a content filtering subscription.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating a content filtering subscription.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-using-parameters-in-a-class-python.html",
@@ -324,7 +324,7 @@
     "href": "lessons/beginner-client-libraries-using-parameters-in-a-class-python.html#references-and-provenance",
     "title": "Using parameters in a class (Python)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using parameters in a class (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using parameters in a class (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-testing-testing-main.html",
@@ -380,7 +380,7 @@
     "href": "lessons/intermediate-testing-testing-main.html#references-and-provenance",
     "title": "Testing",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Testing.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Testing.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-getting-started-mvsim.html",
@@ -422,7 +422,7 @@
     "href": "lessons/advanced-simulators-mvsim-getting-started-mvsim.html#references-and-provenance",
     "title": "Getting started with MVSim",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Getting started with MVSim.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Getting started with MVSim.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-py.html",
@@ -464,7 +464,7 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-py.html#references-and-provenance",
     "title": "Writing a static broadcaster (Python)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a static broadcaster (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a static broadcaster (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-security-deployment-guidelines.html",
@@ -520,7 +520,7 @@
     "href": "lessons/advanced-security-deployment-guidelines.html#references-and-provenance",
     "title": "Deployment Guidelines",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Deployment Guidelines.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Deployment Guidelines.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-security-introducing-ros2-security.html",
@@ -576,7 +576,7 @@
     "href": "lessons/advanced-security-introducing-ros2-security.html#references-and-provenance",
     "title": "Setting up security",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up security.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up security.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-supplementing-custom-rosdep-keys.html",
@@ -618,7 +618,7 @@
     "href": "lessons/advanced-supplementing-custom-rosdep-keys.html#references-and-provenance",
     "title": "Supplementing custom rosdep keys",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Supplementing custom rosdep keys.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Supplementing custom rosdep keys.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/demos-managed-nodes.html",
@@ -660,7 +660,7 @@
     "href": "lessons/demos-managed-nodes.html#references-and-provenance",
     "title": "Managing node lifecycles - example",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Managing node lifecycles - example.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Managing node lifecycles - example.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-testing-buildfarmtesting.html",
@@ -702,7 +702,7 @@
     "href": "lessons/intermediate-testing-buildfarmtesting.html#references-and-provenance",
     "title": "Testing Your Code with the ROS Build Farm",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Testing Your Code with the ROS Build Farm.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Testing Your Code with the ROS Build Farm.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html",
@@ -758,7 +758,7 @@
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#references-and-provenance",
     "title": "Writing a publisher and subscriber in Python",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a simple publisher and subscriber (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a simple publisher and subscriber (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-urdf-building-a-visual-robot-model-with-urdf-from-scratch.html",
@@ -800,7 +800,7 @@
     "href": "lessons/intermediate-urdf-building-a-visual-robot-model-with-urdf-from-scratch.html#references-and-provenance",
     "title": "Building a visual robot model from scratch",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a visual robot model from scratch.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a visual robot model from scratch.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-topics-understanding-ros2-topics.html",
@@ -856,7 +856,7 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-topics-understanding-ros2-topics.html#references-and-provenance",
     "title": "Understanding topics",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding topics.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding topics.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-cpp.html",
@@ -898,7 +898,7 @@
     "href": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-cpp.html#references-and-provenance",
     "title": "Using URDF with robot_state_publisher (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using URDF with robot_state_publisher (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using URDF with robot_state_publisher (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-writing-an-action-server-client-py.html",
@@ -954,7 +954,7 @@
     "href": "lessons/intermediate-writing-an-action-server-client-py.html#references-and-provenance",
     "title": "Writing an action server and client (Python)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing an action server and client (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing an action server and client (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-webots-installation-windows.html",
@@ -996,7 +996,7 @@
     "href": "lessons/advanced-simulators-webots-installation-windows.html#references-and-provenance",
     "title": "Installation (Windows)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Installation (Windows).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Installation (Windows).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-writing-a-composable-node.html",
@@ -1038,7 +1038,7 @@
     "href": "lessons/intermediate-writing-a-composable-node.html#references-and-provenance",
     "title": "Writing a Composable Node (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a Composable Node (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a Composable Node (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-launch-creating-launch-files.html",
@@ -1094,7 +1094,7 @@
     "href": "lessons/intermediate-launch-creating-launch-files.html#references-and-provenance",
     "title": "Creating a launch file",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating a launch file.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating a launch file.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-simulation-main.html",
@@ -1136,7 +1136,7 @@
     "href": "lessons/advanced-simulators-simulation-main.html#references-and-provenance",
     "title": "Simulators",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Simulators.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Simulators.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-main.html",
@@ -1178,7 +1178,7 @@
     "href": "lessons/intermediate-rviz-rviz-main.html#references-and-provenance",
     "title": "RViz",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: RViz.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: RViz.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced.html",
@@ -1220,7 +1220,7 @@
     "href": "lessons/advanced.html#references-and-provenance",
     "title": "Advanced",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Advanced.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Advanced.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-creating-an-action.html",
@@ -1276,7 +1276,7 @@
     "href": "lessons/intermediate-creating-an-action.html#references-and-provenance",
     "title": "Creating an action",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating an action.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating an action.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-single-package-define-and-use-interface.html",
@@ -1318,7 +1318,7 @@
     "href": "lessons/beginner-client-libraries-single-package-define-and-use-interface.html#references-and-provenance",
     "title": "Implementing custom interfaces",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Implementing custom interfaces.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Implementing custom interfaces.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-urdf-exporting-an-urdf-file.html",
@@ -1360,7 +1360,7 @@
     "href": "lessons/intermediate-urdf-exporting-an-urdf-file.html#references-and-provenance",
     "title": "Generating an URDF File",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Generating an URDF File.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Generating an URDF File.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-launch-using-ros2-launch-for-large-projects.html",
@@ -1416,7 +1416,7 @@
     "href": "lessons/intermediate-launch-using-ros2-launch-for-large-projects.html#references-and-provenance",
     "title": "Managing large projects",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Managing large projects.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Managing large projects.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-using-stamped-datatypes-with-tf2-ros-messagefilter.html",
@@ -1458,7 +1458,7 @@
     "href": "lessons/intermediate-tf2-using-stamped-datatypes-with-tf2-ros-messagefilter.html#references-and-provenance",
     "title": "Using stamped datatypes with tf2_ros::MessageFilter",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using stamped datatypes with tf2_ros::MessageFilter.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using stamped datatypes with tf2_ros::MessageFilter.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-discovery-server-discovery-server.html",
@@ -1514,7 +1514,7 @@
     "href": "lessons/advanced-discovery-server-discovery-server.html#references-and-provenance",
     "title": "Using Fast DDS Discovery Server as discovery protocol [community-contributed]",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using Fast DDS Discovery Server as discovery protocol [community-contributed].\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using Fast DDS Discovery Server as discovery protocol [community-contributed].\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/miscellaneous-eclipse-oxygen-with-ros-2-and-rviz2.html",
@@ -1556,7 +1556,7 @@
     "href": "lessons/miscellaneous-eclipse-oxygen-with-ros-2-and-rviz2.html#references-and-provenance",
     "title": "Using Eclipse Oxygen with rviz2 [community-contributed]",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using Eclipse Oxygen with rviz2 [community-contributed].\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using Eclipse Oxygen with rviz2 [community-contributed].\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-nodes-understanding-ros2-nodes.html",
@@ -1612,7 +1612,7 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-nodes-understanding-ros2-nodes.html#references-and-provenance",
     "title": "Understanding nodes",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding nodes.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding nodes.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate.html",
@@ -1654,7 +1654,7 @@
     "href": "lessons/intermediate.html#references-and-provenance",
     "title": "Intermediate",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Intermediate.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Intermediate.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-webots-setting-up-simulation-webots-basic.html",
@@ -1696,7 +1696,7 @@
     "href": "lessons/advanced-simulators-webots-setting-up-simulation-webots-basic.html#references-and-provenance",
     "title": "Setting up a robot simulation (Basic)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up a robot simulation (Basic).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up a robot simulation (Basic).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-webots-simulation-reset-handler.html",
@@ -1738,7 +1738,7 @@
     "href": "lessons/advanced-simulators-webots-simulation-reset-handler.html#references-and-provenance",
     "title": "Setting up a Reset Handler",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up a Reset Handler.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up a Reset Handler.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-security-examine-traffic.html",
@@ -1794,7 +1794,7 @@
     "href": "lessons/advanced-security-examine-traffic.html#references-and-provenance",
     "title": "Examining network traffic",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Examining network traffic.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Examining network traffic.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-testing-cli.html",
@@ -1836,7 +1836,7 @@
     "href": "lessons/intermediate-testing-cli.html#references-and-provenance",
     "title": "Running Tests in ROS 2 from the Command Line",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Running Tests in ROS 2 from the Command Line.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Running Tests in ROS 2 from the Command Line.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/demos-service-introspection.html",
@@ -1892,7 +1892,7 @@
     "href": "lessons/demos-service-introspection.html#references-and-provenance",
     "title": "Configure service introspection",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Configure service introspection.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Configure service introspection.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-topic-statistics-tutorial-topic-statistics-tutorial.html",
@@ -1948,7 +1948,7 @@
     "href": "lessons/advanced-topic-statistics-tutorial-topic-statistics-tutorial.html#references-and-provenance",
     "title": "Enabling topic statistics (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Enabling topic statistics (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Enabling topic statistics (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-rviz-marker-display-types-marker-display-types.html",
@@ -1990,7 +1990,7 @@
     "href": "lessons/intermediate-rviz-marker-display-types-marker-display-types.html#references-and-provenance",
     "title": "Marker: Display types",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Marker: Display types.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Marker: Display types.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-defining-worlds-mvsim.html",
@@ -2032,7 +2032,7 @@
     "href": "lessons/advanced-simulators-mvsim-defining-worlds-mvsim.html#references-and-provenance",
     "title": "Defining worlds, robots, and sensors",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Defining worlds, robots, and sensors.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Defining worlds, robots, and sensors.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-introduction-to-tf2.html",
@@ -2088,7 +2088,7 @@
     "href": "lessons/intermediate-tf2-introduction-to-tf2.html#references-and-provenance",
     "title": "Introducing tf2",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Introducing tf2.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Introducing tf2.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-webots-setting-up-simulation-webots-advanced.html",
@@ -2130,7 +2130,7 @@
     "href": "lessons/advanced-simulators-webots-setting-up-simulation-webots-advanced.html#references-and-provenance",
     "title": "Setting up a robot simulation (Advanced)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up a robot simulation (Advanced).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up a robot simulation (Advanced).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-rviz-marker-sending-basic-shapes-marker-sending-basic-shapes.html",
@@ -2172,7 +2172,7 @@
     "href": "lessons/intermediate-rviz-marker-sending-basic-shapes-marker-sending-basic-shapes.html#references-and-provenance",
     "title": "Marker: Sending Basic Shapes (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Marker: Sending Basic Shapes (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Marker: Sending Basic Shapes (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-cli-tools-introducing-turtlesim-introducing-turtlesim.html",
@@ -2214,7 +2214,7 @@
     "href": "lessons/beginner-cli-tools-introducing-turtlesim-introducing-turtlesim.html#references-and-provenance",
     "title": "Using turtlesim, ros2, and rqt",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using turtlesim, ros2, and rqt.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using turtlesim, ros2, and rqt.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-launch-using-event-handlers.html",
@@ -2256,7 +2256,7 @@
     "href": "lessons/intermediate-launch-using-event-handlers.html#references-and-provenance",
     "title": "Using event handlers",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using event handlers.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using event handlers.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-security-security-main.html",
@@ -2312,7 +2312,7 @@
     "href": "lessons/advanced-security-security-main.html#references-and-provenance",
     "title": "Security",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Security.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Security.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-urdf-using-xacro-to-clean-up-a-urdf-file.html",
@@ -2354,7 +2354,7 @@
     "href": "lessons/intermediate-urdf-using-xacro-to-clean-up-a-urdf-file.html#references-and-provenance",
     "title": "Using Xacro to clean up your code",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using Xacro to clean up your code.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using Xacro to clean up your code.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-monitoring-for-parameter-changes-cpp.html",
@@ -2396,7 +2396,7 @@
     "href": "lessons/intermediate-monitoring-for-parameter-changes-cpp.html#references-and-provenance",
     "title": "Monitoring for parameter changes (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Monitoring for parameter changes (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Monitoring for parameter changes (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-using-node-interfaces-template-class.html",
@@ -2438,7 +2438,7 @@
     "href": "lessons/intermediate-using-node-interfaces-template-class.html#references-and-provenance",
     "title": "Using the Node Interfaces Template Class (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using the Node Interfaces Template Class (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using the Node Interfaces Template Class (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-listener-cpp.html",
@@ -2480,7 +2480,7 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-listener-cpp.html#references-and-provenance",
     "title": "Writing a listener (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a listener (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a listener (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html",
@@ -2501,14 +2501,14 @@
     "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#do-it",
     "title": "Creating a workspace",
     "section": "Do it",
-    "text": "Do it\nOpen a terminal where ROS 2 Jazzy is installed:\nsource /opt/ros/jazzy/setup.bash\nmkdir -p ~/ros2_trails_ws/src\ncd ~/ros2_trails_ws/src\ngit clone -b jazzy https://github.com/ros2/examples.git\ncd ~/ros2_trails_ws\nrosdep install -i --from-path src --rosdistro jazzy -y\ncolcon build --symlink-install --packages-select examples_rclpy_minimal_publisher\nsource install/local_setup.bash\nprintenv AMENT_PREFIX_PATH\nA successful package build creates build, install, and log. The underlay at /opt/ros/jazzy supplies ROS 2; install/local_setup.bash adds this workspace as an overlay without replacing the underlay.\n\nsrc contains the source files you edit.\nbuild contains per-package intermediate build state.\ninstall contains the discoverable result used by ROS tools.\nlog contains build diagnostics.\n\nSourcing changes search paths in the current shell; it does not build or copy anything. --symlink-install links supported Python/resources into install for a faster edit cycle. Rebuild after compiled C++ changes, dependency or metadata changes, and whenever an edit is not reflected through a symlink."
+    "text": "Do it\nOpen a terminal where ROS 2 Jazzy is installed:\nsource /opt/ros/jazzy/setup.bash\nmkdir -p ~/ros2_trails_ws/src\ncd ~/ros2_trails_ws\n# Download workspace_basics_ws.zip from the link immediately below, then:\nunzip -q ~/Downloads/workspace_basics_ws.zip -d /tmp/ros2_trails_workspace\ncp -a /tmp/ros2_trails_workspace/src/trail_workspace_demo src/\ncd ~/ros2_trails_ws\nrosdep install -i --from-path src --rosdistro jazzy -y\ncolcon build --symlink-install --packages-select trail_workspace_demo\nsource install/local_setup.bash\nprintenv AMENT_PREFIX_PATH\nDownload the local workspace starter. The archive is part of this site and contains its license and complete source.\nA successful package build creates build, install, and log. The underlay at /opt/ros/jazzy supplies ROS 2; install/local_setup.bash adds this workspace as an overlay without replacing the underlay.\n\nsrc contains the source files you edit.\nbuild contains per-package intermediate build state.\ninstall contains the discoverable result used by ROS tools.\nlog contains build diagnostics.\n\nSourcing changes search paths in the current shell; it does not build or copy anything. --symlink-install links supported Python/resources into install for a faster edit cycle. Rebuild after compiled C++ changes, dependency or metadata changes, and whenever an edit is not reflected through a symlink."
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#verify",
     "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#verify",
     "title": "Creating a workspace",
     "section": "Verify",
-    "text": "Verify\nros2 pkg prefix examples_rclpy_minimal_publisher\nThe printed path should begin with ~/ros2_trails_ws/install, not /opt/ros/jazzy. That distinction proves the overlay is active."
+    "text": "Verify\nros2 pkg prefix trail_workspace_demo\nThe printed path should begin with ~/ros2_trails_ws/install, not /opt/ros/jazzy. That distinction proves the overlay is active."
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#troubleshooting",
@@ -2536,7 +2536,7 @@
     "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#references-and-provenance",
     "title": "Creating a workspace",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating a workspace.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating a workspace.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-cli-tools-using-rqt-console-using-rqt-console.html",
@@ -2578,7 +2578,7 @@
     "href": "lessons/beginner-cli-tools-using-rqt-console-using-rqt-console.html#references-and-provenance",
     "title": "Using rqt_console to view logs",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using rqt_console to view logs.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using rqt_console to view logs.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-recording-a-bag-from-your-own-node-py.html",
@@ -2620,7 +2620,7 @@
     "href": "lessons/advanced-recording-a-bag-from-your-own-node-py.html#references-and-provenance",
     "title": "Recording a bag from a node (Python)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Recording a bag from a node (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Recording a bag from a node (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-improved-dynamic-discovery.html",
@@ -2662,7 +2662,7 @@
     "href": "lessons/advanced-improved-dynamic-discovery.html#references-and-provenance",
     "title": "Improved Dynamic Discovery",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Improved Dynamic Discovery.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Improved Dynamic Discovery.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/demos-logging-and-logger-configuration.html",
@@ -2718,7 +2718,7 @@
     "href": "lessons/demos-logging-and-logger-configuration.html#references-and-provenance",
     "title": "Logging",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Logging.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Logging.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-launch-using-substitutions.html",
@@ -2774,7 +2774,7 @@
     "href": "lessons/intermediate-launch-using-substitutions.html#references-and-provenance",
     "title": "Using substitutions",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using substitutions.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using substitutions.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-ros2-tracing-trace-and-analyze.html",
@@ -2830,7 +2830,7 @@
     "href": "lessons/advanced-ros2-tracing-trace-and-analyze.html#references-and-provenance",
     "title": "How to use ros2_tracing to trace and analyze an application",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: How to use ros2_tracing to trace and analyze an application.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: How to use ros2_tracing to trace and analyze an application.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-creating-an-rmw-implementation.html",
@@ -2886,7 +2886,7 @@
     "href": "lessons/advanced-creating-an-rmw-implementation.html#references-and-provenance",
     "title": "Creating an rmw implementation",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating an rmw implementation.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating an rmw implementation.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-urdf-urdf-main.html",
@@ -2942,7 +2942,7 @@
     "href": "lessons/intermediate-urdf-urdf-main.html#references-and-provenance",
     "title": "URDF",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: URDF.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: URDF.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-cli-tools-launching-multiple-nodes-launching-multiple-nodes.html",
@@ -2984,7 +2984,7 @@
     "href": "lessons/beginner-cli-tools-launching-multiple-nodes-launching-multiple-nodes.html#references-and-provenance",
     "title": "Launching nodes",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Launching nodes.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Launching nodes.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-pluginlib.html",
@@ -3040,7 +3040,7 @@
     "href": "lessons/beginner-client-libraries-pluginlib.html#references-and-provenance",
     "title": "Creating and using plugins (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating and using plugins (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating and using plugins (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-learning-about-tf2-and-time-cpp.html",
@@ -3082,7 +3082,7 @@
     "href": "lessons/intermediate-tf2-learning-about-tf2-and-time-cpp.html#references-and-provenance",
     "title": "Using time (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using time (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using time (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html",
@@ -3138,7 +3138,7 @@
     "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#references-and-provenance",
     "title": "Creating a package",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating a package.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating a package.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-urdf-adding-physical-and-collision-properties-to-a-urdf-model.html",
@@ -3180,7 +3180,7 @@
     "href": "lessons/intermediate-urdf-adding-physical-and-collision-properties-to-a-urdf-model.html#references-and-provenance",
     "title": "Adding physical and collision properties",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Adding physical and collision properties.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Adding physical and collision properties.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "provenance/nugget_canonical-knowledge-topics-interfaces-and-action_abce9d85da09.html",
@@ -5856,7 +5856,7 @@
     "href": "projects/balance-bot.html#references-and-provenance",
     "title": "Balance Bot: stabilize an inverted pendulum",
     "section": "References and provenance",
-    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\ngz_ros2_control Jazzy repository and compatibility matrix — ros-controls, jazzy branch; accessed 2026-09-01. Supports: Jazzy/Harmonic compatibility, plugin configuration, and effort-demo architecture.\nROS 2 Jazzy Gazebo tutorials — Open Robotics, Jazzy; accessed 2026-09-01. Supports: Gazebo integration concepts and launch workflow.\nros_gz_sim Jazzy package — Open Robotics, Jazzy; accessed 2026-09-01. Supports: create launch action and simulation package API.",
+    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\n\ngz_ros2_control Jazzy repository and compatibility matrix — ros-controls, jazzy branch; accessed 2026-09-01. Supports: Jazzy/Harmonic compatibility, plugin configuration, and effort-demo architecture.\nROS 2 Jazzy Gazebo tutorials — Open Robotics, Jazzy; accessed 2026-09-01. Supports: Gazebo integration concepts and launch workflow.\nros_gz_sim Jazzy package — Open Robotics, Jazzy; accessed 2026-09-01. Supports: create launch action and simulation package API.",
     "crumbs": [
       "Course",
       "Practical ROS 2",
@@ -6233,7 +6233,7 @@
     "href": "projects/camera-detective.html#references-and-provenance",
     "title": "Camera Detective: turn pixels into measurements",
     "section": "References and provenance",
-    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\nROS 2 Jazzy image_pipeline — Open Robotics, Jazzy 3.2; accessed 2026-09-01. Supports: camera calibration, CameraInfo, rectification, and image processing architecture.\nsensor_msgs Image message — Open Robotics, Jazzy; accessed 2026-09-01. Supports: acquisition timestamp, optical frame, encoding, dimensions, and row-step contract.",
+    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\n\nROS 2 Jazzy image_pipeline — Open Robotics, Jazzy 3.2; accessed 2026-09-01. Supports: camera calibration, CameraInfo, rectification, and image processing architecture.\nsensor_msgs Image message — Open Robotics, Jazzy; accessed 2026-09-01. Supports: acquisition timestamp, optical frame, encoding, dimensions, and row-step contract.",
     "crumbs": [
       "Course",
       "Practical ROS 2",
@@ -6374,7 +6374,7 @@
     "href": "guides/jazzy-environment.html#check-the-environment",
     "title": "Prepare a ROS 2 Jazzy environment",
     "section": "Check the environment",
-    "text": "Check the environment\nRun this diagnostic block:\ncheck() { command -v \"$1\" &gt;/dev/null && echo \"PASS $1\" || { echo \"FAIL $1\"; return 1; }; }\ntest -r /opt/ros/jazzy/setup.bash && echo \"PASS ROS setup\" || { echo \"FAIL ROS setup\"; exit 1; }\nsource /opt/ros/jazzy/setup.bash\ncheck ros2 && check colcon && check rosdep && check git && check python3\nEvery check must print PASS; stop and resolve any FAIL. If /opt/ros/jazzy is missing, install the Jazzy desktop or ROS-base distribution before continuing.",
+    "text": "Check the environment\nRun this diagnostic block:\ncheck() { command -v \"$1\" &gt;/dev/null && echo \"PASS $1\" || { echo \"FAIL $1\"; return 1; }; }\ntest -r /opt/ros/jazzy/setup.bash && echo \"PASS ROS setup\" || { echo \"FAIL ROS setup\"; exit 1; }\nsource /opt/ros/jazzy/setup.bash\ncheck ros2 && check colcon && check rosdep && check unzip && check python3\nEvery check must print PASS; stop and resolve any FAIL. If /opt/ros/jazzy is missing, install the Jazzy desktop or ROS-base distribution before continuing.",
     "crumbs": [
       "Course",
       "Resources",
@@ -6386,7 +6386,7 @@
     "href": "guides/jazzy-environment.html#prepare-dependency-resolution",
     "title": "Prepare a ROS 2 Jazzy environment",
     "section": "Prepare dependency resolution",
-    "text": "Prepare dependency resolution\nrosdep installs system dependencies declared by packages. Its one-time system initialization may already be complete:\nsudo rosdep init   # run only if /etc/ros/rosdep/sources.list.d is absent\nrosdep update\nThe workspace lesson also clones a public Git repository, so verify network and Git access:\ngit ls-remote https://github.com/ros2/examples.git HEAD",
+    "text": "Prepare dependency resolution\nrosdep installs system dependencies declared by packages. Its one-time system initialization may already be complete:\nsudo rosdep init   # run only if /etc/ros/rosdep/sources.list.d is absent\nrosdep update\nCourse starter workspaces are downloaded from this site. Verify the archive tool used by those lessons:\nunzip -v | head -n 2",
     "crumbs": [
       "Course",
       "Resources",
@@ -6488,7 +6488,7 @@
     "href": "projects/line-scout.html#references-and-provenance",
     "title": "Line Scout: follow what the robot can sense",
     "section": "References and provenance",
-    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\nJazzy diff_drive_controller — ros-controls, Jazzy; accessed 2026-09-01. Supports: TwistStamped body command, odometry/tf2, limits, and timeout semantics.\nnav_msgs Odometry message — Open Robotics, Jazzy; accessed 2026-09-01. Supports: pose/twist frame semantics used by the simulator and analyzer.",
+    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\n\nJazzy diff_drive_controller — ros-controls, Jazzy; accessed 2026-09-01. Supports: TwistStamped body command, odometry/tf2, limits, and timeout semantics.\nnav_msgs Odometry message — Open Robotics, Jazzy; accessed 2026-09-01. Supports: pose/twist frame semantics used by the simulator and analyzer.",
     "crumbs": [
       "Course",
       "Practical ROS 2",
@@ -6865,7 +6865,7 @@
     "href": "projects/frame-detective.html#references-and-provenance",
     "title": "Frame Detective: debug a robot’s spatial story",
     "section": "References and provenance",
-    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\nROS 2 Jazzy tf2 tutorials — Open Robotics, Jazzy; accessed 2026-09-01. Supports: transform broadcasters, listeners, time semantics, and debugging workflow.\nROS 2 Jazzy URDF tutorials — Open Robotics, Jazzy; accessed 2026-09-01. Supports: link/joint modeling and robot_state_publisher workflow.\nvisualization_msgs Marker definition — Open Robotics, Jazzy; accessed 2026-09-01. Supports: onsite detection marker fields and frame semantics.",
+    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\n\nROS 2 Jazzy tf2 tutorials — Open Robotics, Jazzy; accessed 2026-09-01. Supports: transform broadcasters, listeners, time semantics, and debugging workflow.\nROS 2 Jazzy URDF tutorials — Open Robotics, Jazzy; accessed 2026-09-01. Supports: link/joint modeling and robot_state_publisher workflow.\nvisualization_msgs Marker definition — Open Robotics, Jazzy; accessed 2026-09-01. Supports: onsite detection marker fields and frame semantics.",
     "crumbs": [
       "Course",
       "Practical ROS 2",
@@ -9623,7 +9623,7 @@
     "href": "lessons/advanced-fastdds-configuration.html#references-and-provenance",
     "title": "Unlocking the potential of Fast DDS middleware [community-contributed]",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Unlocking the potential of Fast DDS middleware [community-contributed].\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Unlocking the potential of Fast DDS middleware [community-contributed].\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html",
@@ -9679,7 +9679,7 @@
     "href": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html#references-and-provenance",
     "title": "Using URDF with robot_state_publisher (Python)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using URDF with robot_state_publisher (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using URDF with robot_state_publisher (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-tf2-main.html",
@@ -9735,7 +9735,7 @@
     "href": "lessons/intermediate-tf2-tf2-main.html#references-and-provenance",
     "title": "tf2",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: tf2.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: tf2.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-services-understanding-ros2-services.html",
@@ -9791,7 +9791,7 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-services-understanding-ros2-services.html#references-and-provenance",
     "title": "Understanding services",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding services.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding services.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-testing-integration.html",
@@ -9833,7 +9833,7 @@
     "href": "lessons/intermediate-testing-integration.html#references-and-provenance",
     "title": "Writing Basic Integration Tests with launch_testing",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing Basic Integration Tests with launch_testing.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing Basic Integration Tests with launch_testing.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-gazebo-simulation-gazebo.html",
@@ -9875,7 +9875,7 @@
     "href": "lessons/advanced-simulators-gazebo-simulation-gazebo.html#references-and-provenance",
     "title": "Gazebo",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Gazebo.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Gazebo.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/demos.html",
@@ -9917,7 +9917,7 @@
     "href": "lessons/demos.html#references-and-provenance",
     "title": "Demos",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Demos.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Demos.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-rosdep.html",
@@ -9959,7 +9959,7 @@
     "href": "lessons/intermediate-rosdep.html#references-and-provenance",
     "title": "Managing Dependencies with rosdep",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Managing Dependencies with rosdep.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Managing Dependencies with rosdep.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/demos-real-time-programming.html",
@@ -10015,7 +10015,7 @@
     "href": "lessons/demos-real-time-programming.html#references-and-provenance",
     "title": "Understanding real-time programming",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding real-time programming.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding real-time programming.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-webots-simulation-webots.html",
@@ -10057,7 +10057,7 @@
     "href": "lessons/advanced-simulators-webots-simulation-webots.html#references-and-provenance",
     "title": "Webots",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Webots.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Webots.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-actions-understanding-ros2-actions.html",
@@ -10113,7 +10113,7 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-actions-understanding-ros2-actions.html#references-and-provenance",
     "title": "Understanding actions",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding actions.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding actions.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-custom-display-rviz-custom-display.html",
@@ -10155,7 +10155,7 @@
     "href": "lessons/intermediate-rviz-rviz-custom-display-rviz-custom-display.html#references-and-provenance",
     "title": "Building a Custom RViz Display",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a Custom RViz Display.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a Custom RViz Display.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/demos-rosbag-with-ros1-bridge.html",
@@ -10197,7 +10197,7 @@
     "href": "lessons/demos-rosbag-with-ros1-bridge.html#references-and-provenance",
     "title": "Recording and playing back data with rosbag using the ROS 1 bridge",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Recording and playing back data with rosbag using the ROS 1 bridge.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Recording and playing back data with rosbag using the ROS 1 bridge.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/demos-dummy-robot-demo.html",
@@ -10239,7 +10239,7 @@
     "href": "lessons/demos-dummy-robot-demo.html#references-and-provenance",
     "title": "Experimenting with a dummy robot",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Experimenting with a dummy robot.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Experimenting with a dummy robot.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-reading-from-a-bag-file-cpp.html",
@@ -10281,7 +10281,7 @@
     "href": "lessons/advanced-reading-from-a-bag-file-cpp.html#references-and-provenance",
     "title": "Reading from a bag file (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Reading from a bag file (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Reading from a bag file (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-cpp.html",
@@ -10323,7 +10323,7 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-cpp.html#references-and-provenance",
     "title": "Writing a static broadcaster (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a static broadcaster (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a static broadcaster (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-using-parameters-in-a-class-cpp.html",
@@ -10379,7 +10379,7 @@
     "href": "lessons/beginner-client-libraries-using-parameters-in-a-class-cpp.html#references-and-provenance",
     "title": "Using parameters in a class (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using parameters in a class (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using parameters in a class (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-monitoring-for-parameter-changes-python.html",
@@ -10421,7 +10421,7 @@
     "href": "lessons/intermediate-monitoring-for-parameter-changes-python.html#references-and-provenance",
     "title": "Monitoring for parameter changes (Python)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Monitoring for parameter changes (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Monitoring for parameter changes (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-simulation-mvsim.html",
@@ -10463,7 +10463,7 @@
     "href": "lessons/advanced-simulators-mvsim-simulation-mvsim.html#references-and-provenance",
     "title": "MVSim",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: MVSim.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: MVSim.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html",
@@ -10519,7 +10519,7 @@
     "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#references-and-provenance",
     "title": "Debugging",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Debugging.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Debugging.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-user-guide-rviz-user-guide.html",
@@ -10561,7 +10561,7 @@
     "href": "lessons/intermediate-rviz-rviz-user-guide-rviz-user-guide.html#references-and-provenance",
     "title": "RViz User Guide",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: RViz User Guide.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: RViz User Guide.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/miscellaneous-deploying-ros-2-on-ibm-cloud.html",
@@ -10603,7 +10603,7 @@
     "href": "lessons/miscellaneous-deploying-ros-2-on-ibm-cloud.html#references-and-provenance",
     "title": "Deploying on IBM Cloud Kubernetes [community-contributed]",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Deploying on IBM Cloud Kubernetes [community-contributed].\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Deploying on IBM Cloud Kubernetes [community-contributed].\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/miscellaneous.html",
@@ -10645,7 +10645,7 @@
     "href": "lessons/miscellaneous.html#references-and-provenance",
     "title": "Miscellaneous",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Miscellaneous.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Miscellaneous.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-cli-tools-configuring-ros2-environment.html",
@@ -10687,7 +10687,7 @@
     "href": "lessons/beginner-cli-tools-configuring-ros2-environment.html#references-and-provenance",
     "title": "Configuring environment",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Configuring environment.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Configuring environment.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-py.html",
@@ -10729,7 +10729,7 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-py.html#references-and-provenance",
     "title": "Writing a broadcaster (Python)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a broadcaster (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a broadcaster (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-testing-cpp.html",
@@ -10771,7 +10771,7 @@
     "href": "lessons/intermediate-testing-cpp.html#references-and-provenance",
     "title": "Writing Basic Tests with C++ with GTest",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing Basic Tests with C++ with GTest.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing Basic Tests with C++ with GTest.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-recording-a-bag-from-your-own-node-cpp.html",
@@ -10813,7 +10813,7 @@
     "href": "lessons/advanced-recording-a-bag-from-your-own-node-cpp.html#references-and-provenance",
     "title": "Recording a bag from a node (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Recording a bag from a node (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Recording a bag from a node (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-allocator-template-tutorial.html",
@@ -10855,7 +10855,7 @@
     "href": "lessons/advanced-allocator-template-tutorial.html#references-and-provenance",
     "title": "Implementing a custom memory allocator",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Implementing a custom memory allocator.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Implementing a custom memory allocator.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-security-security-on-two.html",
@@ -10897,7 +10897,7 @@
     "href": "lessons/advanced-security-security-on-two.html#references-and-provenance",
     "title": "Ensuring security across machines",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Ensuring security across machines.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Ensuring security across machines.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/demos-quality-of-service.html",
@@ -10953,7 +10953,7 @@
     "href": "lessons/demos-quality-of-service.html#references-and-provenance",
     "title": "Using quality-of-service settings for lossy networks",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using quality-of-service settings for lossy networks.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using quality-of-service settings for lossy networks.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries.html",
@@ -11009,7 +11009,7 @@
     "href": "lessons/beginner-client-libraries.html#references-and-provenance",
     "title": "Beginner: Client libraries",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Beginner: Client libraries.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Beginner: Client libraries.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-service-and-client.html",
@@ -11051,7 +11051,7 @@
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-service-and-client.html#references-and-provenance",
     "title": "Writing a simple service and client (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a simple service and client (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a simple service and client (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-webots-installation-macos.html",
@@ -11093,7 +11093,7 @@
     "href": "lessons/advanced-simulators-webots-installation-macos.html#references-and-provenance",
     "title": "Installation (macOS)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Installation (macOS).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Installation (macOS).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-cli-tools.html",
@@ -11149,7 +11149,7 @@
     "href": "lessons/beginner-cli-tools.html#references-and-provenance",
     "title": "Beginner: CLI tools",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Beginner: CLI tools.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Beginner: CLI tools.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-composition.html",
@@ -11205,7 +11205,7 @@
     "href": "lessons/intermediate-composition.html#references-and-provenance",
     "title": "Composing multiple nodes in a single process",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Composing multiple nodes in a single process.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Composing multiple nodes in a single process.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/demos-intra-process-communication.html",
@@ -11261,7 +11261,7 @@
     "href": "lessons/demos-intra-process-communication.html#references-and-provenance",
     "title": "Setting up efficient intra-process communication",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up efficient intra-process communication.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up efficient intra-process communication.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/demos-wait-for-acknowledgment.html",
@@ -11303,7 +11303,7 @@
     "href": "lessons/demos-wait-for-acknowledgment.html#references-and-provenance",
     "title": "Wait for acknowledgment",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Wait for acknowledgment.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Wait for acknowledgment.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html",
@@ -11366,7 +11366,7 @@
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#references-and-provenance",
     "title": "Creating and using a custom message",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating custom msg and srv files.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Creating custom msg and srv files.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-gazebo-gazebo.html",
@@ -11408,7 +11408,7 @@
     "href": "lessons/advanced-simulators-gazebo-gazebo.html#references-and-provenance",
     "title": "Setting up a robot simulation (Gazebo)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up a robot simulation (Gazebo).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting up a robot simulation (Gazebo).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-getting-started-with-ros2doctor.html",
@@ -11450,7 +11450,7 @@
     "href": "lessons/beginner-client-libraries-getting-started-with-ros2doctor.html#references-and-provenance",
     "title": "Using ros2doctor to identify issues",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using ros2doctor to identify issues.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using ros2doctor to identify issues.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-testing-python.html",
@@ -11492,7 +11492,7 @@
     "href": "lessons/intermediate-testing-python.html#references-and-provenance",
     "title": "Writing Basic Tests with Python",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing Basic Tests with Python.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing Basic Tests with Python.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-adding-a-frame-cpp.html",
@@ -11534,7 +11534,7 @@
     "href": "lessons/intermediate-tf2-adding-a-frame-cpp.html#references-and-provenance",
     "title": "Adding a frame (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Adding a frame (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Adding a frame (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-service-and-client.html",
@@ -11576,7 +11576,7 @@
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-service-and-client.html#references-and-provenance",
     "title": "Writing a simple service and client (Python)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a simple service and client (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a simple service and client (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-urdf-building-a-movable-robot-model-with-urdf.html",
@@ -11618,7 +11618,7 @@
     "href": "lessons/intermediate-urdf-building-a-movable-robot-model-with-urdf.html#references-and-provenance",
     "title": "Building a movable robot model",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a movable robot model.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a movable robot model.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-adding-a-frame-py.html",
@@ -11660,7 +11660,7 @@
     "href": "lessons/intermediate-tf2-adding-a-frame-py.html#references-and-provenance",
     "title": "Adding a frame (Python)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Adding a frame (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Adding a frame (Python).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-time-travel-with-tf2-cpp.html",
@@ -11702,7 +11702,7 @@
     "href": "lessons/intermediate-tf2-time-travel-with-tf2-cpp.html#references-and-provenance",
     "title": "Traveling in time (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Traveling in time (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Traveling in time (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-cli-tools-recording-and-playing-back-data-recording-and-playing-back-data.html",
@@ -11758,7 +11758,7 @@
     "href": "lessons/beginner-cli-tools-recording-and-playing-back-data-recording-and-playing-back-data.html#references-and-provenance",
     "title": "Recording and playing back data",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Recording and playing back data.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Recording and playing back data.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-cpp.html",
@@ -11800,7 +11800,7 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-cpp.html#references-and-provenance",
     "title": "Writing a broadcaster (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a broadcaster (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a broadcaster (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-installation-ubuntu.html",
@@ -11842,7 +11842,7 @@
     "href": "lessons/advanced-simulators-mvsim-installation-ubuntu.html#references-and-provenance",
     "title": "Installation (Ubuntu)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Installation (Ubuntu).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Installation (Ubuntu).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-writing-an-action-server-client-cpp.html",
@@ -11898,7 +11898,7 @@
     "href": "lessons/intermediate-writing-an-action-server-client-cpp.html#references-and-provenance",
     "title": "Writing an action server and client (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing an action server and client (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing an action server and client (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-webots-installation-ubuntu.html",
@@ -11940,7 +11940,7 @@
     "href": "lessons/advanced-simulators-webots-installation-ubuntu.html#references-and-provenance",
     "title": "Installation (Ubuntu)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Installation (Ubuntu).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Installation (Ubuntu).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-launch-launch-system.html",
@@ -11982,7 +11982,7 @@
     "href": "lessons/intermediate-launch-launch-system.html#references-and-provenance",
     "title": "Integrating launch files into ROS 2 packages",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Integrating launch files into ROS 2 packages.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Integrating launch files into ROS 2 packages.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-custom-panel-rviz-custom-panel.html",
@@ -12024,7 +12024,7 @@
     "href": "lessons/intermediate-rviz-rviz-custom-panel-rviz-custom-panel.html#references-and-provenance",
     "title": "Building a Custom RViz Panel",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a Custom RViz Panel.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a Custom RViz Panel.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-tf2-quaternion-fundamentals.html",
@@ -12066,7 +12066,7 @@
     "href": "lessons/intermediate-tf2-quaternion-fundamentals.html#references-and-provenance",
     "title": "Quaternion fundamentals",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Quaternion fundamentals.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Quaternion fundamentals.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-create-an-rqtbag-plugin.html",
@@ -12108,7 +12108,7 @@
     "href": "lessons/advanced-create-an-rqtbag-plugin.html#references-and-provenance",
     "title": "Create an rqt_bag Plugin",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Create an rqt_bag Plugin.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Create an rqt_bag Plugin.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-ament-lint-for-clean-code.html",
@@ -12150,7 +12150,7 @@
     "href": "lessons/advanced-ament-lint-for-clean-code.html#references-and-provenance",
     "title": "Ament Lint CLI Utilities",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Ament Lint CLI Utilities.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Ament Lint CLI Utilities.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/intermediate-rviz-marker-points-and-lines-marker-points-and-lines.html",
@@ -12192,7 +12192,7 @@
     "href": "lessons/intermediate-rviz-marker-points-and-lines-marker-points-and-lines.html#references-and-provenance",
     "title": "Marker: Points and Lines (C++)",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Marker: Points and Lines (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Marker: Points and Lines (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-security-access-controls.html",
@@ -12248,7 +12248,7 @@
     "href": "lessons/advanced-security-access-controls.html#references-and-provenance",
     "title": "Setting access controls",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting access controls.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Setting access controls.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/miscellaneous-building-realtime-rtpreempt-kernel-for-ros-2.html",
@@ -12290,7 +12290,7 @@
     "href": "lessons/miscellaneous-building-realtime-rtpreempt-kernel-for-ros-2.html#references-and-provenance",
     "title": "Building a real-time Linux kernel [community-contributed]",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a real-time Linux kernel [community-contributed].\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a real-time Linux kernel [community-contributed].\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/miscellaneous-building-ros2-package-with-eclipse-2021-06.html",
@@ -12332,7 +12332,7 @@
     "href": "lessons/miscellaneous-building-ros2-package-with-eclipse-2021-06.html#references-and-provenance",
     "title": "Building a package with Eclipse 2021-06",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a package with Eclipse 2021-06.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Building a package with Eclipse 2021-06.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-security-the-keystore.html",
@@ -12388,7 +12388,7 @@
     "href": "lessons/advanced-security-the-keystore.html#references-and-provenance",
     "title": "Understanding the security keystore",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding the security keystore.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Understanding the security keystore.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html",
@@ -12444,7 +12444,7 @@
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#references-and-provenance",
     "title": "Writing a publisher and subscriber in C++",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a simple publisher and subscriber (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Writing a simple publisher and subscriber (C++).\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/beginner-client-libraries-colcon-tutorial.html",
@@ -12486,7 +12486,7 @@
     "href": "lessons/beginner-client-libraries-colcon-tutorial.html#references-and-provenance",
     "title": "Using colcon to build packages",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using colcon to build packages.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Using colcon to build packages.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "lessons/advanced-simulators-webots-simulation-supervisor.html",
@@ -12528,7 +12528,7 @@
     "href": "lessons/advanced-simulators-webots-simulation-supervisor.html#references-and-provenance",
     "title": "The Ros2Supervisor Node",
     "section": "References and provenance",
-    "text": "References and provenance\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: The Ros2Supervisor Node.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: The Ros2Supervisor Node.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
   },
   {
     "objectID": "course/first-robot-system.html",
