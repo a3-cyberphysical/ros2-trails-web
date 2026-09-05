@@ -4864,6 +4864,279 @@
     ]
   },
   {
+    "objectID": "projects/notebook-robotics-lab/live-graph-probe.html",
+    "href": "projects/notebook-robotics-lab/live-graph-probe.html",
+    "title": "Project A — Live Graph Probe",
+    "section": "",
+    "text": "Milestone 3 of 6 · Produces: a timestamped pose sample table\nBuild projects › Notebook Robotics Lab: probe, plot, and tune ROS 2 › Project A — Live Graph Probe\nTime: about 55 minutes. You need: notebook_lifecycle (or the downloaded complete workspace). Progress: 3/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project A — Live Graph Probe"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/live-graph-probe.html#goal",
+    "href": "projects/notebook-robotics-lab/live-graph-probe.html#goal",
+    "title": "Project A — Live Graph Probe",
+    "section": "Goal",
+    "text": "Goal\nCollect a bounded, timestamped view of a live turtlesim pose topic.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project A — Live Graph Probe"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/live-graph-probe.html#do-it",
+    "href": "projects/notebook-robotics-lab/live-graph-probe.html#do-it",
+    "title": "Project A — Live Graph Probe",
+    "section": "Do it",
+    "text": "Do it\nStart turtlesim_node and turtle_teleop_key in independent sourced terminals. In 01_live_graph_probe.ipynb, use RosSession.sample_for to observe /turtle1/pose for five seconds while moving the turtle. Convert messages into plain dictionaries before closing the session.\nRepeat once without moving. Compare message count, x/y range, and timestamp gaps.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project A — Live Graph Probe"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/live-graph-probe.html#verify",
+    "href": "projects/notebook-robotics-lab/live-graph-probe.html#verify",
+    "title": "Project A — Live Graph Probe",
+    "section": "Verify",
+    "text": "Verify\nBoth trials finish without manual interruption, contain monotonically increasing sample times, and leave no notebook node in ros2 node list. The moving trial must have a larger spatial range than the stationary trial.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project A — Live Graph Probe"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/live-graph-probe.html#troubleshooting",
+    "href": "projects/notebook-robotics-lab/live-graph-probe.html#troubleshooting",
+    "title": "Project A — Live Graph Probe",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nzero samples: inspect topic type and ROS domain in terminal and notebook.\nfrozen cell: ensure the helper uses finite spin_once timeouts.\nstale node: execute the cleanup cell or restart the kernel.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project A — Live Graph Probe"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/live-graph-probe.html#challenge",
+    "href": "projects/notebook-robotics-lab/live-graph-probe.html#challenge",
+    "title": "Project A — Live Graph Probe",
+    "section": "Challenge",
+    "text": "Challenge\nPredict how a best-effort QoS profile would change this local experiment, then state what network condition would be needed to test the prediction meaningfully.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project A — Live Graph Probe"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/live-graph-probe.html#how-to-complete-this-milestone",
+    "href": "projects/notebook-robotics-lab/live-graph-probe.html#how-to-complete-this-milestone",
+    "title": "Project A — Live Graph Probe",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a timestamped pose sample table.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project A — Live Graph Probe"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/capstone.html",
+    "href": "projects/notebook-robotics-lab/capstone.html",
+    "title": "Capstone reproducible experiment",
+    "section": "",
+    "text": "Milestone 6 of 6 · Produces: notebook-lab-evidence.md plus clean notebooks\nBuild projects › Notebook Robotics Lab: probe, plot, and tune ROS 2 › Capstone reproducible experiment\nTime: about 55 minutes. You need: notebook_tuner (or the downloaded complete workspace). Progress: 6/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Capstone reproducible experiment"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/capstone.html#goal",
+    "href": "projects/notebook-robotics-lab/capstone.html#goal",
+    "title": "Capstone reproducible experiment",
+    "section": "Goal",
+    "text": "Goal\nDeliver one reproducible notebook experiment whose claim survives a clean restart.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Capstone reproducible experiment"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/capstone.html#do-it",
+    "href": "projects/notebook-robotics-lab/capstone.html#do-it",
+    "title": "Capstone reproducible experiment",
+    "section": "Do it",
+    "text": "Do it\nChoose the live probe, trajectory microscope, or tuner. Write a prediction, change exactly one independent variable, run baseline and changed trials, and save notebook-lab-evidence.md with environment, commands, metrics, plots, interpretation, limitations, and cleanup evidence. Clear transient cell outputs unless a specific output is part of the evidence.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Capstone reproducible experiment"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/capstone.html#verify",
+    "href": "projects/notebook-robotics-lab/capstone.html#verify",
+    "title": "Capstone reproducible experiment",
+    "section": "Verify",
+    "text": "Verify\nRestart the kernel and Run All. The notebook must finish in order, recreate the reported metrics within stated tolerance, contain no hidden manual variable, and leave no ROS node behind. A second person must be able to identify the changed variable.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Capstone reproducible experiment"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/capstone.html#troubleshooting",
+    "href": "projects/notebook-robotics-lab/capstone.html#troubleshooting",
+    "title": "Capstone reproducible experiment",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nonly out-of-order execution works: restart and move required setup earlier.\nlive replay differs: bound the claim and record environment/timing variation.\ncleanup fails: place session closure in finally and show the terminal node list.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Capstone reproducible experiment"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/capstone.html#challenge",
+    "href": "projects/notebook-robotics-lab/capstone.html#challenge",
+    "title": "Capstone reproducible experiment",
+    "section": "Challenge",
+    "text": "Challenge\nExport a clean HTML evidence view and explain why the executable notebook—not the export—is the reproducibility artifact.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Capstone reproducible experiment"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/capstone.html#how-to-complete-this-milestone",
+    "href": "projects/notebook-robotics-lab/capstone.html#how-to-complete-this-milestone",
+    "title": "Capstone reproducible experiment",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: notebook-lab-evidence.md plus clean notebooks.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Capstone reproducible experiment"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/setup-the-lab.html",
+    "href": "projects/notebook-robotics-lab/setup-the-lab.html",
+    "title": "Set up a ROS-aware kernel",
+    "section": "",
+    "text": "Milestone 1 of 6 · Produces: a kernel preflight record\nBuild projects › Notebook Robotics Lab: probe, plot, and tune ROS 2 › Set up a ROS-aware kernel\nTime: about 35 minutes. You need: the pinned environment (or the downloaded complete workspace). Progress: 1/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Set up a ROS-aware kernel"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/setup-the-lab.html#goal",
+    "href": "projects/notebook-robotics-lab/setup-the-lab.html#goal",
+    "title": "Set up a ROS-aware kernel",
+    "section": "Goal",
+    "text": "Goal\nLaunch Jupyter from a ROS-aware shell and prove the kernel sees the Jazzy environment.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Set up a ROS-aware kernel"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/setup-the-lab.html#do-it",
+    "href": "projects/notebook-robotics-lab/setup-the-lab.html#do-it",
+    "title": "Set up a ROS-aware kernel",
+    "section": "Do it",
+    "text": "Do it\nDownload and extract the project. Install notebook-only tools in an isolated virtual environment while retaining the system ROS Python packages:\nsource /opt/ros/jazzy/setup.bash\ncd ~/Downloads/notebook_robotics_lab\npython3 -m venv --system-site-packages .venv\nsource .venv/bin/activate\npython -m pip install -r requirements.txt\n./run_lab.sh\nOpen 01_live_graph_probe.ipynb. Run the preflight cell and record ROS_DISTRO, Python executable, rclpy import location, and current working directory.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Set up a ROS-aware kernel"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/setup-the-lab.html#verify",
+    "href": "projects/notebook-robotics-lab/setup-the-lab.html#verify",
+    "title": "Set up a ROS-aware kernel",
+    "section": "Verify",
+    "text": "Verify\nROS_DISTRO is jazzy, rclpy imports, the notebook path is inside the download, and Restart Kernel then Run All reproduces the same preflight.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Set up a ROS-aware kernel"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/setup-the-lab.html#troubleshooting",
+    "href": "projects/notebook-robotics-lab/setup-the-lab.html#troubleshooting",
+    "title": "Set up a ROS-aware kernel",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nrclpy missing: recreate the venv with --system-site-packages after sourcing Jazzy.\nwrong distro: stop Jupyter and relaunch it from a correctly sourced shell.\nwrong files: use the locally downloaded archive rather than an unrelated notebook.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Set up a ROS-aware kernel"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/setup-the-lab.html#challenge",
+    "href": "projects/notebook-robotics-lab/setup-the-lab.html#challenge",
+    "title": "Set up a ROS-aware kernel",
+    "section": "Challenge",
+    "text": "Challenge\nExplain why activating a Python environment cannot retroactively change a kernel already running.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Set up a ROS-aware kernel"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/setup-the-lab.html#how-to-complete-this-milestone",
+    "href": "projects/notebook-robotics-lab/setup-the-lab.html#how-to-complete-this-milestone",
+    "title": "Set up a ROS-aware kernel",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a kernel preflight record.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Set up a ROS-aware kernel"
+    ]
+  },
+  {
     "objectID": "projects/balance-bot/package-the-system.html",
     "href": "projects/balance-bot/package-the-system.html",
     "title": "Package the complete system",
@@ -6151,258 +6424,63 @@
     ]
   },
   {
-    "objectID": "projects/camera-detective.html",
-    "href": "projects/camera-detective.html",
-    "title": "Camera Detective: turn pixels into measurements",
+    "objectID": "projects/notebook-robotics-lab.html",
+    "href": "projects/notebook-robotics-lab.html",
+    "title": "Notebook Robotics Lab: probe, plot, and tune ROS 2",
     "section": "",
-    "text": "6 milestones · 5 hours · preview\nCourse position: Part 1 · Lesson 3 of 5. Return to the canonical course.",
+    "text": "6 milestones · 5 hours · preview\nCourse position: Project Lab · after Lesson 1. Return to the canonical course.",
     "crumbs": [
       "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Camera Detective"
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2"
     ]
   },
   {
-    "objectID": "projects/camera-detective.html#what-you-will-build",
-    "href": "projects/camera-detective.html#what-you-will-build",
-    "title": "Camera Detective: turn pixels into measurements",
-    "section": "What you will build",
-    "text": "What you will build\nCamera Detective publishes a moving synthetic checkerboard through the same Image, CameraInfo, optical-frame, and calibration-service interfaces used by a real ROS camera driver. You will compare weak and well-distributed samples, persist a calibration, rectify the stream, and accept or reject it using held-out evidence.\nsynthetic_camera ── image_raw + camera_info ──&gt; camera_calibration\n       ↑                        │                       │\n coverage mode                  └────&gt; image_proc &lt;──── calibration YAML\n                                           │\n                                      image_rect → evaluator",
+    "objectID": "projects/notebook-robotics-lab.html#what-this-project-teaches",
+    "href": "projects/notebook-robotics-lab.html#what-this-project-teaches",
+    "title": "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+    "section": "What this project teaches",
+    "text": "What this project teaches\n\nwhy a Jupyter kernel’s persistent state changes ROS lifecycle discipline;\nhow Context, node, executor, and callbacks fit together;\nhow to collect for a bounded time without freezing the notebook;\nwhen plots reveal timing/error structure that CLI output hides;\nhow to separate exploratory tuning from deployed control code;\nhow to restart and reproduce a notebook experiment from top to bottom.",
     "crumbs": [
       "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Camera Detective"
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2"
     ]
   },
   {
-    "objectID": "projects/camera-detective.html#why-this-comes-after-frame-detective",
-    "href": "projects/camera-detective.html#why-this-comes-after-frame-detective",
-    "title": "Camera Detective: turn pixels into measurements",
-    "section": "Why this comes after Frame Detective",
-    "text": "Why this comes after Frame Detective\nA pixel is not yet a spatial measurement. Its header must carry acquisition time and an optical frame; calibration parameters explain how rays project into the image; later tf2 transforms relate that camera to a robot. This project makes the camera half of that contract observable before Line Scout depends on it.",
+    "objectID": "projects/notebook-robotics-lab.html#safety-boundary",
+    "href": "projects/notebook-robotics-lab.html#safety-boundary",
+    "title": "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+    "section": "Safety boundary",
+    "text": "Safety boundary\nUse simulation for the live probe. Do not put emergency stops, continuous actuation, or unattended control in a notebook. A browser disconnect does not guarantee that its kernel stopped. Keep the stable system and stop mechanism in an independent terminal.",
     "crumbs": [
       "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Camera Detective"
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2"
     ]
   },
   {
-    "objectID": "projects/camera-detective.html#before-starting",
-    "href": "projects/camera-detective.html#before-starting",
-    "title": "Camera Detective: turn pixels into measurements",
-    "section": "Before starting",
-    "text": "Before starting\n\nComplete Lessons 1 and 2 or understand topics, timestamps, and frames.\nUse Ubuntu 24.04 with ROS 2 Jazzy Desktop.\nDownload the Camera Detective workspace.\nAllow about five hours. The complete workspace is for guided modification and recovery.",
-    "crumbs": [
-      "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Camera Detective"
-    ]
-  },
-  {
-    "objectID": "projects/camera-detective.html#definition-of-success",
-    "href": "projects/camera-detective.html#definition-of-success",
-    "title": "Camera Detective: turn pixels into measurements",
-    "section": "Definition of success",
-    "text": "Definition of success\nPublish valid synchronized image metadata, collect coverage across position, scale, and tilt, persist a calibration through SetCameraInfo, produce rectified output, and defend acceptance using a held-out residual. You must also reject the weak-coverage result even if the calibration tool produces numbers.",
-    "crumbs": [
-      "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Camera Detective"
-    ]
-  },
-  {
-    "objectID": "projects/camera-detective.html#provenance-and-license",
-    "href": "projects/camera-detective.html#provenance-and-license",
-    "title": "Camera Detective: turn pixels into measurements",
-    "section": "Provenance and license",
-    "text": "Provenance and license\nThe synthetic source, evaluator, and lessons are original ROS 2 Trails work informed by official Jazzy image_pipeline and message documentation. No source was copied. The workspace is MIT licensed and includes the full terms.",
-    "crumbs": [
-      "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Camera Detective"
-    ]
-  },
-  {
-    "objectID": "projects/camera-detective.html#references-and-provenance",
-    "href": "projects/camera-detective.html#references-and-provenance",
-    "title": "Camera Detective: turn pixels into measurements",
+    "objectID": "projects/notebook-robotics-lab.html#references-and-provenance",
+    "href": "projects/notebook-robotics-lab.html#references-and-provenance",
+    "title": "Notebook Robotics Lab: probe, plot, and tune ROS 2",
     "section": "References and provenance",
-    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\n\nROS 2 Jazzy image_pipeline — Open Robotics, Jazzy 3.2; accessed 2026-09-01. Supports: camera calibration, CameraInfo, rectification, and image processing architecture.\nsensor_msgs Image message — Open Robotics, Jazzy; accessed 2026-09-01. Supports: acquisition timestamp, optical frame, encoding, dimensions, and row-step contract.",
+    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\n\nJupyter architecture — Project Jupyter, current; accessed 2026-09-05. Supports: kernel process, frontend, server, and notebook execution model.\nJupyter notebook format — Project Jupyter, nbformat 5.10; accessed 2026-09-05. Supports: notebook JSON, cells, metadata, outputs, and stable cell identifiers.\nROS 2 executor concepts — Open Robotics, rolling concepts; API checked against Jazzy workspace; accessed 2026-09-05. Supports: callback dispatch and executor ownership model.",
     "crumbs": [
       "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Camera Detective"
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2"
     ]
   },
   {
-    "objectID": "projects/camera-detective.html#project-milestones",
-    "href": "projects/camera-detective.html#project-milestones",
-    "title": "Camera Detective: turn pixels into measurements",
+    "objectID": "projects/notebook-robotics-lab.html#project-milestones",
+    "href": "projects/notebook-robotics-lab.html#project-milestones",
+    "title": "Notebook Robotics Lab: probe, plot, and tune ROS 2",
     "section": "Project milestones",
-    "text": "Project milestones\n\n\n1\n\nRead the image contract\nProduces: an image/topic/frame contract\n\n\n\n2\n\nSee distortion before correcting it\nProduces: raw-image and metadata evidence\n\n\n\n3\n\nCollect calibration coverage\nProduces: good and weak calibration bags\n\n\n\n4\n\nEstimate and persist calibration\nProduces: a persisted camera calibration YAML\n\n\n\n5\n\nRectify and measure\nProduces: held-out raw/rectified evidence and metrics\n\n\n\n6\n\nCapstone calibration decision\nProduces: a defensible accept/reject calibration report",
+    "text": "Project milestones\n\n\n1\n\nSet up a ROS-aware kernel\nProduces: a kernel preflight record\n\n\n\n2\n\nOwn the ROS lifecycle\nProduces: a clean init-sample-close trace\n\n\n\n3\n\nProject A — Live Graph Probe\nProduces: a timestamped pose sample table\n\n\n\n4\n\nProject B — Trajectory Microscope\nProduces: a trajectory metrics plot and decision\n\n\n\n5\n\nProject C — Controller Tuner\nProduces: a ranked gain-sweep table\n\n\n\n6\n\nCapstone reproducible experiment\nProduces: notebook-lab-evidence.md plus clean notebooks",
     "crumbs": [
       "Course",
-      "Practical ROS 2",
-      "Part 1 — Build useful systems",
-      "3. Camera Detective"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ROS 2 Trails",
-    "section": "",
-    "text": "For coders who want to make robots observable, spatially correct, and controllable—not merely memorize commands. Run a complete ROS graph in lesson 1, then build increasingly real systems while learning the theory in context.\nStart Lesson 1 See the course"
-  },
-  {
-    "objectID": "index.html#learn-ros-2-by-building-systems-that-move",
-    "href": "index.html#learn-ros-2-by-building-systems-that-move",
-    "title": "ROS 2 Trails",
-    "section": "",
-    "text": "For coders who want to make robots observable, spatially correct, and controllable—not merely memorize commands. Run a complete ROS graph in lesson 1, then build increasingly real systems while learning the theory in context.\nStart Lesson 1 See the course"
-  },
-  {
-    "objectID": "index.html#is-this-course-for-me",
-    "href": "index.html#is-this-course-for-me",
-    "title": "ROS 2 Trails",
-    "section": "Is this course for me?",
-    "text": "Is this course for me?\nYou should be comfortable editing code and using a terminal. You do not need prior ROS experience, advanced control theory, expensive hardware, or permission to leave the site for required material. The pinned learning platform is Ubuntu 24.04 with ROS 2 Jazzy; simulation and visualization come before hardware."
-  },
-  {
-    "objectID": "index.html#what-you-will-make",
-    "href": "index.html#what-you-will-make",
-    "title": "ROS 2 Trails",
-    "section": "What you will make",
-    "text": "What you will make\n\n\nLesson 1 · A complete graph\nDrive a robot, inspect interfaces, intervene, and record evidence in one hour.\n\n\nLesson 2 · Frame Detective\nSee and repair coordinate-frame and timestamp failures in RViz.\n\n\nLesson 3 · Camera Detective\nCalibrate a distorted image stream and reject weak evidence.\n\n\nLesson 4 · Line Scout\nClose a mobile sensing-control loop and recover from lost observations.\n\n\nLesson 5 · Balance Bot\nModel, control, perturb, tune, and score an unstable simulated mechanism."
-  },
-  {
-    "objectID": "index.html#how-learning-works-here",
-    "href": "index.html#how-learning-works-here",
-    "title": "ROS 2 Trails",
-    "section": "How learning works here",
-    "text": "How learning works here\nEach lesson asks you to run a system, inspect it, make a prediction, change one thing, and save evidence. Core explanations and all 129 local tutorials are available when the project gives you a reason to go deeper.\nBegin the course"
-  },
-  {
-    "objectID": "trails.html",
-    "href": "trails.html",
-    "title": "Learning trails",
-    "section": "",
-    "text": "Choose a guided progression. These trails are editorially curated from the pinned Jazzy knowledge pack; ordering is intentional and provenance remains inspectable.\n\n\nBuilding nodes and packages\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions.\n3 modules 6 direct tutorials\n\n\nData, logging, and observability\nROS 2 offers complementary ways to understand a running system. rosbag2 captures interface data for replay; logs describe application decisions; graph inspection reveals topology; topic statistics summarize communication; service introspection observes request/response events; and tracing exposes lower-level timing across executors and middleware.\n3 modules 5 direct tutorials\n\n\nFoundations: the ROS 2 graph\nROS 2 applications are graphs of independently useful nodes. Nodes exchange typed data through topics, request bounded work through services, run longer goal-oriented work through actions, and expose configuration through parameters. The command-line tools let you inspect this graph before writing code, which makes them the best starting point.\n3 modules 6 direct tutorials\n\n\nInterfaces, parameters, actions, and plugins\nInterfaces are the public contracts between nodes. Messages describe topic samples, services pair a request with a response, and actions combine a goal, feedback, a result, and cancellation. Parameters configure a node but should not be mistaken for a high-rate data channel. Pluginlib adds runtime-selected implementations behind a stable C++ interface.\n4 modules 6 direct tutorials\n\n\nLaunch and composition\nLaunch descriptions make multi-node systems reproducible. They declare nodes, arguments, parameters, namespaces, remappings, conditions, and included launch files. Composition places multiple nodes in a shared process when reduced overhead or more efficient communication matters.\n3 modules 5 direct tutorials\n\n\nMiddleware, discovery, and performance\nROS 2 client libraries communicate through an RMW abstraction over supported middleware implementations. Behavior depends on QoS compatibility, discovery, serialization, executor scheduling, process boundaries, memory allocation, and the network. Performance work therefore needs measurements and an explicit operating context.\n3 modules 6 direct tutorials\n\n\nProduction concerns\nA working demo is not yet an operational robot. Production systems must make communication assumptions explicit, expose diagnosable behavior, verify nodes at multiple levels, and protect the ROS graph when deployed across trust boundaries.\n3 modules 5 direct tutorials\n\n\nSecurity and deployment\nROS 2 security builds on DDS Security. A secure deployment needs identities, signed governance and permissions policy, encrypted/authenticated transport, protected keystores, and a deployment process that keeps credentials separate from application artifacts. Security settings must be tested on the actual graph and network topology.\n3 modules 6 direct tutorials\n\n\nTransforms and robot models\ntf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with robot_state_publisher, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.\n3 modules 5 direct tutorials"
-  },
-  {
-    "objectID": "start.html",
-    "href": "start.html",
-    "title": "Start here",
-    "section": "",
-    "text": "Do these in order. Each stage ends with something observable rather than a reading checkpoint.\n\n\nRun and inspect: Foundations: the ROS 2 graph\nCreate and connect: Building nodes and packages\nReason about space: Transforms and robot models\nMake startup repeatable: Launch and composition\nMeasure what happened: Data, logging, and observability\nIntegrate it: Build Frame Detective"
-  },
-  {
-    "objectID": "start.html#your-first-useful-ros-2-loop",
-    "href": "start.html#your-first-useful-ros-2-loop",
-    "title": "Start here",
-    "section": "",
-    "text": "Do these in order. Each stage ends with something observable rather than a reading checkpoint.\n\n\nRun and inspect: Foundations: the ROS 2 graph\nCreate and connect: Building nodes and packages\nReason about space: Transforms and robot models\nMake startup repeatable: Launch and composition\nMeasure what happened: Data, logging, and observability\nIntegrate it: Build Frame Detective"
-  },
-  {
-    "objectID": "start.html#choose-by-outcome",
-    "href": "start.html#choose-by-outcome",
-    "title": "Start here",
-    "section": "Choose by outcome",
-    "text": "Choose by outcome\n\n\n\nI want to…\nGo to…\n\n\n\n\nunderstand nodes, topics, services, actions\nFoundations\n\n\nwrite packages and interfaces\nBuilding nodes\n\n\nunderstand RViz, URDF, and tf2\nTransforms and models\n\n\ncontrol a simulated mechanism\nBalance Bot\n\n\nfind one exact tutorial\nAll onsite lessons"
-  },
-  {
-    "objectID": "core-skills.html",
-    "href": "core-skills.html",
-    "title": "Core skills",
-    "section": "",
-    "text": "Core skills are organized by the job they perform in a robot, not by the order of an upstream documentation tree."
-  },
-  {
-    "objectID": "core-skills.html#make-it-communicate",
-    "href": "core-skills.html#make-it-communicate",
-    "title": "Core skills",
-    "section": "Make it communicate",
-    "text": "Make it communicate\n\nFoundations: the ROS 2 graph\nBuilding nodes and packages\nInterfaces, parameters, actions, and plugins"
-  },
-  {
-    "objectID": "core-skills.html#make-it-spatial-and-repeatable",
-    "href": "core-skills.html#make-it-spatial-and-repeatable",
-    "title": "Core skills",
-    "section": "Make it spatial and repeatable",
-    "text": "Make it spatial and repeatable\n\nTransforms and robot models\nLaunch and composition"
-  },
-  {
-    "objectID": "core-skills.html#make-it-observable-and-dependable",
-    "href": "core-skills.html#make-it-observable-and-dependable",
-    "title": "Core skills",
-    "section": "Make it observable and dependable",
-    "text": "Make it observable and dependable\n\nData, logging, and observability\nMiddleware, discovery, and performance\nProduction concerns\nSecurity and deployment"
-  },
-  {
-    "objectID": "guides/jazzy-environment.html",
-    "href": "guides/jazzy-environment.html",
-    "title": "Prepare a ROS 2 Jazzy environment",
-    "section": "",
-    "text": "These lessons target ROS 2 Jazzy on Ubuntu 24.04 using Bash. A container or another supported Jazzy platform can work, but package-installation details may differ. Every displayed shell block contains commands you can copy.",
-    "crumbs": [
-      "Course",
-      "Resources",
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "guides/jazzy-environment.html#supported-setup",
-    "href": "guides/jazzy-environment.html#supported-setup",
-    "title": "Prepare a ROS 2 Jazzy environment",
-    "section": "",
-    "text": "These lessons target ROS 2 Jazzy on Ubuntu 24.04 using Bash. A container or another supported Jazzy platform can work, but package-installation details may differ. Every displayed shell block contains commands you can copy.",
-    "crumbs": [
-      "Course",
-      "Resources",
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "guides/jazzy-environment.html#check-the-environment",
-    "href": "guides/jazzy-environment.html#check-the-environment",
-    "title": "Prepare a ROS 2 Jazzy environment",
-    "section": "Check the environment",
-    "text": "Check the environment\nRun this diagnostic block:\ncheck() { command -v \"$1\" &gt;/dev/null && echo \"PASS $1\" || { echo \"FAIL $1\"; return 1; }; }\ntest -r /opt/ros/jazzy/setup.bash && echo \"PASS ROS setup\" || { echo \"FAIL ROS setup\"; exit 1; }\nsource /opt/ros/jazzy/setup.bash\ncheck ros2 && check colcon && check rosdep && check unzip && check python3\nEvery check must print PASS; stop and resolve any FAIL. If /opt/ros/jazzy is missing, install the Jazzy desktop or ROS-base distribution before continuing.",
-    "crumbs": [
-      "Course",
-      "Resources",
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "guides/jazzy-environment.html#prepare-dependency-resolution",
-    "href": "guides/jazzy-environment.html#prepare-dependency-resolution",
-    "title": "Prepare a ROS 2 Jazzy environment",
-    "section": "Prepare dependency resolution",
-    "text": "Prepare dependency resolution\nrosdep installs system dependencies declared by packages. Its one-time system initialization may already be complete:\nsudo rosdep init   # run only if /etc/ros/rosdep/sources.list.d is absent\nrosdep update\nCourse starter workspaces are downloaded from this site. Verify the archive tool used by those lessons:\nunzip -v | head -n 2",
-    "crumbs": [
-      "Course",
-      "Resources",
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "guides/jazzy-environment.html#terminal-rule",
-    "href": "guides/jazzy-environment.html#terminal-rule",
-    "title": "Prepare a ROS 2 Jazzy environment",
-    "section": "Terminal rule",
-    "text": "Terminal rule\nEvery new terminal starts with the underlay:\nsource /opt/ros/jazzy/setup.bash\nAfter building the course workspace, also source its overlay (sometimes called “re-sourcing the overlay” after a rebuild):\nsource ~/ros2_trails_ws/install/local_setup.bash\nIf a package, node, or interface cannot be found, checking which setup files were sourced is the first diagnostic step.",
-    "crumbs": [
-      "Course",
-      "Resources",
-      "Setup"
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2"
     ]
   },
   {
@@ -6507,6 +6585,261 @@
       "Practical ROS 2",
       "Part 1 — Build useful systems",
       "4. Line Scout"
+    ]
+  },
+  {
+    "objectID": "guides/jazzy-environment.html",
+    "href": "guides/jazzy-environment.html",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "",
+    "text": "These lessons target ROS 2 Jazzy on Ubuntu 24.04 using Bash. A container or another supported Jazzy platform can work, but package-installation details may differ. Every displayed shell block contains commands you can copy.",
+    "crumbs": [
+      "Course",
+      "Resources",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#supported-setup",
+    "href": "guides/jazzy-environment.html#supported-setup",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "",
+    "text": "These lessons target ROS 2 Jazzy on Ubuntu 24.04 using Bash. A container or another supported Jazzy platform can work, but package-installation details may differ. Every displayed shell block contains commands you can copy.",
+    "crumbs": [
+      "Course",
+      "Resources",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#check-the-environment",
+    "href": "guides/jazzy-environment.html#check-the-environment",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "Check the environment",
+    "text": "Check the environment\nRun this diagnostic block:\ncheck() { command -v \"$1\" &gt;/dev/null && echo \"PASS $1\" || { echo \"FAIL $1\"; return 1; }; }\ntest -r /opt/ros/jazzy/setup.bash && echo \"PASS ROS setup\" || { echo \"FAIL ROS setup\"; exit 1; }\nsource /opt/ros/jazzy/setup.bash\ncheck ros2 && check colcon && check rosdep && check unzip && check python3\nEvery check must print PASS; stop and resolve any FAIL. If /opt/ros/jazzy is missing, install the Jazzy desktop or ROS-base distribution before continuing.",
+    "crumbs": [
+      "Course",
+      "Resources",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#prepare-dependency-resolution",
+    "href": "guides/jazzy-environment.html#prepare-dependency-resolution",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "Prepare dependency resolution",
+    "text": "Prepare dependency resolution\nrosdep installs system dependencies declared by packages. Its one-time system initialization may already be complete:\nsudo rosdep init   # run only if /etc/ros/rosdep/sources.list.d is absent\nrosdep update\nCourse starter workspaces are downloaded from this site. Verify the archive tool used by those lessons:\nunzip -v | head -n 2",
+    "crumbs": [
+      "Course",
+      "Resources",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "guides/jazzy-environment.html#terminal-rule",
+    "href": "guides/jazzy-environment.html#terminal-rule",
+    "title": "Prepare a ROS 2 Jazzy environment",
+    "section": "Terminal rule",
+    "text": "Terminal rule\nEvery new terminal starts with the underlay:\nsource /opt/ros/jazzy/setup.bash\nAfter building the course workspace, also source its overlay (sometimes called “re-sourcing the overlay” after a rebuild):\nsource ~/ros2_trails_ws/install/local_setup.bash\nIf a package, node, or interface cannot be found, checking which setup files were sourced is the first diagnostic step.",
+    "crumbs": [
+      "Course",
+      "Resources",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "core-skills.html",
+    "href": "core-skills.html",
+    "title": "Core skills",
+    "section": "",
+    "text": "Core skills are organized by the job they perform in a robot, not by the order of an upstream documentation tree."
+  },
+  {
+    "objectID": "core-skills.html#make-it-communicate",
+    "href": "core-skills.html#make-it-communicate",
+    "title": "Core skills",
+    "section": "Make it communicate",
+    "text": "Make it communicate\n\nFoundations: the ROS 2 graph\nBuilding nodes and packages\nInterfaces, parameters, actions, and plugins"
+  },
+  {
+    "objectID": "core-skills.html#make-it-spatial-and-repeatable",
+    "href": "core-skills.html#make-it-spatial-and-repeatable",
+    "title": "Core skills",
+    "section": "Make it spatial and repeatable",
+    "text": "Make it spatial and repeatable\n\nTransforms and robot models\nLaunch and composition"
+  },
+  {
+    "objectID": "core-skills.html#make-it-observable-and-dependable",
+    "href": "core-skills.html#make-it-observable-and-dependable",
+    "title": "Core skills",
+    "section": "Make it observable and dependable",
+    "text": "Make it observable and dependable\n\nData, logging, and observability\nMiddleware, discovery, and performance\nProduction concerns\nSecurity and deployment"
+  },
+  {
+    "objectID": "start.html",
+    "href": "start.html",
+    "title": "Start here",
+    "section": "",
+    "text": "Do these in order. Each stage ends with something observable rather than a reading checkpoint.\n\n\nRun and inspect: Foundations: the ROS 2 graph\nCreate and connect: Building nodes and packages\nReason about space: Transforms and robot models\nMake startup repeatable: Launch and composition\nMeasure what happened: Data, logging, and observability\nIntegrate it: Build Frame Detective"
+  },
+  {
+    "objectID": "start.html#your-first-useful-ros-2-loop",
+    "href": "start.html#your-first-useful-ros-2-loop",
+    "title": "Start here",
+    "section": "",
+    "text": "Do these in order. Each stage ends with something observable rather than a reading checkpoint.\n\n\nRun and inspect: Foundations: the ROS 2 graph\nCreate and connect: Building nodes and packages\nReason about space: Transforms and robot models\nMake startup repeatable: Launch and composition\nMeasure what happened: Data, logging, and observability\nIntegrate it: Build Frame Detective"
+  },
+  {
+    "objectID": "start.html#choose-by-outcome",
+    "href": "start.html#choose-by-outcome",
+    "title": "Start here",
+    "section": "Choose by outcome",
+    "text": "Choose by outcome\n\n\n\nI want to…\nGo to…\n\n\n\n\nunderstand nodes, topics, services, actions\nFoundations\n\n\nwrite packages and interfaces\nBuilding nodes\n\n\nunderstand RViz, URDF, and tf2\nTransforms and models\n\n\ncontrol a simulated mechanism\nBalance Bot\n\n\nexperiment interactively with ROS data\nNotebook Robotics Lab\n\n\nfind one exact tutorial\nAll onsite lessons"
+  },
+  {
+    "objectID": "trails.html",
+    "href": "trails.html",
+    "title": "Learning trails",
+    "section": "",
+    "text": "Choose a guided progression. These trails are editorially curated from the pinned Jazzy knowledge pack; ordering is intentional and provenance remains inspectable.\n\n\nBuilding nodes and packages\nA ROS 2 workspace is a build boundary containing packages. A package is the unit of organization and dependency declaration; nodes are runtime participants implemented inside packages. colcon builds the workspace, while ament_cmake and ament_python provide the common C++ and Python package conventions.\n3 modules 6 direct tutorials\n\n\nData, logging, and observability\nROS 2 offers complementary ways to understand a running system. rosbag2 captures interface data for replay; logs describe application decisions; graph inspection reveals topology; topic statistics summarize communication; service introspection observes request/response events; and tracing exposes lower-level timing across executors and middleware.\n3 modules 5 direct tutorials\n\n\nFoundations: the ROS 2 graph\nROS 2 applications are graphs of independently useful nodes. Nodes exchange typed data through topics, request bounded work through services, run longer goal-oriented work through actions, and expose configuration through parameters. The command-line tools let you inspect this graph before writing code, which makes them the best starting point.\n3 modules 6 direct tutorials\n\n\nInterfaces, parameters, actions, and plugins\nInterfaces are the public contracts between nodes. Messages describe topic samples, services pair a request with a response, and actions combine a goal, feedback, a result, and cancellation. Parameters configure a node but should not be mistaken for a high-rate data channel. Pluginlib adds runtime-selected implementations behind a stable C++ interface.\n4 modules 6 direct tutorials\n\n\nLaunch and composition\nLaunch descriptions make multi-node systems reproducible. They declare nodes, arguments, parameters, namespaces, remappings, conditions, and included launch files. Composition places multiple nodes in a shared process when reduced overhead or more efficient communication matters.\n3 modules 5 direct tutorials\n\n\nMiddleware, discovery, and performance\nROS 2 client libraries communicate through an RMW abstraction over supported middleware implementations. Behavior depends on QoS compatibility, discovery, serialization, executor scheduling, process boundaries, memory allocation, and the network. Performance work therefore needs measurements and an explicit operating context.\n3 modules 6 direct tutorials\n\n\nProduction concerns\nA working demo is not yet an operational robot. Production systems must make communication assumptions explicit, expose diagnosable behavior, verify nodes at multiple levels, and protect the ROS graph when deployed across trust boundaries.\n3 modules 5 direct tutorials\n\n\nSecurity and deployment\nROS 2 security builds on DDS Security. A secure deployment needs identities, signed governance and permissions policy, encrypted/authenticated transport, protected keystores, and a deployment process that keeps credentials separate from application artifacts. Security settings must be tested on the actual graph and network topology.\n3 modules 6 direct tutorials\n\n\nTransforms and robot models\ntf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with robot_state_publisher, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.\n3 modules 5 direct tutorials"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ROS 2 Trails",
+    "section": "",
+    "text": "For coders who want to make robots observable, spatially correct, and controllable—not merely memorize commands. Run a complete ROS graph in lesson 1, then build increasingly real systems while learning the theory in context.\nStart Lesson 1 See the course"
+  },
+  {
+    "objectID": "index.html#learn-ros-2-by-building-systems-that-move",
+    "href": "index.html#learn-ros-2-by-building-systems-that-move",
+    "title": "ROS 2 Trails",
+    "section": "",
+    "text": "For coders who want to make robots observable, spatially correct, and controllable—not merely memorize commands. Run a complete ROS graph in lesson 1, then build increasingly real systems while learning the theory in context.\nStart Lesson 1 See the course"
+  },
+  {
+    "objectID": "index.html#is-this-course-for-me",
+    "href": "index.html#is-this-course-for-me",
+    "title": "ROS 2 Trails",
+    "section": "Is this course for me?",
+    "text": "Is this course for me?\nYou should be comfortable editing code and using a terminal. You do not need prior ROS experience, advanced control theory, expensive hardware, or permission to leave the site for required material. The pinned learning platform is Ubuntu 24.04 with ROS 2 Jazzy; simulation and visualization come before hardware."
+  },
+  {
+    "objectID": "index.html#what-you-will-make",
+    "href": "index.html#what-you-will-make",
+    "title": "ROS 2 Trails",
+    "section": "What you will make",
+    "text": "What you will make\n\n\nLesson 1 · A complete graph\nDrive a robot, inspect interfaces, intervene, and record evidence in one hour.\n\n\nLesson 2 · Frame Detective\nSee and repair coordinate-frame and timestamp failures in RViz.\n\n\nLesson 3 · Camera Detective\nCalibrate a distorted image stream and reject weak evidence.\n\n\nLesson 4 · Line Scout\nClose a mobile sensing-control loop and recover from lost observations.\n\n\nLesson 5 · Balance Bot\nModel, control, perturb, tune, and score an unstable simulated mechanism."
+  },
+  {
+    "objectID": "index.html#how-learning-works-here",
+    "href": "index.html#how-learning-works-here",
+    "title": "ROS 2 Trails",
+    "section": "How learning works here",
+    "text": "How learning works here\nEach lesson asks you to run a system, inspect it, make a prediction, change one thing, and save evidence. Core explanations and all 129 local tutorials are available when the project gives you a reason to go deeper.\nBegin the course"
+  },
+  {
+    "objectID": "projects/camera-detective.html",
+    "href": "projects/camera-detective.html",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "",
+    "text": "6 milestones · 5 hours · preview\nCourse position: Part 1 · Lesson 3 of 5. Return to the canonical course.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#what-you-will-build",
+    "href": "projects/camera-detective.html#what-you-will-build",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "What you will build",
+    "text": "What you will build\nCamera Detective publishes a moving synthetic checkerboard through the same Image, CameraInfo, optical-frame, and calibration-service interfaces used by a real ROS camera driver. You will compare weak and well-distributed samples, persist a calibration, rectify the stream, and accept or reject it using held-out evidence.\nsynthetic_camera ── image_raw + camera_info ──&gt; camera_calibration\n       ↑                        │                       │\n coverage mode                  └────&gt; image_proc &lt;──── calibration YAML\n                                           │\n                                      image_rect → evaluator",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#why-this-comes-after-frame-detective",
+    "href": "projects/camera-detective.html#why-this-comes-after-frame-detective",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "Why this comes after Frame Detective",
+    "text": "Why this comes after Frame Detective\nA pixel is not yet a spatial measurement. Its header must carry acquisition time and an optical frame; calibration parameters explain how rays project into the image; later tf2 transforms relate that camera to a robot. This project makes the camera half of that contract observable before Line Scout depends on it.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#before-starting",
+    "href": "projects/camera-detective.html#before-starting",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "Before starting",
+    "text": "Before starting\n\nComplete Lessons 1 and 2 or understand topics, timestamps, and frames.\nUse Ubuntu 24.04 with ROS 2 Jazzy Desktop.\nDownload the Camera Detective workspace.\nAllow about five hours. The complete workspace is for guided modification and recovery.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#definition-of-success",
+    "href": "projects/camera-detective.html#definition-of-success",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "Definition of success",
+    "text": "Definition of success\nPublish valid synchronized image metadata, collect coverage across position, scale, and tilt, persist a calibration through SetCameraInfo, produce rectified output, and defend acceptance using a held-out residual. You must also reject the weak-coverage result even if the calibration tool produces numbers.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#provenance-and-license",
+    "href": "projects/camera-detective.html#provenance-and-license",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "Provenance and license",
+    "text": "Provenance and license\nThe synthetic source, evaluator, and lessons are original ROS 2 Trails work informed by official Jazzy image_pipeline and message documentation. No source was copied. The workspace is MIT licensed and includes the full terms.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#references-and-provenance",
+    "href": "projects/camera-detective.html#references-and-provenance",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "References and provenance",
+    "text": "References and provenance\nThese optional sources support the project design; none is required to follow the milestones.\n\n\nROS 2 Jazzy image_pipeline — Open Robotics, Jazzy 3.2; accessed 2026-09-01. Supports: camera calibration, CameraInfo, rectification, and image processing architecture.\nsensor_msgs Image message — Open Robotics, Jazzy; accessed 2026-09-01. Supports: acquisition timestamp, optical frame, encoding, dimensions, and row-step contract.",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
+    ]
+  },
+  {
+    "objectID": "projects/camera-detective.html#project-milestones",
+    "href": "projects/camera-detective.html#project-milestones",
+    "title": "Camera Detective: turn pixels into measurements",
+    "section": "Project milestones",
+    "text": "Project milestones\n\n\n1\n\nRead the image contract\nProduces: an image/topic/frame contract\n\n\n\n2\n\nSee distortion before correcting it\nProduces: raw-image and metadata evidence\n\n\n\n3\n\nCollect calibration coverage\nProduces: good and weak calibration bags\n\n\n\n4\n\nEstimate and persist calibration\nProduces: a persisted camera calibration YAML\n\n\n\n5\n\nRectify and measure\nProduces: held-out raw/rectified evidence and metrics\n\n\n\n6\n\nCapstone calibration decision\nProduces: a defensible accept/reject calibration report",
+    "crumbs": [
+      "Course",
+      "Practical ROS 2",
+      "Part 1 — Build useful systems",
+      "3. Camera Detective"
     ]
   },
   {
@@ -7888,6 +8221,279 @@
     ]
   },
   {
+    "objectID": "projects/notebook-robotics-lab/controller-tuner.html",
+    "href": "projects/notebook-robotics-lab/controller-tuner.html",
+    "title": "Project C — Controller Tuner",
+    "section": "",
+    "text": "Milestone 5 of 6 · Produces: a ranked gain-sweep table\nBuild projects › Notebook Robotics Lab: probe, plot, and tune ROS 2 › Project C — Controller Tuner\nTime: about 60 minutes. You need: notebook_trajectory (or the downloaded complete workspace). Progress: 5/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project C — Controller Tuner"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/controller-tuner.html#goal",
+    "href": "projects/notebook-robotics-lab/controller-tuner.html#goal",
+    "title": "Project C — Controller Tuner",
+    "section": "Goal",
+    "text": "Goal\nCompare controller parameters offline and nominate—not deploy—a candidate.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project C — Controller Tuner"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/controller-tuner.html#do-it",
+    "href": "projects/notebook-robotics-lab/controller-tuner.html#do-it",
+    "title": "Project C — Controller Tuner",
+    "section": "Do it",
+    "text": "Do it\nOpen 03_controller_tuner.ipynb. Sweep the supplied proportional and derivative gain grid through the deterministic line model. Rank trials by pass/fail, RMS error, and saturation. Plot the best, a sluggish case, and an oscillatory case.\nChange the initial offset and repeat. Keep both ranking tables.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project C — Controller Tuner"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/controller-tuner.html#verify",
+    "href": "projects/notebook-robotics-lab/controller-tuner.html#verify",
+    "title": "Project C — Controller Tuner",
+    "section": "Verify",
+    "text": "Verify\nEvery command remains bounded, at least one candidate fails, and your nominated gain pair passes both initial offsets. Explain why simulation ranking is only a hypothesis for the live Line Scout project.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project C — Controller Tuner"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/controller-tuner.html#troubleshooting",
+    "href": "projects/notebook-robotics-lab/controller-tuner.html#troubleshooting",
+    "title": "Project C — Controller Tuner",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nall gains look equal: confirm the loop uses each candidate and fresh state.\nunstable numerics: restore the fixed time step and bounded command.\nbest result changes: compare initial conditions and ranking keys.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project C — Controller Tuner"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/controller-tuner.html#challenge",
+    "href": "projects/notebook-robotics-lab/controller-tuner.html#challenge",
+    "title": "Project C — Controller Tuner",
+    "section": "Challenge",
+    "text": "Challenge\nAdd a penalty for command rate-of-change and defend its weight relative to tracking error.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project C — Controller Tuner"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/controller-tuner.html#how-to-complete-this-milestone",
+    "href": "projects/notebook-robotics-lab/controller-tuner.html#how-to-complete-this-milestone",
+    "title": "Project C — Controller Tuner",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a ranked gain-sweep table.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project C — Controller Tuner"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/trajectory-microscope.html",
+    "href": "projects/notebook-robotics-lab/trajectory-microscope.html",
+    "title": "Project B — Trajectory Microscope",
+    "section": "",
+    "text": "Milestone 4 of 6 · Produces: a trajectory metrics plot and decision\nBuild projects › Notebook Robotics Lab: probe, plot, and tune ROS 2 › Project B — Trajectory Microscope\nTime: about 50 minutes. You need: notebook_probe (or the downloaded complete workspace). Progress: 4/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project B — Trajectory Microscope"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/trajectory-microscope.html#goal",
+    "href": "projects/notebook-robotics-lab/trajectory-microscope.html#goal",
+    "title": "Project B — Trajectory Microscope",
+    "section": "Goal",
+    "text": "Goal\nTurn a time series into evidence about tracking quality rather than admiring a plot.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project B — Trajectory Microscope"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/trajectory-microscope.html#do-it",
+    "href": "projects/notebook-robotics-lab/trajectory-microscope.html#do-it",
+    "title": "Project B — Trajectory Microscope",
+    "section": "Do it",
+    "text": "Do it\nOpen 02_trajectory_microscope.ipynb. Load the bundled line_trial.csv, validate its columns and monotonic timestamps, calculate RMS/peak cross-track error and command saturation, then plot error and command against time.\nChange one row in memory to create a timestamp gap and rerun validation. Do not modify the source CSV.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project B — Trajectory Microscope"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/trajectory-microscope.html#verify",
+    "href": "projects/notebook-robotics-lab/trajectory-microscope.html#verify",
+    "title": "Project B — Trajectory Microscope",
+    "section": "Verify",
+    "text": "Verify\nRecord the numeric metrics, identify the largest error time, and have the injected gap rejected. The notebook must reach the same metrics after Restart Kernel and Run All.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project B — Trajectory Microscope"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/trajectory-microscope.html#troubleshooting",
+    "href": "projects/notebook-robotics-lab/trajectory-microscope.html#troubleshooting",
+    "title": "Project B — Trajectory Microscope",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nmisleading curve: inspect units, axes, and raw extrema before interpreting it.\ndifferent metrics: restart and check that the source CSV was not overwritten.\nno plot: verify matplotlib in the active kernel and retain numeric evidence.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project B — Trajectory Microscope"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/trajectory-microscope.html#challenge",
+    "href": "projects/notebook-robotics-lab/trajectory-microscope.html#challenge",
+    "title": "Project B — Trajectory Microscope",
+    "section": "Challenge",
+    "text": "Challenge\nAdd a rolling RMS view and explain one failure it reveals that a single aggregate RMS hides.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project B — Trajectory Microscope"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/trajectory-microscope.html#how-to-complete-this-milestone",
+    "href": "projects/notebook-robotics-lab/trajectory-microscope.html#how-to-complete-this-milestone",
+    "title": "Project B — Trajectory Microscope",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a trajectory metrics plot and decision.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Project B — Trajectory Microscope"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/own-the-lifecycle.html",
+    "href": "projects/notebook-robotics-lab/own-the-lifecycle.html",
+    "title": "Own the ROS lifecycle",
+    "section": "",
+    "text": "Milestone 2 of 6 · Produces: a clean init-sample-close trace\nBuild projects › Notebook Robotics Lab: probe, plot, and tune ROS 2 › Own the ROS lifecycle\nTime: about 45 minutes. You need: notebook_setup (or the downloaded complete workspace). Progress: 2/6.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Own the ROS lifecycle"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/own-the-lifecycle.html#goal",
+    "href": "projects/notebook-robotics-lab/own-the-lifecycle.html#goal",
+    "title": "Own the ROS lifecycle",
+    "section": "Goal",
+    "text": "Goal\nCreate and close one isolated ROS context without leaking nodes between cell runs.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Own the ROS lifecycle"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/own-the-lifecycle.html#do-it",
+    "href": "projects/notebook-robotics-lab/own-the-lifecycle.html#do-it",
+    "title": "Own the ROS lifecycle",
+    "section": "Do it",
+    "text": "Do it\nInspect RosSession in notebook_tools.py: it owns a Context, one node, and a SingleThreadedExecutor. In the first notebook, create a session, list its node name, call close() twice, and then create a fresh session.\nRun ros2 node list in a separate terminal before, during, and after the cell. Interrupt one collection cell, then use try/finally to guarantee cleanup.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Own the ROS lifecycle"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/own-the-lifecycle.html#verify",
+    "href": "projects/notebook-robotics-lab/own-the-lifecycle.html#verify",
+    "title": "Own the ROS lifecycle",
+    "section": "Verify",
+    "text": "Verify\nThe notebook node exists only while its session is open; the second close() is harmless; a fresh session works without restarting the kernel. Save the three node-list observations.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Own the ROS lifecycle"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/own-the-lifecycle.html#troubleshooting",
+    "href": "projects/notebook-robotics-lab/own-the-lifecycle.html#troubleshooting",
+    "title": "Own the ROS lifecycle",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nduplicate node: close the older object or restart the kernel, then Run All.\ncell never returns: interrupt it and replace an unbounded spin with sample_for.\ncontext invalid: do not reuse a closed session; construct a new one.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Own the ROS lifecycle"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/own-the-lifecycle.html#challenge",
+    "href": "projects/notebook-robotics-lab/own-the-lifecycle.html#challenge",
+    "title": "Own the ROS lifecycle",
+    "section": "Challenge",
+    "text": "Challenge\nDeliberately omit cleanup once, observe the leaked node, then restart the kernel and explain why restart is the notebook equivalent of resetting hidden state.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Own the ROS lifecycle"
+    ]
+  },
+  {
+    "objectID": "projects/notebook-robotics-lab/own-the-lifecycle.html#how-to-complete-this-milestone",
+    "href": "projects/notebook-robotics-lab/own-the-lifecycle.html#how-to-complete-this-milestone",
+    "title": "Own the ROS lifecycle",
+    "section": "How to complete this milestone",
+    "text": "How to complete this milestone\n\nRun the primary activity; reading alone does not complete it.\nMeet every condition under Verify.\nSave the promised artifact: a clean init-sample-close trace.\nAttempt the Challenge or make one controlled experiment of your own.\n\nIf blocked, use Troubleshooting first, then capture the onsite diagnostic packet. Include the exact command, full output, environment, graph inventory, and smallest reproduction. External references are optional depth, not required progression.",
+    "crumbs": [
+      "Course",
+      "Projects",
+      "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+      "Own the ROS lifecycle"
+    ]
+  },
+  {
     "objectID": "reference.html",
     "href": "reference.html",
     "title": "Reference",
@@ -8359,7 +8965,7 @@
     "href": "course.html#alternate-routes",
     "title": "Practical ROS 2",
     "section": "Alternate routes",
-    "text": "Alternate routes\n\nAlready know ROS basics? Begin with Frame Detective.\nNeed one exact command? Use Resources.\nWant another capstone? Browse Projects.",
+    "text": "Alternate routes\n\nAlready know ROS basics? Begin with Frame Detective.\nWant an interactive experiment workbench? Open the Notebook Robotics Lab after Lesson 1.\nNeed one exact command? Use Resources.\nWant another capstone? Browse Projects.",
     "crumbs": [
       "Course",
       "Practical ROS 2"
