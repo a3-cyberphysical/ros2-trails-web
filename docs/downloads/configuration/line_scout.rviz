@@ -1,0 +1,33 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 30; 33; 43
+    Fixed Frame: odom
+    Frame Rate: 30
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+    - Class: rviz_default_plugins/TF
+      Name: Robot frame
+      Enabled: true
+      Show Axes: true
+      Show Names: true
+    - Class: rviz_default_plugins/Marker
+      Name: Track
+      Enabled: true
+      Marker Topic:
+        Value: /line_scout/track
+    - Class: rviz_default_plugins/Path
+      Name: Actual path
+      Enabled: true
+      Topic:
+        Value: /line_scout/path
+  Enabled: true
+  Name: root
+Window Geometry:
+  Width: 1200
+  Height: 800

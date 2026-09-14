@@ -1,0 +1,2934 @@
+[
+  {
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "progressive",
+    "href": "trails/building-nodes.html",
+    "id": "trail_building-nodes",
+    "kind": "skill",
+    "parent": "skills",
+    "primary_capability": "packages-interfaces",
+    "search_weight": 90,
+    "title": "Building nodes and packages",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "data-observability"
+    ],
+    "difficulty": "progressive",
+    "href": "trails/data-and-observability.html",
+    "id": "trail_data-and-observability",
+    "kind": "skill",
+    "parent": "skills",
+    "primary_capability": "data-observability",
+    "search_weight": 90,
+    "title": "Data, logging, and observability",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "trails/foundations.html",
+    "id": "trail_foundations",
+    "kind": "skill",
+    "parent": "skills",
+    "primary_capability": "ros-graph",
+    "search_weight": 90,
+    "title": "Foundations: the ROS 2 graph",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "trails/interfaces-and-actions.html",
+    "id": "trail_interfaces-and-actions",
+    "kind": "skill",
+    "parent": "skills",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 90,
+    "title": "Interfaces, parameters, actions, and plugins",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "launch-composition"
+    ],
+    "difficulty": "progressive",
+    "href": "trails/launch-and-composition.html",
+    "id": "trail_launch-and-composition",
+    "kind": "skill",
+    "parent": "skills",
+    "primary_capability": "launch-composition",
+    "search_weight": 90,
+    "title": "Launch and composition",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "middleware-performance"
+    ],
+    "difficulty": "progressive",
+    "href": "trails/middleware-and-performance.html",
+    "id": "trail_middleware-and-performance",
+    "kind": "skill",
+    "parent": "skills",
+    "primary_capability": "middleware-performance",
+    "search_weight": 90,
+    "title": "Middleware, discovery, and performance",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "testing-debugging"
+    ],
+    "difficulty": "progressive",
+    "href": "trails/production-concerns.html",
+    "id": "trail_production-concerns",
+    "kind": "skill",
+    "parent": "skills",
+    "primary_capability": "testing-debugging",
+    "search_weight": 90,
+    "title": "Production concerns",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "security-deployment"
+    ],
+    "difficulty": "progressive",
+    "href": "trails/security-and-deployment.html",
+    "id": "trail_security-and-deployment",
+    "kind": "skill",
+    "parent": "skills",
+    "primary_capability": "security-deployment",
+    "search_weight": 90,
+    "title": "Security and deployment",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "trails/transforms-and-models.html",
+    "id": "trail_transforms-and-models",
+    "kind": "skill",
+    "parent": "skills",
+    "primary_capability": "tf2-frames",
+    "search_weight": 90,
+    "title": "Transforms and robot models",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "middleware-performance"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-allocator-template-tutorial.html",
+    "id": "advanced/allocator-template-tutorial",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "middleware-performance",
+    "search_weight": 55,
+    "title": "Implementing a custom memory allocator",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "testing-debugging"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-ament-lint-for-clean-code.html",
+    "id": "advanced/ament-lint-for-clean-code",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "testing-debugging",
+    "search_weight": 55,
+    "title": "Ament Lint CLI Utilities",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "data-observability"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-create-an-rqtbag-plugin.html",
+    "id": "advanced/create-an-rqtbag-plugin",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "data-observability",
+    "search_weight": 55,
+    "title": "Create an rqt_bag Plugin",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "middleware-performance"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-creating-an-rmw-implementation.html",
+    "id": "advanced/creating-an-rmw-implementation",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "middleware-performance",
+    "search_weight": 70,
+    "title": "Creating an ``rmw`` implementation",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "middleware-performance"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-discovery-server-discovery-server.html",
+    "id": "advanced/discovery-server/discovery-server",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "middleware-performance",
+    "search_weight": 70,
+    "title": "Using Fast DDS Discovery Server as discovery protocol [community-contributed]",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "middleware-performance"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-fastdds-configuration.html",
+    "id": "advanced/fastdds-configuration",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "middleware-performance",
+    "search_weight": 70,
+    "title": "Unlocking the potential of Fast DDS middleware [community-contributed]",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "middleware-performance"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-improved-dynamic-discovery.html",
+    "id": "advanced/improved-dynamic-discovery",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "middleware-performance",
+    "search_weight": 55,
+    "title": "Improved Dynamic Discovery",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "data-observability"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-ros2-tracing-trace-and-analyze.html",
+    "id": "advanced/ros2-tracing-trace-and-analyze",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "data-observability",
+    "search_weight": 70,
+    "title": "How to use ros2_tracing to trace and analyze an application",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "data-observability"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-reading-from-a-bag-file-cpp.html",
+    "id": "advanced/reading-from-a-bag-file-cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "data-observability",
+    "search_weight": 55,
+    "title": "Reading from a bag file (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "data-observability"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-recording-a-bag-from-your-own-node-cpp.html",
+    "id": "advanced/recording-a-bag-from-your-own-node-cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "data-observability",
+    "search_weight": 55,
+    "title": "Recording a bag from a node (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "data-observability"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-recording-a-bag-from-your-own-node-py.html",
+    "id": "advanced/recording-a-bag-from-your-own-node-py",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "data-observability",
+    "search_weight": 55,
+    "title": "Recording a bag from a node (Python)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "security-deployment"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-security-access-controls.html",
+    "id": "advanced/security/access-controls",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "security-deployment",
+    "search_weight": 70,
+    "title": "Setting access controls",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "security-deployment"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-security-deployment-guidelines.html",
+    "id": "advanced/security/deployment-guidelines",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "security-deployment",
+    "search_weight": 70,
+    "title": "Deployment Guidelines",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "security-deployment"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-security-examine-traffic.html",
+    "id": "advanced/security/examine-traffic",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "security-deployment",
+    "search_weight": 70,
+    "title": "Examining network traffic",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "security-deployment"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-security-introducing-ros2-security.html",
+    "id": "advanced/security/introducing-ros2-security",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "security-deployment",
+    "search_weight": 70,
+    "title": "Setting up security",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "security-deployment"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-security-security-main.html",
+    "id": "advanced/security/security-main",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "security-deployment",
+    "search_weight": 70,
+    "title": "Security",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "security-deployment"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-security-security-on-two.html",
+    "id": "advanced/security/security-on-two",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "security-deployment",
+    "search_weight": 55,
+    "title": "Ensuring security across machines",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "security-deployment"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-security-the-keystore.html",
+    "id": "advanced/security/the-keystore",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "security-deployment",
+    "search_weight": 70,
+    "title": "Understanding the security keystore",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-gazebo-gazebo.html",
+    "id": "advanced/simulators/gazebo/gazebo",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Setting up a robot simulation (Gazebo)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-gazebo-simulation-gazebo.html",
+    "id": "advanced/simulators/gazebo/simulation-gazebo",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Gazebo",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-mvsim-defining-worlds-mvsim.html",
+    "id": "advanced/simulators/mvsim/defining-worlds-mvsim",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Defining worlds, robots, and sensors",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-mvsim-getting-started-mvsim.html",
+    "id": "advanced/simulators/mvsim/getting-started-mvsim",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Getting started with MVSim",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-mvsim-installation-ubuntu.html",
+    "id": "advanced/simulators/mvsim/installation-ubuntu",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Installation (Ubuntu)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-mvsim-simulation-mvsim.html",
+    "id": "advanced/simulators/mvsim/simulation-mvsim",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "MVSim",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-simulation-main.html",
+    "id": "advanced/simulators/simulation-main",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Simulators",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-webots-installation-macos.html",
+    "id": "advanced/simulators/webots/installation-macos",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Installation (macOS)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-webots-installation-ubuntu.html",
+    "id": "advanced/simulators/webots/installation-ubuntu",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Installation (Ubuntu)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-webots-installation-windows.html",
+    "id": "advanced/simulators/webots/installation-windows",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Installation (Windows)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-webots-setting-up-simulation-webots-advanced.html",
+    "id": "advanced/simulators/webots/setting-up-simulation-webots-advanced",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Setting up a robot simulation (Advanced)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-webots-setting-up-simulation-webots-basic.html",
+    "id": "advanced/simulators/webots/setting-up-simulation-webots-basic",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Setting up a robot simulation (Basic)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-webots-simulation-reset-handler.html",
+    "id": "advanced/simulators/webots/simulation-reset-handler",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Setting up a Reset Handler",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-webots-simulation-supervisor.html",
+    "id": "advanced/simulators/webots/simulation-supervisor",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "The Ros2Supervisor Node",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "simulation"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-simulators-webots-simulation-webots.html",
+    "id": "advanced/simulators/webots/simulation-webots",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "simulation",
+    "search_weight": 55,
+    "title": "Webots",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-supplementing-custom-rosdep-keys.html",
+    "id": "advanced/supplementing-custom-rosdep-keys",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Supplementing custom rosdep keys",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "data-observability"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced-topic-statistics-tutorial-topic-statistics-tutorial.html",
+    "id": "advanced/topic-statistics-tutorial/topic-statistics-tutorial",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "data-observability",
+    "search_weight": 70,
+    "title": "Enabling topic statistics (C++)",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/advanced.html",
+    "id": "advanced",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Advanced",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-cli-tools-configuring-ros2-environment.html",
+    "id": "beginner-cli-tools/configuring-ros2-environment",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Configuring environment",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-cli-tools-introducing-turtlesim-introducing-turtlesim.html",
+    "id": "beginner-cli-tools/introducing-turtlesim/introducing-turtlesim",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Using ``turtlesim``, ``ros2``, and ``rqt``",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "launch-composition"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-cli-tools-launching-multiple-nodes-launching-multiple-nodes.html",
+    "id": "beginner-cli-tools/launching-multiple-nodes/launching-multiple-nodes",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "launch-composition",
+    "search_weight": 55,
+    "title": "Launching nodes",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "data-observability"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-cli-tools-recording-and-playing-back-data-recording-and-playing-back-data.html",
+    "id": "beginner-cli-tools/recording-and-playing-back-data/recording-and-playing-back-data",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "data-observability",
+    "search_weight": 70,
+    "title": "Recording and playing back data",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-cli-tools-understanding-ros2-actions-understanding-ros2-actions.html",
+    "id": "beginner-cli-tools/understanding-ros2-actions/understanding-ros2-actions",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 70,
+    "title": "Understanding actions",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-cli-tools-understanding-ros2-nodes-understanding-ros2-nodes.html",
+    "id": "beginner-cli-tools/understanding-ros2-nodes/understanding-ros2-nodes",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 70,
+    "title": "Understanding nodes",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-cli-tools-understanding-ros2-parameters-understanding-ros2-parameters.html",
+    "id": "beginner-cli-tools/understanding-ros2-parameters/understanding-ros2-parameters",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 55,
+    "title": "Understanding parameters",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-cli-tools-understanding-ros2-services-understanding-ros2-services.html",
+    "id": "beginner-cli-tools/understanding-ros2-services/understanding-ros2-services",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 70,
+    "title": "Understanding services",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-cli-tools-understanding-ros2-topics-understanding-ros2-topics.html",
+    "id": "beginner-cli-tools/understanding-ros2-topics/understanding-ros2-topics",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 70,
+    "title": "Understanding topics",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-cli-tools-using-rqt-console-using-rqt-console.html",
+    "id": "beginner-cli-tools/using-rqt-console/using-rqt-console",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Using ``rqt_console`` to view logs",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-cli-tools.html",
+    "id": "beginner-cli-tools",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 70,
+    "title": "Beginner: CLI tools",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-colcon-tutorial.html",
+    "id": "beginner-client-libraries/colcon-tutorial",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "packages-interfaces",
+    "search_weight": 55,
+    "title": "Using ``colcon`` to build packages",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html",
+    "id": "beginner-client-libraries/creating-a-workspace/creating-a-workspace",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "packages-interfaces",
+    "search_weight": 70,
+    "title": "Creating a workspace",
+    "validation_state": "authored"
+  },
+  {
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html",
+    "id": "beginner-client-libraries/creating-your-first-ros2-package",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "packages-interfaces",
+    "search_weight": 70,
+    "title": "Creating a package",
+    "validation_state": "authored"
+  },
+  {
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html",
+    "id": "beginner-client-libraries/custom-ros2-interfaces",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "packages-interfaces",
+    "search_weight": 70,
+    "title": "Creating and using a custom message",
+    "validation_state": "authored"
+  },
+  {
+    "capabilities": [
+      "testing-debugging"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-getting-started-with-ros2doctor.html",
+    "id": "beginner-client-libraries/getting-started-with-ros2doctor",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "testing-debugging",
+    "search_weight": 55,
+    "title": "Using ``ros2doctor`` to identify issues",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-pluginlib.html",
+    "id": "beginner-client-libraries/pluginlib",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 70,
+    "title": "Creating and using plugins (C++)",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-single-package-define-and-use-interface.html",
+    "id": "beginner-client-libraries/single-package-define-and-use-interface",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "packages-interfaces",
+    "search_weight": 55,
+    "title": "Implementing custom interfaces",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-using-parameters-in-a-class-cpp.html",
+    "id": "beginner-client-libraries/using-parameters-in-a-class-cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 70,
+    "title": "Using parameters in a class (C++)",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-using-parameters-in-a-class-python.html",
+    "id": "beginner-client-libraries/using-parameters-in-a-class-python",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 55,
+    "title": "Using parameters in a class (Python)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html",
+    "id": "beginner-client-libraries/writing-a-simple-cpp-publisher-and-subscriber",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "packages-interfaces",
+    "search_weight": 70,
+    "title": "Writing a publisher and subscriber in C++",
+    "validation_state": "authored"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-service-and-client.html",
+    "id": "beginner-client-libraries/writing-a-simple-cpp-service-and-client",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 55,
+    "title": "Writing a simple service and client (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html",
+    "id": "beginner-client-libraries/writing-a-simple-py-publisher-and-subscriber",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "packages-interfaces",
+    "search_weight": 70,
+    "title": "Writing a publisher and subscriber in Python",
+    "validation_state": "authored"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries-writing-a-simple-py-service-and-client.html",
+    "id": "beginner-client-libraries/writing-a-simple-py-service-and-client",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 55,
+    "title": "Writing a simple service and client (Python)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/beginner-client-libraries.html",
+    "id": "beginner-client-libraries",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "packages-interfaces",
+    "search_weight": 70,
+    "title": "Beginner: Client libraries",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/demos-content-filtering-subscription.html",
+    "id": "demos/content-filtering-subscription",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Creating a content filtering subscription",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "middleware-performance"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/demos-intra-process-communication.html",
+    "id": "demos/intra-process-communication",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "middleware-performance",
+    "search_weight": 70,
+    "title": "Setting up efficient intra-process communication",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "data-observability"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/demos-logging-and-logger-configuration.html",
+    "id": "demos/logging-and-logger-configuration",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "data-observability",
+    "search_weight": 70,
+    "title": "Logging",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/demos-managed-nodes.html",
+    "id": "demos/managed-nodes",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Managing node lifecycles - example",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/demos-quality-of-service.html",
+    "id": "demos/quality-of-service",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 70,
+    "title": "Using quality-of-service settings for lossy networks",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "middleware-performance"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/demos-real-time-programming.html",
+    "id": "demos/real-time-programming",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "middleware-performance",
+    "search_weight": 70,
+    "title": "Understanding real-time programming",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "data-observability"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/demos-rosbag-with-ros1-bridge.html",
+    "id": "demos/rosbag-with-ros1-bridge",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "data-observability",
+    "search_weight": 55,
+    "title": "Recording and playing back data with ``rosbag`` using the ROS 1 bridge",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/demos-service-introspection.html",
+    "id": "demos/service-introspection",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 70,
+    "title": "Configure service introspection",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/demos-wait-for-acknowledgment.html",
+    "id": "demos/wait-for-acknowledgment",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Wait for acknowledgment",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/demos-dummy-robot-demo.html",
+    "id": "demos/dummy-robot-demo",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Experimenting with a dummy robot",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/demos.html",
+    "id": "demos",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Demos",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "launch-composition"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-composition.html",
+    "id": "intermediate/composition",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "launch-composition",
+    "search_weight": 70,
+    "title": "Composing multiple nodes in a single process",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-creating-an-action.html",
+    "id": "intermediate/creating-an-action",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 70,
+    "title": "Creating an action",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "launch-composition"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-launch-creating-launch-files.html",
+    "id": "intermediate/launch/creating-launch-files",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "launch-composition",
+    "search_weight": 70,
+    "title": "Creating a launch file",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "launch-composition"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-launch-launch-main.html",
+    "id": "intermediate/launch/launch-main",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "launch-composition",
+    "search_weight": 70,
+    "title": "Launch",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "launch-composition"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-launch-launch-system.html",
+    "id": "intermediate/launch/launch-system",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "launch-composition",
+    "search_weight": 55,
+    "title": "Integrating launch files into ROS 2 packages",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "launch-composition"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-launch-using-event-handlers.html",
+    "id": "intermediate/launch/using-event-handlers",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "launch-composition",
+    "search_weight": 55,
+    "title": "Using event handlers",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "launch-composition"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-launch-using-ros2-launch-for-large-projects.html",
+    "id": "intermediate/launch/using-ros2-launch-for-large-projects",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "launch-composition",
+    "search_weight": 70,
+    "title": "Managing large projects",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "launch-composition"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-launch-using-substitutions.html",
+    "id": "intermediate/launch/using-substitutions",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "launch-composition",
+    "search_weight": 70,
+    "title": "Using substitutions",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-monitoring-for-parameter-changes-cpp.html",
+    "id": "intermediate/monitoring-for-parameter-changes-cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 55,
+    "title": "Monitoring for parameter changes (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-monitoring-for-parameter-changes-python.html",
+    "id": "intermediate/monitoring-for-parameter-changes-python",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 55,
+    "title": "Monitoring for parameter changes (Python)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "rviz-visualization"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-rviz-marker-display-types-marker-display-types.html",
+    "id": "intermediate/rviz/marker-display-types/marker-display-types",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "rviz-visualization",
+    "search_weight": 55,
+    "title": "Marker: Display types",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "rviz-visualization"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-rviz-marker-points-and-lines-marker-points-and-lines.html",
+    "id": "intermediate/rviz/marker-points-and-lines/marker-points-and-lines",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "rviz-visualization",
+    "search_weight": 55,
+    "title": "Marker: Points and Lines (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "rviz-visualization"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-rviz-marker-sending-basic-shapes-marker-sending-basic-shapes.html",
+    "id": "intermediate/rviz/marker-sending-basic-shapes/marker-sending-basic-shapes",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "rviz-visualization",
+    "search_weight": 55,
+    "title": "Marker: Sending Basic Shapes (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "rviz-visualization"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-rviz-rviz-custom-display-rviz-custom-display.html",
+    "id": "intermediate/rviz/rviz-custom-display/rviz-custom-display",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "rviz-visualization",
+    "search_weight": 55,
+    "title": "Building a Custom RViz Display",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "rviz-visualization"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-rviz-rviz-custom-panel-rviz-custom-panel.html",
+    "id": "intermediate/rviz/rviz-custom-panel/rviz-custom-panel",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "rviz-visualization",
+    "search_weight": 55,
+    "title": "Building a Custom RViz Panel",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "rviz-visualization"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-rviz-rviz-main.html",
+    "id": "intermediate/rviz/rviz-main",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "rviz-visualization",
+    "search_weight": 55,
+    "title": "RViz",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "rviz-visualization"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-rviz-rviz-user-guide-rviz-user-guide.html",
+    "id": "intermediate/rviz/rviz-user-guide/rviz-user-guide",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "rviz-visualization",
+    "search_weight": 55,
+    "title": "RViz User Guide",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-rosdep.html",
+    "id": "intermediate/rosdep",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Managing Dependencies with rosdep",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "testing-debugging"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-testing-buildfarmtesting.html",
+    "id": "intermediate/testing/buildfarmtesting",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "testing-debugging",
+    "search_weight": 55,
+    "title": "Testing Your Code with the ROS Build Farm",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "testing-debugging"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-testing-cli.html",
+    "id": "intermediate/testing/cli",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "testing-debugging",
+    "search_weight": 55,
+    "title": "Running Tests in ROS 2 from the Command Line",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "testing-debugging"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-testing-cpp.html",
+    "id": "intermediate/testing/cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "testing-debugging",
+    "search_weight": 55,
+    "title": "Writing Basic Tests with C++ with GTest",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "testing-debugging"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-testing-integration.html",
+    "id": "intermediate/testing/integration",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "testing-debugging",
+    "search_weight": 55,
+    "title": "Writing Basic Integration Tests with launch_testing",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "testing-debugging"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-testing-python.html",
+    "id": "intermediate/testing/python",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "testing-debugging",
+    "search_weight": 55,
+    "title": "Writing Basic Tests with Python",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "testing-debugging"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-testing-testing-main.html",
+    "id": "intermediate/testing/testing-main",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "testing-debugging",
+    "search_weight": 70,
+    "title": "Testing",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-adding-a-frame-cpp.html",
+    "id": "intermediate/tf2/adding-a-frame-cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Adding a frame (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-adding-a-frame-py.html",
+    "id": "intermediate/tf2/adding-a-frame-py",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Adding a frame (Python)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html",
+    "id": "intermediate/tf2/debugging-tf2-problems",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 70,
+    "title": "Debugging",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-introduction-to-tf2.html",
+    "id": "intermediate/tf2/introduction-to-tf2",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 70,
+    "title": "Introducing ``tf2``",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-learning-about-tf2-and-time-cpp.html",
+    "id": "intermediate/tf2/learning-about-tf2-and-time-cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Using time (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-quaternion-fundamentals.html",
+    "id": "intermediate/tf2/quaternion-fundamentals",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Quaternion fundamentals",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-tf2-main.html",
+    "id": "intermediate/tf2/tf2-main",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 70,
+    "title": "``tf2``",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-time-travel-with-tf2-cpp.html",
+    "id": "intermediate/tf2/time-travel-with-tf2-cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Traveling in time (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-using-stamped-datatypes-with-tf2-ros-messagefilter.html",
+    "id": "intermediate/tf2/using-stamped-datatypes-with-tf2-ros-messagefilter",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Using stamped datatypes with ``tf2_ros::MessageFilter``",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-cpp.html",
+    "id": "intermediate/tf2/writing-a-tf2-broadcaster-cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Writing a broadcaster (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-py.html",
+    "id": "intermediate/tf2/writing-a-tf2-broadcaster-py",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Writing a broadcaster (Python)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-writing-a-tf2-listener-cpp.html",
+    "id": "intermediate/tf2/writing-a-tf2-listener-cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Writing a listener (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-writing-a-tf2-listener-py.html",
+    "id": "intermediate/tf2/writing-a-tf2-listener-py",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Writing a listener (Python)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-cpp.html",
+    "id": "intermediate/tf2/writing-a-tf2-static-broadcaster-cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Writing a static broadcaster (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-py.html",
+    "id": "intermediate/tf2/writing-a-tf2-static-broadcaster-py",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "tf2-frames",
+    "search_weight": 55,
+    "title": "Writing a static broadcaster (Python)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "urdf-models"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-urdf-adding-physical-and-collision-properties-to-a-urdf-model.html",
+    "id": "intermediate/urdf/adding-physical-and-collision-properties-to-a-urdf-model",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "urdf-models",
+    "search_weight": 55,
+    "title": "Adding physical and collision properties",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "urdf-models"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-urdf-building-a-movable-robot-model-with-urdf.html",
+    "id": "intermediate/urdf/building-a-movable-robot-model-with-urdf",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "urdf-models",
+    "search_weight": 55,
+    "title": "Building a movable robot model",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "urdf-models"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-urdf-building-a-visual-robot-model-with-urdf-from-scratch.html",
+    "id": "intermediate/urdf/building-a-visual-robot-model-with-urdf-from-scratch",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "urdf-models",
+    "search_weight": 55,
+    "title": "Building a visual robot model from scratch",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "urdf-models"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-urdf-exporting-an-urdf-file.html",
+    "id": "intermediate/urdf/exporting-an-urdf-file",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "urdf-models",
+    "search_weight": 55,
+    "title": "Generating an URDF File",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "urdf-models"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-urdf-urdf-main.html",
+    "id": "intermediate/urdf/urdf-main",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "urdf-models",
+    "search_weight": 70,
+    "title": "URDF",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "urdf-models"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-cpp.html",
+    "id": "intermediate/urdf/using-urdf-with-robot-state-publisher-cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "urdf-models",
+    "search_weight": 55,
+    "title": "Using URDF with ``robot_state_publisher`` (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "urdf-models"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html",
+    "id": "intermediate/urdf/using-urdf-with-robot-state-publisher-py",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "urdf-models",
+    "search_weight": 70,
+    "title": "Using URDF with ``robot_state_publisher`` (Python)",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "urdf-models"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-urdf-using-xacro-to-clean-up-a-urdf-file.html",
+    "id": "intermediate/urdf/using-xacro-to-clean-up-a-urdf-file",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "urdf-models",
+    "search_weight": 55,
+    "title": "Using Xacro to clean up your code",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-using-node-interfaces-template-class.html",
+    "id": "intermediate/using-node-interfaces-template-class",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "packages-interfaces",
+    "search_weight": 55,
+    "title": "Using the Node Interfaces Template Class (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "launch-composition"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-writing-a-composable-node.html",
+    "id": "intermediate/writing-a-composable-node",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "launch-composition",
+    "search_weight": 55,
+    "title": "Writing a Composable Node (C++)",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-writing-an-action-server-client-cpp.html",
+    "id": "intermediate/writing-an-action-server-client/cpp",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 70,
+    "title": "Writing an action server and client (C++)",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "services-actions-parameters"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate-writing-an-action-server-client-py.html",
+    "id": "intermediate/writing-an-action-server-client/py",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "services-actions-parameters",
+    "search_weight": 70,
+    "title": "Writing an action server and client (Python)",
+    "validation_state": "curated"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/intermediate.html",
+    "id": "intermediate",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Intermediate",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/miscellaneous-building-ros2-package-with-eclipse-2021-06.html",
+    "id": "miscellaneous/building-ros2-package-with-eclipse-2021-06",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "packages-interfaces",
+    "search_weight": 55,
+    "title": "Building a package with Eclipse 2021-06",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "middleware-performance"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/miscellaneous-building-realtime-rtpreempt-kernel-for-ros-2.html",
+    "id": "miscellaneous/building-realtime-rt_preempt-kernel-for-ros-2",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "middleware-performance",
+    "search_weight": 55,
+    "title": "Building a real-time Linux kernel [community-contributed]",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "security-deployment"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/miscellaneous-deploying-ros-2-on-ibm-cloud.html",
+    "id": "miscellaneous/deploying-ros-2-on-ibm-cloud",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "security-deployment",
+    "search_weight": 55,
+    "title": "Deploying on IBM Cloud Kubernetes [community-contributed]",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "rviz-visualization"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/miscellaneous-eclipse-oxygen-with-ros-2-and-rviz2.html",
+    "id": "miscellaneous/eclipse-oxygen-with-ros-2-and-rviz2",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "rviz-visualization",
+    "search_weight": 55,
+    "title": "Using Eclipse Oxygen with ``rviz2`` [community-contributed]",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "ros-graph"
+    ],
+    "difficulty": "progressive",
+    "href": "lessons/miscellaneous.html",
+    "id": "miscellaneous",
+    "kind": "lesson",
+    "parent": "lesson-library",
+    "primary_capability": "ros-graph",
+    "search_weight": 55,
+    "title": "Miscellaneous",
+    "validation_state": "growing"
+  },
+  {
+    "capabilities": [
+      "tf2-frames",
+      "urdf-models",
+      "rviz-visualization",
+      "testing-debugging"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_hours": 5,
+    "href": "projects/frame-detective.html",
+    "id": "project_frame_detective",
+    "kind": "project",
+    "parent": "observe-experiment",
+    "primary_capability": "tf2-frames",
+    "runtime": [
+      "Ubuntu 24.04",
+      "ROS 2 Jazzy",
+      "RViz 2"
+    ],
+    "search_weight": 100,
+    "title": "Frame Detective: debug a robot's spatial story",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "tf2-frames",
+      "urdf-models",
+      "rviz-visualization",
+      "testing-debugging"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 35,
+    "href": "projects/frame-detective/frame-contract.html",
+    "id": "frame_contract",
+    "kind": "project-lesson",
+    "parent": "project_frame_detective",
+    "primary_capability": "tf2-frames",
+    "search_weight": 95,
+    "title": "Draw the frame contract",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "tf2-frames",
+      "urdf-models",
+      "rviz-visualization",
+      "testing-debugging"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 55,
+    "href": "projects/frame-detective/model-and-see.html",
+    "id": "frame_model",
+    "kind": "project-lesson",
+    "parent": "project_frame_detective",
+    "primary_capability": "tf2-frames",
+    "search_weight": 95,
+    "title": "Model and see the robot",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "tf2-frames",
+      "urdf-models",
+      "rviz-visualization",
+      "testing-debugging"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 55,
+    "href": "projects/frame-detective/publish-motion.html",
+    "id": "frame_publish",
+    "kind": "project-lesson",
+    "parent": "project_frame_detective",
+    "primary_capability": "tf2-frames",
+    "search_weight": 95,
+    "title": "Publish motion through time",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "tf2-frames",
+      "urdf-models",
+      "rviz-visualization",
+      "testing-debugging"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 60,
+    "href": "projects/frame-detective/transform-detections.html",
+    "id": "frame_transform",
+    "kind": "project-lesson",
+    "parent": "project_frame_detective",
+    "primary_capability": "tf2-frames",
+    "search_weight": 95,
+    "title": "Transform detections into the map",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "tf2-frames",
+      "urdf-models",
+      "rviz-visualization",
+      "testing-debugging"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 70,
+    "href": "projects/frame-detective/diagnose-faults.html",
+    "id": "frame_faults",
+    "kind": "project-lesson",
+    "parent": "project_frame_detective",
+    "primary_capability": "tf2-frames",
+    "search_weight": 95,
+    "title": "Diagnose four spatial faults",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "tf2-frames",
+      "urdf-models",
+      "rviz-visualization",
+      "testing-debugging"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 45,
+    "href": "projects/frame-detective/capstone.html",
+    "id": "frame_capstone",
+    "kind": "project-lesson",
+    "parent": "project_frame_detective",
+    "primary_capability": "tf2-frames",
+    "search_weight": 95,
+    "title": "Capstone frame incident",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "tf2-frames",
+      "urdf-models",
+      "rviz-visualization",
+      "testing-debugging"
+    ],
+    "difficulty": "beginner-intermediate",
+    "href": "downloads/frame_detective_ws.zip",
+    "id": "artifact_frame_detective_workspace",
+    "kind": "workspace",
+    "parent": "project_frame_detective",
+    "primary_capability": "tf2-frames",
+    "runtime": [
+      "Ubuntu 24.04",
+      "ROS 2 Jazzy",
+      "RViz 2"
+    ],
+    "search_weight": 80,
+    "title": "Complete Frame Detective workspace",
+    "used_by": [
+      "project_frame_detective"
+    ],
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "tf2-frames",
+      "data-observability"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_hours": 5,
+    "href": "projects/camera-detective.html",
+    "id": "project_camera_detective",
+    "kind": "project",
+    "parent": "perception",
+    "primary_capability": "sensing-perception",
+    "runtime": [
+      "Ubuntu 24.04",
+      "ROS 2 Jazzy",
+      "image_pipeline"
+    ],
+    "search_weight": 100,
+    "title": "Camera Detective: turn pixels into measurements",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "tf2-frames",
+      "data-observability"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 35,
+    "href": "projects/camera-detective/image-contract.html",
+    "id": "camera_contract",
+    "kind": "project-lesson",
+    "parent": "project_camera_detective",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Read the image contract",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "tf2-frames",
+      "data-observability"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 45,
+    "href": "projects/camera-detective/see-distortion.html",
+    "id": "camera_distortion",
+    "kind": "project-lesson",
+    "parent": "project_camera_detective",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "See distortion before correcting it",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "tf2-frames",
+      "data-observability"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 55,
+    "href": "projects/camera-detective/collect-coverage.html",
+    "id": "camera_collect",
+    "kind": "project-lesson",
+    "parent": "project_camera_detective",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Collect calibration coverage",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "tf2-frames",
+      "data-observability"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 65,
+    "href": "projects/camera-detective/calibrate.html",
+    "id": "camera_calibrate",
+    "kind": "project-lesson",
+    "parent": "project_camera_detective",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Estimate and persist calibration",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "tf2-frames",
+      "data-observability"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 55,
+    "href": "projects/camera-detective/rectify-and-measure.html",
+    "id": "camera_rectify",
+    "kind": "project-lesson",
+    "parent": "project_camera_detective",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Rectify and measure",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "tf2-frames",
+      "data-observability"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 45,
+    "href": "projects/camera-detective/capstone.html",
+    "id": "camera_capstone",
+    "kind": "project-lesson",
+    "parent": "project_camera_detective",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Capstone calibration decision",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "tf2-frames",
+      "data-observability"
+    ],
+    "difficulty": "beginner-intermediate",
+    "href": "downloads/camera_detective_ws.zip",
+    "id": "artifact_camera_detective_workspace",
+    "kind": "workspace",
+    "parent": "project_camera_detective",
+    "primary_capability": "sensing-perception",
+    "runtime": [
+      "Ubuntu 24.04",
+      "ROS 2 Jazzy",
+      "image_pipeline"
+    ],
+    "search_weight": 80,
+    "title": "Complete Camera Detective workspace",
+    "used_by": [
+      "project_camera_detective"
+    ],
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "control",
+      "tf2-frames",
+      "rviz-visualization"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_hours": 6,
+    "href": "projects/line-scout.html",
+    "id": "project_line_scout",
+    "kind": "project",
+    "parent": "mobile-robotics",
+    "primary_capability": "sensing-perception",
+    "runtime": [
+      "Ubuntu 24.04",
+      "ROS 2 Jazzy",
+      "RViz 2"
+    ],
+    "search_weight": 100,
+    "title": "Line Scout: follow what the robot can sense",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "control",
+      "tf2-frames",
+      "rviz-visualization"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 35,
+    "href": "projects/line-scout/system-contract.html",
+    "id": "line_contract",
+    "kind": "project-lesson",
+    "parent": "project_line_scout",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Draw the sensing-control contract",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "control",
+      "tf2-frames",
+      "rviz-visualization"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 50,
+    "href": "projects/line-scout/run-track.html",
+    "id": "line_sim",
+    "kind": "project-lesson",
+    "parent": "project_line_scout",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Run and inspect the track",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "control",
+      "tf2-frames",
+      "rviz-visualization"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 55,
+    "href": "projects/line-scout/estimate-error.html",
+    "id": "line_estimate",
+    "kind": "project-lesson",
+    "parent": "project_line_scout",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Estimate line error",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "control",
+      "tf2-frames",
+      "rviz-visualization"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 70,
+    "href": "projects/line-scout/close-loop.html",
+    "id": "line_control",
+    "kind": "project-lesson",
+    "parent": "project_line_scout",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Close the mobile control loop",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "control",
+      "tf2-frames",
+      "rviz-visualization"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 55,
+    "href": "projects/line-scout/recover-occlusion.html",
+    "id": "line_recovery",
+    "kind": "project-lesson",
+    "parent": "project_line_scout",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Recover after line loss",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "control",
+      "tf2-frames",
+      "rviz-visualization"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 70,
+    "href": "projects/line-scout/tune-evidence.html",
+    "id": "line_tune",
+    "kind": "project-lesson",
+    "parent": "project_line_scout",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Tune from tracking evidence",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "control",
+      "tf2-frames",
+      "rviz-visualization"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 55,
+    "href": "projects/line-scout/capstone.html",
+    "id": "line_capstone",
+    "kind": "project-lesson",
+    "parent": "project_line_scout",
+    "primary_capability": "sensing-perception",
+    "search_weight": 95,
+    "title": "Capstone line course",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "sensing-perception",
+      "control",
+      "tf2-frames",
+      "rviz-visualization"
+    ],
+    "difficulty": "beginner-intermediate",
+    "href": "downloads/line_scout_ws.zip",
+    "id": "artifact_line_scout_workspace",
+    "kind": "workspace",
+    "parent": "project_line_scout",
+    "primary_capability": "sensing-perception",
+    "runtime": [
+      "Ubuntu 24.04",
+      "ROS 2 Jazzy",
+      "RViz 2"
+    ],
+    "search_weight": 80,
+    "title": "Complete Line Scout workspace",
+    "used_by": [
+      "project_line_scout"
+    ],
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "control",
+      "simulation",
+      "data-observability"
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 8,
+    "href": "projects/balance-bot.html",
+    "id": "project_balance_bot",
+    "kind": "project",
+    "parent": "control",
+    "primary_capability": "control",
+    "runtime": [
+      "Ubuntu 24.04",
+      "ROS 2 Jazzy",
+      "Gazebo Harmonic"
+    ],
+    "search_weight": 100,
+    "title": "Balance Bot: stabilize an inverted pendulum",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "control",
+      "simulation",
+      "data-observability"
+    ],
+    "difficulty": "intermediate",
+    "estimated_minutes": 45,
+    "href": "projects/balance-bot/preflight.html",
+    "id": "balance_preflight",
+    "kind": "project-lesson",
+    "parent": "project_balance_bot",
+    "primary_capability": "control",
+    "search_weight": 95,
+    "title": "Run the reference pendulum",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "control",
+      "simulation",
+      "data-observability"
+    ],
+    "difficulty": "intermediate",
+    "estimated_minutes": 60,
+    "href": "projects/balance-bot/model-the-plant.html",
+    "id": "balance_plant",
+    "kind": "project-lesson",
+    "parent": "project_balance_bot",
+    "primary_capability": "control",
+    "search_weight": 95,
+    "title": "Model the cart-pole plant",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "control",
+      "simulation",
+      "data-observability"
+    ],
+    "difficulty": "intermediate",
+    "estimated_minutes": 60,
+    "href": "projects/balance-bot/launch-the-simulation.html",
+    "id": "balance_sim",
+    "kind": "project-lesson",
+    "parent": "project_balance_bot",
+    "primary_capability": "control",
+    "search_weight": 95,
+    "title": "Launch your simulation",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "control",
+      "simulation",
+      "data-observability"
+    ],
+    "difficulty": "intermediate",
+    "estimated_minutes": 45,
+    "href": "projects/balance-bot/read-the-state.html",
+    "id": "balance_state",
+    "kind": "project-lesson",
+    "parent": "project_balance_bot",
+    "primary_capability": "control",
+    "search_weight": 95,
+    "title": "Read and interpret state",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "control",
+      "simulation",
+      "data-observability"
+    ],
+    "difficulty": "intermediate",
+    "estimated_minutes": 75,
+    "href": "projects/balance-bot/close-the-loop.html",
+    "id": "balance_control",
+    "kind": "project-lesson",
+    "parent": "project_balance_bot",
+    "primary_capability": "control",
+    "search_weight": 95,
+    "title": "Close the control loop",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "control",
+      "simulation",
+      "data-observability"
+    ],
+    "difficulty": "intermediate",
+    "estimated_minutes": 120,
+    "href": "projects/balance-bot/tune-from-evidence.html",
+    "id": "balance_tune",
+    "kind": "project-lesson",
+    "parent": "project_balance_bot",
+    "primary_capability": "control",
+    "search_weight": 95,
+    "title": "Tune from evidence",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "control",
+      "simulation",
+      "data-observability"
+    ],
+    "difficulty": "intermediate",
+    "estimated_minutes": 45,
+    "href": "projects/balance-bot/package-the-system.html",
+    "id": "balance_launch",
+    "kind": "project-lesson",
+    "parent": "project_balance_bot",
+    "primary_capability": "control",
+    "search_weight": 95,
+    "title": "Package the complete system",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "control",
+      "simulation",
+      "data-observability"
+    ],
+    "difficulty": "intermediate",
+    "estimated_minutes": 60,
+    "href": "projects/balance-bot/capstone.html",
+    "id": "balance_capstone",
+    "kind": "project-lesson",
+    "parent": "project_balance_bot",
+    "primary_capability": "control",
+    "search_weight": 95,
+    "title": "Capstone stability trial",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "control",
+      "simulation",
+      "data-observability"
+    ],
+    "difficulty": "intermediate",
+    "href": "downloads/balance_bot_ws.zip",
+    "id": "artifact_balance_bot_workspace",
+    "kind": "workspace",
+    "parent": "project_balance_bot",
+    "primary_capability": "control",
+    "runtime": [
+      "Ubuntu 24.04",
+      "ROS 2 Jazzy",
+      "Gazebo Harmonic"
+    ],
+    "search_weight": 80,
+    "title": "Complete Balance Bot workspace",
+    "used_by": [
+      "project_balance_bot"
+    ],
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "ros-graph",
+      "data-observability",
+      "control"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_hours": 5,
+    "href": "projects/notebook-robotics-lab.html",
+    "id": "project_notebook_robotics_lab",
+    "kind": "project",
+    "parent": "observe-experiment",
+    "primary_capability": "ros-graph",
+    "runtime": [
+      "Ubuntu 24.04",
+      "ROS 2 Jazzy",
+      "JupyterLab",
+      "Python"
+    ],
+    "search_weight": 100,
+    "title": "Notebook Robotics Lab: probe, plot, and tune ROS 2",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "ros-graph",
+      "data-observability",
+      "control"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 35,
+    "href": "projects/notebook-robotics-lab/setup-the-lab.html",
+    "id": "notebook_setup",
+    "kind": "project-lesson",
+    "parent": "project_notebook_robotics_lab",
+    "primary_capability": "ros-graph",
+    "search_weight": 95,
+    "title": "Set up a ROS-aware kernel",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "ros-graph",
+      "data-observability",
+      "control"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 45,
+    "href": "projects/notebook-robotics-lab/own-the-lifecycle.html",
+    "id": "notebook_lifecycle",
+    "kind": "project-lesson",
+    "parent": "project_notebook_robotics_lab",
+    "primary_capability": "ros-graph",
+    "search_weight": 95,
+    "title": "Own the ROS lifecycle",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "ros-graph",
+      "data-observability",
+      "control"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 55,
+    "href": "projects/notebook-robotics-lab/live-graph-probe.html",
+    "id": "notebook_probe",
+    "kind": "project-lesson",
+    "parent": "project_notebook_robotics_lab",
+    "primary_capability": "ros-graph",
+    "search_weight": 95,
+    "title": "Project A \u2014 Live Graph Probe",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "ros-graph",
+      "data-observability",
+      "control"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 50,
+    "href": "projects/notebook-robotics-lab/trajectory-microscope.html",
+    "id": "notebook_trajectory",
+    "kind": "project-lesson",
+    "parent": "project_notebook_robotics_lab",
+    "primary_capability": "ros-graph",
+    "search_weight": 95,
+    "title": "Project B \u2014 Trajectory Microscope",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "ros-graph",
+      "data-observability",
+      "control"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 60,
+    "href": "projects/notebook-robotics-lab/controller-tuner.html",
+    "id": "notebook_tuner",
+    "kind": "project-lesson",
+    "parent": "project_notebook_robotics_lab",
+    "primary_capability": "ros-graph",
+    "search_weight": 95,
+    "title": "Project C \u2014 Controller Tuner",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "ros-graph",
+      "data-observability",
+      "control"
+    ],
+    "difficulty": "beginner-intermediate",
+    "estimated_minutes": 55,
+    "href": "projects/notebook-robotics-lab/capstone.html",
+    "id": "notebook_capstone",
+    "kind": "project-lesson",
+    "parent": "project_notebook_robotics_lab",
+    "primary_capability": "ros-graph",
+    "search_weight": 95,
+    "title": "Capstone reproducible experiment",
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "ros-graph",
+      "data-observability",
+      "control"
+    ],
+    "difficulty": "beginner-intermediate",
+    "href": "downloads/notebook_robotics_lab.zip",
+    "id": "artifact_notebook_robotics_lab_workspace",
+    "kind": "workspace",
+    "parent": "project_notebook_robotics_lab",
+    "primary_capability": "ros-graph",
+    "runtime": [
+      "Ubuntu 24.04",
+      "ROS 2 Jazzy",
+      "JupyterLab",
+      "Python"
+    ],
+    "search_weight": 80,
+    "title": "Complete Notebook Robotics Lab",
+    "used_by": [
+      "project_notebook_robotics_lab"
+    ],
+    "validation_state": "preview"
+  },
+  {
+    "archive": true,
+    "capabilities": [
+      "packages-interfaces"
+    ],
+    "difficulty": "beginner",
+    "href": "downloads/workspace_basics_ws.zip",
+    "id": "artifact_workspace_basics",
+    "kind": "workspace",
+    "output": "workspace_basics_ws.zip",
+    "parent": "beginner-client-libraries/creating-a-workspace/creating-a-workspace",
+    "primary_capability": "packages-interfaces",
+    "runtime": [
+      "ros2-jazzy",
+      "python"
+    ],
+    "search_weight": 80,
+    "source": "examples/workspace_basics_ws",
+    "title": "Workspace Basics starter",
+    "used_by": [
+      "beginner-client-libraries/creating-a-workspace/creating-a-workspace"
+    ],
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "ros-graph",
+      "data-observability"
+    ],
+    "difficulty": "beginner-intermediate",
+    "href": "downloads/notebooks/01_live_graph_probe.ipynb",
+    "id": "artifact_live_graph_notebook",
+    "kind": "notebook",
+    "output": "notebooks/01_live_graph_probe.ipynb",
+    "parent": "notebook_probe",
+    "primary_capability": "ros-graph",
+    "runtime": [
+      "ros2-jazzy",
+      "jupyterlab"
+    ],
+    "search_weight": 80,
+    "source": "examples/notebook_robotics_lab/notebooks/01_live_graph_probe.ipynb",
+    "title": "Live Graph Probe notebook",
+    "used_by": [
+      "notebook_probe"
+    ],
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "data-observability",
+      "testing-debugging"
+    ],
+    "difficulty": "beginner-intermediate",
+    "href": "downloads/notebooks/02_trajectory_microscope.ipynb",
+    "id": "artifact_trajectory_notebook",
+    "kind": "notebook",
+    "output": "notebooks/02_trajectory_microscope.ipynb",
+    "parent": "notebook_trajectory",
+    "primary_capability": "data-observability",
+    "runtime": [
+      "python",
+      "jupyterlab"
+    ],
+    "search_weight": 80,
+    "source": "examples/notebook_robotics_lab/notebooks/02_trajectory_microscope.ipynb",
+    "title": "Trajectory Microscope notebook",
+    "used_by": [
+      "notebook_trajectory"
+    ],
+    "validation_state": "validated-offline"
+  },
+  {
+    "capabilities": [
+      "control",
+      "data-observability"
+    ],
+    "difficulty": "beginner-intermediate",
+    "href": "downloads/notebooks/03_controller_tuner.ipynb",
+    "id": "artifact_controller_tuner_notebook",
+    "kind": "notebook",
+    "output": "notebooks/03_controller_tuner.ipynb",
+    "parent": "notebook_tuner",
+    "primary_capability": "control",
+    "runtime": [
+      "python",
+      "jupyterlab"
+    ],
+    "search_weight": 80,
+    "source": "examples/notebook_robotics_lab/notebooks/03_controller_tuner.ipynb",
+    "title": "Controller Tuner notebook",
+    "used_by": [
+      "notebook_tuner"
+    ],
+    "validation_state": "validated-offline"
+  },
+  {
+    "capabilities": [
+      "data-observability",
+      "control"
+    ],
+    "difficulty": "beginner-intermediate",
+    "href": "downloads/data/notebook_line_trial.csv",
+    "id": "artifact_notebook_line_trial",
+    "kind": "dataset",
+    "output": "data/notebook_line_trial.csv",
+    "parent": "notebook_trajectory",
+    "primary_capability": "data-observability",
+    "runtime": [
+      "csv"
+    ],
+    "search_weight": 80,
+    "source": "examples/notebook_robotics_lab/data/line_trial.csv",
+    "title": "Notebook line-trial dataset",
+    "used_by": [
+      "notebook_trajectory"
+    ],
+    "validation_state": "validated-offline"
+  },
+  {
+    "capabilities": [
+      "control",
+      "data-observability"
+    ],
+    "difficulty": "intermediate",
+    "href": "downloads/data/balance_bot_trials.csv",
+    "id": "artifact_balance_trials",
+    "kind": "dataset",
+    "output": "data/balance_bot_trials.csv",
+    "parent": "balance_tune",
+    "primary_capability": "data-observability",
+    "runtime": [
+      "csv"
+    ],
+    "search_weight": 80,
+    "source": "examples/balance_bot_ws/trials.csv",
+    "title": "Balance Bot trial dataset",
+    "used_by": [
+      "balance_tune"
+    ],
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "rviz-visualization",
+      "tf2-frames"
+    ],
+    "difficulty": "beginner-intermediate",
+    "href": "downloads/configuration/frame_detective.rviz",
+    "id": "artifact_frame_detective_rviz",
+    "kind": "configuration",
+    "output": "configuration/frame_detective.rviz",
+    "parent": "frame_model",
+    "primary_capability": "rviz-visualization",
+    "runtime": [
+      "ros2-jazzy",
+      "rviz2"
+    ],
+    "search_weight": 80,
+    "source": "examples/frame_detective_ws/src/frame_detective/rviz/detective.rviz",
+    "title": "Frame Detective RViz configuration",
+    "used_by": [
+      "frame_model"
+    ],
+    "validation_state": "preview"
+  },
+  {
+    "capabilities": [
+      "rviz-visualization",
+      "control"
+    ],
+    "difficulty": "beginner-intermediate",
+    "href": "downloads/configuration/line_scout.rviz",
+    "id": "artifact_line_scout_rviz",
+    "kind": "configuration",
+    "output": "configuration/line_scout.rviz",
+    "parent": "line_sim",
+    "primary_capability": "rviz-visualization",
+    "runtime": [
+      "ros2-jazzy",
+      "rviz2"
+    ],
+    "search_weight": 80,
+    "source": "examples/line_scout_ws/src/line_scout/rviz/line_scout.rviz",
+    "title": "Line Scout RViz configuration",
+    "used_by": [
+      "line_sim"
+    ],
+    "validation_state": "preview"
+  }
+]

@@ -1,0 +1,2 @@
+trial,k_theta,k_theta_dot,k_x,k_x_dot,max_force,peak_angle_all_rad,peak_angle_scored_rad,settling_time_s,peak_cart_m,peak_force_n,initial_x,initial_x_dot,initial_theta,initial_theta_dot,max_state_gap_s,max_force_gap_s,stale_events,cutoff_events,saturation_samples,passed,notes
+example,120.0,22.0,-4.0,-8.0,80.0,,,,,,,,,,,,,,,runtime validation pending
