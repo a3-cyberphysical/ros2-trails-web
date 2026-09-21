@@ -219,6 +219,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#why-this-trail-matters" id="toc-why-this-trail-matters" class="nav-link active" data-scroll-target="#why-this-trail-matters">Why this trail matters</a></li>
+  <li><a href="#if-you-came-from-lesson-1" id="toc-if-you-came-from-lesson-1" class="nav-link" data-scroll-target="#if-you-came-from-lesson-1">If you came from Lesson 1</a></li>
   <li><a href="#what-you-will-save" id="toc-what-you-will-save" class="nav-link" data-scroll-target="#what-you-will-save">What you will save</a></li>
   <li><a href="#start-learning" id="toc-start-learning" class="nav-link" data-scroll-target="#start-learning">Start learning</a></li>
   <li><a href="#what-you-will-build-up-along-the-way" id="toc-what-you-will-build-up-along-the-way" class="nav-link" data-scroll-target="#what-you-will-build-up-along-the-way">What you will build up along the way</a></li>
@@ -280,7 +281,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="why-this-trail-matters" class="level2">
 <h2 class="anchored" data-anchor-id="why-this-trail-matters">Why this trail matters</h2>
 <p>Robots do not just exchange numbers. They exchange numbers that live in frames: <code>map</code>, <code>odom</code>, <code>base_link</code>, camera frames, tool frames, and object frames. A learner who can see and debug those relationships will understand RViz, URDF, navigation, perception, and manipulation much faster.</p>
-<p>This trail starts with a small visible transform tree, then grows toward robot models and project-scale frame debugging.</p>
+<p>This trail starts by making a small transform tree visible in RViz, because the fastest way to understand frames is to debug one. A short tf2 primer is also available if you want vocabulary before the checkpoint.</p>
+</section>
+<section id="if-you-came-from-lesson-1" class="level2">
+<h2 class="anchored" data-anchor-id="if-you-came-from-lesson-1">If you came from Lesson 1</h2>
+<p>Your first ROS graph proved that nodes exchange typed messages. This trail adds the missing spatial question: which frame did that data live in, and when was it valid?</p>
+<p>Go next to <a href="../lessons/intermediate-tf2-debugging-tf2-problems.html">Debugging tf2 with RViz</a> as the checkpoint before Frame Detective. If <code>frame</code>, <code>transform</code>, or <code>Fixed Frame</code> still feels fuzzy, use the introductory tf2 primer as support, then return to the checkpoint.</p>
 </section>
 <section id="what-you-will-save" class="level2">
 <h2 class="anchored" data-anchor-id="what-you-will-save">What you will save</h2>
@@ -294,27 +300,27 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="start-learning" class="level2">
 <h2 class="anchored" data-anchor-id="start-learning">Start learning</h2>
-<p>Complete these lessons in order. Each lesson contains a local activity and knowledge check.</p>
+<p>If you arrived from Lesson 1, start with the tf2/RViz checkpoint below. Use the primer only if frame vocabulary still feels fuzzy. Each lesson contains a local activity and knowledge check.</p>
 <div class="lesson-grid" role="list" aria-label="Lessons in this trail">
 <div class="lesson-card" role="listitem">
 <p><span class="lesson-number" aria-hidden="true">1</span></p>
+<section id="debugging-tf2-with-rviz" class="level3">
+<h3 class="anchored" data-anchor-id="debugging-tf2-with-rviz"><a href="../lessons/intermediate-tf2-debugging-tf2-problems.html">Debugging tf2 with RViz</a></h3>
+<p>Checkpoint · RViz and CLI evidence</p>
+</section>
+</div>
+<div class="lesson-card" role="listitem">
+<p><span class="lesson-number" aria-hidden="true">?</span></p>
 <section id="introducing-tf2" class="level3">
 <h3 class="anchored" data-anchor-id="introducing-tf2"><a href="../lessons/intermediate-tf2-introduction-to-tf2.html">Introducing <code>tf2</code></a></h3>
-<p>Stage 1 · Frame vocabulary</p>
+<p>Optional primer · Frame vocabulary</p>
 </section>
 </div>
 <div class="lesson-card" role="listitem">
 <p><span class="lesson-number" aria-hidden="true">2</span></p>
-<section id="debugging-tf2-with-rviz" class="level3">
-<h3 class="anchored" data-anchor-id="debugging-tf2-with-rviz"><a href="../lessons/intermediate-tf2-debugging-tf2-problems.html">Debugging tf2 with RViz</a></h3>
-<p>Stage 2 · RViz and CLI evidence</p>
-</section>
-</div>
-<div class="lesson-card" role="listitem">
-<p><span class="lesson-number" aria-hidden="true">3</span></p>
 <section id="using-urdf-with-robot_state_publisher-python" class="level3">
 <h3 class="anchored" data-anchor-id="using-urdf-with-robot_state_publisher-python"><a href="../lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html">Using URDF with <code>robot_state_publisher</code> (Python)</a></h3>
-<p>Stage 3 · Robot model frames</p>
+<p>Next layer · Robot model frames</p>
 </section>
 </div>
 </div>

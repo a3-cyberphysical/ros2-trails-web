@@ -217,19 +217,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lesson-1-your-first-ros-2-system" id="toc-lesson-1-your-first-ros-2-system" class="nav-link active" data-scroll-target="#lesson-1-your-first-ros-2-system">Lesson 1 — Your first ROS 2 system</a>
+  <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a></li>
+  <li><a href="#do-it" id="toc-do-it" class="nav-link" data-scroll-target="#do-it">Do it</a>
   <ul class="collapse">
-  <li><a href="#the-result-first" id="toc-the-result-first" class="nav-link" data-scroll-target="#the-result-first">The result first</a></li>
-  <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link" data-scroll-target="#before-you-start">Before you start</a></li>
+  <li><a href="#prepare-terminals" id="toc-prepare-terminals" class="nav-link" data-scroll-target="#prepare-terminals">Prepare terminals</a></li>
   <li><a href="#run-the-whole-system" id="toc-run-the-whole-system" class="nav-link" data-scroll-target="#run-the-whole-system">Run the whole system</a></li>
   <li><a href="#inspect-before-explaining" id="toc-inspect-before-explaining" class="nav-link" data-scroll-target="#inspect-before-explaining">Inspect before explaining</a></li>
   <li><a href="#intervene-with-the-graph" id="toc-intervene-with-the-graph" class="nav-link" data-scroll-target="#intervene-with-the-graph">Intervene with the graph</a></li>
   <li><a href="#record-evidence" id="toc-record-evidence" class="nav-link" data-scroll-target="#record-evidence">Record evidence</a></li>
-  <li><a href="#how-to-complete-this-lesson" id="toc-how-to-complete-this-lesson" class="nav-link" data-scroll-target="#how-to-complete-this-lesson">How to complete this lesson</a></li>
-  <li><a href="#experiment" id="toc-experiment" class="nav-link" data-scroll-target="#experiment">Experiment</a></li>
-  <li><a href="#if-you-need-help" id="toc-if-you-need-help" class="nav-link" data-scroll-target="#if-you-need-help">If you need help</a></li>
-  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
   </ul></li>
+  <li><a href="#verify" id="toc-verify" class="nav-link" data-scroll-target="#verify">Verify</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  <li><a href="#challenge" id="toc-challenge" class="nav-link" data-scroll-target="#challenge">Challenge</a></li>
+  <li><a href="#next-step" id="toc-next-step" class="nav-link" data-scroll-target="#next-step">Next step</a></li>
   </ul>
 </nav>
     </div>
@@ -255,23 +255,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="lesson-1-your-first-ros-2-system" class="level1">
-<h1>Lesson 1 — Your first ROS 2 system</h1>
-<section id="the-result-first" class="level2">
-<h2 class="anchored" data-anchor-id="the-result-first">The result first</h2>
-<p>In this lesson you will launch a complete robot application, discover its graph, change its behavior, and record evidence. You do not need to understand every ROS abstraction before beginning; the inspection steps give those abstractions a concrete purpose.</p>
+<section id="goal" class="level2">
+<h2 class="anchored" data-anchor-id="goal">Goal</h2>
+<p>Launch a complete visible ROS 2 application, discover its graph, change its behavior, and record evidence. You do not need to understand every ROS abstraction before beginning; the inspection steps give those abstractions a concrete purpose.</p>
 <p><strong>Time:</strong> about 60 minutes. <strong>Produces:</strong> <code>lesson-01-evidence.md</code> and a small bag.</p>
 </section>
-<section id="before-you-start" class="level2">
-<h2 class="anchored" data-anchor-id="before-you-start">Before you start</h2>
-<p>Use Ubuntu 24.04 with ROS 2 Jazzy Desktop. Open two Bash terminals. In every new terminal:</p>
+<section id="do-it" class="level2">
+<h2 class="anchored" data-anchor-id="do-it">Do it</h2>
+<section id="prepare-terminals" class="level3">
+<h3 class="anchored" data-anchor-id="prepare-terminals">Prepare terminals</h3>
+<p>Use Ubuntu 24.04 with ROS 2 Jazzy Desktop. Open three Bash terminals. Terminal A runs the simulator, Terminal B sends commands, and Terminal C inspects the graph without stopping the running system. In every new terminal:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> /opt/ros/jazzy/setup.bash</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">printenv</span> ROS_DISTRO</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">command</span> <span class="at">-v</span> ros2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Expect <code>jazzy</code> and a path to <code>ros2</code>. If either differs, use the local <a href="../guides/jazzy-environment.html">environment contract</a> before continuing.</p>
 </section>
-<section id="run-the-whole-system" class="level2">
-<h2 class="anchored" data-anchor-id="run-the-whole-system">Run the whole system</h2>
+<section id="run-the-whole-system" class="level3">
+<h3 class="anchored" data-anchor-id="run-the-whole-system">Run the whole system</h3>
 <p>In <strong>Terminal A</strong>, start turtlesim:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> run turtlesim turtlesim_node</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>In <strong>Terminal B</strong>, start keyboard control:</p>
@@ -279,8 +279,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> run turtlesim turtle_teleop_key</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Focus Terminal B and move the turtle. This visible behavior is the whole game in miniature: one node owns simulated state, another publishes intent, and typed ROS interfaces connect them.</p>
 </section>
-<section id="inspect-before-explaining" class="level2">
-<h2 class="anchored" data-anchor-id="inspect-before-explaining">Inspect before explaining</h2>
+<section id="inspect-before-explaining" class="level3">
+<h3 class="anchored" data-anchor-id="inspect-before-explaining">Inspect before explaining</h3>
 <p>Keep both processes running. In <strong>Terminal C</strong>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> /opt/ros/jazzy/setup.bash</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> node list</span>
@@ -289,54 +289,71 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic info /turtle1/cmd_vel <span class="at">--verbose</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic echo /turtle1/pose <span class="at">--once</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Draw two boxes for the nodes and arrows for the command and pose topics. Label publisher, subscriber, and message type from command output—not memory.</p>
+<p>Expected observations:</p>
+<ul>
+<li><code>ros2 node list</code> includes <code>/turtlesim</code> and <code>/teleop_turtle</code>;</li>
+<li><code>ros2 topic list -t</code> includes <code>/turtle1/cmd_vel [geometry_msgs/msg/Twist]</code> and <code>/turtle1/pose [turtlesim/msg/Pose]</code>;</li>
+<li><code>ros2 node info /turtlesim</code> shows the simulator subscribes to command velocity and publishes pose.</li>
+</ul>
 </section>
-<section id="intervene-with-the-graph" class="level2">
-<h2 class="anchored" data-anchor-id="intervene-with-the-graph">Intervene with the graph</h2>
+<section id="intervene-with-the-graph" class="level3">
+<h3 class="anchored" data-anchor-id="intervene-with-the-graph">Intervene with the graph</h3>
 <p>Predict the direction first, then publish one bounded command:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> topic pub <span class="at">--once</span> /turtle1/cmd_vel geometry_msgs/msg/Twist <span class="dt">\</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"{linear: {x: 1.0}, angular: {z: 0.8}}"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Expect the turtle to make one short curved motion. If nothing visible happens, keep turtlesim running, check that the topic name is <code>/turtle1/cmd_vel</code>, confirm the message type is <code>geometry_msgs/msg/Twist</code>, and look for the one-shot publisher message in the terminal output.</p>
 <p>Call a service and inspect a parameter:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> service call /clear std_srvs/srv/Empty <span class="st">'{}'</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> param get /turtlesim background_b</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> param set /turtlesim background_b 40</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> service call /clear std_srvs/srv/Empty <span class="st">'{}'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Expect <code>/clear</code> to erase the turtle trail, <code>ros2 param get</code> to print the current blue background value, and the final <code>/clear</code> to redraw the window with a visibly changed background color after <code>background_b</code> is set to <code>40</code>.</p>
 <p>Explain why continuous velocity is a topic, clearing is a service, and background color is a parameter.</p>
 </section>
-<section id="record-evidence" class="level2">
-<h2 class="anchored" data-anchor-id="record-evidence">Record evidence</h2>
+<section id="record-evidence" class="level3">
+<h3 class="anchored" data-anchor-id="record-evidence">Record evidence</h3>
 <p>Create a fresh evidence directory. If <code>lesson-01</code> already exists, choose a new name rather than overwriting it.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/ros2_trails_evidence</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ros2_trails_evidence</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> bag record <span class="at">-o</span> lesson-01 /turtle1/cmd_vel /turtle1/pose</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Move for ten seconds, then stop the recorder with Ctrl+C. Inspect it:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> bag info ~/ros2_trails_evidence/lesson-01</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If you chose a different bag directory name, substitute that name in the <code>ros2 bag info</code> command and in your evidence notes.</p>
+<p>Expect a duration close to your recording time and non-zero message counts for both <code>/turtle1/cmd_vel</code> and <code>/turtle1/pose</code>. If the command topic count is zero, repeat the recording while actively moving the turtle from Terminal B.</p>
 </section>
-<section id="how-to-complete-this-lesson" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-complete-this-lesson">How to complete this lesson</h2>
+</section>
+<section id="verify" class="level2">
+<h2 class="anchored" data-anchor-id="verify">Verify</h2>
 <p>Create <code>~/ros2_trails_evidence/lesson-01-evidence.md</code> containing:</p>
 <ul>
-<li>your two-node/two-topic graph drawing;</li>
-<li>one command and its observed behavior;</li>
-<li>the topic/service/parameter explanation;</li>
-<li>bag duration and message counts;</li>
-<li>one surprise and one question to carry forward.</li>
+<li><code>## Graph sketch</code> — your two-node/two-topic drawing;</li>
+<li><code>## Command result</code> — one command and its observed behavior;</li>
+<li><code>## Interface explanation</code> — why the lesson used a topic, service, and parameter;</li>
+<li><code>## Bag evidence</code> — bag duration and message counts;</li>
+<li><code>## Carry forward</code> — one surprise and one question for tf2/RViz.</li>
 </ul>
 <p>You are done when you can recreate the graph from clean terminals, predict the manual command, and support your explanation with CLI output. Reading without running the system does not complete the lesson.</p>
 </section>
-<section id="experiment" class="level2">
-<h2 class="anchored" data-anchor-id="experiment">Experiment</h2>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li><code>ros2</code> is not found: source <code>/opt/ros/jazzy/setup.bash</code> in that terminal and check <code>printenv ROS_DISTRO</code>.</li>
+<li><code>turtlesim_node</code> is not found: install the local tutorial package with <code>sudo apt update &amp;&amp; sudo apt install ros-jazzy-turtlesim</code>, then open a fresh sourced terminal.</li>
+<li>Teleop does nothing: click the teleop terminal so it owns keyboard focus.</li>
+<li><code>ros2 topic echo /turtle1/pose --once</code> hangs: move the turtle once or confirm <code>/turtlesim</code> is still running.</li>
+<li><code>ros2 bag record</code> says the output exists: choose a new bag directory name rather than overwriting evidence.</li>
+</ul>
+</section>
+<section id="challenge" class="level2">
+<h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
 <p>Change exactly one linear or angular value, predict the new path, run it, and record whether the result matched. Restore the background parameter if desired.</p>
+<p>Use the onsite <a href="../resources.html">Help and diagnostic packet</a> if you get stuck. Capture environment, exact command, full error, expected behavior, node/topic lists, and the smallest reproduction before asking for help. Stop all lesson terminals with Ctrl+C when finished.</p>
 </section>
-<section id="if-you-need-help" class="level2">
-<h2 class="anchored" data-anchor-id="if-you-need-help">If you need help</h2>
-<p>Use the onsite <a href="../resources.html">Help and diagnostic packet</a>. Capture environment, exact command, full error, expected behavior, node/topic lists, and the smallest reproduction before asking for help. Stop all three lesson terminals with Ctrl+C when finished.</p>
-</section>
-<section id="continue" class="level2">
-<h2 class="anchored" data-anchor-id="continue">Continue</h2>
-<p>Next, make spatial data and timestamps visible in <a href="../projects/frame-detective.html">Lesson 2 — Frame Detective</a>.</p>
+<section id="next-step" class="level2">
+<h2 class="anchored" data-anchor-id="next-step">Next step</h2>
+<p>Next, make spatial data visible in the <a href="../trails/transforms-and-models.html">Transforms and robot models trail</a>, then use <a href="../projects/frame-detective.html">Frame Detective</a> to debug frames in a project.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
