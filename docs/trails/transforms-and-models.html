@@ -218,7 +218,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#start-learning" id="toc-start-learning" class="nav-link active" data-scroll-target="#start-learning">Start learning</a></li>
+  <li><a href="#why-this-trail-matters" id="toc-why-this-trail-matters" class="nav-link active" data-scroll-target="#why-this-trail-matters">Why this trail matters</a></li>
+  <li><a href="#what-you-will-save" id="toc-what-you-will-save" class="nav-link" data-scroll-target="#what-you-will-save">What you will save</a></li>
+  <li><a href="#start-learning" id="toc-start-learning" class="nav-link" data-scroll-target="#start-learning">Start learning</a></li>
   <li><a href="#what-you-will-build-up-along-the-way" id="toc-what-you-will-build-up-along-the-way" class="nav-link" data-scroll-target="#what-you-will-build-up-along-the-way">What you will build up along the way</a></li>
   <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">1. Overview</a>
   <ul class="collapse">
@@ -242,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Transforms and robot models</h1>
-<p class="subtitle lead">tf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with <code>robot_state_publisher</code>, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components.</p>
+<p class="subtitle lead">See, query, model, and debug coordinate frames before they become project-scale faults.</p>
 </div>
 
 
@@ -260,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="trail-meta">
-<p><strong>5 lessons</strong> · <strong>3 learning stages</strong> · Learn entirely on this site</p>
+<p><strong>3 lessons</strong> · <strong>3 learning stages</strong> · Learn entirely on this site</p>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -275,43 +277,44 @@ ul.task-list li input[type="checkbox"] {
 <p>Run the <a href="../guides/jazzy-environment.html">local Jazzy environment check</a>. It verifies the installation, shell, build tools, dependency tool, and network assumptions used below.</p>
 </div>
 </div>
+<section id="why-this-trail-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-trail-matters">Why this trail matters</h2>
+<p>Robots do not just exchange numbers. They exchange numbers that live in frames: <code>map</code>, <code>odom</code>, <code>base_link</code>, camera frames, tool frames, and object frames. A learner who can see and debug those relationships will understand RViz, URDF, navigation, perception, and manipulation much faster.</p>
+<p>This trail starts with a small visible transform tree, then grows toward robot models and project-scale frame debugging.</p>
+</section>
+<section id="what-you-will-save" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-save">What you will save</h2>
+<ul>
+<li>a sketch of a three-frame tree;</li>
+<li>terminal evidence from <code>tf2_echo</code>;</li>
+<li>a note about RViz Fixed Frame behavior;</li>
+<li>one missing-transform diagnosis;</li>
+<li>a next-project plan for Frame Detective.</li>
+</ul>
+</section>
 <section id="start-learning" class="level2">
 <h2 class="anchored" data-anchor-id="start-learning">Start learning</h2>
 <p>Complete these lessons in order. Each lesson contains a local activity and knowledge check.</p>
 <div class="lesson-grid" role="list" aria-label="Lessons in this trail">
 <div class="lesson-card" role="listitem">
 <p><span class="lesson-number" aria-hidden="true">1</span></p>
-<section id="tf2" class="level3">
-<h3 class="anchored" data-anchor-id="tf2"><a href="../lessons/intermediate-tf2-tf2-main.html"><code>tf2</code></a></h3>
-<p>Intermediate · Curated</p>
+<section id="introducing-tf2" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-tf2"><a href="../lessons/intermediate-tf2-introduction-to-tf2.html">Introducing <code>tf2</code></a></h3>
+<p>Stage 1 · Frame vocabulary</p>
 </section>
 </div>
 <div class="lesson-card" role="listitem">
 <p><span class="lesson-number" aria-hidden="true">2</span></p>
-<section id="introducing-tf2" class="level3">
-<h3 class="anchored" data-anchor-id="introducing-tf2"><a href="../lessons/intermediate-tf2-introduction-to-tf2.html">Introducing <code>tf2</code></a></h3>
-<p>Intermediate · Curated</p>
+<section id="debugging-tf2-with-rviz" class="level3">
+<h3 class="anchored" data-anchor-id="debugging-tf2-with-rviz"><a href="../lessons/intermediate-tf2-debugging-tf2-problems.html">Debugging tf2 with RViz</a></h3>
+<p>Stage 2 · RViz and CLI evidence</p>
 </section>
 </div>
 <div class="lesson-card" role="listitem">
 <p><span class="lesson-number" aria-hidden="true">3</span></p>
-<section id="debugging" class="level3">
-<h3 class="anchored" data-anchor-id="debugging"><a href="../lessons/intermediate-tf2-debugging-tf2-problems.html">Debugging</a></h3>
-<p>Intermediate · Curated</p>
-</section>
-</div>
-<div class="lesson-card" role="listitem">
-<p><span class="lesson-number" aria-hidden="true">4</span></p>
-<section id="urdf" class="level3">
-<h3 class="anchored" data-anchor-id="urdf"><a href="../lessons/intermediate-urdf-urdf-main.html">URDF</a></h3>
-<p>Intermediate · Curated</p>
-</section>
-</div>
-<div class="lesson-card" role="listitem">
-<p><span class="lesson-number" aria-hidden="true">5</span></p>
 <section id="using-urdf-with-robot_state_publisher-python" class="level3">
 <h3 class="anchored" data-anchor-id="using-urdf-with-robot_state_publisher-python"><a href="../lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html">Using URDF with <code>robot_state_publisher</code> (Python)</a></h3>
-<p>Intermediate · Curated</p>
+<p>Stage 3 · Robot model frames</p>
 </section>
 </div>
 </div>

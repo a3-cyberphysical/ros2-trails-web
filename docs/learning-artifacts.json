@@ -1508,8 +1508,8 @@
     "parent": "lesson-library",
     "primary_capability": "tf2-frames",
     "search_weight": 70,
-    "title": "Debugging",
-    "validation_state": "curated"
+    "title": "Debugging tf2 with RViz",
+    "validation_state": "authored"
   },
   {
     "capabilities": [

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Debugging – ROS 2 Trails</title>
+<title>Debugging tf2 with RViz – ROS 2 Trails</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -122,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Debugging</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Debugging tf2 with RViz</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -218,13 +253,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-outcome" id="toc-learning-outcome" class="nav-link active" data-scroll-target="#learning-outcome">Learning outcome</a></li>
-  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before you begin</a></li>
-  <li><a href="#guided-activity" id="toc-guided-activity" class="nav-link" data-scroll-target="#guided-activity">Guided activity</a></li>
-  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding">Check your understanding</a></li>
-  <li><a href="#knowledge-for-this-lesson" id="toc-knowledge-for-this-lesson" class="nav-link" data-scroll-target="#knowledge-for-this-lesson">Knowledge for this lesson</a></li>
-  <li><a href="#continue-on-a-trail" id="toc-continue-on-a-trail" class="nav-link" data-scroll-target="#continue-on-a-trail">Continue on a trail</a></li>
+  <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a></li>
+  <li><a href="#do-it" id="toc-do-it" class="nav-link" data-scroll-target="#do-it">Do it</a></li>
+  <li><a href="#verify" id="toc-verify" class="nav-link" data-scroll-target="#verify">Verify</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  <li><a href="#challenge" id="toc-challenge" class="nav-link" data-scroll-target="#challenge">Challenge</a></li>
+  <li><a href="#next-step" id="toc-next-step" class="nav-link" data-scroll-target="#next-step">Next step</a></li>
   <li><a href="#references-and-provenance" id="toc-references-and-provenance" class="nav-link" data-scroll-target="#references-and-provenance">References and provenance</a></li>
+  <li><a href="#continue-on-a-trail" id="toc-continue-on-a-trail" class="nav-link" data-scroll-target="#continue-on-a-trail">Continue on a trail</a></li>
   </ul>
 </nav>
     </div>
@@ -233,7 +269,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Debugging</h1>
+<h1 class="title">Debugging tf2 with RViz</h1>
 <p class="subtitle lead">Intermediate</p>
 </div>
 
@@ -251,47 +287,91 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="lesson-state curated">
-<p><strong>Curated lesson</strong> · This page is part of the local ROS 2 Trails curriculum.</p>
-</div>
-<section id="learning-outcome" class="level2">
-<h2 class="anchored" data-anchor-id="learning-outcome">Learning outcome</h2>
-<p>Use <strong>Debugging</strong> in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked.</p>
+<section id="goal" class="level2">
+<h2 class="anchored" data-anchor-id="goal">Goal</h2>
+<p>Make a tiny <code>tf2</code> frame tree visible in RViz, verify it from the terminal, then diagnose and repair a missing transform using evidence.</p>
+<p><code>tf2</code> answers a question that appears everywhere in robotics: “Where was this thing, relative to that thing, at this time?” A coordinate such as <code>(0.35, 0.0, 0.2)</code> is not meaningful by itself. It needs a source frame, a target frame, and time. This lesson keeps the tree small enough that you can see every part.</p>
+<p>You will produce <code>~/ros2_trails_evidence/tf2-rviz-evidence.md</code>.</p>
 </section>
-<section id="before-you-begin" class="level2">
-<h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
-<p>You should have comfortable use of nodes, topics, services, actions, and parameters. Work in a disposable ROS 2 workspace so the experiment is easy to repeat.</p>
-</section>
-<section id="guided-activity" class="level2">
-<h2 class="anchored" data-anchor-id="guided-activity">Guided activity</h2>
+<section id="do-it" class="level2">
+<h2 class="anchored" data-anchor-id="do-it">Do it</h2>
+<p>Open three terminals. In each one:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> /opt/ros/jazzy/setup.bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In <strong>Terminal A</strong>, publish the root-to-body transform:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> run tf2_ros static_transform_publisher <span class="dt">\</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--x</span> 1.0 <span class="at">--y</span> 0.5 <span class="at">--z</span> 0.0 <span class="dt">\</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--roll</span> 0.0 <span class="at">--pitch</span> 0.0 <span class="at">--yaw</span> 0.4 <span class="dt">\</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">--frame-id</span> map <span class="dt">\</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">--child-frame-id</span> base_link</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Before adding the camera frame, prove the missing edge. In <strong>Terminal C</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> run tf2_ros tf2_echo map camera_link</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Expect a repeated warning that <code>camera_link</code> does not exist or cannot be transformed yet. That warning is useful: <code>map -&gt; base_link</code> exists, but the tree has no <code>base_link -&gt; camera_link</code> edge.</p>
+<p>Now repair the tree. In <strong>Terminal B</strong>, publish the body-to-camera transform:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> run tf2_ros static_transform_publisher <span class="dt">\</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--x</span> 0.35 <span class="at">--y</span> 0.0 <span class="at">--z</span> 0.2 <span class="dt">\</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--roll</span> 0.0 <span class="at">--pitch</span> 0.0 <span class="at">--yaw</span> 0.0 <span class="dt">\</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">--frame-id</span> base_link <span class="dt">\</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">--child-frame-id</span> camera_link</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Return to <strong>Terminal C</strong>. The same <code>tf2_echo</code> command should now print the composed relationship:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ros2</span> run tf2_ros tf2_echo map camera_link</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Expect repeated output for <code>camera_link</code> relative to <code>map</code>. The translation is not exactly the second command’s <code>(0.35, 0.0, 0.2)</code> because the camera transform is composed through the rotated <code>base_link</code>. With the commands above, expect approximately <code>x: 1.32</code>, <code>y: 0.64</code>, <code>z: 0.20</code>; the rotation should be close to the <code>0.4</code> rad yaw from <code>map -&gt; base_link</code>.</p>
+<p>Now open RViz from a fourth terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> /opt/ros/jazzy/setup.bash</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">rviz2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In RViz:</p>
 <ol type="1">
-<li>State what you expect <strong>Debugging</strong> to change or reveal.</li>
-<li>Prepare the smallest workspace, node, or command sequence needed for the experiment.</li>
-<li>Apply the feature in a small workspace and record evidence that it behaves as intended.</li>
-<li>Change one input or configuration value and predict the effect before running it again.</li>
-<li>Capture the command, graph observation, log message, or test result that proves the outcome.</li>
+<li>Set <strong>Fixed Frame</strong> to <code>map</code>.</li>
+<li>Add a <strong>TF</strong> display.</li>
+<li>Expand the TF display and confirm that <code>map</code>, <code>base_link</code>, and <code>camera_link</code> appear.</li>
 </ol>
+<p>Sketch the tree before continuing:</p>
+<pre class="text"><code>map
+  -&gt; base_link
+       -&gt; camera_link</code></pre>
 </section>
-<section id="check-your-understanding" class="level2">
-<h2 class="anchored" data-anchor-id="check-your-understanding">Check your understanding</h2>
+<section id="verify" class="level2">
+<h2 class="anchored" data-anchor-id="verify">Verify</h2>
+<p>Create the evidence file:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/ros2_trails_evidence</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/ros2_trails_evidence/tf2-rviz-evidence.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Include:</p>
 <ul>
-<li>What ROS 2 entity, tool, or runtime behavior is central to this lesson?</li>
-<li>What observation distinguishes success from a command that merely exits without error?</li>
-<li>Which assumption would you test first if another learner could not reproduce your result?</li>
+<li>your three-frame sketch;</li>
+<li>the missing-frame warning before Terminal B was running;</li>
+<li>the <code>tf2_echo map camera_link</code> translation and rotation summary;</li>
+<li>the RViz Fixed Frame value;</li>
+<li>the command that repaired the tree.</li>
+</ul>
+<p>You are done when RViz and <code>tf2_echo</code> agree that <code>camera_link</code> is reachable from <code>map</code>, and your evidence explains why the composed query failed before the <code>base_link -&gt; camera_link</code> edge existed.</p>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>RViz shows “Fixed Frame [map] does not exist”: confirm Terminal A is still running and that <code>--frame-id map</code> is spelled exactly.</li>
+<li>RViz opens but there is no TF display: use <strong>Add</strong> and select <strong>TF</strong> from the display list.</li>
+<li><code>tf2_echo</code> keeps printing that the target frame does not exist after Terminal B starts: check <code>--child-frame-id camera_link</code> and the exact spelling in the query.</li>
+<li><code>tf2_echo</code> works but RViz does not: set Fixed Frame to <code>map</code>, not <code>base_link</code> or <code>camera_link</code>.</li>
+<li>Nothing changes after editing a command: stop the old static publisher first; two publishers for the same child frame make the lesson confusing.</li>
 </ul>
 </section>
-<section id="knowledge-for-this-lesson" class="level2">
-<h2 class="anchored" data-anchor-id="knowledge-for-this-lesson">Knowledge for this lesson</h2>
+<section id="challenge" class="level2">
+<h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
+<p>Change only the camera offset from <code>--x 0.35</code> to <code>--x 0.70</code>. Because <code>base_link</code> is yawed relative to <code>map</code>, predict whether the composed translation printed by <code>tf2_echo map camera_link</code> should change in map X, map Y, or both. Restart Terminal B and record whether the result matched your prediction.</p>
+<p>When you are finished, stop the static transform publishers and <code>tf2_echo</code> with <code>Ctrl+C</code>, then close RViz. The evidence file can stay in <code>~/ros2_trails_evidence/</code> for later lessons.</p>
+</section>
+<section id="next-step" class="level2">
+<h2 class="anchored" data-anchor-id="next-step">Next step</h2>
+<p>Continue to <a href="../projects/frame-detective.html">Frame Detective</a>, where frames move over time and RViz becomes a debugging instrument rather than a picture.</p>
+</section>
+<section id="references-and-provenance" class="level2">
+<h2 class="anchored" data-anchor-id="references-and-provenance">References and provenance</h2>
+<div class="reference-layer">
+<p>This local lesson is original ROS 2 Trails material. It is informed by the ROS 2 Jazzy <code>tf2</code> and RViz tutorials, which remain optional authoritative references:</p>
 <ul>
-<li>tf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with <code>robot_state_publisher</code>, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components. <a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_618f1f3c07cd.html">Inspect provenance</a></li>
-<li>A transform answers where one frame is relative to another at a particular <a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_9a70a4c2cb39.html">Inspect provenance</a></li>
-<li>time. <a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_87f595da605c.html">Inspect provenance</a></li>
-<li>Static transforms describe relationships that do not change. <a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_31952784ac9e.html">Inspect provenance</a></li>
-<li>Dynamic transforms must be timestamped and published continuously. <a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_4bde98fd46c3.html">Inspect provenance</a></li>
-<li>A connected frame tree needs unambiguous parent-child relationships. <a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_0ad0edc74ad7.html">Inspect provenance</a></li>
-<li>URDF describes structure; joint states supply changing joint positions; tf2 <a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_a11230d2fb1b.html">Inspect provenance</a></li>
-<li>exposes the resulting frame relationships. <a href="../provenance/nugget_canonical-knowledge-topics-transforms-and-models_49742c9b984d.html">Inspect provenance</a></li>
+<li><a href="https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Tf2/Tf2-Main.html">ROS 2 Jazzy tf2 tutorials</a></li>
+<li><a href="https://docs.ros.org/en/jazzy/Tutorials/Intermediate/RViz/RViz-Main.html">ROS 2 Jazzy RViz tutorials</a></li>
 </ul>
+</div>
 </section>
 <section id="continue-on-a-trail" class="level2">
 <h2 class="anchored" data-anchor-id="continue-on-a-trail">Continue on a trail</h2>
@@ -299,15 +379,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="../trails/transforms-and-models.html">Transforms and robot models</a></li>
 </ul>
 <nav class="lesson-navigation" aria-label="Lesson navigation">
-<a class="previous-lesson" href="../lessons/intermediate-tf2-introduction-to-tf2.html">← Introducing <code>tf2</code></a><a class="next-lesson" href="../lessons/intermediate-urdf-urdf-main.html">Next: URDF →</a>
+<a class="previous-lesson" href="../lessons/intermediate-tf2-introduction-to-tf2.html">← Introducing <code>tf2</code></a><a class="next-lesson" href="../lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html">Next: Using URDF with <code>robot_state_publisher</code> (Python) →</a>
 </nav>
-</section>
-<section id="references-and-provenance" class="level2">
-<h2 class="anchored" data-anchor-id="references-and-provenance">References and provenance</h2>
-<div class="reference-layer">
-<p>This local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: <a href="https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Tf2/Debugging-Tf2-Problems.html">Debugging</a>.</p>
-<p>Pinned source revision: <code>b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e</code></p>
-</div>
 
 
 </section>

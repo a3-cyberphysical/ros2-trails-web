@@ -4,7 +4,29 @@
     "href": "trails/transforms-and-models.html",
     "title": "Transforms and robot models",
     "section": "",
-    "text": "5 lessons · 3 learning stages · Learn entirely on this site",
+    "text": "3 lessons · 3 learning stages · Learn entirely on this site",
+    "crumbs": [
+      "Learn",
+      "Transforms and robot models"
+    ]
+  },
+  {
+    "objectID": "trails/transforms-and-models.html#why-this-trail-matters",
+    "href": "trails/transforms-and-models.html#why-this-trail-matters",
+    "title": "Transforms and robot models",
+    "section": "Why this trail matters",
+    "text": "Why this trail matters\nRobots do not just exchange numbers. They exchange numbers that live in frames: map, odom, base_link, camera frames, tool frames, and object frames. A learner who can see and debug those relationships will understand RViz, URDF, navigation, perception, and manipulation much faster.\nThis trail starts with a small visible transform tree, then grows toward robot models and project-scale frame debugging.",
+    "crumbs": [
+      "Learn",
+      "Transforms and robot models"
+    ]
+  },
+  {
+    "objectID": "trails/transforms-and-models.html#what-you-will-save",
+    "href": "trails/transforms-and-models.html#what-you-will-save",
+    "title": "Transforms and robot models",
+    "section": "What you will save",
+    "text": "What you will save\n\na sketch of a three-frame tree;\nterminal evidence from tf2_echo;\na note about RViz Fixed Frame behavior;\none missing-transform diagnosis;\na next-project plan for Frame Detective.",
     "crumbs": [
       "Learn",
       "Transforms and robot models"
@@ -15,7 +37,7 @@
     "href": "trails/transforms-and-models.html#start-learning",
     "title": "Transforms and robot models",
     "section": "Start learning",
-    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\ntf2\nIntermediate · Curated\n\n\n\n2\n\nIntroducing tf2\nIntermediate · Curated\n\n\n\n3\n\nDebugging\nIntermediate · Curated\n\n\n\n4\n\nURDF\nIntermediate · Curated\n\n\n\n5\n\nUsing URDF with robot_state_publisher (Python)\nIntermediate · Curated",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nIntroducing tf2\nStage 1 · Frame vocabulary\n\n\n\n2\n\nDebugging tf2 with RViz\nStage 2 · RViz and CLI evidence\n\n\n\n3\n\nUsing URDF with robot_state_publisher (Python)\nStage 3 · Robot model frames",
     "crumbs": [
       "Learn",
       "Transforms and robot models"
@@ -92,7 +114,7 @@
     "href": "trails/production-concerns.html#start-learning",
     "title": "Production concerns",
     "section": "Start learning",
-    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nUsing quality-of-service settings for lossy networks\nDemos · Curated\n\n\n\n2\n\nTesting\nIntermediate · Curated\n\n\n\n3\n\nHow to use ros2_tracing to trace and analyze an application\nAdvanced · Curated\n\n\n\n4\n\nSecurity\nAdvanced · Curated\n\n\n\n5\n\nUnderstanding real-time programming\nDemos · Curated",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nUsing quality-of-service settings for lossy networks\nDemos\n\n\n\n2\n\nTesting\nIntermediate\n\n\n\n3\n\nHow to use ros2_tracing to trace and analyze an application\nAdvanced\n\n\n\n4\n\nSecurity\nAdvanced\n\n\n\n5\n\nUnderstanding real-time programming\nDemos",
     "crumbs": [
       "Learn",
       "Production concerns"
@@ -169,7 +191,7 @@
     "href": "trails/launch-and-composition.html#start-learning",
     "title": "Launch and composition",
     "section": "Start learning",
-    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nLaunch\nIntermediate · Curated\n\n\n\n2\n\nCreating a launch file\nIntermediate · Curated\n\n\n\n3\n\nUsing substitutions\nIntermediate · Curated\n\n\n\n4\n\nManaging large projects\nIntermediate · Curated\n\n\n\n5\n\nComposing multiple nodes in a single process\nIntermediate · Curated",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nLaunch\nIntermediate\n\n\n\n2\n\nCreating a launch file\nIntermediate\n\n\n\n3\n\nUsing substitutions\nIntermediate\n\n\n\n4\n\nManaging large projects\nIntermediate\n\n\n\n5\n\nComposing multiple nodes in a single process\nIntermediate",
     "crumbs": [
       "Learn",
       "Launch and composition"
@@ -246,7 +268,7 @@
     "href": "trails/foundations.html#start-learning",
     "title": "Foundations: the ROS 2 graph",
     "section": "Start learning",
-    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nUnderstanding nodes\nBeginner-CLI-Tools · Curated\n\n\n\n2\n\nUnderstanding topics\nBeginner-CLI-Tools · Curated\n\n\n\n3\n\nUnderstanding services\nBeginner-CLI-Tools · Curated\n\n\n\n4\n\nUnderstanding actions\nBeginner-CLI-Tools · Curated\n\n\n\n5\n\nRecording and playing back data\nBeginner-CLI-Tools · Curated",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nUnderstanding nodes\nBeginner-CLI-Tools\n\n\n\n2\n\nUnderstanding topics\nBeginner-CLI-Tools\n\n\n\n3\n\nUnderstanding services\nBeginner-CLI-Tools\n\n\n\n4\n\nUnderstanding actions\nBeginner-CLI-Tools\n\n\n\n5\n\nRecording and playing back data\nBeginner-CLI-Tools",
     "crumbs": [
       "Learn",
       "Foundations: the ROS 2 graph"
@@ -356,7 +378,7 @@
     "href": "trails/building-nodes.html#start-learning",
     "title": "Building nodes and packages",
     "section": "Start learning",
-    "text": "Start learning\nComplete the stages in order; choose one lesson in stage 2. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nCreating a workspace\nStage 1 · Workspace and package · step 1 of 2 · Authored\n\n\n\n2\n\nCreating a package\nStage 1 · Workspace and package · step 2 of 2 · Authored\n\n\n\nA\n\nWriting a publisher and subscriber in C++\nStage 2 · C++ branch · Authored\n\n\n\nB\n\nWriting a publisher and subscriber in Python\nStage 2 · Python branch · Authored\n\n\n\n3\n\nCreating and using a custom message\nStage 3 · Domain interface · Authored",
+    "text": "Start learning\nComplete the stages in order; choose one lesson in stage 2. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nCreating a workspace\nStage 1 · Workspace and package · step 1 of 2\n\n\n\n2\n\nCreating a package\nStage 1 · Workspace and package · step 2 of 2\n\n\n\nA\n\nWriting a publisher and subscriber in C++\nStage 2 · C++ branch\n\n\n\nB\n\nWriting a publisher and subscriber in Python\nStage 2 · Python branch\n\n\n\n3\n\nCreating and using a custom message\nStage 3 · Domain interface",
     "crumbs": [
       "Learn",
       "Building nodes and packages"
@@ -2102,14 +2124,14 @@
     "href": "lessons/miscellaneous.html",
     "title": "Miscellaneous",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Miscellaneous in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/miscellaneous.html#learning-outcome",
     "href": "lessons/miscellaneous.html#learning-outcome",
     "title": "Miscellaneous",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Miscellaneous in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Miscellaneous in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/miscellaneous.html#before-you-begin",
@@ -2144,14 +2166,14 @@
     "href": "lessons/miscellaneous-deploying-ros-2-on-ibm-cloud.html",
     "title": "Deploying on IBM Cloud Kubernetes [community-contributed]",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Deploying on IBM Cloud Kubernetes [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/miscellaneous-deploying-ros-2-on-ibm-cloud.html#learning-outcome",
     "href": "lessons/miscellaneous-deploying-ros-2-on-ibm-cloud.html#learning-outcome",
     "title": "Deploying on IBM Cloud Kubernetes [community-contributed]",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Deploying on IBM Cloud Kubernetes [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Deploying on IBM Cloud Kubernetes [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/miscellaneous-deploying-ros-2-on-ibm-cloud.html#before-you-begin",
@@ -2186,14 +2208,14 @@
     "href": "lessons/miscellaneous-building-realtime-rtpreempt-kernel-for-ros-2.html",
     "title": "Building a real-time Linux kernel [community-contributed]",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Building a real-time Linux kernel [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/miscellaneous-building-realtime-rtpreempt-kernel-for-ros-2.html#learning-outcome",
     "href": "lessons/miscellaneous-building-realtime-rtpreempt-kernel-for-ros-2.html#learning-outcome",
     "title": "Building a real-time Linux kernel [community-contributed]",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Building a real-time Linux kernel [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Building a real-time Linux kernel [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/miscellaneous-building-realtime-rtpreempt-kernel-for-ros-2.html#before-you-begin",
@@ -2228,14 +2250,14 @@
     "href": "lessons/intermediate-writing-an-action-server-client-py.html",
     "title": "Writing an action server and client (Python)",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing an action server and client (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-writing-an-action-server-client-py.html#learning-outcome",
     "href": "lessons/intermediate-writing-an-action-server-client-py.html#learning-outcome",
     "title": "Writing an action server and client (Python)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing an action server and client (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing an action server and client (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-writing-an-action-server-client-py.html#before-you-begin",
@@ -2284,14 +2306,14 @@
     "href": "lessons/intermediate-writing-a-composable-node.html",
     "title": "Writing a Composable Node (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing a Composable Node (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-writing-a-composable-node.html#learning-outcome",
     "href": "lessons/intermediate-writing-a-composable-node.html#learning-outcome",
     "title": "Writing a Composable Node (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing a Composable Node (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing a Composable Node (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-writing-a-composable-node.html#before-you-begin",
@@ -2326,14 +2348,14 @@
     "href": "lessons/intermediate-urdf-using-xacro-to-clean-up-a-urdf-file.html",
     "title": "Using Xacro to clean up your code",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using Xacro to clean up your code in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-using-xacro-to-clean-up-a-urdf-file.html#learning-outcome",
     "href": "lessons/intermediate-urdf-using-xacro-to-clean-up-a-urdf-file.html#learning-outcome",
     "title": "Using Xacro to clean up your code",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using Xacro to clean up your code in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using Xacro to clean up your code in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-using-xacro-to-clean-up-a-urdf-file.html#before-you-begin",
@@ -2368,14 +2390,14 @@
     "href": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-cpp.html",
     "title": "Using URDF with robot_state_publisher (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using URDF with robot_state_publisher (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-cpp.html#learning-outcome",
     "href": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-cpp.html#learning-outcome",
     "title": "Using URDF with robot_state_publisher (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using URDF with robot_state_publisher (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using URDF with robot_state_publisher (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-cpp.html#before-you-begin",
@@ -2410,14 +2432,14 @@
     "href": "lessons/intermediate-urdf-exporting-an-urdf-file.html",
     "title": "Generating an URDF File",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Generating an URDF File in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-exporting-an-urdf-file.html#learning-outcome",
     "href": "lessons/intermediate-urdf-exporting-an-urdf-file.html#learning-outcome",
     "title": "Generating an URDF File",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Generating an URDF File in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Generating an URDF File in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-exporting-an-urdf-file.html#before-you-begin",
@@ -2452,14 +2474,14 @@
     "href": "lessons/intermediate-urdf-building-a-movable-robot-model-with-urdf.html",
     "title": "Building a movable robot model",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Building a movable robot model in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-building-a-movable-robot-model-with-urdf.html#learning-outcome",
     "href": "lessons/intermediate-urdf-building-a-movable-robot-model-with-urdf.html#learning-outcome",
     "title": "Building a movable robot model",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Building a movable robot model in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Building a movable robot model in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-building-a-movable-robot-model-with-urdf.html#before-you-begin",
@@ -2494,14 +2516,14 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-py.html",
     "title": "Writing a static broadcaster (Python)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing a static broadcaster (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-py.html#learning-outcome",
     "href": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-py.html#learning-outcome",
     "title": "Writing a static broadcaster (Python)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing a static broadcaster (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing a static broadcaster (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-py.html#before-you-begin",
@@ -2536,14 +2558,14 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-listener-py.html",
     "title": "Writing a listener (Python)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing a listener (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-listener-py.html#learning-outcome",
     "href": "lessons/intermediate-tf2-writing-a-tf2-listener-py.html#learning-outcome",
     "title": "Writing a listener (Python)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing a listener (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing a listener (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-listener-py.html#before-you-begin",
@@ -2578,14 +2600,14 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-py.html",
     "title": "Writing a broadcaster (Python)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing a broadcaster (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-py.html#learning-outcome",
     "href": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-py.html#learning-outcome",
     "title": "Writing a broadcaster (Python)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing a broadcaster (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing a broadcaster (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-py.html#before-you-begin",
@@ -2620,14 +2642,14 @@
     "href": "lessons/intermediate-tf2-using-stamped-datatypes-with-tf2-ros-messagefilter.html",
     "title": "Using stamped datatypes with tf2_ros::MessageFilter",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using stamped datatypes with tf2_ros::MessageFilter in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-using-stamped-datatypes-with-tf2-ros-messagefilter.html#learning-outcome",
     "href": "lessons/intermediate-tf2-using-stamped-datatypes-with-tf2-ros-messagefilter.html#learning-outcome",
     "title": "Using stamped datatypes with tf2_ros::MessageFilter",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using stamped datatypes with tf2_ros::MessageFilter in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using stamped datatypes with tf2_ros::MessageFilter in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-using-stamped-datatypes-with-tf2-ros-messagefilter.html#before-you-begin",
@@ -2662,14 +2684,14 @@
     "href": "lessons/intermediate-tf2-tf2-main.html",
     "title": "tf2",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use tf2 in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-tf2-main.html#learning-outcome",
     "href": "lessons/intermediate-tf2-tf2-main.html#learning-outcome",
     "title": "tf2",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse tf2 in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use tf2 in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-tf2-main.html#before-you-begin",
@@ -2718,14 +2740,14 @@
     "href": "lessons/intermediate-tf2-learning-about-tf2-and-time-cpp.html",
     "title": "Using time (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using time (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-learning-about-tf2-and-time-cpp.html#learning-outcome",
     "href": "lessons/intermediate-tf2-learning-about-tf2-and-time-cpp.html#learning-outcome",
     "title": "Using time (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using time (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using time (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-learning-about-tf2-and-time-cpp.html#before-you-begin",
@@ -2758,72 +2780,79 @@
   {
     "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html",
     "href": "lessons/intermediate-tf2-debugging-tf2-problems.html",
-    "title": "Debugging",
+    "title": "Debugging tf2 with RViz",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Make a tiny tf2 frame tree visible in RViz, verify it from the terminal, then diagnose and repair a missing transform using evidence.\ntf2 answers a question that appears everywhere in robotics: “Where was this thing, relative to that thing, at this time?” A coordinate such as (0.35, 0.0, 0.2) is not meaningful by itself. It needs a source frame, a target frame, and time. This lesson keeps the tree small enough that you can see every part.\nYou will produce ~/ros2_trails_evidence/tf2-rviz-evidence.md."
   },
   {
-    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#learning-outcome",
-    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#learning-outcome",
-    "title": "Debugging",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Debugging in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#goal",
+    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#goal",
+    "title": "Debugging tf2 with RViz",
+    "section": "",
+    "text": "Make a tiny tf2 frame tree visible in RViz, verify it from the terminal, then diagnose and repair a missing transform using evidence.\ntf2 answers a question that appears everywhere in robotics: “Where was this thing, relative to that thing, at this time?” A coordinate such as (0.35, 0.0, 0.2) is not meaningful by itself. It needs a source frame, a target frame, and time. This lesson keeps the tree small enough that you can see every part.\nYou will produce ~/ros2_trails_evidence/tf2-rviz-evidence.md."
   },
   {
-    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#before-you-begin",
-    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#before-you-begin",
-    "title": "Debugging",
-    "section": "Before you begin",
-    "text": "Before you begin\nYou should have comfortable use of nodes, topics, services, actions, and parameters. Work in a disposable ROS 2 workspace so the experiment is easy to repeat."
+    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#do-it",
+    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#do-it",
+    "title": "Debugging tf2 with RViz",
+    "section": "Do it",
+    "text": "Do it\nOpen three terminals. In each one:\nsource /opt/ros/jazzy/setup.bash\nIn Terminal A, publish the root-to-body transform:\nros2 run tf2_ros static_transform_publisher \\\n  --x 1.0 --y 0.5 --z 0.0 \\\n  --roll 0.0 --pitch 0.0 --yaw 0.4 \\\n  --frame-id map \\\n  --child-frame-id base_link\nBefore adding the camera frame, prove the missing edge. In Terminal C:\nros2 run tf2_ros tf2_echo map camera_link\nExpect a repeated warning that camera_link does not exist or cannot be transformed yet. That warning is useful: map -&gt; base_link exists, but the tree has no base_link -&gt; camera_link edge.\nNow repair the tree. In Terminal B, publish the body-to-camera transform:\nros2 run tf2_ros static_transform_publisher \\\n  --x 0.35 --y 0.0 --z 0.2 \\\n  --roll 0.0 --pitch 0.0 --yaw 0.0 \\\n  --frame-id base_link \\\n  --child-frame-id camera_link\nReturn to Terminal C. The same tf2_echo command should now print the composed relationship:\nros2 run tf2_ros tf2_echo map camera_link\nExpect repeated output for camera_link relative to map. The translation is not exactly the second command’s (0.35, 0.0, 0.2) because the camera transform is composed through the rotated base_link. With the commands above, expect approximately x: 1.32, y: 0.64, z: 0.20; the rotation should be close to the 0.4 rad yaw from map -&gt; base_link.\nNow open RViz from a fourth terminal:\nsource /opt/ros/jazzy/setup.bash\nrviz2\nIn RViz:\n\nSet Fixed Frame to map.\nAdd a TF display.\nExpand the TF display and confirm that map, base_link, and camera_link appear.\n\nSketch the tree before continuing:\nmap\n  -&gt; base_link\n       -&gt; camera_link"
   },
   {
-    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#guided-activity",
-    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#guided-activity",
-    "title": "Debugging",
-    "section": "Guided activity",
-    "text": "Guided activity\n\nState what you expect Debugging to change or reveal.\nPrepare the smallest workspace, node, or command sequence needed for the experiment.\nApply the feature in a small workspace and record evidence that it behaves as intended.\nChange one input or configuration value and predict the effect before running it again.\nCapture the command, graph observation, log message, or test result that proves the outcome."
+    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#verify",
+    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#verify",
+    "title": "Debugging tf2 with RViz",
+    "section": "Verify",
+    "text": "Verify\nCreate the evidence file:\nmkdir -p ~/ros2_trails_evidence\nnano ~/ros2_trails_evidence/tf2-rviz-evidence.md\nInclude:\n\nyour three-frame sketch;\nthe missing-frame warning before Terminal B was running;\nthe tf2_echo map camera_link translation and rotation summary;\nthe RViz Fixed Frame value;\nthe command that repaired the tree.\n\nYou are done when RViz and tf2_echo agree that camera_link is reachable from map, and your evidence explains why the composed query failed before the base_link -&gt; camera_link edge existed."
   },
   {
-    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#check-your-understanding",
-    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#check-your-understanding",
-    "title": "Debugging",
-    "section": "Check your understanding",
-    "text": "Check your understanding\n\nWhat ROS 2 entity, tool, or runtime behavior is central to this lesson?\nWhat observation distinguishes success from a command that merely exits without error?\nWhich assumption would you test first if another learner could not reproduce your result?"
+    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#troubleshooting",
+    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#troubleshooting",
+    "title": "Debugging tf2 with RViz",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nRViz shows “Fixed Frame [map] does not exist”: confirm Terminal A is still running and that --frame-id map is spelled exactly.\nRViz opens but there is no TF display: use Add and select TF from the display list.\ntf2_echo keeps printing that the target frame does not exist after Terminal B starts: check --child-frame-id camera_link and the exact spelling in the query.\ntf2_echo works but RViz does not: set Fixed Frame to map, not base_link or camera_link.\nNothing changes after editing a command: stop the old static publisher first; two publishers for the same child frame make the lesson confusing."
   },
   {
-    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#knowledge-for-this-lesson",
-    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#knowledge-for-this-lesson",
-    "title": "Debugging",
-    "section": "Knowledge for this lesson",
-    "text": "Knowledge for this lesson\n\ntf2 represents how coordinate frames relate over time. URDF describes robot links, joints, geometry, and physical properties. Together with robot_state_publisher, these provide the spatial backbone needed by visualization, perception, manipulation, and navigation components. Inspect provenance\nA transform answers where one frame is relative to another at a particular Inspect provenance\ntime. Inspect provenance\nStatic transforms describe relationships that do not change. Inspect provenance\nDynamic transforms must be timestamped and published continuously. Inspect provenance\nA connected frame tree needs unambiguous parent-child relationships. Inspect provenance\nURDF describes structure; joint states supply changing joint positions; tf2 Inspect provenance\nexposes the resulting frame relationships. Inspect provenance"
+    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#challenge",
+    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#challenge",
+    "title": "Debugging tf2 with RViz",
+    "section": "Challenge",
+    "text": "Challenge\nChange only the camera offset from --x 0.35 to --x 0.70. Because base_link is yawed relative to map, predict whether the composed translation printed by tf2_echo map camera_link should change in map X, map Y, or both. Restart Terminal B and record whether the result matched your prediction.\nWhen you are finished, stop the static transform publishers and tf2_echo with Ctrl+C, then close RViz. The evidence file can stay in ~/ros2_trails_evidence/ for later lessons."
   },
   {
-    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#continue-on-a-trail",
-    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#continue-on-a-trail",
-    "title": "Debugging",
-    "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nTransforms and robot models\n\n\n← Introducing tf2Next: URDF →"
+    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#next-step",
+    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#next-step",
+    "title": "Debugging tf2 with RViz",
+    "section": "Next step",
+    "text": "Next step\nContinue to Frame Detective, where frames move over time and RViz becomes a debugging instrument rather than a picture."
   },
   {
     "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#references-and-provenance",
     "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#references-and-provenance",
-    "title": "Debugging",
+    "title": "Debugging tf2 with RViz",
     "section": "References and provenance",
-    "text": "References and provenance\n\nThis local lesson is indexed from the pinned ROS 2 Jazzy knowledge corpus. The upstream page is an optional authoritative reference: Debugging.\nPinned source revision: b3565d9c5d0a91f86f2b67bf9b59db0fb9282a7e"
+    "text": "References and provenance\n\nThis local lesson is original ROS 2 Trails material. It is informed by the ROS 2 Jazzy tf2 and RViz tutorials, which remain optional authoritative references:\n\nROS 2 Jazzy tf2 tutorials\nROS 2 Jazzy RViz tutorials"
+  },
+  {
+    "objectID": "lessons/intermediate-tf2-debugging-tf2-problems.html#continue-on-a-trail",
+    "href": "lessons/intermediate-tf2-debugging-tf2-problems.html#continue-on-a-trail",
+    "title": "Debugging tf2 with RViz",
+    "section": "Continue on a trail",
+    "text": "Continue on a trail\n\nTransforms and robot models\n\n\n← Introducing tf2Next: Using URDF with robot_state_publisher (Python) →"
   },
   {
     "objectID": "lessons/intermediate-tf2-adding-a-frame-cpp.html",
     "href": "lessons/intermediate-tf2-adding-a-frame-cpp.html",
     "title": "Adding a frame (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Adding a frame (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-adding-a-frame-cpp.html#learning-outcome",
     "href": "lessons/intermediate-tf2-adding-a-frame-cpp.html#learning-outcome",
     "title": "Adding a frame (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Adding a frame (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Adding a frame (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-adding-a-frame-cpp.html#before-you-begin",
@@ -2858,14 +2887,14 @@
     "href": "lessons/intermediate-testing-python.html",
     "title": "Writing Basic Tests with Python",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing Basic Tests with Python in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-python.html#learning-outcome",
     "href": "lessons/intermediate-testing-python.html#learning-outcome",
     "title": "Writing Basic Tests with Python",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing Basic Tests with Python in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing Basic Tests with Python in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-python.html#before-you-begin",
@@ -2900,14 +2929,14 @@
     "href": "lessons/intermediate-testing-cpp.html",
     "title": "Writing Basic Tests with C++ with GTest",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing Basic Tests with C++ with GTest in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-cpp.html#learning-outcome",
     "href": "lessons/intermediate-testing-cpp.html#learning-outcome",
     "title": "Writing Basic Tests with C++ with GTest",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing Basic Tests with C++ with GTest in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing Basic Tests with C++ with GTest in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-cpp.html#before-you-begin",
@@ -2942,14 +2971,14 @@
     "href": "lessons/intermediate-testing-buildfarmtesting.html",
     "title": "Testing Your Code with the ROS Build Farm",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Testing Your Code with the ROS Build Farm in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-buildfarmtesting.html#learning-outcome",
     "href": "lessons/intermediate-testing-buildfarmtesting.html#learning-outcome",
     "title": "Testing Your Code with the ROS Build Farm",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Testing Your Code with the ROS Build Farm in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Testing Your Code with the ROS Build Farm in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-buildfarmtesting.html#before-you-begin",
@@ -2984,14 +3013,14 @@
     "href": "lessons/intermediate-rviz-rviz-main.html",
     "title": "RViz",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use RViz in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-main.html#learning-outcome",
     "href": "lessons/intermediate-rviz-rviz-main.html#learning-outcome",
     "title": "RViz",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse RViz in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use RViz in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-main.html#before-you-begin",
@@ -3026,14 +3055,14 @@
     "href": "lessons/intermediate-rviz-rviz-custom-display-rviz-custom-display.html",
     "title": "Building a Custom RViz Display",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Building a Custom RViz Display in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-custom-display-rviz-custom-display.html#learning-outcome",
     "href": "lessons/intermediate-rviz-rviz-custom-display-rviz-custom-display.html#learning-outcome",
     "title": "Building a Custom RViz Display",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Building a Custom RViz Display in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Building a Custom RViz Display in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-custom-display-rviz-custom-display.html#before-you-begin",
@@ -3068,14 +3097,14 @@
     "href": "lessons/intermediate-rviz-marker-points-and-lines-marker-points-and-lines.html",
     "title": "Marker: Points and Lines (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Marker: Points and Lines (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-marker-points-and-lines-marker-points-and-lines.html#learning-outcome",
     "href": "lessons/intermediate-rviz-marker-points-and-lines-marker-points-and-lines.html#learning-outcome",
     "title": "Marker: Points and Lines (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Marker: Points and Lines (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Marker: Points and Lines (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-marker-points-and-lines-marker-points-and-lines.html#before-you-begin",
@@ -3110,14 +3139,14 @@
     "href": "lessons/intermediate-rosdep.html",
     "title": "Managing Dependencies with rosdep",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Managing Dependencies with rosdep in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rosdep.html#learning-outcome",
     "href": "lessons/intermediate-rosdep.html#learning-outcome",
     "title": "Managing Dependencies with rosdep",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Managing Dependencies with rosdep in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Managing Dependencies with rosdep in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rosdep.html#before-you-begin",
@@ -3152,14 +3181,14 @@
     "href": "lessons/intermediate-monitoring-for-parameter-changes-cpp.html",
     "title": "Monitoring for parameter changes (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Monitoring for parameter changes (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-monitoring-for-parameter-changes-cpp.html#learning-outcome",
     "href": "lessons/intermediate-monitoring-for-parameter-changes-cpp.html#learning-outcome",
     "title": "Monitoring for parameter changes (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Monitoring for parameter changes (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Monitoring for parameter changes (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-monitoring-for-parameter-changes-cpp.html#before-you-begin",
@@ -3194,14 +3223,14 @@
     "href": "lessons/intermediate-launch-using-ros2-launch-for-large-projects.html",
     "title": "Managing large projects",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Managing large projects in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-using-ros2-launch-for-large-projects.html#learning-outcome",
     "href": "lessons/intermediate-launch-using-ros2-launch-for-large-projects.html#learning-outcome",
     "title": "Managing large projects",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Managing large projects in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Managing large projects in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-using-ros2-launch-for-large-projects.html#before-you-begin",
@@ -3250,14 +3279,14 @@
     "href": "lessons/intermediate-launch-launch-system.html",
     "title": "Integrating launch files into ROS 2 packages",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Integrating launch files into ROS 2 packages in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-launch-system.html#learning-outcome",
     "href": "lessons/intermediate-launch-launch-system.html#learning-outcome",
     "title": "Integrating launch files into ROS 2 packages",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Integrating launch files into ROS 2 packages in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Integrating launch files into ROS 2 packages in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-launch-system.html#before-you-begin",
@@ -3292,14 +3321,14 @@
     "href": "lessons/intermediate-launch-creating-launch-files.html",
     "title": "Creating a launch file",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Creating a launch file in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-creating-launch-files.html#learning-outcome",
     "href": "lessons/intermediate-launch-creating-launch-files.html#learning-outcome",
     "title": "Creating a launch file",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Creating a launch file in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Creating a launch file in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-creating-launch-files.html#before-you-begin",
@@ -3348,14 +3377,14 @@
     "href": "lessons/intermediate-composition.html",
     "title": "Composing multiple nodes in a single process",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Composing multiple nodes in a single process in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-composition.html#learning-outcome",
     "href": "lessons/intermediate-composition.html#learning-outcome",
     "title": "Composing multiple nodes in a single process",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Composing multiple nodes in a single process in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Composing multiple nodes in a single process in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-composition.html#before-you-begin",
@@ -3404,14 +3433,14 @@
     "href": "lessons/demos-wait-for-acknowledgment.html",
     "title": "Wait for acknowledgment",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Wait for acknowledgment in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-wait-for-acknowledgment.html#learning-outcome",
     "href": "lessons/demos-wait-for-acknowledgment.html#learning-outcome",
     "title": "Wait for acknowledgment",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Wait for acknowledgment in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Wait for acknowledgment in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-wait-for-acknowledgment.html#before-you-begin",
@@ -3446,14 +3475,14 @@
     "href": "lessons/demos-rosbag-with-ros1-bridge.html",
     "title": "Recording and playing back data with rosbag using the ROS 1 bridge",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Recording and playing back data with rosbag using the ROS 1 bridge in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-rosbag-with-ros1-bridge.html#learning-outcome",
     "href": "lessons/demos-rosbag-with-ros1-bridge.html#learning-outcome",
     "title": "Recording and playing back data with rosbag using the ROS 1 bridge",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Recording and playing back data with rosbag using the ROS 1 bridge in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Recording and playing back data with rosbag using the ROS 1 bridge in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-rosbag-with-ros1-bridge.html#before-you-begin",
@@ -3488,14 +3517,14 @@
     "href": "lessons/demos-quality-of-service.html",
     "title": "Using quality-of-service settings for lossy networks",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using quality-of-service settings for lossy networks in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-quality-of-service.html#learning-outcome",
     "href": "lessons/demos-quality-of-service.html#learning-outcome",
     "title": "Using quality-of-service settings for lossy networks",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using quality-of-service settings for lossy networks in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using quality-of-service settings for lossy networks in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-quality-of-service.html#before-you-begin",
@@ -3544,14 +3573,14 @@
     "href": "lessons/demos-logging-and-logger-configuration.html",
     "title": "Logging",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Logging in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-logging-and-logger-configuration.html#learning-outcome",
     "href": "lessons/demos-logging-and-logger-configuration.html#learning-outcome",
     "title": "Logging",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Logging in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Logging in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-logging-and-logger-configuration.html#before-you-begin",
@@ -3600,14 +3629,14 @@
     "href": "lessons/demos-dummy-robot-demo.html",
     "title": "Experimenting with a dummy robot",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Experimenting with a dummy robot in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-dummy-robot-demo.html#learning-outcome",
     "href": "lessons/demos-dummy-robot-demo.html#learning-outcome",
     "title": "Experimenting with a dummy robot",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Experimenting with a dummy robot in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Experimenting with a dummy robot in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-dummy-robot-demo.html#before-you-begin",
@@ -3642,14 +3671,14 @@
     "href": "lessons/beginner-client-libraries.html",
     "title": "Beginner: Client libraries",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Beginner: Client libraries in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries.html#learning-outcome",
     "href": "lessons/beginner-client-libraries.html#learning-outcome",
     "title": "Beginner: Client libraries",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Beginner: Client libraries in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Beginner: Client libraries in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries.html#before-you-begin",
@@ -3698,14 +3727,14 @@
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html",
     "title": "Writing a publisher and subscriber in Python",
     "section": "",
-    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum.\nRoute: Building nodes and packages › Stage 2 › Python branch"
+    "text": "Build two Python nodes that exchange increasing integers over a typed topic and verify the communication through the ROS graph."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#goal",
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#goal",
     "title": "Writing a publisher and subscriber in Python",
-    "section": "Goal",
-    "text": "Goal\nBuild two Python nodes that exchange increasing integers over a typed topic and verify the communication through the ROS graph."
+    "section": "",
+    "text": "Build two Python nodes that exchange increasing integers over a typed topic and verify the communication through the ROS graph."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-publisher-and-subscriber.html#do-it",
@@ -3754,14 +3783,14 @@
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html",
     "title": "Writing a publisher and subscriber in C++",
     "section": "",
-    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum.\nRoute: Building nodes and packages › Stage 2 › C++ branch"
+    "text": "Build C++ publisher and subscriber nodes with rclcpp, observe their topic, and understand the build declarations that make both executables installable."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#goal",
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#goal",
     "title": "Writing a publisher and subscriber in C++",
-    "section": "Goal",
-    "text": "Goal\nBuild C++ publisher and subscriber nodes with rclcpp, observe their topic, and understand the build declarations that make both executables installable."
+    "section": "",
+    "text": "Build C++ publisher and subscriber nodes with rclcpp, observe their topic, and understand the build declarations that make both executables installable."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-publisher-and-subscriber.html#do-it",
@@ -3810,14 +3839,14 @@
     "href": "lessons/beginner-client-libraries-using-parameters-in-a-class-cpp.html",
     "title": "Using parameters in a class (C++)",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using parameters in a class (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-using-parameters-in-a-class-cpp.html#learning-outcome",
     "href": "lessons/beginner-client-libraries-using-parameters-in-a-class-cpp.html#learning-outcome",
     "title": "Using parameters in a class (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using parameters in a class (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using parameters in a class (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-using-parameters-in-a-class-cpp.html#before-you-begin",
@@ -3866,14 +3895,14 @@
     "href": "lessons/beginner-client-libraries-pluginlib.html",
     "title": "Creating and using plugins (C++)",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Creating and using plugins (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-pluginlib.html#learning-outcome",
     "href": "lessons/beginner-client-libraries-pluginlib.html#learning-outcome",
     "title": "Creating and using plugins (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Creating and using plugins (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Creating and using plugins (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-pluginlib.html#before-you-begin",
@@ -3922,14 +3951,14 @@
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html",
     "title": "Creating and using a custom message",
     "section": "",
-    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum.\nRoute: Building nodes and packages › Stage 3 › Domain interface"
+    "text": "Define a custom message in a dedicated interface package, generate its language support, and prove that ROS 2 can serialize a domain-specific waypoint."
   },
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#goal",
     "href": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#goal",
     "title": "Creating and using a custom message",
-    "section": "Goal",
-    "text": "Goal\nDefine a custom message in a dedicated interface package, generate its language support, and prove that ROS 2 can serialize a domain-specific waypoint."
+    "section": "",
+    "text": "Define a custom message in a dedicated interface package, generate its language support, and prove that ROS 2 can serialize a domain-specific waypoint."
   },
   {
     "objectID": "lessons/beginner-client-libraries-custom-ros2-interfaces.html#do-it",
@@ -3985,14 +4014,14 @@
     "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html",
     "title": "Creating a workspace",
     "section": "",
-    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum.\nRoute: Building nodes and packages › Stage 1 › Workspace and package · step 1 of 2"
+    "text": "Create an overlay workspace, build it with colcon, and prove that ROS 2 can discover a package from the installed overlay."
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#goal",
     "href": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#goal",
     "title": "Creating a workspace",
-    "section": "Goal",
-    "text": "Goal\nCreate an overlay workspace, build it with colcon, and prove that ROS 2 can discover a package from the installed overlay."
+    "section": "",
+    "text": "Create an overlay workspace, build it with colcon, and prove that ROS 2 can discover a package from the installed overlay."
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-a-workspace-creating-a-workspace.html#do-it",
@@ -4041,14 +4070,14 @@
     "href": "lessons/beginner-cli-tools.html",
     "title": "Beginner: CLI tools",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Beginner: CLI tools in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools.html#learning-outcome",
     "href": "lessons/beginner-cli-tools.html#learning-outcome",
     "title": "Beginner: CLI tools",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Beginner: CLI tools in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Beginner: CLI tools in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools.html#before-you-begin",
@@ -4097,14 +4126,14 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-topics-understanding-ros2-topics.html",
     "title": "Understanding topics",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Understanding topics in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-topics-understanding-ros2-topics.html#learning-outcome",
     "href": "lessons/beginner-cli-tools-understanding-ros2-topics-understanding-ros2-topics.html#learning-outcome",
     "title": "Understanding topics",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Understanding topics in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Understanding topics in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-topics-understanding-ros2-topics.html#before-you-begin",
@@ -4153,14 +4182,14 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-parameters-understanding-ros2-parameters.html",
     "title": "Understanding parameters",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Understanding parameters in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-parameters-understanding-ros2-parameters.html#learning-outcome",
     "href": "lessons/beginner-cli-tools-understanding-ros2-parameters-understanding-ros2-parameters.html#learning-outcome",
     "title": "Understanding parameters",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Understanding parameters in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Understanding parameters in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-parameters-understanding-ros2-parameters.html#before-you-begin",
@@ -4195,14 +4224,14 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-actions-understanding-ros2-actions.html",
     "title": "Understanding actions",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Understanding actions in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-actions-understanding-ros2-actions.html#learning-outcome",
     "href": "lessons/beginner-cli-tools-understanding-ros2-actions-understanding-ros2-actions.html#learning-outcome",
     "title": "Understanding actions",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Understanding actions in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Understanding actions in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-actions-understanding-ros2-actions.html#before-you-begin",
@@ -4251,14 +4280,14 @@
     "href": "lessons/beginner-cli-tools-launching-multiple-nodes-launching-multiple-nodes.html",
     "title": "Launching nodes",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Launching nodes in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-launching-multiple-nodes-launching-multiple-nodes.html#learning-outcome",
     "href": "lessons/beginner-cli-tools-launching-multiple-nodes-launching-multiple-nodes.html#learning-outcome",
     "title": "Launching nodes",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Launching nodes in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Launching nodes in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-launching-multiple-nodes-launching-multiple-nodes.html#before-you-begin",
@@ -4293,14 +4322,14 @@
     "href": "lessons/beginner-cli-tools-configuring-ros2-environment.html",
     "title": "Configuring environment",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Configuring environment in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-configuring-ros2-environment.html#learning-outcome",
     "href": "lessons/beginner-cli-tools-configuring-ros2-environment.html#learning-outcome",
     "title": "Configuring environment",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Configuring environment in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Configuring environment in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-configuring-ros2-environment.html#before-you-begin",
@@ -4335,14 +4364,14 @@
     "href": "lessons/advanced-topic-statistics-tutorial-topic-statistics-tutorial.html",
     "title": "Enabling topic statistics (C++)",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Enabling topic statistics (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-topic-statistics-tutorial-topic-statistics-tutorial.html#learning-outcome",
     "href": "lessons/advanced-topic-statistics-tutorial-topic-statistics-tutorial.html#learning-outcome",
     "title": "Enabling topic statistics (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Enabling topic statistics (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Enabling topic statistics (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-topic-statistics-tutorial-topic-statistics-tutorial.html#before-you-begin",
@@ -4391,14 +4420,14 @@
     "href": "lessons/advanced-simulators-webots-simulation-webots.html",
     "title": "Webots",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Webots in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-simulation-webots.html#learning-outcome",
     "href": "lessons/advanced-simulators-webots-simulation-webots.html#learning-outcome",
     "title": "Webots",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Webots in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Webots in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-simulation-webots.html#before-you-begin",
@@ -4433,14 +4462,14 @@
     "href": "lessons/advanced-simulators-webots-simulation-reset-handler.html",
     "title": "Setting up a Reset Handler",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Setting up a Reset Handler in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-simulation-reset-handler.html#learning-outcome",
     "href": "lessons/advanced-simulators-webots-simulation-reset-handler.html#learning-outcome",
     "title": "Setting up a Reset Handler",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Setting up a Reset Handler in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Setting up a Reset Handler in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-simulation-reset-handler.html#before-you-begin",
@@ -4475,14 +4504,14 @@
     "href": "lessons/advanced-simulators-webots-setting-up-simulation-webots-advanced.html",
     "title": "Setting up a robot simulation (Advanced)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Setting up a robot simulation (Advanced) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-setting-up-simulation-webots-advanced.html#learning-outcome",
     "href": "lessons/advanced-simulators-webots-setting-up-simulation-webots-advanced.html#learning-outcome",
     "title": "Setting up a robot simulation (Advanced)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Setting up a robot simulation (Advanced) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Setting up a robot simulation (Advanced) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-setting-up-simulation-webots-advanced.html#before-you-begin",
@@ -4517,14 +4546,14 @@
     "href": "lessons/advanced-simulators-webots-installation-ubuntu.html",
     "title": "Installation (Ubuntu)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Installation (Ubuntu) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-installation-ubuntu.html#learning-outcome",
     "href": "lessons/advanced-simulators-webots-installation-ubuntu.html#learning-outcome",
     "title": "Installation (Ubuntu)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Installation (Ubuntu) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Installation (Ubuntu) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-installation-ubuntu.html#before-you-begin",
@@ -4559,14 +4588,14 @@
     "href": "lessons/advanced-simulators-simulation-main.html",
     "title": "Simulators",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Simulators in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-simulation-main.html#learning-outcome",
     "href": "lessons/advanced-simulators-simulation-main.html#learning-outcome",
     "title": "Simulators",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Simulators in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Simulators in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-simulation-main.html#before-you-begin",
@@ -4601,14 +4630,14 @@
     "href": "lessons/advanced-simulators-mvsim-installation-ubuntu.html",
     "title": "Installation (Ubuntu)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Installation (Ubuntu) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-installation-ubuntu.html#learning-outcome",
     "href": "lessons/advanced-simulators-mvsim-installation-ubuntu.html#learning-outcome",
     "title": "Installation (Ubuntu)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Installation (Ubuntu) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Installation (Ubuntu) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-installation-ubuntu.html#before-you-begin",
@@ -4643,14 +4672,14 @@
     "href": "lessons/advanced-simulators-mvsim-defining-worlds-mvsim.html",
     "title": "Defining worlds, robots, and sensors",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Defining worlds, robots, and sensors in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-defining-worlds-mvsim.html#learning-outcome",
     "href": "lessons/advanced-simulators-mvsim-defining-worlds-mvsim.html#learning-outcome",
     "title": "Defining worlds, robots, and sensors",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Defining worlds, robots, and sensors in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Defining worlds, robots, and sensors in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-defining-worlds-mvsim.html#before-you-begin",
@@ -4685,14 +4714,14 @@
     "href": "lessons/advanced-simulators-gazebo-gazebo.html",
     "title": "Setting up a robot simulation (Gazebo)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Setting up a robot simulation (Gazebo) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-gazebo-gazebo.html#learning-outcome",
     "href": "lessons/advanced-simulators-gazebo-gazebo.html#learning-outcome",
     "title": "Setting up a robot simulation (Gazebo)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Setting up a robot simulation (Gazebo) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Setting up a robot simulation (Gazebo) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-gazebo-gazebo.html#before-you-begin",
@@ -4727,14 +4756,14 @@
     "href": "lessons/advanced-security-security-on-two.html",
     "title": "Ensuring security across machines",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Ensuring security across machines in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-security-on-two.html#learning-outcome",
     "href": "lessons/advanced-security-security-on-two.html#learning-outcome",
     "title": "Ensuring security across machines",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Ensuring security across machines in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Ensuring security across machines in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-security-on-two.html#before-you-begin",
@@ -4769,14 +4798,14 @@
     "href": "lessons/advanced-security-introducing-ros2-security.html",
     "title": "Setting up security",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Setting up security in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-introducing-ros2-security.html#learning-outcome",
     "href": "lessons/advanced-security-introducing-ros2-security.html#learning-outcome",
     "title": "Setting up security",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Setting up security in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Setting up security in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-introducing-ros2-security.html#before-you-begin",
@@ -4825,14 +4854,14 @@
     "href": "lessons/advanced-security-deployment-guidelines.html",
     "title": "Deployment Guidelines",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Deployment Guidelines in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-deployment-guidelines.html#learning-outcome",
     "href": "lessons/advanced-security-deployment-guidelines.html#learning-outcome",
     "title": "Deployment Guidelines",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Deployment Guidelines in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Deployment Guidelines in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-deployment-guidelines.html#before-you-begin",
@@ -4881,14 +4910,14 @@
     "href": "lessons/advanced-ros2-tracing-trace-and-analyze.html",
     "title": "How to use ros2_tracing to trace and analyze an application",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use How to use ros2_tracing to trace and analyze an application in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-ros2-tracing-trace-and-analyze.html#learning-outcome",
     "href": "lessons/advanced-ros2-tracing-trace-and-analyze.html#learning-outcome",
     "title": "How to use ros2_tracing to trace and analyze an application",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse How to use ros2_tracing to trace and analyze an application in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use How to use ros2_tracing to trace and analyze an application in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-ros2-tracing-trace-and-analyze.html#before-you-begin",
@@ -4937,14 +4966,14 @@
     "href": "lessons/advanced-recording-a-bag-from-your-own-node-cpp.html",
     "title": "Recording a bag from a node (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Recording a bag from a node (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-recording-a-bag-from-your-own-node-cpp.html#learning-outcome",
     "href": "lessons/advanced-recording-a-bag-from-your-own-node-cpp.html#learning-outcome",
     "title": "Recording a bag from a node (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Recording a bag from a node (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Recording a bag from a node (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-recording-a-bag-from-your-own-node-cpp.html#before-you-begin",
@@ -4979,14 +5008,14 @@
     "href": "lessons/advanced-improved-dynamic-discovery.html",
     "title": "Improved Dynamic Discovery",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Improved Dynamic Discovery in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-improved-dynamic-discovery.html#learning-outcome",
     "href": "lessons/advanced-improved-dynamic-discovery.html#learning-outcome",
     "title": "Improved Dynamic Discovery",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Improved Dynamic Discovery in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Improved Dynamic Discovery in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-improved-dynamic-discovery.html#before-you-begin",
@@ -5021,14 +5050,14 @@
     "href": "lessons/advanced-discovery-server-discovery-server.html",
     "title": "Using Fast DDS Discovery Server as discovery protocol [community-contributed]",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using Fast DDS Discovery Server as discovery protocol [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-discovery-server-discovery-server.html#learning-outcome",
     "href": "lessons/advanced-discovery-server-discovery-server.html#learning-outcome",
     "title": "Using Fast DDS Discovery Server as discovery protocol [community-contributed]",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using Fast DDS Discovery Server as discovery protocol [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using Fast DDS Discovery Server as discovery protocol [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-discovery-server-discovery-server.html#before-you-begin",
@@ -5077,14 +5106,14 @@
     "href": "lessons/advanced-create-an-rqtbag-plugin.html",
     "title": "Create an rqt_bag Plugin",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Create an rqt_bag Plugin in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-create-an-rqtbag-plugin.html#learning-outcome",
     "href": "lessons/advanced-create-an-rqtbag-plugin.html#learning-outcome",
     "title": "Create an rqt_bag Plugin",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Create an rqt_bag Plugin in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Create an rqt_bag Plugin in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-create-an-rqtbag-plugin.html#before-you-begin",
@@ -5119,14 +5148,14 @@
     "href": "lessons/advanced-allocator-template-tutorial.html",
     "title": "Implementing a custom memory allocator",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Implementing a custom memory allocator in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-allocator-template-tutorial.html#learning-outcome",
     "href": "lessons/advanced-allocator-template-tutorial.html#learning-outcome",
     "title": "Implementing a custom memory allocator",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Implementing a custom memory allocator in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Implementing a custom memory allocator in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-allocator-template-tutorial.html#before-you-begin",
@@ -5161,14 +5190,14 @@
     "href": "index.html",
     "title": "ROS 2 Trails",
     "section": "",
-    "text": "For coders who want to make robots observable, spatially correct, and controllable—not merely memorize commands. Run a complete ROS graph in lesson 1, then build increasingly real systems while learning the theory in context.\nStart Lesson 1 See the course"
+    "text": "For coders who want to make robots observable, spatially correct, and controllable. Run a complete ROS graph first, then use projects to make each concept matter.\nStart Lesson 1 See the course Find a topic\nIncludes 129 onsite lessons plus guided projects. External ROS documentation is kept as reference material, not as the main path through a lesson."
   },
   {
-    "objectID": "index.html#learn-ros-2-by-building-systems-that-move",
-    "href": "index.html#learn-ros-2-by-building-systems-that-move",
+    "objectID": "index.html#start-building-ros-2-systems",
+    "href": "index.html#start-building-ros-2-systems",
     "title": "ROS 2 Trails",
     "section": "",
-    "text": "For coders who want to make robots observable, spatially correct, and controllable—not merely memorize commands. Run a complete ROS graph in lesson 1, then build increasingly real systems while learning the theory in context.\nStart Lesson 1 See the course"
+    "text": "For coders who want to make robots observable, spatially correct, and controllable. Run a complete ROS graph first, then use projects to make each concept matter.\nStart Lesson 1 See the course Find a topic\nIncludes 129 onsite lessons plus guided projects. External ROS documentation is kept as reference material, not as the main path through a lesson."
   },
   {
     "objectID": "index.html#is-this-course-for-me",
@@ -5178,11 +5207,18 @@
     "text": "Is this course for me?\nYou should be comfortable editing code and using a terminal. You do not need prior ROS experience, advanced control theory, expensive hardware, or permission to leave the site for required material. The pinned learning platform is Ubuntu 24.04 with ROS 2 Jazzy; simulation and visualization come before hardware."
   },
   {
+    "objectID": "index.html#choose-by-goal",
+    "href": "index.html#choose-by-goal",
+    "title": "ROS 2 Trails",
+    "section": "Choose by goal",
+    "text": "Choose by goal\n\n\nStart from zero\nFollow the guided course when you want a single next page.\n\n\nSee robot frames\nUse tf2 and RViz to understand where robot data lives.\n\n\nBuild a project\nPractice ROS concepts inside small systems with visible artifacts.\n\n\nFind one topic\nSearch the local lesson library when you know the exact concept."
+  },
+  {
     "objectID": "index.html#what-you-will-make",
     "href": "index.html#what-you-will-make",
     "title": "ROS 2 Trails",
     "section": "What you will make",
-    "text": "What you will make\n\n\nLesson 1 · A complete graph\nDrive a robot, inspect interfaces, intervene, and record evidence in one hour.\n\n\nLesson 2 · Frame Detective\nSee and repair coordinate-frame and timestamp failures in RViz.\n\n\nLesson 3 · Camera Detective\nCalibrate a distorted image stream and reject weak evidence.\n\n\nLesson 4 · Line Scout\nClose a mobile sensing-control loop and recover from lost observations.\n\n\nLesson 5 · Balance Bot\nModel, control, perturb, tune, and score an unstable simulated mechanism."
+    "text": "What you will make\n\nA complete ROS graph you can inspect and change.\nA frame-debugging project in RViz.\nA camera calibration and evidence workflow.\nA line-following sensing-control loop.\nA balance-bot control experiment."
   },
   {
     "objectID": "index.html#how-learning-works-here",
@@ -5405,7 +5441,7 @@
     "href": "artifacts.html#workspaces",
     "title": "Runnable artifacts",
     "section": "Workspaces and packages",
-    "text": "Workspaces and packages\n\n\nComplete Frame Detective workspace\nType: workspace · State: preview\nUse with: Frame Detective: debug a robot’s spatial story\n\n\nComplete Camera Detective workspace\nType: workspace · State: preview\nUse with: Camera Detective: turn pixels into measurements\n\n\nComplete Line Scout workspace\nType: workspace · State: preview\nUse with: Line Scout: follow what the robot can sense\n\n\nComplete Balance Bot workspace\nType: workspace · State: preview\nUse with: Balance Bot: stabilize an inverted pendulum\n\n\nComplete Notebook Robotics Lab\nType: workspace · State: preview\nUse with: Notebook Robotics Lab: probe, plot, and tune ROS 2\n\n\nWorkspace Basics starter\nType: workspace · State: preview\nUse with: Creating a workspace",
+    "text": "Workspaces and packages\n\n\nComplete Frame Detective workspace\nType: workspace · State: preview Use with: Frame Detective: debug a robot’s spatial story\n\n\nComplete Camera Detective workspace\nType: workspace · State: preview Use with: Camera Detective: turn pixels into measurements\n\n\nComplete Line Scout workspace\nType: workspace · State: preview Use with: Line Scout: follow what the robot can sense\n\n\nComplete Balance Bot workspace\nType: workspace · State: preview Use with: Balance Bot: stabilize an inverted pendulum\n\n\nComplete Notebook Robotics Lab\nType: workspace · State: preview Use with: Notebook Robotics Lab: probe, plot, and tune ROS 2\n\n\nWorkspace Basics starter\nType: workspace · State: preview Use with: Creating a workspace",
     "crumbs": [
       "Learn",
       "All artifacts"
@@ -5416,7 +5452,7 @@
     "href": "artifacts.html#notebooks",
     "title": "Runnable artifacts",
     "section": "Notebooks",
-    "text": "Notebooks\n\n\nLive Graph Probe notebook\nType: notebook · State: preview\nUse with: Project A — Live Graph Probe\n\n\nTrajectory Microscope notebook\nType: notebook · State: validated-offline\nUse with: Project B — Trajectory Microscope\n\n\nController Tuner notebook\nType: notebook · State: validated-offline\nUse with: Project C — Controller Tuner",
+    "text": "Notebooks\n\n\nLive Graph Probe notebook\nType: notebook · State: preview Use with: Project A — Live Graph Probe\n\n\nTrajectory Microscope notebook\nType: notebook · State: validated-offline Use with: Project B — Trajectory Microscope\n\n\nController Tuner notebook\nType: notebook · State: validated-offline Use with: Project C — Controller Tuner",
     "crumbs": [
       "Learn",
       "All artifacts"
@@ -5427,7 +5463,7 @@
     "href": "artifacts.html#data-and-evidence",
     "title": "Runnable artifacts",
     "section": "Data and evidence",
-    "text": "Data and evidence\n\n\nNotebook line-trial dataset\nType: dataset · State: validated-offline\nUse with: Project B — Trajectory Microscope\n\n\nBalance Bot trial dataset\nType: dataset · State: preview\nUse with: Tune from evidence",
+    "text": "Data and evidence\n\n\nNotebook line-trial dataset\nType: dataset · State: validated-offline Use with: Project B — Trajectory Microscope\n\n\nBalance Bot trial dataset\nType: dataset · State: preview Use with: Tune from evidence",
     "crumbs": [
       "Learn",
       "All artifacts"
@@ -5438,7 +5474,7 @@
     "href": "artifacts.html#configuration",
     "title": "Runnable artifacts",
     "section": "Launch, RViz, and configuration",
-    "text": "Launch, RViz, and configuration\n\n\nFrame Detective RViz configuration\nType: configuration · State: preview\nUse with: Model and see the robot\n\n\nLine Scout RViz configuration\nType: configuration · State: preview\nUse with: Run and inspect the track",
+    "text": "Launch, RViz, and configuration\n\n\nFrame Detective RViz configuration\nType: configuration · State: preview Use with: Model and see the robot\n\n\nLine Scout RViz configuration\nType: configuration · State: preview Use with: Run and inspect the track",
     "crumbs": [
       "Learn",
       "All artifacts"
@@ -5652,14 +5688,14 @@
     "href": "lessons/advanced-ament-lint-for-clean-code.html",
     "title": "Ament Lint CLI Utilities",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Ament Lint CLI Utilities in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-ament-lint-for-clean-code.html#learning-outcome",
     "href": "lessons/advanced-ament-lint-for-clean-code.html#learning-outcome",
     "title": "Ament Lint CLI Utilities",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Ament Lint CLI Utilities in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Ament Lint CLI Utilities in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-ament-lint-for-clean-code.html#before-you-begin",
@@ -5694,14 +5730,14 @@
     "href": "lessons/advanced-creating-an-rmw-implementation.html",
     "title": "Creating an rmw implementation",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Creating an rmw implementation in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-creating-an-rmw-implementation.html#learning-outcome",
     "href": "lessons/advanced-creating-an-rmw-implementation.html#learning-outcome",
     "title": "Creating an rmw implementation",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Creating an rmw implementation in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Creating an rmw implementation in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-creating-an-rmw-implementation.html#before-you-begin",
@@ -5750,14 +5786,14 @@
     "href": "lessons/advanced-fastdds-configuration.html",
     "title": "Unlocking the potential of Fast DDS middleware [community-contributed]",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Unlocking the potential of Fast DDS middleware [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-fastdds-configuration.html#learning-outcome",
     "href": "lessons/advanced-fastdds-configuration.html#learning-outcome",
     "title": "Unlocking the potential of Fast DDS middleware [community-contributed]",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Unlocking the potential of Fast DDS middleware [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Unlocking the potential of Fast DDS middleware [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-fastdds-configuration.html#before-you-begin",
@@ -5806,14 +5842,14 @@
     "href": "lessons/advanced-reading-from-a-bag-file-cpp.html",
     "title": "Reading from a bag file (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Reading from a bag file (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-reading-from-a-bag-file-cpp.html#learning-outcome",
     "href": "lessons/advanced-reading-from-a-bag-file-cpp.html#learning-outcome",
     "title": "Reading from a bag file (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Reading from a bag file (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Reading from a bag file (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-reading-from-a-bag-file-cpp.html#before-you-begin",
@@ -5848,14 +5884,14 @@
     "href": "lessons/advanced-recording-a-bag-from-your-own-node-py.html",
     "title": "Recording a bag from a node (Python)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Recording a bag from a node (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-recording-a-bag-from-your-own-node-py.html#learning-outcome",
     "href": "lessons/advanced-recording-a-bag-from-your-own-node-py.html#learning-outcome",
     "title": "Recording a bag from a node (Python)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Recording a bag from a node (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Recording a bag from a node (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-recording-a-bag-from-your-own-node-py.html#before-you-begin",
@@ -5890,14 +5926,14 @@
     "href": "lessons/advanced-security-access-controls.html",
     "title": "Setting access controls",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Setting access controls in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-access-controls.html#learning-outcome",
     "href": "lessons/advanced-security-access-controls.html#learning-outcome",
     "title": "Setting access controls",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Setting access controls in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Setting access controls in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-access-controls.html#before-you-begin",
@@ -5946,14 +5982,14 @@
     "href": "lessons/advanced-security-examine-traffic.html",
     "title": "Examining network traffic",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Examining network traffic in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-examine-traffic.html#learning-outcome",
     "href": "lessons/advanced-security-examine-traffic.html#learning-outcome",
     "title": "Examining network traffic",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Examining network traffic in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Examining network traffic in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-examine-traffic.html#before-you-begin",
@@ -6002,14 +6038,14 @@
     "href": "lessons/advanced-security-security-main.html",
     "title": "Security",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Security in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-security-main.html#learning-outcome",
     "href": "lessons/advanced-security-security-main.html#learning-outcome",
     "title": "Security",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Security in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Security in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-security-main.html#before-you-begin",
@@ -6058,14 +6094,14 @@
     "href": "lessons/advanced-security-the-keystore.html",
     "title": "Understanding the security keystore",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Understanding the security keystore in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-the-keystore.html#learning-outcome",
     "href": "lessons/advanced-security-the-keystore.html#learning-outcome",
     "title": "Understanding the security keystore",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Understanding the security keystore in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Understanding the security keystore in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-security-the-keystore.html#before-you-begin",
@@ -6114,14 +6150,14 @@
     "href": "lessons/advanced-simulators-gazebo-simulation-gazebo.html",
     "title": "Gazebo",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Gazebo in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-gazebo-simulation-gazebo.html#learning-outcome",
     "href": "lessons/advanced-simulators-gazebo-simulation-gazebo.html#learning-outcome",
     "title": "Gazebo",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Gazebo in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Gazebo in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-gazebo-simulation-gazebo.html#before-you-begin",
@@ -6156,14 +6192,14 @@
     "href": "lessons/advanced-simulators-mvsim-getting-started-mvsim.html",
     "title": "Getting started with MVSim",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Getting started with MVSim in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-getting-started-mvsim.html#learning-outcome",
     "href": "lessons/advanced-simulators-mvsim-getting-started-mvsim.html#learning-outcome",
     "title": "Getting started with MVSim",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Getting started with MVSim in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Getting started with MVSim in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-getting-started-mvsim.html#before-you-begin",
@@ -6198,14 +6234,14 @@
     "href": "lessons/advanced-simulators-mvsim-simulation-mvsim.html",
     "title": "MVSim",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use MVSim in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-simulation-mvsim.html#learning-outcome",
     "href": "lessons/advanced-simulators-mvsim-simulation-mvsim.html#learning-outcome",
     "title": "MVSim",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse MVSim in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use MVSim in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-mvsim-simulation-mvsim.html#before-you-begin",
@@ -6240,14 +6276,14 @@
     "href": "lessons/advanced-simulators-webots-installation-macos.html",
     "title": "Installation (macOS)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Installation (macOS) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-installation-macos.html#learning-outcome",
     "href": "lessons/advanced-simulators-webots-installation-macos.html#learning-outcome",
     "title": "Installation (macOS)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Installation (macOS) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Installation (macOS) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-installation-macos.html#before-you-begin",
@@ -6282,14 +6318,14 @@
     "href": "lessons/advanced-simulators-webots-installation-windows.html",
     "title": "Installation (Windows)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Installation (Windows) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-installation-windows.html#learning-outcome",
     "href": "lessons/advanced-simulators-webots-installation-windows.html#learning-outcome",
     "title": "Installation (Windows)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Installation (Windows) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Installation (Windows) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-installation-windows.html#before-you-begin",
@@ -6324,14 +6360,14 @@
     "href": "lessons/advanced-simulators-webots-setting-up-simulation-webots-basic.html",
     "title": "Setting up a robot simulation (Basic)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Setting up a robot simulation (Basic) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-setting-up-simulation-webots-basic.html#learning-outcome",
     "href": "lessons/advanced-simulators-webots-setting-up-simulation-webots-basic.html#learning-outcome",
     "title": "Setting up a robot simulation (Basic)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Setting up a robot simulation (Basic) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Setting up a robot simulation (Basic) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-setting-up-simulation-webots-basic.html#before-you-begin",
@@ -6366,14 +6402,14 @@
     "href": "lessons/advanced-simulators-webots-simulation-supervisor.html",
     "title": "The Ros2Supervisor Node",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use The Ros2Supervisor Node in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-simulation-supervisor.html#learning-outcome",
     "href": "lessons/advanced-simulators-webots-simulation-supervisor.html#learning-outcome",
     "title": "The Ros2Supervisor Node",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse The Ros2Supervisor Node in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use The Ros2Supervisor Node in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-simulators-webots-simulation-supervisor.html#before-you-begin",
@@ -6408,14 +6444,14 @@
     "href": "lessons/advanced-supplementing-custom-rosdep-keys.html",
     "title": "Supplementing custom rosdep keys",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Supplementing custom rosdep keys in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-supplementing-custom-rosdep-keys.html#learning-outcome",
     "href": "lessons/advanced-supplementing-custom-rosdep-keys.html#learning-outcome",
     "title": "Supplementing custom rosdep keys",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Supplementing custom rosdep keys in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Supplementing custom rosdep keys in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced-supplementing-custom-rosdep-keys.html#before-you-begin",
@@ -6450,14 +6486,14 @@
     "href": "lessons/advanced.html",
     "title": "Advanced",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Advanced in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced.html#learning-outcome",
     "href": "lessons/advanced.html#learning-outcome",
     "title": "Advanced",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Advanced in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Advanced in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/advanced.html#before-you-begin",
@@ -6492,14 +6528,14 @@
     "href": "lessons/beginner-cli-tools-introducing-turtlesim-introducing-turtlesim.html",
     "title": "Using turtlesim, ros2, and rqt",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using turtlesim, ros2, and rqt in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-introducing-turtlesim-introducing-turtlesim.html#learning-outcome",
     "href": "lessons/beginner-cli-tools-introducing-turtlesim-introducing-turtlesim.html#learning-outcome",
     "title": "Using turtlesim, ros2, and rqt",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using turtlesim, ros2, and rqt in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using turtlesim, ros2, and rqt in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-introducing-turtlesim-introducing-turtlesim.html#before-you-begin",
@@ -6534,14 +6570,14 @@
     "href": "lessons/beginner-cli-tools-recording-and-playing-back-data-recording-and-playing-back-data.html",
     "title": "Recording and playing back data",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Recording and playing back data in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-recording-and-playing-back-data-recording-and-playing-back-data.html#learning-outcome",
     "href": "lessons/beginner-cli-tools-recording-and-playing-back-data-recording-and-playing-back-data.html#learning-outcome",
     "title": "Recording and playing back data",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Recording and playing back data in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Recording and playing back data in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-recording-and-playing-back-data-recording-and-playing-back-data.html#before-you-begin",
@@ -6590,14 +6626,14 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-nodes-understanding-ros2-nodes.html",
     "title": "Understanding nodes",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Understanding nodes in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-nodes-understanding-ros2-nodes.html#learning-outcome",
     "href": "lessons/beginner-cli-tools-understanding-ros2-nodes-understanding-ros2-nodes.html#learning-outcome",
     "title": "Understanding nodes",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Understanding nodes in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Understanding nodes in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-nodes-understanding-ros2-nodes.html#before-you-begin",
@@ -6646,14 +6682,14 @@
     "href": "lessons/beginner-cli-tools-understanding-ros2-services-understanding-ros2-services.html",
     "title": "Understanding services",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Understanding services in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-services-understanding-ros2-services.html#learning-outcome",
     "href": "lessons/beginner-cli-tools-understanding-ros2-services-understanding-ros2-services.html#learning-outcome",
     "title": "Understanding services",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Understanding services in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Understanding services in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-understanding-ros2-services-understanding-ros2-services.html#before-you-begin",
@@ -6702,14 +6738,14 @@
     "href": "lessons/beginner-cli-tools-using-rqt-console-using-rqt-console.html",
     "title": "Using rqt_console to view logs",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using rqt_console to view logs in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-using-rqt-console-using-rqt-console.html#learning-outcome",
     "href": "lessons/beginner-cli-tools-using-rqt-console-using-rqt-console.html#learning-outcome",
     "title": "Using rqt_console to view logs",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using rqt_console to view logs in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using rqt_console to view logs in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-cli-tools-using-rqt-console-using-rqt-console.html#before-you-begin",
@@ -6744,14 +6780,14 @@
     "href": "lessons/beginner-client-libraries-colcon-tutorial.html",
     "title": "Using colcon to build packages",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using colcon to build packages in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-colcon-tutorial.html#learning-outcome",
     "href": "lessons/beginner-client-libraries-colcon-tutorial.html#learning-outcome",
     "title": "Using colcon to build packages",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using colcon to build packages in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using colcon to build packages in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-colcon-tutorial.html#before-you-begin",
@@ -6786,14 +6822,14 @@
     "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html",
     "title": "Creating a package",
     "section": "",
-    "text": "Authored lesson · This page is part of the local ROS 2 Trails curriculum.\nRoute: Building nodes and packages › Stage 1 › Workspace and package · step 2 of 2"
+    "text": "Create a Python package with explicit dependencies, build only that package, and run its installed executable."
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#goal",
     "href": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#goal",
     "title": "Creating a package",
-    "section": "Goal",
-    "text": "Goal\nCreate a Python package with explicit dependencies, build only that package, and run its installed executable."
+    "section": "",
+    "text": "Create a Python package with explicit dependencies, build only that package, and run its installed executable."
   },
   {
     "objectID": "lessons/beginner-client-libraries-creating-your-first-ros2-package.html#do-it",
@@ -6842,14 +6878,14 @@
     "href": "lessons/beginner-client-libraries-getting-started-with-ros2doctor.html",
     "title": "Using ros2doctor to identify issues",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using ros2doctor to identify issues in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-getting-started-with-ros2doctor.html#learning-outcome",
     "href": "lessons/beginner-client-libraries-getting-started-with-ros2doctor.html#learning-outcome",
     "title": "Using ros2doctor to identify issues",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using ros2doctor to identify issues in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using ros2doctor to identify issues in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-getting-started-with-ros2doctor.html#before-you-begin",
@@ -6884,14 +6920,14 @@
     "href": "lessons/beginner-client-libraries-single-package-define-and-use-interface.html",
     "title": "Implementing custom interfaces",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Implementing custom interfaces in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-single-package-define-and-use-interface.html#learning-outcome",
     "href": "lessons/beginner-client-libraries-single-package-define-and-use-interface.html#learning-outcome",
     "title": "Implementing custom interfaces",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Implementing custom interfaces in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Implementing custom interfaces in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-single-package-define-and-use-interface.html#before-you-begin",
@@ -6926,14 +6962,14 @@
     "href": "lessons/beginner-client-libraries-using-parameters-in-a-class-python.html",
     "title": "Using parameters in a class (Python)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using parameters in a class (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-using-parameters-in-a-class-python.html#learning-outcome",
     "href": "lessons/beginner-client-libraries-using-parameters-in-a-class-python.html#learning-outcome",
     "title": "Using parameters in a class (Python)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using parameters in a class (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using parameters in a class (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-using-parameters-in-a-class-python.html#before-you-begin",
@@ -6968,14 +7004,14 @@
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-service-and-client.html",
     "title": "Writing a simple service and client (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing a simple service and client (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-service-and-client.html#learning-outcome",
     "href": "lessons/beginner-client-libraries-writing-a-simple-cpp-service-and-client.html#learning-outcome",
     "title": "Writing a simple service and client (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing a simple service and client (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing a simple service and client (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-cpp-service-and-client.html#before-you-begin",
@@ -7010,14 +7046,14 @@
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-service-and-client.html",
     "title": "Writing a simple service and client (Python)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing a simple service and client (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-service-and-client.html#learning-outcome",
     "href": "lessons/beginner-client-libraries-writing-a-simple-py-service-and-client.html#learning-outcome",
     "title": "Writing a simple service and client (Python)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing a simple service and client (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing a simple service and client (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/beginner-client-libraries-writing-a-simple-py-service-and-client.html#before-you-begin",
@@ -7052,14 +7088,14 @@
     "href": "lessons/demos-content-filtering-subscription.html",
     "title": "Creating a content filtering subscription",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Creating a content filtering subscription in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-content-filtering-subscription.html#learning-outcome",
     "href": "lessons/demos-content-filtering-subscription.html#learning-outcome",
     "title": "Creating a content filtering subscription",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Creating a content filtering subscription in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Creating a content filtering subscription in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-content-filtering-subscription.html#before-you-begin",
@@ -7094,14 +7130,14 @@
     "href": "lessons/demos-intra-process-communication.html",
     "title": "Setting up efficient intra-process communication",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Setting up efficient intra-process communication in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-intra-process-communication.html#learning-outcome",
     "href": "lessons/demos-intra-process-communication.html#learning-outcome",
     "title": "Setting up efficient intra-process communication",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Setting up efficient intra-process communication in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Setting up efficient intra-process communication in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-intra-process-communication.html#before-you-begin",
@@ -7150,14 +7186,14 @@
     "href": "lessons/demos-managed-nodes.html",
     "title": "Managing node lifecycles - example",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Managing node lifecycles - example in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-managed-nodes.html#learning-outcome",
     "href": "lessons/demos-managed-nodes.html#learning-outcome",
     "title": "Managing node lifecycles - example",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Managing node lifecycles - example in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Managing node lifecycles - example in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-managed-nodes.html#before-you-begin",
@@ -7192,14 +7228,14 @@
     "href": "lessons/demos-real-time-programming.html",
     "title": "Understanding real-time programming",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Understanding real-time programming in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-real-time-programming.html#learning-outcome",
     "href": "lessons/demos-real-time-programming.html#learning-outcome",
     "title": "Understanding real-time programming",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Understanding real-time programming in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Understanding real-time programming in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-real-time-programming.html#before-you-begin",
@@ -7248,14 +7284,14 @@
     "href": "lessons/demos-service-introspection.html",
     "title": "Configure service introspection",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Configure service introspection in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-service-introspection.html#learning-outcome",
     "href": "lessons/demos-service-introspection.html#learning-outcome",
     "title": "Configure service introspection",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Configure service introspection in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Configure service introspection in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos-service-introspection.html#before-you-begin",
@@ -7304,14 +7340,14 @@
     "href": "lessons/demos.html",
     "title": "Demos",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Demos in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos.html#learning-outcome",
     "href": "lessons/demos.html#learning-outcome",
     "title": "Demos",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Demos in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Demos in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/demos.html#before-you-begin",
@@ -7346,14 +7382,14 @@
     "href": "lessons/intermediate-creating-an-action.html",
     "title": "Creating an action",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Creating an action in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-creating-an-action.html#learning-outcome",
     "href": "lessons/intermediate-creating-an-action.html#learning-outcome",
     "title": "Creating an action",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Creating an action in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Creating an action in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-creating-an-action.html#before-you-begin",
@@ -7402,14 +7438,14 @@
     "href": "lessons/intermediate-launch-launch-main.html",
     "title": "Launch",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Launch in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-launch-main.html#learning-outcome",
     "href": "lessons/intermediate-launch-launch-main.html#learning-outcome",
     "title": "Launch",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Launch in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Launch in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-launch-main.html#before-you-begin",
@@ -7458,14 +7494,14 @@
     "href": "lessons/intermediate-launch-using-event-handlers.html",
     "title": "Using event handlers",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using event handlers in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-using-event-handlers.html#learning-outcome",
     "href": "lessons/intermediate-launch-using-event-handlers.html#learning-outcome",
     "title": "Using event handlers",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using event handlers in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using event handlers in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-using-event-handlers.html#before-you-begin",
@@ -7500,14 +7536,14 @@
     "href": "lessons/intermediate-launch-using-substitutions.html",
     "title": "Using substitutions",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using substitutions in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-using-substitutions.html#learning-outcome",
     "href": "lessons/intermediate-launch-using-substitutions.html#learning-outcome",
     "title": "Using substitutions",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using substitutions in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using substitutions in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-launch-using-substitutions.html#before-you-begin",
@@ -7556,14 +7592,14 @@
     "href": "lessons/intermediate-monitoring-for-parameter-changes-python.html",
     "title": "Monitoring for parameter changes (Python)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Monitoring for parameter changes (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-monitoring-for-parameter-changes-python.html#learning-outcome",
     "href": "lessons/intermediate-monitoring-for-parameter-changes-python.html#learning-outcome",
     "title": "Monitoring for parameter changes (Python)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Monitoring for parameter changes (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Monitoring for parameter changes (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-monitoring-for-parameter-changes-python.html#before-you-begin",
@@ -7598,14 +7634,14 @@
     "href": "lessons/intermediate-rviz-marker-display-types-marker-display-types.html",
     "title": "Marker: Display types",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Marker: Display types in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-marker-display-types-marker-display-types.html#learning-outcome",
     "href": "lessons/intermediate-rviz-marker-display-types-marker-display-types.html#learning-outcome",
     "title": "Marker: Display types",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Marker: Display types in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Marker: Display types in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-marker-display-types-marker-display-types.html#before-you-begin",
@@ -7640,14 +7676,14 @@
     "href": "lessons/intermediate-rviz-marker-sending-basic-shapes-marker-sending-basic-shapes.html",
     "title": "Marker: Sending Basic Shapes (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Marker: Sending Basic Shapes (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-marker-sending-basic-shapes-marker-sending-basic-shapes.html#learning-outcome",
     "href": "lessons/intermediate-rviz-marker-sending-basic-shapes-marker-sending-basic-shapes.html#learning-outcome",
     "title": "Marker: Sending Basic Shapes (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Marker: Sending Basic Shapes (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Marker: Sending Basic Shapes (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-marker-sending-basic-shapes-marker-sending-basic-shapes.html#before-you-begin",
@@ -7682,14 +7718,14 @@
     "href": "lessons/intermediate-rviz-rviz-custom-panel-rviz-custom-panel.html",
     "title": "Building a Custom RViz Panel",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Building a Custom RViz Panel in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-custom-panel-rviz-custom-panel.html#learning-outcome",
     "href": "lessons/intermediate-rviz-rviz-custom-panel-rviz-custom-panel.html#learning-outcome",
     "title": "Building a Custom RViz Panel",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Building a Custom RViz Panel in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Building a Custom RViz Panel in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-custom-panel-rviz-custom-panel.html#before-you-begin",
@@ -7724,14 +7760,14 @@
     "href": "lessons/intermediate-rviz-rviz-user-guide-rviz-user-guide.html",
     "title": "RViz User Guide",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use RViz User Guide in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-user-guide-rviz-user-guide.html#learning-outcome",
     "href": "lessons/intermediate-rviz-rviz-user-guide-rviz-user-guide.html#learning-outcome",
     "title": "RViz User Guide",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse RViz User Guide in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use RViz User Guide in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-rviz-rviz-user-guide-rviz-user-guide.html#before-you-begin",
@@ -7766,14 +7802,14 @@
     "href": "lessons/intermediate-testing-cli.html",
     "title": "Running Tests in ROS 2 from the Command Line",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Running Tests in ROS 2 from the Command Line in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-cli.html#learning-outcome",
     "href": "lessons/intermediate-testing-cli.html#learning-outcome",
     "title": "Running Tests in ROS 2 from the Command Line",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Running Tests in ROS 2 from the Command Line in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Running Tests in ROS 2 from the Command Line in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-cli.html#before-you-begin",
@@ -7808,14 +7844,14 @@
     "href": "lessons/intermediate-testing-integration.html",
     "title": "Writing Basic Integration Tests with launch_testing",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing Basic Integration Tests with launch_testing in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-integration.html#learning-outcome",
     "href": "lessons/intermediate-testing-integration.html#learning-outcome",
     "title": "Writing Basic Integration Tests with launch_testing",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing Basic Integration Tests with launch_testing in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing Basic Integration Tests with launch_testing in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-integration.html#before-you-begin",
@@ -7850,14 +7886,14 @@
     "href": "lessons/intermediate-testing-testing-main.html",
     "title": "Testing",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Testing in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-testing-main.html#learning-outcome",
     "href": "lessons/intermediate-testing-testing-main.html#learning-outcome",
     "title": "Testing",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Testing in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Testing in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-testing-testing-main.html#before-you-begin",
@@ -7906,14 +7942,14 @@
     "href": "lessons/intermediate-tf2-adding-a-frame-py.html",
     "title": "Adding a frame (Python)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Adding a frame (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-adding-a-frame-py.html#learning-outcome",
     "href": "lessons/intermediate-tf2-adding-a-frame-py.html#learning-outcome",
     "title": "Adding a frame (Python)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Adding a frame (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Adding a frame (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-adding-a-frame-py.html#before-you-begin",
@@ -7948,14 +7984,14 @@
     "href": "lessons/intermediate-tf2-introduction-to-tf2.html",
     "title": "Introducing tf2",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Introducing tf2 in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-introduction-to-tf2.html#learning-outcome",
     "href": "lessons/intermediate-tf2-introduction-to-tf2.html#learning-outcome",
     "title": "Introducing tf2",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Introducing tf2 in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Introducing tf2 in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-introduction-to-tf2.html#before-you-begin",
@@ -7990,7 +8026,7 @@
     "href": "lessons/intermediate-tf2-introduction-to-tf2.html#continue-on-a-trail",
     "title": "Introducing tf2",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nTransforms and robot models\n\n\n← tf2Next: Debugging →"
+    "text": "Continue on a trail\n\nTransforms and robot models\n\n\nNext: Debugging tf2 with RViz →"
   },
   {
     "objectID": "lessons/intermediate-tf2-introduction-to-tf2.html#references-and-provenance",
@@ -8004,14 +8040,14 @@
     "href": "lessons/intermediate-tf2-quaternion-fundamentals.html",
     "title": "Quaternion fundamentals",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Quaternion fundamentals in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-quaternion-fundamentals.html#learning-outcome",
     "href": "lessons/intermediate-tf2-quaternion-fundamentals.html#learning-outcome",
     "title": "Quaternion fundamentals",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Quaternion fundamentals in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Quaternion fundamentals in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-quaternion-fundamentals.html#before-you-begin",
@@ -8046,14 +8082,14 @@
     "href": "lessons/intermediate-tf2-time-travel-with-tf2-cpp.html",
     "title": "Traveling in time (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Traveling in time (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-time-travel-with-tf2-cpp.html#learning-outcome",
     "href": "lessons/intermediate-tf2-time-travel-with-tf2-cpp.html#learning-outcome",
     "title": "Traveling in time (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Traveling in time (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Traveling in time (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-time-travel-with-tf2-cpp.html#before-you-begin",
@@ -8088,14 +8124,14 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-cpp.html",
     "title": "Writing a broadcaster (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing a broadcaster (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-cpp.html#learning-outcome",
     "href": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-cpp.html#learning-outcome",
     "title": "Writing a broadcaster (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing a broadcaster (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing a broadcaster (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-broadcaster-cpp.html#before-you-begin",
@@ -8130,14 +8166,14 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-listener-cpp.html",
     "title": "Writing a listener (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing a listener (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-listener-cpp.html#learning-outcome",
     "href": "lessons/intermediate-tf2-writing-a-tf2-listener-cpp.html#learning-outcome",
     "title": "Writing a listener (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing a listener (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing a listener (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-listener-cpp.html#before-you-begin",
@@ -8172,14 +8208,14 @@
     "href": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-cpp.html",
     "title": "Writing a static broadcaster (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing a static broadcaster (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-cpp.html#learning-outcome",
     "href": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-cpp.html#learning-outcome",
     "title": "Writing a static broadcaster (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing a static broadcaster (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing a static broadcaster (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-tf2-writing-a-tf2-static-broadcaster-cpp.html#before-you-begin",
@@ -8214,14 +8250,14 @@
     "href": "lessons/intermediate-urdf-adding-physical-and-collision-properties-to-a-urdf-model.html",
     "title": "Adding physical and collision properties",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Adding physical and collision properties in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-adding-physical-and-collision-properties-to-a-urdf-model.html#learning-outcome",
     "href": "lessons/intermediate-urdf-adding-physical-and-collision-properties-to-a-urdf-model.html#learning-outcome",
     "title": "Adding physical and collision properties",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Adding physical and collision properties in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Adding physical and collision properties in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-adding-physical-and-collision-properties-to-a-urdf-model.html#before-you-begin",
@@ -8256,14 +8292,14 @@
     "href": "lessons/intermediate-urdf-building-a-visual-robot-model-with-urdf-from-scratch.html",
     "title": "Building a visual robot model from scratch",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Building a visual robot model from scratch in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-building-a-visual-robot-model-with-urdf-from-scratch.html#learning-outcome",
     "href": "lessons/intermediate-urdf-building-a-visual-robot-model-with-urdf-from-scratch.html#learning-outcome",
     "title": "Building a visual robot model from scratch",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Building a visual robot model from scratch in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Building a visual robot model from scratch in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-building-a-visual-robot-model-with-urdf-from-scratch.html#before-you-begin",
@@ -8298,14 +8334,14 @@
     "href": "lessons/intermediate-urdf-urdf-main.html",
     "title": "URDF",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use URDF in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-urdf-main.html#learning-outcome",
     "href": "lessons/intermediate-urdf-urdf-main.html#learning-outcome",
     "title": "URDF",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse URDF in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use URDF in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-urdf-main.html#before-you-begin",
@@ -8340,7 +8376,7 @@
     "href": "lessons/intermediate-urdf-urdf-main.html#continue-on-a-trail",
     "title": "URDF",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nTransforms and robot models\n\n\n← DebuggingNext: Using URDF with robot_state_publisher (Python) →"
+    "text": "Continue on a trail\n\nTransforms and robot models\n\n\n← Debugging tf2 with RVizNext: Using URDF with robot_state_publisher (Python) →"
   },
   {
     "objectID": "lessons/intermediate-urdf-urdf-main.html#references-and-provenance",
@@ -8354,14 +8390,14 @@
     "href": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html",
     "title": "Using URDF with robot_state_publisher (Python)",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using URDF with robot_state_publisher (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html#learning-outcome",
     "href": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html#learning-outcome",
     "title": "Using URDF with robot_state_publisher (Python)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using URDF with robot_state_publisher (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using URDF with robot_state_publisher (Python) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html#before-you-begin",
@@ -8396,7 +8432,7 @@
     "href": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html#continue-on-a-trail",
     "title": "Using URDF with robot_state_publisher (Python)",
     "section": "Continue on a trail",
-    "text": "Continue on a trail\n\nTransforms and robot models\n\n\n← URDF"
+    "text": "Continue on a trail\n\nTransforms and robot models\n\n\n← Debugging tf2 with RVizFinish trail →"
   },
   {
     "objectID": "lessons/intermediate-urdf-using-urdf-with-robot-state-publisher-py.html#references-and-provenance",
@@ -8410,14 +8446,14 @@
     "href": "lessons/intermediate-using-node-interfaces-template-class.html",
     "title": "Using the Node Interfaces Template Class (C++)",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using the Node Interfaces Template Class (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-using-node-interfaces-template-class.html#learning-outcome",
     "href": "lessons/intermediate-using-node-interfaces-template-class.html#learning-outcome",
     "title": "Using the Node Interfaces Template Class (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using the Node Interfaces Template Class (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using the Node Interfaces Template Class (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-using-node-interfaces-template-class.html#before-you-begin",
@@ -8452,14 +8488,14 @@
     "href": "lessons/intermediate-writing-an-action-server-client-cpp.html",
     "title": "Writing an action server and client (C++)",
     "section": "",
-    "text": "Curated lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Writing an action server and client (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-writing-an-action-server-client-cpp.html#learning-outcome",
     "href": "lessons/intermediate-writing-an-action-server-client-cpp.html#learning-outcome",
     "title": "Writing an action server and client (C++)",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Writing an action server and client (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Writing an action server and client (C++) in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate-writing-an-action-server-client-cpp.html#before-you-begin",
@@ -8508,14 +8544,14 @@
     "href": "lessons/intermediate.html",
     "title": "Intermediate",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Intermediate in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate.html#learning-outcome",
     "href": "lessons/intermediate.html#learning-outcome",
     "title": "Intermediate",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Intermediate in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Intermediate in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/intermediate.html#before-you-begin",
@@ -8550,14 +8586,14 @@
     "href": "lessons/miscellaneous-building-ros2-package-with-eclipse-2021-06.html",
     "title": "Building a package with Eclipse 2021-06",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Building a package with Eclipse 2021-06 in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/miscellaneous-building-ros2-package-with-eclipse-2021-06.html#learning-outcome",
     "href": "lessons/miscellaneous-building-ros2-package-with-eclipse-2021-06.html#learning-outcome",
     "title": "Building a package with Eclipse 2021-06",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Building a package with Eclipse 2021-06 in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Building a package with Eclipse 2021-06 in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/miscellaneous-building-ros2-package-with-eclipse-2021-06.html#before-you-begin",
@@ -8592,14 +8628,14 @@
     "href": "lessons/miscellaneous-eclipse-oxygen-with-ros-2-and-rviz2.html",
     "title": "Using Eclipse Oxygen with rviz2 [community-contributed]",
     "section": "",
-    "text": "Growing lesson · This page is part of the local ROS 2 Trails curriculum."
+    "text": "Use Using Eclipse Oxygen with rviz2 [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/miscellaneous-eclipse-oxygen-with-ros-2-and-rviz2.html#learning-outcome",
     "href": "lessons/miscellaneous-eclipse-oxygen-with-ros-2-and-rviz2.html#learning-outcome",
     "title": "Using Eclipse Oxygen with rviz2 [community-contributed]",
-    "section": "Learning outcome",
-    "text": "Learning outcome\nUse Using Eclipse Oxygen with rviz2 [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
+    "section": "",
+    "text": "Use Using Eclipse Oxygen with rviz2 [community-contributed] in a ROS 2 Jazzy workflow, then demonstrate the result using observable runtime evidence rather than assuming it worked."
   },
   {
     "objectID": "lessons/miscellaneous-eclipse-oxygen-with-ros-2-and-rviz2.html#before-you-begin",
@@ -10308,7 +10344,7 @@
     "href": "skills.html#ros-foundations",
     "title": "Skills and topics",
     "section": "ROS foundations",
-    "text": "ROS foundations\n\n\n\nROS graph, nodes, and topics\nAlso called: graph, nodes, topics\n18 learning artifacts\n\nNotebook Robotics Lab: probe, plot, and tune ROS 2\nFoundations: the ROS 2 graph\nBeginner: CLI tools\nUnderstanding nodes\nUnderstanding topics\n\n\n\n\n\nServices, actions, and parameters\nAlso called: services, actions, parameters\n16 learning artifacts\n\nInterfaces, parameters, actions, and plugins\nConfigure service introspection\nCreating an action\nCreating and using plugins (C++)\nUnderstanding actions",
+    "text": "ROS foundations\n\n\n\nROS graph, nodes, and topics\nAlso called: graph, nodes, topics 18 learning artifacts\n\nNotebook Robotics Lab: probe, plot, and tune ROS 2\nFoundations: the ROS 2 graph\nBeginner: CLI tools\nUnderstanding nodes\nUnderstanding topics\n\n\n\n\n\nServices, actions, and parameters\nAlso called: services, actions, parameters 16 learning artifacts\n\nInterfaces, parameters, actions, and plugins\nConfigure service introspection\nCreating an action\nCreating and using plugins (C++)\nUnderstanding actions",
     "crumbs": [
       "Learn",
       "All skills"
@@ -10319,7 +10355,7 @@
     "href": "skills.html#build-systems",
     "title": "Skills and topics",
     "section": "Build systems",
-    "text": "Build systems\n\n\n\nWorkspaces, packages, and interfaces\nAlso called: colcon, workspace, packages, messages, interfaces\n11 learning artifacts\n\nBuilding nodes and packages\nBeginner: Client libraries\nCreating a package\nCreating a workspace\nCreating and using a custom message\n\n\n\n\n\nLaunch and composition\nAlso called: launch, components, composition\n10 learning artifacts\n\nLaunch and composition\nComposing multiple nodes in a single process\nCreating a launch file\nLaunch\nManaging large projects",
+    "text": "Build systems\n\n\n\nWorkspaces, packages, and interfaces\nAlso called: colcon, workspace, packages, messages, interfaces 11 learning artifacts\n\nBuilding nodes and packages\nBeginner: Client libraries\nCreating a package\nCreating a workspace\nCreating and using a custom message\n\n\n\n\n\nLaunch and composition\nAlso called: launch, components, composition 10 learning artifacts\n\nLaunch and composition\nComposing multiple nodes in a single process\nCreating a launch file\nLaunch\nManaging large projects",
     "crumbs": [
       "Learn",
       "All skills"
@@ -10330,7 +10366,7 @@
     "href": "skills.html#spatial-robotics",
     "title": "Skills and topics",
     "section": "Spatial robotics",
-    "text": "Spatial robotics\n\n\n\ntf2 and coordinate frames\nAlso called: tf, tf2, transforms, frames\n17 learning artifacts\n\nFrame Detective: debug a robot’s spatial story\nTransforms and robot models\nDebugging\nIntroducing tf2\ntf2\n\n\n\n\n\nURDF, Xacro, and robot models\nAlso called: urdf, xacro, robot model\n8 learning artifacts\n\nURDF\nUsing URDF with robot_state_publisher (Python)\nAdding physical and collision properties\nBuilding a movable robot model\nBuilding a visual robot model from scratch\n\n\n\n\n\nRViz and visualization\nAlso called: rviz, markers, visualization\n8 learning artifacts\n\nBuilding a Custom RViz Display\nBuilding a Custom RViz Panel\nMarker: Display types\nMarker: Points and Lines (C++)\nMarker: Sending Basic Shapes (C++)",
+    "text": "Spatial robotics\n\n\n\ntf2 and coordinate frames\nAlso called: tf, tf2, transforms, frames 17 learning artifacts\n\nFrame Detective: debug a robot’s spatial story\nTransforms and robot models\nDebugging tf2 with RViz\nIntroducing tf2\ntf2\n\n\n\n\n\nURDF, Xacro, and robot models\nAlso called: urdf, xacro, robot model 8 learning artifacts\n\nURDF\nUsing URDF with robot_state_publisher (Python)\nAdding physical and collision properties\nBuilding a movable robot model\nBuilding a visual robot model from scratch\n\n\n\n\n\nRViz and visualization\nAlso called: rviz, markers, visualization 8 learning artifacts\n\nBuilding a Custom RViz Display\nBuilding a Custom RViz Panel\nMarker: Display types\nMarker: Points and Lines (C++)\nMarker: Sending Basic Shapes (C++)",
     "crumbs": [
       "Learn",
       "All skills"
@@ -10341,7 +10377,7 @@
     "href": "skills.html#robot-behavior",
     "title": "Skills and topics",
     "section": "Robot behavior",
-    "text": "Robot behavior\n\n\n\nSensors and perception\nAlso called: camera, lidar, perception, sensors\n2 learning artifacts\n\nCamera Detective: turn pixels into measurements\nLine Scout: follow what the robot can sense\n\n\n\n\n\nControl and ros2_control\nAlso called: control, cmd_vel, ros2_control\n1 learning artifacts\n\nBalance Bot: stabilize an inverted pendulum\n\n\n\n\nSimulation\nAlso called: gazebo, webots, mvsim, simulation\n15 learning artifacts\n\nDefining worlds, robots, and sensors\nGazebo\nGetting started with MVSim\nInstallation (Ubuntu)\nInstallation (Ubuntu)\n\n\n\n\nMapping and localization\nAlso called: slam, map, amcl, localization\n0 learning artifacts\nThis capability is reserved for an upcoming project.\n\n\n\nNavigation\nAlso called: nav2, navigation, planning\n0 learning artifacts\nThis capability is reserved for an upcoming project.\n\n\nManipulation\nAlso called: moveit, arm, grasp, manipulation\n0 learning artifacts\nThis capability is reserved for an upcoming project.\n\n\n\nMulti-robot systems\nAlso called: swarm, namespaces, multi-robot\n0 learning artifacts\nThis capability is reserved for an upcoming project.",
+    "text": "Robot behavior\n\n\n\nSensors and perception\nAlso called: camera, lidar, perception, sensors 2 learning artifacts\n\nCamera Detective: turn pixels into measurements\nLine Scout: follow what the robot can sense\n\n\n\n\n\nControl and ros2_control\nAlso called: control, cmd_vel, ros2_control 1 learning artifacts\n\nBalance Bot: stabilize an inverted pendulum\n\n\n\n\nSimulation\nAlso called: gazebo, webots, mvsim, simulation 15 learning artifacts\n\nDefining worlds, robots, and sensors\nGazebo\nGetting started with MVSim\nInstallation (Ubuntu)\nInstallation (Ubuntu)\n\n\n\n\nMapping and localization\nAlso called: slam, map, amcl, localization 0 learning artifacts\nThis capability is reserved for an upcoming project.\n\n\n\nNavigation\nAlso called: nav2, navigation, planning 0 learning artifacts\nThis capability is reserved for an upcoming project.\n\n\nManipulation\nAlso called: moveit, arm, grasp, manipulation 0 learning artifacts\nThis capability is reserved for an upcoming project.\n\n\n\nMulti-robot systems\nAlso called: swarm, namespaces, multi-robot 0 learning artifacts\nThis capability is reserved for an upcoming project.",
     "crumbs": [
       "Learn",
       "All skills"
@@ -10352,7 +10388,7 @@
     "href": "skills.html#engineering-evidence",
     "title": "Skills and topics",
     "section": "Engineering evidence",
-    "text": "Engineering evidence\n\n\n\nBags, data, logging, and observability\nAlso called: rosbag, bags, logging, tracing, data\n10 learning artifacts\n\nData, logging, and observability\nEnabling topic statistics (C++)\nHow to use ros2_tracing to trace and analyze an application\nLogging\nRecording and playing back data\n\n\n\n\n\nTesting and debugging\nAlso called: testing, diagnostics, ros2doctor, debugging\n9 learning artifacts\n\nProduction concerns\nTesting\nAment Lint CLI Utilities\nRunning Tests in ROS 2 from the Command Line\nTesting Your Code with the ROS Build Farm\n\n\n\n\n\nMiddleware and performance\nAlso called: dds, rmw, qos, performance\n9 learning artifacts\n\nMiddleware, discovery, and performance\nCreating an rmw implementation\nSetting up efficient intra-process communication\nUnderstanding real-time programming\nUnlocking the potential of Fast DDS middleware [community-contributed]\n\n\n\n\n\nSecurity and deployment\nAlso called: sros2, security, deployment\n9 learning artifacts\n\nSecurity and deployment\nDeployment Guidelines\nExamining network traffic\nSecurity\nSetting access controls",
+    "text": "Engineering evidence\n\n\n\nBags, data, logging, and observability\nAlso called: rosbag, bags, logging, tracing, data 10 learning artifacts\n\nData, logging, and observability\nEnabling topic statistics (C++)\nHow to use ros2_tracing to trace and analyze an application\nLogging\nRecording and playing back data\n\n\n\n\n\nTesting and debugging\nAlso called: testing, diagnostics, ros2doctor, debugging 9 learning artifacts\n\nProduction concerns\nTesting\nAment Lint CLI Utilities\nRunning Tests in ROS 2 from the Command Line\nTesting Your Code with the ROS Build Farm\n\n\n\n\n\nMiddleware and performance\nAlso called: dds, rmw, qos, performance 9 learning artifacts\n\nMiddleware, discovery, and performance\nCreating an rmw implementation\nSetting up efficient intra-process communication\nUnderstanding real-time programming\nUnlocking the potential of Fast DDS middleware [community-contributed]\n\n\n\n\n\nSecurity and deployment\nAlso called: sros2, security, deployment 9 learning artifacts\n\nSecurity and deployment\nDeployment Guidelines\nExamining network traffic\nSecurity\nSetting access controls",
     "crumbs": [
       "Learn",
       "All skills"
@@ -10381,7 +10417,7 @@
     "href": "trails/data-and-observability.html#start-learning",
     "title": "Data, logging, and observability",
     "section": "Start learning",
-    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nRecording and playing back data\nBeginner-CLI-Tools · Curated\n\n\n\n2\n\nLogging\nDemos · Curated\n\n\n\n3\n\nEnabling topic statistics (C++)\nAdvanced · Curated\n\n\n\n4\n\nConfigure service introspection\nDemos · Curated\n\n\n\n5\n\nHow to use ros2_tracing to trace and analyze an application\nAdvanced · Curated",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nRecording and playing back data\nBeginner-CLI-Tools\n\n\n\n2\n\nLogging\nDemos\n\n\n\n3\n\nEnabling topic statistics (C++)\nAdvanced\n\n\n\n4\n\nConfigure service introspection\nDemos\n\n\n\n5\n\nHow to use ros2_tracing to trace and analyze an application\nAdvanced",
     "crumbs": [
       "Learn",
       "Data, logging, and observability"
@@ -10458,7 +10494,7 @@
     "href": "trails/interfaces-and-actions.html#start-learning",
     "title": "Interfaces, parameters, actions, and plugins",
     "section": "Start learning",
-    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nCreating and using a custom message\nBeginner-Client-Libraries · Authored\n\n\n\n2\n\nCreating an action\nIntermediate · Curated\n\n\n\n3\n\nWriting an action server and client (C++)\nIntermediate · Curated\n\n\n\n4\n\nWriting an action server and client (Python)\nIntermediate · Curated\n\n\n\n5\n\nUsing parameters in a class (C++)\nBeginner-Client-Libraries · Curated\n\n\n\n6\n\nCreating and using plugins (C++)\nBeginner-Client-Libraries · Curated",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nCreating and using a custom message\nBeginner-Client-Libraries\n\n\n\n2\n\nCreating an action\nIntermediate\n\n\n\n3\n\nWriting an action server and client (C++)\nIntermediate\n\n\n\n4\n\nWriting an action server and client (Python)\nIntermediate\n\n\n\n5\n\nUsing parameters in a class (C++)\nBeginner-Client-Libraries\n\n\n\n6\n\nCreating and using plugins (C++)\nBeginner-Client-Libraries",
     "crumbs": [
       "Learn",
       "Interfaces, parameters, actions, and plugins"
@@ -10546,7 +10582,7 @@
     "href": "trails/middleware-and-performance.html#start-learning",
     "title": "Middleware, discovery, and performance",
     "section": "Start learning",
-    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nUsing quality-of-service settings for lossy networks\nDemos · Curated\n\n\n\n2\n\nSetting up efficient intra-process communication\nDemos · Curated\n\n\n\n3\n\nUsing Fast DDS Discovery Server as discovery protocol [community-contributed]\nAdvanced · Curated\n\n\n\n4\n\nUnlocking the potential of Fast DDS middleware [community-contributed]\nAdvanced · Curated\n\n\n\n5\n\nUnderstanding real-time programming\nDemos · Curated\n\n\n\n6\n\nCreating an rmw implementation\nAdvanced · Curated",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nUsing quality-of-service settings for lossy networks\nDemos\n\n\n\n2\n\nSetting up efficient intra-process communication\nDemos\n\n\n\n3\n\nUsing Fast DDS Discovery Server as discovery protocol [community-contributed]\nAdvanced\n\n\n\n4\n\nUnlocking the potential of Fast DDS middleware [community-contributed]\nAdvanced\n\n\n\n5\n\nUnderstanding real-time programming\nDemos\n\n\n\n6\n\nCreating an rmw implementation\nAdvanced",
     "crumbs": [
       "Learn",
       "Middleware, discovery, and performance"
@@ -10623,7 +10659,7 @@
     "href": "trails/security-and-deployment.html#start-learning",
     "title": "Security and deployment",
     "section": "Start learning",
-    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nSecurity\nAdvanced · Curated\n\n\n\n2\n\nSetting up security\nAdvanced · Curated\n\n\n\n3\n\nUnderstanding the security keystore\nAdvanced · Curated\n\n\n\n4\n\nSetting access controls\nAdvanced · Curated\n\n\n\n5\n\nDeployment Guidelines\nAdvanced · Curated\n\n\n\n6\n\nExamining network traffic\nAdvanced · Curated",
+    "text": "Start learning\nComplete these lessons in order. Each lesson contains a local activity and knowledge check.\n\n\n1\n\nSecurity\nAdvanced\n\n\n\n2\n\nSetting up security\nAdvanced\n\n\n\n3\n\nUnderstanding the security keystore\nAdvanced\n\n\n\n4\n\nSetting access controls\nAdvanced\n\n\n\n5\n\nDeployment Guidelines\nAdvanced\n\n\n\n6\n\nExamining network traffic\nAdvanced",
     "crumbs": [
       "Learn",
       "Security and deployment"

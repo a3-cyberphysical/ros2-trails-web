@@ -8,6 +8,7 @@
 
 body { color: var(--trail-ink); background: var(--trail-paper); }
 .navbar { box-shadow: 0 2px 18px rgba(16, 35, 63, .1); }
+.btn { margin: .15rem .25rem .15rem 0; }
 .hero-panel {
   color: white; padding: clamp(2rem, 6vw, 5rem); border-radius: 1.4rem;
   background: radial-gradient(circle at 85% 20%, rgba(45,196,201,.7), transparent 28%),
